@@ -860,11 +860,7 @@ function shareToX() {
   window.open(url, '_blank');
 }
 
-function shareToLine() {
-  const text = getShareText();
-  const url = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(text)}`;
-  window.open(url, '_blank');
-}
+function shareToLine(){var t=getShareText();window.location.href='line://msg/text/'+encodeURIComponent(t);setTimeout(function(){window.open('https://line.me/R/msg/text/'+encodeURIComponent(t),'_blank')},500);}
 
 function copyResult() {
   const text = getShareText() + `\n${window.location.href}`;
@@ -886,6 +882,8 @@ function showToast(msg) {
   t.textContent = msg;
   t.classList.add('show');
   setTimeout(() => t.classList.remove('show'), 2200);
+}
+
 }
 </script>
 </body>
