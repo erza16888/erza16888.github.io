@@ -138,7 +138,6 @@ body{
 .opt.sel{background:#FFF0EE;border-color:var(--red);color:var(--ink)}
 .opt.sel .opt-ltr{background:var(--red);border-color:var(--red);color:#FFF}
 
-/* 按鈕控制組區塊 */
 .btn-group {
   display: flex;
   gap: 12px;
@@ -155,7 +154,6 @@ body{
 .cta:active{transform:scale(.98) translateY(0)}
 .cta:disabled{opacity:.28;cursor:not-allowed;transform:none;box-shadow:none;background:var(--red)}
 
-/* 返回上一題按鈕樣式 */
 .back-btn {
   flex: 1;
   background: transparent;
@@ -205,12 +203,11 @@ body{
   letter-spacing:.06em;position:relative;color:rgba(255,255,255,.9);
 }
 
-/* trait bars inside hero bottom */
 .res-traits{background:rgba(0,0,0,.18);border-top:1px solid rgba(255,255,255,.08);padding:18px 20px}
 .tr-row{display:flex;align-items:center;gap:10px;margin-bottom:9px}
 .tr-row:last-child{margin-bottom:0}
 .tr-lbl{font-size:11px;font-weight:700;width:68px;flex-shrink:0;opacity:.7;letter-spacing:.04em}
-.tr-bg{flex:1;height:6px;background:rgba(255,255,255,.12);border-radius:var(--r-pill);overflow:hidden}
+.tr-bg{flex:1;height:6px;background:rgba(255,255,255,.1);border-radius:var(--r-pill);overflow:hidden}
 .tr-fill{height:100%;border-radius:var(--r-pill);transition:width .85s cubic-bezier(.4,0,.2,1) .2s}
 .tr-pct{font-size:12px;font-weight:700;width:34px;text-align:right;opacity:.8}
 
@@ -227,7 +224,6 @@ body{
 }
 .desc-txt{font-size:14px;color:var(--ink2);line-height:1.95;white-space:pre-line;margin-bottom:16px}
 
-/* warning */
 .warn{
   background:var(--red-dim);border:1px solid rgba(192,57,43,.18);
   border-radius:var(--r-md);padding:13px 15px;margin-bottom:16px;
@@ -235,7 +231,6 @@ body{
 .warn-h{font-size:10px;font-weight:700;letter-spacing:.12em;color:var(--red);margin-bottom:5px}
 .warn-b{font-size:13px;color:var(--ink2);line-height:1.7}
 
-/* survival guide */
 .guide{
   background:var(--green-dim);border:1px solid rgba(46,125,94,.18);
   border-radius:var(--r-md);padding:13px 15px;margin-bottom:0;
@@ -243,7 +238,6 @@ body{
 .guide-h{font-size:10px;font-weight:700;letter-spacing:.12em;color:var(--green);margin-bottom:5px}
 .guide-b{font-size:13px;color:var(--ink2);line-height:1.7}
 
-/* keywords */
 .kws{display:flex;flex-wrap:wrap;gap:7px}
 .kw{
   background:var(--bg2);border:1px solid var(--border2);
@@ -278,7 +272,6 @@ body{
 .sbtn-line{background:#06C755;color:#FFF}
 .sbtn-cp{background:var(--bg2);color:var(--ink2);border:1px solid var(--border2)}
 
-/* ── RETRY ── */
 .retry{
   display:block;width:100%;background:transparent;color:var(--ink3);
   border:1.5px solid var(--border2);border-radius:var(--r-pill);padding:14px;
@@ -287,10 +280,8 @@ body{
 }
 .retry:hover{border-color:rgba(192,57,43,.35);color:var(--red);background:var(--red-dim)}
 
-/* ── FOOTER ── */
 .ftr{text-align:center;font-size:11px;color:var(--ink3);padding-bottom:16px;letter-spacing:.04em}
 
-/* ── TOAST ── */
 .toast{
   position:fixed;bottom:24px;left:50%;
   transform:translateX(-50%) translateY(70px);
@@ -308,9 +299,7 @@ body{
   .sbtns{flex-direction:column}
 }
 
-/* ── AD SLOT ── */
 .ad-slot{min-height:250px;background:#f0f0f0;margin:20px 0;text-align:center;line-height:250px;color:#aaa;font-size:12px;border-radius:12px;overflow:hidden;font-family:'Hiragino Kaku Gothic ProN',sans-serif;letter-spacing:.05em}
-/* ── SEO FAQ ── */
 .seo-faq{max-width:520px;margin:28px auto 0;padding:0 16px 40px;font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Noto Sans JP',sans-serif}
 .seo-faq h2{font-size:16px;font-weight:900;margin-bottom:16px;text-align:center;opacity:.55;letter-spacing:.03em}
 .seo-faq details{background:rgba(127,127,127,0.06);border:1px solid rgba(127,127,127,0.16);border-radius:12px;padding:14px 16px;margin-bottom:10px}
@@ -319,7 +308,6 @@ body{
 .seo-faq summary::before{content:'Q. ';color:#C0392B;font-weight:900}
 .seo-faq .faq-a{font-size:13px;line-height:1.85;opacity:.7;margin-top:10px;padding-top:10px;border-top:1px solid rgba(127,127,127,0.16)}
 .seo-faq .faq-a::before{content:'A. ';color:#2E7D5E;font-weight:900}
-
 </style>
 <script type="application/ld+json">
 {
@@ -330,7 +318,7 @@ body{
       "@type": "Question",
       "name": "職場モンスター診断とは何ですか？",
       "acceptedAnswer": {
-        "@type": "Apple",
+        "@type": "Answer",
         "text": "職場での「裏の顔」やモンスター気質を10問で測定する無料の心理テストです。職場 人間関係 占いの観点から、自分でも気づいていない言動のクセを客観的に把握できます。"
       }
     },
@@ -371,7 +359,7 @@ body{
 
   <div id="quiz">
     <div class="intro" id="intro">
-      <p>職場の人間関係、うまくいってる？<br>
+      <p>職盤の人間関係、うまくいってる？<br>
       誰でも仕事中は「いい人」を演じているけど、<strong>裏の顔</strong>はまた別の話。</p>
       <p>この診断では、職場 人間関係 占いの観点から、<strong>あなたが気づいていない「モンスター気質」</strong>を10問で特定します。</p>
       <p>性格の裏の顔・診断 心理テスト 面白い――<strong>同僚に送りつけてみよう。</strong></p>
@@ -396,7 +384,6 @@ body{
 
     <div class="ad-slot" id="ad-top">【スポンサーリンク / 広告】</div>
     
-    <!-- 按鈕控制群組 -->
     <div class="btn-group">
       <button class="back-btn hidden" id="back-btn" disabled>戻る</button>
       <button class="cta" id="mbtn">診断スタート 👺</button>
@@ -506,7 +493,7 @@ var Qs=[
   },
   {
     scene:"情報の扱い",
-    txt:"飲み会で上司がうっかり重要な人事情報を漏らした。あなたは？",
+    txt:"飲み會で上司がうっかり重要な人事情報を漏らした。あなたは？",
     opts:[
       {t:"聞かなかったことにする",s:0},
       {t:"信頼できる同僚1人だけに「こっそり」教える",s:2},
@@ -528,7 +515,7 @@ var Qs=[
     scene:"評価面談",
     txt:"上司との評価面談。思っていたより低い評価をつけられた。あなたは？",
     opts:[
-      {t:"「わかりました」と言って帰り、家でひとり悔しがる",s:1},
+      {t:"「わかりました」言えて帰り、家でひとり悔しがる",s:1},
       {t:"「具体的にどの点が課題でしたか？」と冷静に聞く",s:0},
       {t:"その場では了承しつつ、後日別の上司にアピールを強化する",s:3},
       {t:"「〇〇さんの評価と比べて、差がある理由を教えてください」と聞く",s:4}
@@ -578,7 +565,6 @@ var Qs=[
 
 var Rs=[
   {
-    min:0,max:7,
     emoji:"🕊️",bg:"🕊️",
     badge:"SAINT TYPE",
     sub:"職場の良心",
@@ -593,12 +579,11 @@ var Rs=[
     desc:"職場でこれほど「いい人」でいられることは、本当に稀なことです。空気を読む力が高く、誰かが困っていたら自然と動いてしまう。会議では相手の話をちゃんと聞き、飲み会では全員に気を遣う。そのおかげでチームの雰囲気が保たれており、あなたの存在は間接的にかなりの貢献をしています。\n\nただ、それって本当に「好き」でやってるの？自分の意見を言わずに場を収めることを繰り返していると、ある日突然「なんで私だけ…」と思う日が来ます。聖人にも限界はある。爆発する前に一度、自分の「嫌なこと」を誰かに話してみてください。",
     warn:"「どうぞ、どうぞ」を続けすぎて、気づいたら一番損な役回りを引き受けていることが多いです。周囲は「あの人は頼めばやってくれる」と学習済みです。",
     guide:"このタイプは頼みやすく、悪口も言わないため職場の宝です。ただし、限界を超えると突然静かにフェードアウトするので、定期的に「最近どう？」と声をかけてあげてください。",
-    kws:["聖人","空気読み","自己犠牲","調停役","爆発寸前","八方美人"],
+    kws:["聖人","空気読み","自己犠謝","調停役","爆発寸前","八方美人"],
     quote:"「いい人でいることは、コストがかかる。誰もそれを教えてくれないけど。」",
     attr:"― 職場の良心タイプの独白"
   },
   {
-    min:8,max:14,
     emoji:"🦊",bg:"🦊",
     badge:"STRATEGIST TYPE",
     sub:"戦略的サバイバー",
@@ -610,7 +595,7 @@ var Rs=[
       {l:"計算高さ",p:84},
       {l:"モンスター度",p:38}
     ],
-    desc:"表では「協調性バツグン」、裏では「この人、私の目標に使えるか？」を常に計算しているタイプ。人当たりがよく、話を聞くのが上手なので周囲からの信頼も高い。でもその情報収集と人脈形成には、しっかり目的がある。処世術の天才であり、職場政治をゲームとして楽しんでいる節があります。実際、出世するのもこのタイプ。\n\nただ、長く一緒にいると「なんか全部計算されてる気がする」と気づかれます。計算が見えた瞬間に信頼が一気に崩れるのがこのタイプの弱点。本音で話せる人を一人くらいは作っておいたほうがいいですよ。",
+    desc:"表では「協調性バツグン」、裏では「この人、私の目標に使えるか？」を常に計算しているタイプ。人当たりがよく、話を聞くのが上手なので周囲からの信頼も高い。でもその情報収集と人脈形成には、しっかり目的がある。処世術の天才であり、職場政治をゲームとして楽しんでいる節があります。実際、出世するのもこのタイプ。\n\nただ、長く一緒にいると「なんか全部計算されてる気がする」と気づかれます。計算が見えた瞬間に信頼が一気に崩れるのがこのタイプの弱點。本音で話せる人を一人くらいは作っておいたほうがいいですよ。",
     warn:"「この情報は使えそう」「この人はいま利用できる」と思った瞬間、それが表情に0.3秒だけ出ています。鋭い人には読まれています。",
     guide:"このタイプは敵に回すと面倒なので、基本的に味方にしておくことが重要。お世辞をきちんと返し、手柄を少し譲ると忠実な同盟者になってくれます。",
     kws:["計算高い","処世術","情報収集","笑顔の腹黒","政治的","戦略家"],
@@ -618,7 +603,6 @@ var Rs=[
     attr:"― 戦略的サバイバータイプの格言"
   },
   {
-    min:15,max:21,
     emoji:"🐍",bg:"🐍",
     badge:"SHADOW TYPE",
     sub:"陰のインフルエンサー",
@@ -638,7 +622,6 @@ var Rs=[
     attr:"― 陰のインフルエンサータイプの格言"
   },
   {
-    min:22,max:28,
     emoji:"🦁",bg:"🦁",
     badge:"BOSS MONSTER TYPE",
     sub:"自覚なき支配者",
@@ -658,7 +641,6 @@ var Rs=[
     attr:"― 無自覚ハラスメントタイプへの証言"
   },
   {
-    min:29,max:40,
     emoji:"👺",bg:"👺",
     badge:"FINAL BOSS TYPE",
     sub:"職場の台風",
@@ -679,7 +661,7 @@ var Rs=[
   }
 ];
 
-var cq=0,selectedScoresHistory=[],started=false,cr=null,sel=null;
+var cq=0,selectedScoresHistory=[],started=false,cr=null;
 
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('mbtn').addEventListener('click', go);
@@ -764,7 +746,21 @@ function showRes(){
     document.getElementById('quiz').style.display='none';
     var rs=document.getElementById('res');rs.classList.add('on');
 
-    var r = Rs.find(function(res){ return totalScore >= res.min && totalScore <= res.max; }) || Rs[Rs.length-1];
+    /* 【計分機率平衡精算】：最低 0分，最高 40分，共 41分值。等寬切分為五大互斥區間。 */
+    var r = null;
+    if (totalScore >= 0 && totalScore <= 7) {
+      r = Rs[0];
+    } else if (totalScore >= 8 && totalScore <= 15) {
+      r = Rs[1];
+    } else if (totalScore >= 16 && totalScore <= 23) {
+      r = Rs[2];
+    } else if (totalScore >= 24 && totalScore <= 31) {
+      r = Rs[3];
+    } else if (totalScore >= 32 && totalScore <= 40) {
+      r = Rs[4];
+    } else {
+      r = Rs[Rs.length - 1];
+    }
     cr=r;
 
     document.getElementById('rtop').style.background=r.grad;
