@@ -1,17 +1,64 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta name="google-site-verification" content="rBfo0TnMn9Bv_pPNZMpX5OoiFiort3eD3sftEOW0zIo" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>推し活タイプ診断｜あなたはどのオタク生態？【無料診断テスト2026】</title>
   <meta name="description" content="あなたの推し活スタイルを8問で診断！沼落ち系・課金廃人・雑食オタクなど、全6タイプから本当の自分を発見。友達とシェアして盛り上がろう。オタク診断・推し活テスト・心理テスト。" />
   <meta name="keywords" content="推し活, オタク診断, 心理テスト, 推しタイプ診断, アイドルオタク, 沼落ち, 課金, 推し活タイプ, 無料診断, 2026" />
-  <meta property="og:title" content="推し活タイプ診断｜あなたはどのオタク生態？" />
-  <meta property="og:description" content="8問の質問であなたの推し活スタイルが分かる！全6タイプ診断。シェアして友達と比べよう。" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
   <meta name="robots" content="index, follow" />
+
+  <!-- ═══════════════════════════════════════════
+       OG / Twitter Card（SNS シェア用）
+  ════════════════════════════════════════════ -->
+  <meta property="og:title"       content="推し活タイプ診断｜あなたはどのオタク生態？【2026年版】" />
+  <meta property="og:description" content="8問でわかる！あなたの推し活スタイル診断。全6タイプ。友達と比べてみよう。" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://kokoro-shindan.com/" />
+  <meta property="og:image"       content="https://kokoro-shindan.com/og-image.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="ja_JP" />
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="推し活タイプ診断｜あなたはどのオタク生態？" />
+  <meta name="twitter:description" content="8問でわかる！あなたの推し活スタイル診断。全6タイプ。" />
+  <meta name="twitter:image"       content="https://kokoro-shindan.com/og-image.png" />
+
+  <!-- ═══════════════════════════════════════════
+       JSON-LD FAQ Schema（Google 精選スニペット用）
+  ════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "推し活タイプ診断とは何ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "推し活タイプ診断とは、8つの質問に答えることで、あなたの推し活スタイル・オタク気質を6つのタイプに分類する無料の心理テストです。「エモ観察者タイプ」「ソーシャル沼人タイプ」「コレクター廃人タイプ」「雑食オタクタイプ」「熱量過多の一途タイプ」「深淵の沼主タイプ」の6種類があり、結果はSNSでシェアできます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "推し活を長く続けるためのコツはありますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "推し活を長く楽しむためには、予算管理・体力・メンタルバランスの三つが重要です。月ごとの推し活予算をあらかじめ決めておくこと、ライブ遠征などでは睡眠と食事をきちんと取ること、推し以外の趣味や友人関係も大切にすることで、燃え尽きずに長く応援できます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "推し活にはどのくらいのお金がかかりますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "推し活の費用は人によって大きく異なります。グッズ購入・ライブチケット・遠征費などを含めると、月1万円以下の節度ある活動から、月10万円以上を費やすヘビーなファンまでさまざまです。大切なのは、生活費と貯蓄を確保したうえで、無理のない範囲で楽しむことです。"
+        }
+      }
+    ]
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -27,11 +74,9 @@
       --accent3: #818cf8;
       --text: #e8e8f0;
       --text-muted: #8888a8;
-      --glow: rgba(192, 132, 252, 0.18);
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -42,7 +87,6 @@
       overflow-x: hidden;
     }
 
-    /* ── Stars background ── */
     body::before {
       content: '';
       position: fixed;
@@ -68,17 +112,31 @@
       padding: 0 16px 64px;
     }
 
+    /* ── AdSense slot ── */
+    .ad-slot {
+      min-height: 250px;
+      background: rgba(255,255,255,.03);
+      border: 1px dashed var(--border);
+      border-radius: 14px;
+      margin: 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 12px;
+      letter-spacing: .06em;
+    }
+
     /* ── Hero ── */
     .hero {
       text-align: center;
-      padding: 56px 0 40px;
+      padding: 56px 0 32px;
     }
 
     .hero-badge {
       display: inline-block;
       font-size: 11px;
       letter-spacing: .12em;
-      text-transform: uppercase;
       color: var(--accent);
       border: 1px solid var(--accent);
       border-radius: 100px;
@@ -121,9 +179,7 @@
       gap: 5px;
     }
 
-    .hero-meta span::before {
-      content: attr(data-icon);
-    }
+    .hero-meta span::before { content: attr(data-icon); }
 
     /* ── Progress ── */
     .progress-bar-wrap {
@@ -180,11 +236,7 @@
     }
 
     /* ── Options ── */
-    .options {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+    .options { display: flex; flex-direction: column; gap: 10px; }
 
     .opt-btn {
       background: var(--surface2);
@@ -229,10 +281,7 @@
       margin-top: 1px;
     }
 
-    .opt-btn.selected .opt-label {
-      background: var(--accent2);
-      color: #fff;
-    }
+    .opt-btn.selected .opt-label { background: var(--accent2); color: #fff; }
 
     /* ── Nav ── */
     .nav-row {
@@ -276,11 +325,7 @@
     .btn-next:disabled { opacity: .35; cursor: not-allowed; transform: none; }
 
     /* ── Result ── */
-    #result-section {
-      display: none;
-      animation: fadeUp .5s ease both;
-    }
-
+    #result-section { display: none; animation: fadeUp .5s ease both; }
     #result-section.visible { display: block; }
 
     .result-card {
@@ -301,16 +346,11 @@
     .result-type-label {
       font-size: 11px;
       letter-spacing: .14em;
-      text-transform: uppercase;
       color: var(--accent);
       margin-bottom: 8px;
     }
 
-    .result-emoji {
-      font-size: 52px;
-      line-height: 1;
-      margin-bottom: 12px;
-    }
+    .result-emoji { font-size: 52px; line-height: 1; margin-bottom: 12px; }
 
     .result-type-name {
       font-family: 'Zen Kaku Gothic New', sans-serif;
@@ -323,14 +363,9 @@
       margin-bottom: 6px;
     }
 
-    .result-type-sub {
-      font-size: 13px;
-      color: var(--text-muted);
-    }
+    .result-type-sub { font-size: 13px; color: var(--text-muted); }
 
-    .result-body {
-      padding: 28px;
-    }
+    .result-body { padding: 28px; }
 
     .result-desc {
       font-size: 15px;
@@ -366,6 +401,7 @@
       color: var(--accent3);
     }
 
+    /* ── Share section ── */
     .share-section {
       background: var(--surface2);
       border: 1px solid var(--border);
@@ -374,11 +410,7 @@
       text-align: center;
     }
 
-    .share-title {
-      font-size: 15px;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
+    .share-title { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
 
     .share-sub {
       font-size: 12px;
@@ -394,7 +426,7 @@
     }
 
     .share-btn {
-      padding: 10px 20px;
+      padding: 10px 18px;
       border-radius: 10px;
       font-family: 'Noto Sans JP', sans-serif;
       font-size: 13px;
@@ -409,6 +441,16 @@
     .share-x    { background: #000; color: #fff; border: 1px solid #333; }
     .share-line { background: #06c755; color: #fff; }
     .share-copy { background: var(--surface); color: var(--accent); border: 1px solid var(--accent); }
+
+    .copy-confirm {
+      margin-top: 14px;
+      font-size: 12px;
+      color: var(--accent);
+      min-height: 18px;
+      opacity: 0;
+      transition: opacity .3s;
+    }
+    .copy-confirm.show { opacity: 1; }
 
     .retry-btn {
       display: block;
@@ -433,16 +475,59 @@
       align-items: center;
       gap: 12px;
       margin: 36px 0;
-      color: var(--border);
-      font-size: 11px;
-      letter-spacing: .1em;
       color: var(--text-muted);
+      font-size: 11px;
     }
     .divider::before, .divider::after {
       content: '';
       flex: 1;
       height: 1px;
       background: var(--border);
+    }
+
+    /* ── FAQ SEO section ── */
+    .seo-faq {
+      margin-top: 56px;
+      border-top: 1px solid var(--border);
+      padding-top: 36px;
+    }
+
+    .seo-faq h2 {
+      font-family: 'Zen Kaku Gothic New', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 20px;
+    }
+
+    .faq-q {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .faq-a {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      text-align: center;
+      font-size: 11px;
+      color: var(--text-muted);
+      padding-top: 20px;
+      opacity: .5;
     }
 
     /* ── Toast ── */
@@ -462,26 +547,14 @@
       z-index: 999;
       white-space: nowrap;
     }
-    .toast.show {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0);
-    }
-
-    /* ── Footer ── */
-    .footer {
-      text-align: center;
-      font-size: 11px;
-      color: var(--text-muted);
-      padding-top: 20px;
-      opacity: .5;
-    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
   </style>
 </head>
 <body>
 
 <div class="wrapper">
 
-  <!-- Hero -->
+  <!-- ═══ Hero ═══ -->
   <div class="hero">
     <div class="hero-badge">✦ 無料 心理テスト 2026 ✦</div>
     <h1 class="hero-title">推し活タイプ診断</h1>
@@ -493,7 +566,13 @@
     </div>
   </div>
 
-  <!-- Quiz section -->
+  <!-- ═══ Ad Slot 1：ヒーロー直下（滞在時間が長い） ═══ -->
+  <div class="ad-slot" id="ad-slot-top">
+    <!-- ここに Google AdSense の <ins> コードを貼り付けてください -->
+    スポンサーリンク / 広告
+  </div>
+
+  <!-- ═══ Quiz section ═══ -->
   <div id="quiz-section">
     <div class="progress-bar-wrap">
       <div class="progress-bar-fill" id="progress-bar" style="width:0%"></div>
@@ -514,8 +593,15 @@
 
   <div class="divider" id="divider-mid" style="display:none">✦</div>
 
-  <!-- Result section -->
+  <!-- ═══ Result section ═══ -->
   <div id="result-section">
+
+    <!-- ═══ Ad Slot 2：結果の直上（最も注目される位置） ═══ -->
+    <div class="ad-slot" id="ad-slot-result">
+      <!-- ここに Google AdSense の <ins> コードを貼り付けてください -->
+      スポンサーリンク / 広告
+    </div>
+
     <div class="result-card">
       <div class="result-header">
         <div class="result-type-label">診断結果</div>
@@ -534,24 +620,42 @@
       <div class="share-title">📣 結果をシェアする</div>
       <div class="share-sub">あなたのタイプ、友達に当ててもらおう</div>
       <div class="share-buttons">
-        <button class="share-btn share-x" onclick="shareX()">𝕏 でポスト</button>
+        <button class="share-btn share-x"    onclick="shareX()">𝕏 でポスト</button>
         <button class="share-btn share-line" onclick="shareLine()">LINE で送る</button>
-        <button class="share-btn share-copy" onclick="copyResult()">🔗 リンクをコピー</button>
+        <button class="share-btn share-copy" onclick="copyResult()">🔗 テキストをコピー</button>
       </div>
+      <div class="copy-confirm" id="copy-confirm">✅ クリップボードにコピーしました！</div>
     </div>
 
     <button class="retry-btn" onclick="resetQuiz()">🔄 もう一度診断する</button>
+
+    <!-- ═══ FAQ SEO section ═══ -->
+    <section class="seo-faq">
+      <h2>よくある質問（FAQ）</h2>
+      <div class="faq-item">
+        <div class="faq-q">Q. 推し活タイプ診断とは何ですか？</div>
+        <div class="faq-a">8つの質問に答えることで、あなたの推し活スタイルを「エモ観察者」「ソーシャル沼人」「コレクター廃人」「雑食オタク」「熱量過多の一途」「深淵の沼主」の6タイプに診断する無料の心理テストです。結果はSNSでシェアできます。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Q. 推し活を長く続けるコツはありますか？</div>
+        <div class="faq-a">予算・体力・メンタルのバランスが重要です。月ごとの推し活予算をあらかじめ決め、睡眠と食事をきちんと取ること、推し以外の趣味や人間関係も大切にすることで、燃え尽きずに長く応援を続けられます。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Q. 推し活にはどのくらいお金がかかりますか？</div>
+        <div class="faq-a">グッズ・ライブ・遠征費を含めると月1万円以下の節度ある活動から月10万円以上のヘビーな活動まで様々です。生活費と貯蓄を確保したうえで、自分のペースで無理なく楽しむことが大切です。</div>
+      </div>
+    </section>
   </div>
 
   <div class="footer">© 2026 推し活タイプ診断 | All rights reserved.</div>
 </div>
 
-<div class="toast" id="toast">リンクをコピーしました！</div>
+<div class="toast" id="toast">コピーしました！</div>
 
 <script>
-// ─────────────────────────────────────────────
+// ═══════════════════════════════════════════
 //  DATA
-// ─────────────────────────────────────────────
+// ═══════════════════════════════════════════
 const questions = [
   {
     text: "推しに新しいグッズが発売された！あなたが最初にすること？",
@@ -567,7 +671,7 @@ const questions = [
     options: [
       { text: "前日から眠れない。当日は開場の3時間前に並ぶ。", score: 4 },
       { text: "テンション上がるけど、適度にリラックスして楽しむ。", score: 2 },
-      { text: "自分より推しを愛している人を見て、「すごいなぁ」と思う観察者。", score: 1 },
+      { text: "自分より推しを愛している人を見て「すごいなぁ」と思う観察者。", score: 1 },
       { text: "本番より物販の時間の方が真剣かもしれない。", score: 3 },
     ]
   },
@@ -629,76 +733,76 @@ const questions = [
 
 const results = [
   {
-    minScore: 8,
-    maxScore: 13,
+    minScore: 8, maxScore: 13,
     emoji: "🌸",
     name: "エモ観察者タイプ",
     sub: "推しは好き。でも距離感は大切に。",
+    shortComment: "冷静に見えてちゃんと沼ってる",
     desc: "あなたは「推し活の教科書」に載るべき、バランス型オタクの鑑。感情的になりすぎず、でも確かな愛を持って推しを見守ることができる。その落ち着きと客観性で、周りのオタク友達からは「一番まともなやつ」と思われているはず。コンテンツを深く楽しみながらも、自分の生活も大切にできる——それは実は、才能の一種です。",
     roast: "……ただ、たまに「そこまで好きじゃないの？」って誤解されてるよね？本人は全力なのに、テンションが低く見えちゃう不思議な人。ライブ会場で「この人大丈夫かな」って隣の人に心配されたことないですか。",
     traits: ["冷静系オタク", "観察者気質", "生活も推しも両立", "周りへのダメージ少なめ"]
   },
   {
-    minScore: 14,
-    maxScore: 19,
+    minScore: 14, maxScore: 19,
     emoji: "🎭",
     name: "ソーシャル沼人タイプ",
     sub: "推し活は孤独じゃない、一緒に語れる人がいれば最高。",
+    shortComment: "気づいたらグループの幹事になってる",
     desc: "あなたにとって推し活は「体験」だけでなく「共有」が本質。同担の友達とのDMで深夜2時まで語り合い、ライブ後の感想戦があってこそ完結する——そんな推し活スタイル。人の熱量に共鳴する力が高く、コミュニティの中心にいることが多い。あなたがいるだけで、周りのオタクのテンションが上がる「場の空気を作れる人」です。",
-    roast: "ただ、一人の時間が少なくて、気づいたら推し活グループの調整役になってませんか？「今日はどこに並ぶ？」「チケット取れた？」「誰が物販行く？」……幹事仕事、お疲れ様です。あとSNSに上げた感想が、自分より友達の話になってることも多い気がします。",
+    roast: "ただ、一人の時間が少なくて、気づいたら推し活グループの調整役になってませんか？「今日はどこに並ぶ？」「チケット取れた？」「誰が物販行く？」……幹事仕事、お疲れ様です。",
     traits: ["コミュニティ型オタク", "共感力高め", "場のムードメーカー", "グループ幹事になりがち"]
   },
   {
-    minScore: 20,
-    maxScore: 24,
+    minScore: 20, maxScore: 24,
     emoji: "📦",
     name: "コレクター廃人タイプ",
     sub: "部屋が聖地。物が増えることで愛が可視化される。",
+    shortComment: "引越し業者が一番恐れるタイプ",
     desc: "グッズを持つことは、推しを自分の空間に迎えることと同義——あなたにとってはそういうことです。コンプリートへの情熱は本物で、入手困難なグッズを手に入れた瞬間の達成感は、他の何にも替えがたい。飾り方にも美学があり、「推しの部屋」はある意味、芸術作品。管理能力と愛の組み合わせは、並のオタクには真似できません。",
-    roast: "しかし収納、大丈夫ですか？段ボールの山の中で生活してますよね？「捨てられないから」という理由で、3年前のフライヤーを6枚キープしてるの知ってます。引っ越しのたびに運送屋さんが絶望する量の荷物、一度棚卸しをすすめます。あと「もったいなくて開けられない」グッズが、あなたの部屋に何個ありますか。",
+    roast: "しかし収納、大丈夫ですか？段ボールの山の中で生活してますよね？「もったいなくて開けられない」グッズが、あなたの部屋に何個ありますか。引っ越しのたびに運送屋さんが絶望する量の荷物、一度棚卸しをすすめます。",
     traits: ["グッズ収集特化", "コンプ欲強め", "管理能力が高い（高すぎる）", "部屋が第二の聖地"]
   },
   {
-    minScore: 25,
-    maxScore: 27,
+    minScore: 25, maxScore: 27,
     emoji: "🎪",
     name: "雑食オタクタイプ",
     sub: "推しは多ければ多いほどいい。ジャンルは関係ない。",
+    shortComment: "最推しが何人いるか自分でも把握してない",
     desc: "あなたの推し活は「専念」より「多様性」。アイドル、2次元、スポーツ、配信者——ジャンルを超えて愛を分配できる、稀有な才能の持ち主です。好きなものの幅が広いぶん、どんな話題にも乗れる「最強コミュ力タイプ」でもある。推しが引退しても、ダメージリカバリーが早く、気づいたらもう次の沼の入口に立っているメンタルの強さは見習いたい。",
-    roast: "ただ、「一番は誰ですか？」って聞かれたとき、答えるのに3分かかりますよね。最推しが多すぎて、自分でも把握できていないのでは。課金も分散されるから財政的には安全かと思いきや、ジャンル数が多すぎてトータルで見たらかなりの出費になっている説があります。",
+    roast: "ただ、「一番は誰ですか？」って聞かれたとき、答えるのに3分かかりますよね。課金も分散されるから安全かと思いきや、ジャンル数が多すぎてトータルはかなりの出費になっている説があります。",
     traits: ["マルチジャンル対応", "切り替えが早い", "話題の引き出しが多い", "最推しが5人いる"]
   },
   {
-    minScore: 28,
-    maxScore: 30,
+    minScore: 28, maxScore: 30,
     emoji: "🔥",
     name: "熱量過多の一途タイプ",
     sub: "推しへの愛は、もはや信仰に近い。",
+    shortComment: "貯金通帳の代わりにライブのセトリを覚えてる",
     desc: "あなたの推し活は「好き」という言葉では足りない。それは生き方です。推しのために早起きし、推しのために遠征し、推しのために人生のスケジュールが組まれている。その情熱の純度は本物で、推しへのリスペクトと愛情の深さは誰にも負けない。推しも、きっとあなたのような存在に支えられていると感じているはず。",
-    roast: "ただ、最後に「推し以外のこと」について話したのはいつですか？友達との会話が100%推しの話になって久しいですよね。あと来月の貯金残高、ちゃんと確認しましたか？財布の中のレシートが全部ライブとグッズ代になっているの、もはや家計簿として機能してません。体は大丈夫ですか。睡眠取れてますか。",
+    roast: "ただ、最後に「推し以外のこと」について話したのはいつですか？来月の貯金残高、ちゃんと確認しましたか？財布のレシートが全部ライブとグッズ代、もはや家計簿として機能してません。睡眠取れてますか。",
     traits: ["一途系最上位", "推しが人生の軸", "情熱の純度MAX", "財布と睡眠が常に瀕死"]
   },
   {
-    minScore: 31,
-    maxScore: 32,
+    minScore: 31, maxScore: 32,
     emoji: "🌊",
     name: "深淵の沼主タイプ",
     sub: "もはや「オタク」じゃない。「崇拝者」だ。",
+    shortComment: "推しの利き手まで言えてしまう人類の宝",
     desc: "あなたは推し活の最終形態に到達しています。グッズはコンプ、ライブは全通、推しのことなら経歴・誕生日・利き手まで言えてしまう百科事典。その愛の純度と行動力は、ファンアートにされてもおかしくない伝説級。周囲から「あなたのこと、推しに伝えてあげたい」と言われるレベルの、愛の化身です。",
-    roast: "でも正直に聞きます。最後に推しのいない話題で盛り上がったのはいつですか？友達に「ちょっと推しの話やめて」と言われた回数、両手で足りてますよね？あと、推しが引退した後の人生プランは一応ありますか。「考えたくない」以外の答えでお願いします。",
+    roast: "でも正直に聞きます。最後に推しのいない話題で盛り上がったのはいつですか？友達に「ちょっと推しの話やめて」と言われた回数、両手で足りてますよね？推しが引退した後の人生プランは一応ありますか。",
     traits: ["推し活マスター", "全通・コンプ当たり前", "推しの生き字引", "でも睡眠と貯金は要相談"]
   }
 ];
 
-// ─────────────────────────────────────────────
+// ═══════════════════════════════════════════
 //  STATE
-// ─────────────────────────────────────────────
+// ═══════════════════════════════════════════
 let currentQ = 0;
 let answers = new Array(questions.length).fill(null);
 
-// ─────────────────────────────────────────────
+// ═══════════════════════════════════════════
 //  RENDER QUESTION
-// ─────────────────────────────────────────────
+// ═══════════════════════════════════════════
 function renderQuestion() {
   const q = questions[currentQ];
   const total = questions.length;
@@ -723,10 +827,9 @@ function renderQuestion() {
   document.getElementById('btn-prev').disabled = currentQ === 0;
   updateNextButton();
 
-  // Reset animation
   const card = document.getElementById('q-card');
   card.style.animation = 'none';
-  card.offsetHeight; // reflow
+  card.offsetHeight;
   card.style.animation = 'fadeUp .4s ease both';
 }
 
@@ -763,9 +866,9 @@ document.getElementById('btn-prev').addEventListener('click', () => {
   }
 });
 
-// ─────────────────────────────────────────────
+// ═══════════════════════════════════════════
 //  CALCULATE + SHOW RESULT
-// ─────────────────────────────────────────────
+// ═══════════════════════════════════════════
 function calcScore() {
   return answers.reduce((sum, ansIdx, qIdx) => {
     if (ansIdx === null) return sum;
@@ -797,81 +900,113 @@ function showResult() {
   resultSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-// ─────────────────────────────────────────────
+// ═══════════════════════════════════════════
 //  SHARE FUNCTIONS
-// ─────────────────────────────────────────────
+// ═══════════════════════════════════════════
+
+/**
+ * 分享文字：測驗名 + 結果名 + 一句話短評 + 網址
+ * window.location.href で動的にURLを取得
+ */
 function getShareText() {
   const score = calcScore();
   const r = getResult(score);
-  return `【推し活タイプ診断】\n私は「${r.name}」でした！\n${r.sub}\n\nあなたも診断してみて👇\n${location.href}`;
+  const url = window.location.href;
+  return `【推し活タイプ診断】\n私は「${r.name}」でした！\n✦ ${r.shortComment}\n\nあなたも診断してみて👇\n${url}`;
 }
 
+function getXShareText() {
+  const score = calcScore();
+  const r = getResult(score);
+  const url = window.location.href;
+  return `【推し活タイプ診断】私は「${r.name}」でした！\n✦ ${r.shortComment}\n${url}\n#推し活 #オタク診断 #心理テスト`;
+}
+
+/* X（Twitter）: deep link → fallback to web */
 function shareX() {
-  const text = encodeURIComponent(getShareText());
+  const text = encodeURIComponent(getXShareText());
   const webUrl = `https://twitter.com/intent/tweet?text=${text}`;
-  // Try X app deep link first; if it doesn't open within 1.2s, fall back to web
   const appUrl = `twitter://post?message=${text}`;
-  const start = Date.now();
+
   const iframe = document.createElement('iframe');
   iframe.style.display = 'none';
   iframe.src = appUrl;
   document.body.appendChild(iframe);
+
+  const start = Date.now();
   setTimeout(() => {
     document.body.removeChild(iframe);
-    // If page is still visible (app didn't open), go to web
     if (Date.now() - start < 1500) {
       window.open(webUrl, '_blank');
     }
   }, 1200);
 }
 
+/* LINE: deep link on mobile → fallback to web */
 function shareLine() {
   const text = encodeURIComponent(getShareText());
-  const url = encodeURIComponent(location.href);
-  // line:// deep link opens LINE app directly on mobile
-  // falls back to web LINE share if app not installed
+  const url = encodeURIComponent(window.location.href);
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
   if (isMobile) {
-    // LINE app deep link: line://msg/text/<encoded text>
     const lineAppUrl = `line://msg/text/${text}`;
     const lineWebUrl = `https://social-plugins.line.me/lineit/share?url=${url}&text=${text}`;
-    const start = Date.now();
     window.location.href = lineAppUrl;
     setTimeout(() => {
-      if (Date.now() - start < 1500) {
-        window.open(lineWebUrl, '_blank');
-      }
+      window.open(lineWebUrl, '_blank');
     }, 1200);
   } else {
-    window.open(`https://social-plugins.line.me/lineit/share?url=${url}&text=${text}`, '_blank');
+    window.open(
+      `https://social-plugins.line.me/lineit/share?url=${url}&text=${text}`,
+      '_blank'
+    );
   }
 }
 
+/* コピー: テキスト＋URLをクリップボードに */
 function copyResult() {
   const text = getShareText();
   navigator.clipboard.writeText(text).then(() => {
+    const confirm = document.getElementById('copy-confirm');
+    confirm.classList.add('show');
+    setTimeout(() => confirm.classList.remove('show'), 3000);
+
+    const toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2500);
+  }).catch(() => {
+    // fallback for older browsers
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
     const toast = document.getElementById('toast');
     toast.classList.add('show');
     setTimeout(() => toast.classList.remove('show'), 2500);
   });
 }
 
-// ─────────────────────────────────────────────
+// ═══════════════════════════════════════════
 //  RESET
-// ─────────────────────────────────────────────
+// ═══════════════════════════════════════════
 function resetQuiz() {
   currentQ = 0;
   answers = new Array(questions.length).fill(null);
   document.getElementById('quiz-section').style.display = 'block';
   document.getElementById('divider-mid').style.display = 'none';
   document.getElementById('result-section').classList.remove('visible');
+  document.getElementById('copy-confirm').classList.remove('show');
   renderQuestion();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// ─────────────────────────────────────────────
+// ═══════════════════════════════════════════
 //  INIT
-// ─────────────────────────────────────────────
+// ═══════════════════════════════════════════
 renderQuestion();
 </script>
 </body>
