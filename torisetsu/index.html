@@ -786,7 +786,7 @@ body {
 
 </div>
 
-<div class="site-footer">© 2025 取扱説明書メーカー ｜ 診断結果は娯楽目的です</div>
+<div class="site-footer">© 2026 取扱説明書メーカー ｜ 診断結果は娯楽目的です</div>
 
 <div class="toast" id="toast"></div>
 
@@ -1110,10 +1110,7 @@ function shareToX() {
   window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text), '_blank');
 }
 
-function shareToLine() {
-  var text = getShareText();
-  window.open('https://social-plugins.line.me/lineit/share?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(text), '_blank');
-}
+function shareToLine(){var t=getShareText();window.location.href='line://msg/text/'+encodeURIComponent(t);setTimeout(function(){window.open('https://line.me/R/msg/text/'+encodeURIComponent(t),'_blank')},500);}
 
 function copyResult() {
   var text = getShareText() + '\n' + window.location.href;
@@ -1136,6 +1133,7 @@ function showToast(msg) {
   t.classList.add('show');
   setTimeout(function() { t.classList.remove('show'); }, 2100);
 }
+
 </script>
 </body>
 </html>
