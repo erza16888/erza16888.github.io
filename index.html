@@ -441,6 +441,15 @@
     .share-x    { background: #000; color: #fff; border: 1px solid #333; }
     .share-line { background: #06c755; color: #fff; }
     .share-copy { background: var(--surface); color: var(--accent); border: 1px solid var(--accent); }
+    .share-native {
+      display: block;
+      width: 100%;
+      margin-bottom: 14px;
+      padding: 14px;
+      font-size: 15px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff;
+    }
 
     .copy-confirm {
       margin-top: 14px;
@@ -619,6 +628,7 @@
     <div class="share-section">
       <div class="share-title">📣 結果をシェアする</div>
       <div class="share-sub">あなたのタイプ、友達に当ててもらおう</div>
+      <button class="share-btn share-native" id="native-share-btn" onclick="nativeShare()">📲 シェアする（アプリを選択）</button>
       <div class="share-buttons">
         <button class="share-btn share-x"    onclick="shareX()">𝕏 でポスト</button>
         <button class="share-btn share-line" onclick="shareLine()">LINE で送る</button>
@@ -915,31 +925,68 @@ function getShareText() {
   return `【推し活タイプ診断】\n私は「${r.name}」でした！\n✦ ${r.shortComment}\n\nあなたも診断してみて👇\n${url}`;
 }
 
-function getXShareText() {
+/* X用：本文テキスト（URLは含めない。URLは別パラメータで渡すと
+   X側がOGカード=サムネイルを自動展開してくれる） */
+function getXShareBody() {
   const score = calcScore();
   const r = getResult(score);
-  const url = window.location.href;
-  return `【推し活タイプ診断】私は「${r.name}」でした！\n✦ ${r.shortComment}\n${url}\n#推し活 #オタク診断 #心理テスト`;
+  return `【推し活タイプ診断】私は「${r.name}」でした！\n✦ ${r.shortComment}`;
 }
 
-/* X（Twitter）: deep link → fallback to web */
+/* 端末ネイティブの共有シート（X・LINE・Instagram などをユーザーが選択）
+   モバイルで最も確実にアプリを開ける方法。非対応端末ではボタンを隠す。 */
+function nativeShare() {
+  const score = calcScore();
+  const r = getResult(score);
+  if (navigator.share) {
+    navigator.share({
+      title: '推し活タイプ診断',
+      text: `私は「${r.name}」でした！\n✦ ${r.shortComment}\nあなたも診断してみて👇`,
+      url: window.location.href
+    }).catch(() => { /* ユーザーがキャンセルした場合は何もしない */ });
+  } else {
+    // 非対応ならコピーにフォールバック
+    copyResult();
+  }
+}
+
+/* X（Twitter）でシェア
+   ・text=本文＋ハッシュタグ、url=診断ページURL を分けて渡すことで
+     Xがサムネイル（OGカード）を自動展開する
+   ・モバイルではまずアプリ起動を試み、開かなければWebにフォールバック */
 function shareX() {
-  const text = encodeURIComponent(getXShareText());
-  const webUrl = `https://twitter.com/intent/tweet?text=${text}`;
-  const appUrl = `twitter://post?message=${text}`;
+  const body = encodeURIComponent(getXShareBody());
+  const hashtags = '推し活,オタク診断,心理テスト';
+  const pageUrl = encodeURIComponent(window.location.href);
+  const intent = `text=${body}&url=${pageUrl}&hashtags=${encodeURIComponent(hashtags)}`;
 
-  const iframe = document.createElement('iframe');
-  iframe.style.display = 'none';
-  iframe.src = appUrl;
-  document.body.appendChild(iframe);
+  const webUrl = `https://x.com/intent/tweet?${intent}`;
+  const appUrl = `twitter://post?message=${body}%0A${pageUrl}`;
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-  const start = Date.now();
-  setTimeout(() => {
-    document.body.removeChild(iframe);
-    if (Date.now() - start < 1500) {
-      window.open(webUrl, '_blank');
-    }
-  }, 1200);
+  if (isMobile) {
+    // アプリ起動を試行
+    const now = Date.now();
+    const timer = setTimeout(() => {
+      // 1.2秒経ってもページが生きている＝アプリ未起動 → Webへ
+      if (Date.now() - now < 1600) {
+        window.open(webUrl, '_blank');
+      }
+    }, 1200);
+
+    // ページが隠れたら（＝アプリが開いたら）フォールバックをキャンセル
+    const onHide = () => {
+      if (document.hidden) {
+        clearTimeout(timer);
+        document.removeEventListener('visibilitychange', onHide);
+      }
+    };
+    document.addEventListener('visibilitychange', onHide);
+
+    window.location.href = appUrl;
+  } else {
+    window.open(webUrl, '_blank');
+  }
 }
 
 /* LINE: deep link on mobile → fallback to web */
@@ -1007,6 +1054,11 @@ function resetQuiz() {
 // ═══════════════════════════════════════════
 //  INIT
 // ═══════════════════════════════════════════
+// Web Share API 非対応端末（多くのPCブラウザ）ではネイティブ共有ボタンを隠す
+if (!navigator.share) {
+  const nb = document.getElementById('native-share-btn');
+  if (nb) nb.style.display = 'none';
+}
 renderQuestion();
 </script>
 </body>
