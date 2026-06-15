@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【隠れメンヘラ診断】あなたの「ポックリ病」度テスト｜無料心理テスト</title>
+<meta name="description" content="あなたは自分では気づいていない隠れメンヘラかも？全8問の心理テストで「ポックリ病」度を診断。結果をシェアして友達と比べよう！無料・即時結果。">
+<meta name="keywords" content="隠れメンヘラ診断,メンヘラテスト,心理テスト,ポックリ病,性格診断,無料診断,メンヘラ度チェック,心理診断テスト,メンヘラ 特徴">
+<meta property="og:title" content="【隠れメンヘラ診断】あなたの「ポックリ病」度テスト">
+<meta property="og:description" content="全8問の心理テストで隠れメンヘラ度を診断。あなたは何タイプ？">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow">
+<style>
+  :root {
+    --pink-deep: #C9528A;
+    --pink-mid: #E87DB0;
+    --pink-light: #FADADF;
+    --pink-pale: #FFF0F5;
+    --purple-deep: #7B4FA6;
+    --purple-light: #EDE3F8;
+    --text-dark: #2D1F2E;
+    --text-mid: #5A4060;
+    --text-muted: #9A7FA8;
+    --white: #FFFFFF;
+    --shadow: rgba(180,100,150,0.13);
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-pill: 999px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+    background: linear-gradient(160deg, #FFF0F5 0%, #EDE3F8 100%);
+    min-height: 100vh;
+    color: var(--text-dark);
+    line-height: 1.7;
+  }
+
+  .container {
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 0 16px 60px;
+  }
+
+  /* ─── HEADER ─── */
+  .site-header {
+    text-align: center;
+    padding: 40px 0 24px;
+  }
+
+  .badge {
+    display: inline-block;
+    background: var(--pink-deep);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 4px 14px;
+    border-radius: var(--radius-pill);
+    margin-bottom: 14px;
+  }
+
+  .main-title {
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--text-dark);
+    line-height: 1.35;
+    margin-bottom: 8px;
+  }
+
+  .main-title span {
+    color: var(--pink-deep);
+  }
+
+  .subtitle {
+    font-size: 14px;
+    color: var(--text-mid);
+    margin-bottom: 20px;
+  }
+
+  .deco-bar {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 28px;
+  }
+
+  .deco-bar span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--pink-mid);
+    display: inline-block;
+  }
+
+  .deco-bar span:nth-child(2) { background: var(--purple-deep); transform: scale(0.7); }
+  .deco-bar span:nth-child(3) { background: var(--pink-light); }
+
+  /* ─── INTRO CARD ─── */
+  .intro-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 24px 22px;
+    box-shadow: 0 4px 24px var(--shadow);
+    margin-bottom: 24px;
+    border: 1px solid rgba(201,82,138,0.1);
+  }
+
+  .intro-card p {
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.85;
+    margin-bottom: 10px;
+  }
+
+  .intro-card p:last-child { margin-bottom: 0; }
+
+  .intro-card strong {
+    color: var(--pink-deep);
+    font-weight: 700;
+  }
+
+  /* ─── PROGRESS ─── */
+  .progress-wrap {
+    margin-bottom: 18px;
+  }
+
+  .progress-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .progress-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  .progress-count {
+    font-size: 13px;
+    color: var(--pink-deep);
+    font-weight: 700;
+  }
+
+  .progress-bar-bg {
+    background: var(--pink-light);
+    border-radius: var(--radius-pill);
+    height: 8px;
+    overflow: hidden;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--pink-deep), var(--purple-deep));
+    border-radius: var(--radius-pill);
+    transition: width 0.4s cubic-bezier(.4,0,.2,1);
+  }
+
+  /* ─── QUESTION CARD ─── */
+  .question-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 26px 22px 22px;
+    box-shadow: 0 4px 24px var(--shadow);
+    margin-bottom: 16px;
+    border: 1px solid rgba(201,82,138,0.1);
+    animation: slideIn 0.3s ease;
+  }
+
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .q-number {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--pink-deep);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .q-text {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.55;
+    margin-bottom: 22px;
+  }
+
+  /* ─── OPTIONS ─── */
+  .options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .option-btn {
+    width: 100%;
+    background: var(--pink-pale);
+    border: 1.5px solid var(--pink-light);
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    line-height: 1.5;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .option-btn::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 100%;
+    background: var(--pink-mid);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .option-btn:hover {
+    border-color: var(--pink-mid);
+    background: #FFF0F8;
+    transform: translateX(3px);
+  }
+
+  .option-btn:hover::before { opacity: 1; }
+
+  .option-btn:active { transform: scale(0.98) translateX(3px); }
+
+  .option-btn.selected {
+    background: var(--pink-light);
+    border-color: var(--pink-deep);
+    color: var(--pink-deep);
+    font-weight: 600;
+  }
+
+  .option-btn.selected::before { opacity: 1; background: var(--pink-deep); }
+
+  .option-letter {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--pink-mid);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 22px;
+    margin-right: 10px;
+    flex-shrink: 0;
+    vertical-align: middle;
+  }
+
+  .option-btn.selected .option-letter { background: var(--pink-deep); }
+
+  /* ─── CTA BUTTON ─── */
+  .cta-btn {
+    display: block;
+    width: 100%;
+    background: linear-gradient(135deg, var(--pink-deep) 0%, var(--purple-deep) 100%);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-pill);
+    padding: 18px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 6px 20px rgba(201,82,138,0.35);
+    letter-spacing: 0.03em;
+    margin-top: 8px;
+  }
+
+  .cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(201,82,138,0.45);
+  }
+
+  .cta-btn:active { transform: translateY(0) scale(0.98); }
+
+  .cta-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* ─── RESULT ─── */
+  .result-section {
+    display: none;
+    animation: slideIn 0.5s ease;
+  }
+
+  .result-section.visible { display: block; }
+
+  .result-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 8px 32px var(--shadow);
+    margin-bottom: 20px;
+    border: 1px solid rgba(201,82,138,0.12);
+  }
+
+  .result-header {
+    background: linear-gradient(135deg, var(--pink-deep) 0%, var(--purple-deep) 100%);
+    padding: 28px 24px 24px;
+    text-align: center;
+    color: var(--white);
+  }
+
+  .result-emoji {
+    font-size: 52px;
+    display: block;
+    margin-bottom: 12px;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.15));
+  }
+
+  .result-type-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    opacity: 0.8;
+    margin-bottom: 6px;
+  }
+
+  .result-type-name {
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  .result-score-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.25);
+    border-radius: var(--radius-pill);
+    padding: 4px 16px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .result-body {
+    padding: 24px 22px;
+  }
+
+  .result-desc {
+    font-size: 15px;
+    color: var(--text-mid);
+    line-height: 1.9;
+    margin-bottom: 20px;
+    white-space: pre-line;
+  }
+
+  .result-highlight {
+    background: var(--pink-pale);
+    border-left: 4px solid var(--pink-deep);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: var(--text-dark);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  .result-meter {
+    margin-bottom: 24px;
+  }
+
+  .result-meter-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+
+  .result-meter-bar {
+    background: var(--pink-light);
+    border-radius: var(--radius-pill);
+    height: 12px;
+    overflow: hidden;
+  }
+
+  .result-meter-fill {
+    height: 100%;
+    border-radius: var(--radius-pill);
+    background: linear-gradient(90deg, var(--pink-deep), var(--purple-deep));
+    transition: width 1s cubic-bezier(.4,0,.2,1) 0.3s;
+  }
+
+  /* ─── SHARE ─── */
+  .share-section {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 22px;
+    box-shadow: 0 4px 20px var(--shadow);
+    border: 1px solid rgba(201,82,138,0.1);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .share-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 14px;
+  }
+
+  .share-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .share-btn {
+    flex: 1;
+    padding: 13px 10px;
+    border-radius: var(--radius-md);
+    border: none;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    letter-spacing: 0.02em;
+  }
+
+  .share-btn:hover { transform: translateY(-2px); }
+  .share-btn:active { transform: scale(0.97); }
+
+  .share-btn-x {
+    background: #0F1419;
+    color: #FFF;
+  }
+
+  .share-btn-line {
+    background: #06C755;
+    color: #FFF;
+  }
+
+  .share-btn-copy {
+    background: var(--purple-light);
+    color: var(--purple-deep);
+    border: 1.5px solid rgba(123,79,166,0.25);
+  }
+
+  /* ─── RETRY ─── */
+  .retry-btn {
+    display: block;
+    width: 100%;
+    background: transparent;
+    color: var(--text-mid);
+    border: 1.5px solid rgba(90,64,96,0.2);
+    border-radius: var(--radius-pill);
+    padding: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 40px;
+  }
+
+  .retry-btn:hover {
+    border-color: var(--pink-mid);
+    color: var(--pink-deep);
+    background: var(--pink-pale);
+  }
+
+  /* ─── HIDDEN ─── */
+  .hidden { display: none !important; }
+
+  /* ─── FOOTER ─── */
+  .site-footer {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-muted);
+    padding-bottom: 20px;
+  }
+
+  /* ─── TOAST ─── */
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(80px);
+    background: var(--text-dark);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: var(--radius-pill);
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    z-index: 999;
+    white-space: nowrap;
+  }
+
+  .toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  @media (max-width: 400px) {
+    .main-title { font-size: 22px; }
+    .q-text { font-size: 16px; }
+    .share-buttons { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header class="site-header">
+    <div class="badge">無料 心理テスト</div>
+    <h1 class="main-title">
+      隠れメンヘラ診断<br>
+      <span>「ポックリ病」</span>度テスト
+    </h1>
+    <p class="subtitle">全8問・所要時間：約2分</p>
+    <div class="deco-bar">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <!-- QUIZ SECTION -->
+  <div id="quiz-section">
+
+    <div class="intro-card" id="intro-card">
+      <p>「私はメンヘラじゃない」と思っているあなたへ。<br>
+      本当にそう？ <strong>「ポックリ病」</strong>とは、<strong>突然ぷつんと消えたくなる衝動</strong>や、気づかぬうちに相手を試す行動のこと。</p>
+      <p>8つの場面であなたの<strong>隠れた本性</strong>を暴きます。正直に答えてね🩷</p>
+    </div>
+
+    <div class="progress-wrap hidden" id="progress-wrap">
+      <div class="progress-meta">
+        <span class="progress-label">QUESTION</span>
+        <span class="progress-count" id="progress-count">1 / 8</span>
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progress-bar" style="width:0%"></div>
+      </div>
+    </div>
+
+    <div class="question-card hidden" id="question-card">
+      <div class="q-number" id="q-number">Q1</div>
+      <div class="q-text" id="q-text"></div>
+      <div class="options-list" id="options-list"></div>
+    </div>
+
+    <button class="cta-btn" id="main-btn" onclick="handleMainBtn()">
+      診断スタート ✦
+    </button>
+
+  </div>
+
+  <!-- RESULT SECTION -->
+  <div class="result-section" id="result-section">
+
+    <div class="result-card" id="result-card">
+      <div class="result-header">
+        <span class="result-emoji" id="res-emoji">💊</span>
+        <div class="result-type-label">あなたのタイプ</div>
+        <div class="result-type-name" id="res-name">――</div>
+        <div class="result-score-badge" id="res-score-badge">スコア　― 点</div>
+      </div>
+      <div class="result-body">
+        <p class="result-desc" id="res-desc"></p>
+        <div class="result-highlight" id="res-highlight"></div>
+        <div class="result-meter">
+          <div class="result-meter-label">
+            <span>ポックリ病レベル</span>
+            <span id="res-meter-pct">0%</span>
+          </div>
+          <div class="result-meter-bar">
+            <div class="result-meter-fill" id="res-meter-fill" style="width:0%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="share-section">
+      <div class="share-title">結果をシェアして友達を試そう🩷</div>
+      <div class="share-buttons">
+        <button class="share-btn share-btn-x" onclick="shareToX()">X (Twitter)</button>
+        <button class="share-btn share-btn-line" onclick="shareToLine()">LINE</button>
+        <button class="share-btn share-btn-copy" onclick="copyResult()">コピー</button>
+      </div>
+    </div>
+
+    <button class="retry-btn" onclick="resetQuiz()">もう一度診断する ↺</button>
+
+  </div>
+
+</div>
+
+<div class="site-footer">
+  © 2025 隠れメンヘラ診断 ｜ 結果はあくまで娯楽目的です
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const questions = [
+  {
+    text: "LINEの既読がついたのに30分以上返信が来ない。あなたは？",
+    options: [
+      { text: "気にしない。向こうも忙しいよね", score: 0 },
+      { text: "まあ待つけど、内心ちょっとソワソワしてる", score: 1 },
+      { text: "スタンプを送って「気づいた？」とアピールする", score: 2 },
+      { text: "既読無視か確認するため、わざと別の話題で連絡してみる", score: 3 },
+    ]
+  },
+  {
+    text: "喧嘩した相手に「もういい、消えます」と送りたくなったことある？",
+    options: [
+      { text: "そんなことは考えたことすらない", score: 0 },
+      { text: "頭をよぎったことはあるが送ったことはない", score: 1 },
+      { text: "3回以上送ったことがある", score: 2 },
+      { text: "送って反応を確認するのがもはや作戦", score: 3 },
+    ]
+  },
+  {
+    text: "SNSで元彼（元彼女）の近況をチェックする頻度は？",
+    options: [
+      { text: "もうブロックしたのでそもそも見られない", score: 0 },
+      { text: "たまに思い出したときだけ", score: 1 },
+      { text: "週に数回、習慣になってる", score: 2 },
+      { text: "毎日。むしろルーティン化してる", score: 3 },
+    ]
+  },
+  {
+    text: "友達グループのLINEで自分だけスルーされた。次の行動は？",
+    options: [
+      { text: "大した話じゃなかったからスルーされても普通に次の話題に乗る", score: 0 },
+      { text: "内心傷つくけど、気にしてないフリをする", score: 1 },
+      { text: "しばらく既読だけつけてわざと返信しない", score: 2 },
+      { text: "グループを抜けることを検討し始める", score: 3 },
+    ]
+  },
+  {
+    text: "相手が自分の地雷ワードを言ったとき、どうする？",
+    options: [
+      { text: "「それ傷つくからやめて」とはっきり伝える", score: 0 },
+      { text: "傷ついてもニコニコしながら流す", score: 1 },
+      { text: "態度で察してほしいので無言になる", score: 2 },
+      { text: "後から「あのとき実は…」と溜め込んだ感情を一気に放出", score: 3 },
+    ]
+  },
+  {
+    text: "好きな人が他の異性と楽しそうに話しているのを目撃。気持ちは？",
+    options: [
+      { text: "あの人もリア充だな、以上。", score: 0 },
+      { text: "少しモヤっとするけどすぐ忘れる", score: 1 },
+      { text: "「私のこと好きなんじゃないの？」と後でネチネチ確認する", score: 2 },
+      { text: "その場でテンションが0になり、翌日まで引きずる", score: 3 },
+    ]
+  },
+  {
+    text: "深夜2時に突然「誰もわかってくれない」という気持ちに襲われた経験は？",
+    options: [
+      { text: "ない。深夜は普通に寝てる", score: 0 },
+      { text: "たまにあるが、朝になると忘れる", score: 1 },
+      { text: "月に数回、定期的にくる", score: 2 },
+      { text: "もはや恒例行事。夜の方が本来の自分", score: 3 },
+    ]
+  },
+  {
+    text: "「あなたって本当に繊細だよね」と言われたら？",
+    options: [
+      { text: "「そうかな？」と思いながらもあっさり流す", score: 0 },
+      { text: "少し複雑な気持ちになるが素直に受け取る", score: 1 },
+      { text: "心の中で「これは褒め言葉？それとも……」と30分考える", score: 2 },
+      { text: "「繊細じゃなくて、あなたが鈍感なんだけど？」と思う", score: 3 },
+    ]
+  },
+];
+
+const results = [
+  {
+    min: 0, max: 5,
+    emoji: "🌸",
+    name: "ほぼ健全系｜精神の女王",
+    desc: "メンタルの安定感、まじで天才。感情の波がほとんどなく、自分軸がしっかりしているため、相手に依存したり振り回されたりすることが少ないタイプです。友達からは「一緒にいると落ち着く」と言われることが多く、無意識にグループの精神的支柱になっていたりします。\n\n……ただ、正直すぎて「空気読んでる？」と言われることもそこそこあるのでは？感情が薄いわけじゃないけど、人の気持ちの細かいニュアンスを「そんなことで？」と流してしまいがちなのが玉に瑕。",
+    highlight: "「感情を乗りこなしてるのか、感じてないのかは、自分にしかわからない。」",
+    pct: 10,
+  },
+  {
+    min: 6, max: 11,
+    emoji: "🌙",
+    name: "隠れメンヘラ予備軍｜月光型センシティブ",
+    desc: "表面上はクールで理性的なのに、内側では小さな感情の嵐が吹き荒れているタイプ。誰にも心配かけたくないから、傷ついても笑顔で乗り切るのが得意。その気遣い力と察する能力は本当に素晴らしく、友人関係でも評価が高いはず。\n\nでも、気づいてる？自分が「大丈夫」と言うたびに、少しずつ感情が積み重なってること。ある日突然ポキッといくやつ。まさにポックリ病の入口にいる。",
+    highlight: "「大丈夫、が口癖の人ほど、大丈夫じゃないことを知ってる。」",
+    pct: 38,
+  },
+  {
+    min: 12, max: 17,
+    emoji: "💊",
+    name: "中級メンヘラ｜感情過多ロマンチスト",
+    desc: "感情豊かで共感力が高く、人の痛みを自分のことのように感じられる、繊細で優しいタイプ。あなたといると「わかってもらえた」と感じる人が多く、人を惹きつける不思議な魅力があります。その深さは本物の才能です。\n\nただ……自分の感情を「試す道具」として使ってしまうクセがそろそろ自覚できてませんか？「消えます」「もういい」「察してよ」。これ、言葉じゃなくて爆弾なんですが、自覚ある？",
+    highlight: "「愛されたい気持ちが強いほど、相手を試したくなる。それがポックリ病の正体。」",
+    pct: 65,
+  },
+  {
+    min: 18, max: 24,
+    emoji: "🌊",
+    name: "上級隠れメンヘラ｜深海感情モンスター",
+    desc: "おめでとうございます（？）。あなたは感情の深海に生きる、類まれなる繊細さの持ち主です。その情緒の豊かさは、詩人や芸術家に通じるものがあり、表現力と共感力は本物。きっと人生の色が、他の人より鮮やかに見えているはず。\n\nしかし現実問題として、あなたは定期的に周囲に「ポックリ」するリスクが高い。突然SNSを消す、連絡を絶つ、感情のシャッターを下ろす。その背後に「構ってほしい」があることに、まだ気づいてないふりをしてる？",
+    highlight: "「嵐のような感情は、愛し方を知らなかったころの自分が作ったもの。」",
+    pct: 92,
+  },
+];
+
+let currentQ = 0;
+let totalScore = 0;
+let selectedScore = null;
+let quizStarted = false;
+let currentResult = null;
+
+function handleMainBtn() {
+  if (!quizStarted) {
+    startQuiz();
+    return;
+  }
+  if (selectedScore === null) {
+    showToast("選択肢を選んでください🩷");
+    return;
+  }
+  totalScore += selectedScore;
+  selectedScore = null;
+  currentQ++;
+  if (currentQ < questions.length) {
+    renderQuestion();
+  } else {
+    showResult();
+  }
+}
+
+function startQuiz() {
+  quizStarted = true;
+  document.getElementById('intro-card').classList.add('hidden');
+  document.getElementById('progress-wrap').classList.remove('hidden');
+  document.getElementById('question-card').classList.remove('hidden');
+  document.getElementById('main-btn').textContent = "次へ →";
+  document.getElementById('main-btn').disabled = true;
+  renderQuestion();
+}
+
+function renderQuestion() {
+  const q = questions[currentQ];
+  const n = currentQ + 1;
+  const total = questions.length;
+
+  document.getElementById('q-number').textContent = `Q${n}`;
+  document.getElementById('q-text').textContent = q.text;
+  document.getElementById('progress-count').textContent = `${n} / ${total}`;
+  document.getElementById('progress-bar').style.width = `${((n-1)/total)*100}%`;
+
+  if (n === total) {
+    document.getElementById('main-btn').textContent = "診断結果を見る ✦";
+  } else {
+    document.getElementById('main-btn').textContent = "次へ →";
+  }
+  document.getElementById('main-btn').disabled = true;
+
+  const letters = ['A', 'B', 'C', 'D'];
+  const list = document.getElementById('options-list');
+  list.innerHTML = '';
+  q.options.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'option-btn';
+    btn.innerHTML = `<span class="option-letter">${letters[i]}</span>${opt.text}`;
+    btn.onclick = () => selectOption(btn, opt.score);
+    list.appendChild(btn);
+  });
+
+  document.getElementById('question-card').style.animation = 'none';
+  void document.getElementById('question-card').offsetWidth;
+  document.getElementById('question-card').style.animation = 'slideIn 0.3s ease';
+}
+
+function selectOption(btn, score) {
+  document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  selectedScore = score;
+  document.getElementById('main-btn').disabled = false;
+}
+
+function showResult() {
+  document.getElementById('progress-bar').style.width = '100%';
+  setTimeout(() => {
+    document.getElementById('quiz-section').style.display = 'none';
+    const rs = document.getElementById('result-section');
+    rs.classList.add('visible');
+
+    const r = results.find(res => totalScore >= res.min && totalScore <= res.max) || results[results.length - 1];
+    currentResult = r;
+
+    document.getElementById('res-emoji').textContent = r.emoji;
+    document.getElementById('res-name').textContent = r.name;
+    document.getElementById('res-score-badge').textContent = `スコア　${totalScore} 点`;
+    document.getElementById('res-desc').textContent = r.desc;
+    document.getElementById('res-highlight').textContent = r.highlight;
+    document.getElementById('res-meter-pct').textContent = `${r.pct}%`;
+
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        document.getElementById('res-meter-fill').style.width = `${r.pct}%`;
+      }, 100);
+    });
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, 300);
+}
+
+function resetQuiz() {
+  currentQ = 0;
+  totalScore = 0;
+  selectedScore = null;
+  quizStarted = false;
+  currentResult = null;
+
+  document.getElementById('quiz-section').style.display = 'block';
+  document.getElementById('result-section').classList.remove('visible');
+  document.getElementById('intro-card').classList.remove('hidden');
+  document.getElementById('progress-wrap').classList.add('hidden');
+  document.getElementById('question-card').classList.add('hidden');
+  document.getElementById('main-btn').textContent = "診断スタート ✦";
+  document.getElementById('main-btn').disabled = false;
+  document.getElementById('progress-bar').style.width = '0%';
+  document.getElementById('res-meter-fill').style.width = '0%';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function getShareText() {
+  if (!currentResult) return '';
+  return `【隠れメンヘラ診断】\n私のタイプは「${currentResult.name}」でした！\nポックリ病レベル：${currentResult.pct}%\n\n${currentResult.highlight}\n\nあなたも診断してみて👇`;
+}
+
+function shareToX() {
+  const text = getShareText();
+  const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
+  window.open(url, '_blank');
+}
+
+function shareToLine() {
+  const text = getShareText();
+  const url = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(text)}`;
+  window.open(url, '_blank');
+}
+
+function copyResult() {
+  const text = getShareText() + `\n${window.location.href}`;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(() => showToast("コピーしました！"));
+  } else {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    showToast("コピーしました！");
+  }
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2200);
+}
+</script>
+</body>
+</html>
