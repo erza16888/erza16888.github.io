@@ -851,7 +851,7 @@ function resetQuiz() {
 
 function getShareText() {
   if (!currentResult) return '';
-  return `【隠れメンヘラ診断】\n私のタイプは「${currentResult.name}」でした！\nポックリ病レベル：${currentResult.pct}%\n\n${currentResult.highlight}\n\nあなたも診断してみて👇`;
+  return `【隠れメンヘラ診断】\n私のタイプは「${currentResult.name}」でした！\nポックリ病レベル：${currentResult.pct}%\n\n${currentResult.highlight}\n\nあなたも診断してみて👇\n${window.location.href}`;
 }
 
 function shareToX() {
@@ -863,7 +863,7 @@ function shareToX() {
 function shareToLine(){var t=getShareText();window.location.href='line://msg/text/'+encodeURIComponent(t);setTimeout(function(){window.open('https://line.me/R/msg/text/'+encodeURIComponent(t),'_blank')},500);}
 
 function copyResult() {
-  const text = getShareText() + `\n${window.location.href}`;
+  const text = getShareText();
   if (navigator.clipboard) {
     navigator.clipboard.writeText(text).then(() => showToast("コピーしました！"));
   } else {
