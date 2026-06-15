@@ -441,15 +441,6 @@
     .share-x    { background: #000; color: #fff; border: 1px solid #333; }
     .share-line { background: #06c755; color: #fff; }
     .share-copy { background: var(--surface); color: var(--accent); border: 1px solid var(--accent); }
-    .share-native {
-      display: block;
-      width: 100%;
-      margin-bottom: 14px;
-      padding: 14px;
-      font-size: 15px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #fff;
-    }
 
     .copy-confirm {
       margin-top: 14px;
@@ -628,7 +619,6 @@
     <div class="share-section">
       <div class="share-title">📣 結果をシェアする</div>
       <div class="share-sub">あなたのタイプ、友達に当ててもらおう</div>
-      <button class="share-btn share-native" id="native-share-btn" onclick="nativeShare()">📲 シェアする（アプリを選択）</button>
       <div class="share-buttons">
         <button class="share-btn share-x"    onclick="shareX()">𝕏 でポスト</button>
         <button class="share-btn share-line" onclick="shareLine()">LINE で送る</button>
@@ -925,23 +915,6 @@ function getShareText() {
   return `【推し活タイプ診断】\n私は「${r.name}」でした！\n✦ ${r.shortComment}\n\nあなたも診断してみて👇\n${url}`;
 }
 
-/* 端末ネイティブの共有シート（X・LINE・Instagram などをユーザーが選択）
-   モバイルで最も確実にアプリを開ける方法。非対応端末ではボタンを隠す。 */
-function nativeShare() {
-  const score = calcScore();
-  const r = getResult(score);
-  if (navigator.share) {
-    navigator.share({
-      title: '推し活タイプ診断',
-      text: `私は「${r.name}」でした！\n✦ ${r.shortComment}\nあなたも診断してみて👇`,
-      url: window.location.href
-    }).catch(() => { /* ユーザーがキャンセルした場合は何もしない */ });
-  } else {
-    // 非対応ならコピーにフォールバック
-    copyResult();
-  }
-}
-
 /* X（Twitter）でシェア
    モバイルではまず twitter:// スキームでアプリ直起動を試みる。
    ページがバックグラウンドに切り替われば成功、切り替わらなければ
@@ -950,10 +923,12 @@ function shareX() {
   const r = getResult(calcScore());
   const body = `【推し活タイプ診断】私は「${r.name}」でした！\n✦ ${r.shortComment}`;
   const pageUrl = window.location.href;
-  const hashtags = '推し活,オタク診断,心理テスト';
+  const tagLine = '#推し活 #オタク診断 #心理テスト';
 
-  const webUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(body)}&url=${encodeURIComponent(pageUrl)}&hashtags=${encodeURIComponent(hashtags)}`;
-  const appUrl = `twitter://post?message=${encodeURIComponent(body + '\n' + pageUrl)}`;
+  // Web版：text本文 + url + hashtags（XがOGカードを展開）
+  const webUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(body)}&url=${encodeURIComponent(pageUrl)}&hashtags=${encodeURIComponent('推し活,オタク診断,心理テスト')}`;
+  // アプリ版：messageにハッシュタグを本文として直接含める（hashtagsパラメータ非対応のため）
+  const appUrl = `twitter://post?message=${encodeURIComponent(body + '\n' + tagLine + '\n' + pageUrl)}`;
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
   if (!isMobile) {
@@ -1044,11 +1019,6 @@ function resetQuiz() {
 // ═══════════════════════════════════════════
 //  INIT
 // ═══════════════════════════════════════════
-// Web Share API 非対応端末（多くのPCブラウザ）ではネイティブ共有ボタンを隠す
-if (!navigator.share) {
-  const nb = document.getElementById('native-share-btn');
-  if (nb) nb.style.display = 'none';
-}
 renderQuestion();
 </script>
 </body>
