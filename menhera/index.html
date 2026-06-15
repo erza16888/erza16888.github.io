@@ -589,7 +589,6 @@
     </div>
   </header>
 
-  <!-- QUIZ SECTION -->
   <div id="quiz-section">
 
     <div class="intro-card" id="intro-card">
@@ -621,7 +620,6 @@
 
   </div>
 
-  <!-- RESULT SECTION -->
   <div class="result-section" id="result-section">
     <div class="ad-slot" id="ad-result">【スポンサーリンク / 広告】</div>
 
@@ -630,7 +628,7 @@
         <span class="result-emoji" id="res-emoji">💊</span>
         <div class="result-type-label">あなたのタイプ</div>
         <div class="result-type-name" id="res-name">――</div>
-        <div class="result-score-badge" id="res-score-badge">スコア　― 点</div>
+        <div class="result-score-badge" id="res-score-badge">スコア ― 点</div>
       </div>
       <div class="result-body">
         <p class="result-desc" id="res-desc"></p>
@@ -751,7 +749,7 @@ const questions = [
   {
     text: "「あなたって本当に繊細だよね」と言われたら？",
     options: [
-      { text: "「そうかな？」と思いながらもあっさり流す", score: 0 },
+      { text: "「そうかな？」と思いながらもあっあっさり流す", score: 0 },
       { text: "少し複雑な気持ちになるが素直に受け取る", score: 1 },
       { text: "心の中で「これは褒め言葉？それとも……」と30分考える", score: 2 },
       { text: "「繊細じゃなくて、あなたが鈍感なんだけど？」と思う", score: 3 },
@@ -780,7 +778,7 @@ const results = [
     min: 12, max: 17,
     emoji: "💊",
     name: "中級メンヘラ｜感情過多ロマンチスト",
-    desc: "感情豊かで共感力が高く、人の痛みを自分のことのように感じられる、繊細で優しいタイプ。あなたといると「わかってもらえた」と感じる人が多く、人を惹きつける不思議な魅力があります。その深さは本物の才能です。\n\nただ……自分の感情を「試す道具」として使ってしまうクセがそろそろ自覚できてませんか？「消えます」「もういい」「察してよ」。これ、言葉じゃなくて爆弾なんですが、自覚ある？",
+    desc: "感情豊かで共感力が高く、人の痛みを自分のことのように感じられる、繊細で優しいタイプ。あなたといると「わかってもらえた」と感じる人が多く、人を惹きつける不思議な魅力があります。その深さは本物の才能です。\n\nただ……自分の感情を「試す道具」として使ってしまうクセがそろそろ自覚できてませんか？「消えます」「もういい」「察してよ」。これ、言葉じゃなくて爆弾なんいますが、自覚ある？",
     highlight: "「愛されたい気持ちが強いほど、相手を試したくなる。それがポックリ病の正体。」",
     pct: 65,
   },
@@ -882,7 +880,7 @@ function showResult() {
 
     document.getElementById('res-emoji').textContent = r.emoji;
     document.getElementById('res-name').textContent = r.name;
-    document.getElementById('res-score-badge').textContent = `スコア　${totalScore} 点`;
+    document.getElementById('res-score-badge').textContent = `スコア ${totalScore} 点`;
     document.getElementById('res-desc').textContent = r.desc;
     document.getElementById('res-highlight').textContent = r.highlight;
     document.getElementById('res-meter-pct').textContent = `${r.pct}%`;
@@ -924,9 +922,7 @@ function getShareText() {
 
 function shareToX(){window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(getShareText())+'&url='+encodeURIComponent(window.location.href)+'&hashtags='+encodeURIComponent('隠れメンヘラ診断,メンヘラ診断,心理テスト,診断テスト,性格診断'),'_blank');}
 
-function shareToLine(){var t=window.location.href+'
-
-'+getShareText();window.location.href='line://msg/text/'+encodeURIComponent(t);setTimeout(function(){window.open('https://line.me/R/msg/text/'+encodeURIComponent(t),'_blank')},500);}
+function shareToLine(){var t=window.location.href+'\n\n'+getShareText();window.location.href='line://msg/text/'+encodeURIComponent(t);setTimeout(function(){window.open('https://line.me/R/msg/text/'+encodeURIComponent(t),'_blank')},500);}
 
 function copyResult() {
   const text = getShareText() + `\n${window.location.href}`;
