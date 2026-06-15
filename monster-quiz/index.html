@@ -3,42 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>【職場モンスター診断】知られざるあなたの「裏の顔」｜診断 心理テスト 面白い</title>
-<meta name="description" content="あなたの職場での「裏の顔」を暴く！全10問の心理テストで、職場 人間関係 占い的に診断。性格の裏の顔を6タイプで判定。診断 心理テスト 面白い結果をシェアしよう！無料・即時結果。">
-<meta name="keywords" content="職場モンスター診断,職場 人間関係 占い,性格の裏の顔,診断 心理テスト 面白い,職場診断,裏の顔,性格テスト,無料診断,心理テスト,職場 性格診断,職場あるある">
+<title>【職場モンスター診断】知られざるあなたの「裏の顔」｜無料心理テスト2026</title>
+<meta name="description" content="職場での「裏の顔」を暴く心理テスト！職場 人間関係 占い・性格の裏の顔・診断 心理テスト 面白い。全10問で隠れたモンスター気質を診断。同僚に送りつけよう。無料・即時結果。">
+<meta name="keywords" content="職場 人間関係 占い,性格の裏の顔,診断 心理テスト 面白い,職場モンスター,裏の顔,性格診断,無料診断,職場診断,モンスター社員,心理テスト,2026診断,職場 性格,裏の顔診断">
 <meta property="og:title" content="【職場モンスター診断】知られざるあなたの「裏の顔」">
-<meta property="og:description" content="全10問で職場での裏の顔を診断。あなたは6タイプのうちどのモンスター？診断 心理テスト 面白い結果をシェアしよう！">
+<meta property="og:description" content="全10問の心理テストで職場での「裏の顔」を診断。性格の裏の顔・職場 人間関係 占いが気になる人に。結果をシェアしよう！">
 <meta property="og:type" content="website">
+<meta property="og:image" content="og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="index, follow">
 <style>
-:root{
-  --bg:#F7F5F2;
-  --bg2:#EFECE8;
-  --white:#FFFFFF;
-  --ink:#1A1614;
-  --ink2:#4A3F38;
-  --ink3:#9A8F88;
+:root {
+  --bg:#F5F3EE;
+  --bg2:#ECEAE4;
+  --card:#FFFFFF;
+  --card2:#F9F8F5;
+  --border:#E0DDD6;
+  --border2:#D0CDC5;
+  --ink:#1C1A17;
+  --ink2:#4A4640;
+  --ink3:#8A8580;
   --red:#C0392B;
-  --red2:#E05040;
-  --red-pale:#FDF0EE;
-  --red-dim:rgba(192,57,43,0.10);
-  --red-glow:rgba(192,57,43,0.06);
-  --yellow:#E8A800;
-  --yellow-pale:#FFFBEE;
-  --green:#2E7D5A;
-  --green-pale:#EDF7F2;
-  --border:rgba(26,22,20,0.09);
-  --border2:rgba(26,22,20,0.16);
-  --shadow:rgba(26,22,20,0.08);
-  --radius-sm:10px;
-  --radius-md:16px;
-  --radius-lg:22px;
-  --radius-xl:28px;
-  --radius-pill:999px;
+  --red2:#E85D4A;
+  --red-dim:rgba(192,57,43,0.08);
+  --red-glow:rgba(232,93,74,0.15);
+  --green:#2E7D5E;
+  --green-dim:rgba(46,125,94,0.1);
+  --amber:#B8860B;
+  --amber-dim:rgba(184,134,11,0.1);
+  --shadow:rgba(28,26,23,0.08);
+  --shadow2:rgba(28,26,23,0.04);
+  --r-sm:10px;
+  --r-md:16px;
+  --r-lg:22px;
+  --r-xl:28px;
+  --r-pill:999px;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-body{
+* { box-sizing:border-box; margin:0; padding:0 }
+body {
   font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Noto Sans JP',sans-serif;
   background:var(--bg);
   min-height:100vh;
@@ -46,707 +51,785 @@ body{
   line-height:1.7;
   -webkit-font-smoothing:antialiased;
 }
-.container{max-width:540px;margin:0 auto;padding:0 16px 80px}
+.wrap { max-width:520px; margin:0 auto; padding:0 16px 80px }
 
-/* HEADER */
-.site-header{text-align:center;padding:44px 0 28px;position:relative}
-.header-eyebrow{
-  display:inline-flex;align-items:center;gap:8px;
-  background:var(--red-dim);
-  border:1px solid rgba(192,57,43,0.2);
-  color:var(--red);
-  font-size:11px;font-weight:700;letter-spacing:0.14em;
-  padding:5px 16px;border-radius:var(--radius-pill);
-  margin-bottom:20px;
+/* ── HEADER ── */
+.hdr { text-align:center; padding:44px 0 28px; position:relative }
+.hdr-eyebrow {
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:10px; font-weight:700; letter-spacing:.18em;
+  color:var(--red); margin-bottom:16px;
 }
-.main-title{
-  font-size:26px;font-weight:900;color:var(--ink);
-  line-height:1.3;margin-bottom:10px;letter-spacing:-0.01em;
+.hdr-eyebrow::before, .hdr-eyebrow::after {
+  content:''; display:block; width:20px; height:1px; background:var(--red); opacity:.5;
 }
-.main-title .red{color:var(--red)}
-.main-title .block{display:block;font-size:15px;font-weight:400;color:var(--ink3);margin-top:4px;letter-spacing:0.01em}
-.subtitle{font-size:13px;color:var(--ink3);margin-bottom:20px;letter-spacing:0.03em}
-.tag-row{display:flex;justify-content:center;gap:6px;flex-wrap:wrap}
-.pill-tag{
-  display:inline-block;
-  background:var(--white);border:1px solid var(--border2);
-  color:var(--ink2);font-size:11px;font-weight:700;
-  padding:4px 13px;border-radius:var(--radius-pill);letter-spacing:0.05em;
+.hdr-title {
+  font-size:26px; font-weight:900; line-height:1.3;
+  color:var(--ink); margin-bottom:8px; letter-spacing:-.01em;
+}
+.hdr-title .red { color:var(--red) }
+.hdr-sub { font-size:13px; color:var(--ink3); margin-bottom:20px; letter-spacing:.03em }
+.hdr-tags { display:flex; justify-content:center; gap:6px; flex-wrap:wrap }
+.htag {
+  background:var(--red-dim); border:1px solid rgba(192,57,43,.2);
+  color:var(--red); font-size:10px; font-weight:700;
+  padding:3px 11px; border-radius:var(--r-pill); letter-spacing:.06em;
 }
 
-/* INTRO */
-.intro-card{
-  background:var(--white);border:1px solid var(--border);
-  border-radius:var(--radius-lg);padding:22px 20px 20px;
-  margin-bottom:22px;position:relative;overflow:hidden;
+/* ── INTRO ── */
+.intro {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:var(--r-lg); padding:22px 20px; margin-bottom:20px;
+  position:relative; overflow:hidden;
+  box-shadow:0 2px 12px var(--shadow2);
 }
-.intro-card::after{
-  content:'👹';position:absolute;right:10px;bottom:-4px;
-  font-size:80px;opacity:0.06;pointer-events:none;line-height:1;
+.intro::after {
+  content:'👺'; position:absolute; right:14px; top:8px;
+  font-size:60px; opacity:.06; pointer-events:none; line-height:1; filter:grayscale(1);
 }
-.intro-card p{font-size:14px;color:var(--ink2);line-height:1.9;margin-bottom:10px;position:relative}
-.intro-card p:last-child{margin-bottom:0}
-.intro-card strong{color:var(--red);font-weight:700}
-.intro-warn{
-  background:var(--red-pale);border:1px solid rgba(192,57,43,0.18);
-  border-radius:var(--radius-sm);padding:10px 14px;
-  font-size:13px;color:var(--red2);font-weight:600;
-  display:flex;align-items:flex-start;gap:7px;
-  position:relative;margin-top:12px;
-}
-.intro-warn::before{content:'⚠';font-size:15px;flex-shrink:0;margin-top:1px}
+.intro p { font-size:14px; color:var(--ink2); line-height:1.9; margin-bottom:10px; position:relative }
+.intro p:last-child { margin-bottom:0 }
+.intro strong { color:var(--red); font-weight:700 }
 
-/* PROGRESS */
-.progress-wrap{margin-bottom:18px}
-.progress-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px}
-.progress-label{font-size:10px;color:var(--ink3);font-weight:700;letter-spacing:0.14em}
-.progress-count{font-size:13px;color:var(--red);font-weight:700}
-.progress-bar-bg{background:var(--bg2);border-radius:var(--radius-pill);height:5px;overflow:hidden}
-.progress-bar-fill{
-  height:100%;background:linear-gradient(90deg,var(--red) 0%,var(--red2) 100%);
-  border-radius:var(--radius-pill);transition:width 0.45s cubic-bezier(.4,0,.2,1);
+/* ── PROGRESS ── */
+.prog { margin-bottom:18px }
+.prog-meta { display:flex; justify-content:space-between; align-items:center; margin-bottom:7px }
+.prog-lbl { font-size:10px; color:var(--ink3); font-weight:700; letter-spacing:.14em }
+.prog-cnt { font-size:12px; color:var(--red); font-weight:700 }
+.prog-bg { background:var(--bg2); border-radius:var(--r-pill); height:5px; overflow:hidden }
+.prog-fill {
+  height:100%; background:linear-gradient(90deg,var(--red) 0%,var(--red2) 100%);
+  border-radius:var(--r-pill); transition:width .45s cubic-bezier(.4,0,.2,1);
 }
 
-/* QUESTION CARD */
-.question-card{
-  background:var(--white);border:1px solid var(--border);
-  border-radius:var(--radius-lg);padding:24px 20px 20px;
-  margin-bottom:14px;animation:fadeUp 0.3s ease;
+/* ── QUESTION ── */
+.qcard {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:var(--r-lg); padding:24px 20px 20px; margin-bottom:14px;
+  box-shadow:0 2px 12px var(--shadow2); animation:up .3s ease;
 }
-@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-.q-eyebrow{display:flex;align-items:center;gap:9px;margin-bottom:13px}
-.q-num{
-  background:var(--red-dim);border:1px solid rgba(192,57,43,0.2);
-  color:var(--red);font-size:10px;font-weight:700;
-  padding:3px 12px;border-radius:var(--radius-pill);letter-spacing:0.1em;
+@keyframes up { from{opacity:0; transform:translateY(12px)} to{opacity:1; transform:translateY(0)} }
+.q-brow { display:flex; align-items:center; gap:8px; margin-bottom:12px }
+.q-tag {
+  background:var(--red-dim); border:1px solid rgba(192,57,43,.22);
+  color:var(--red); font-size:10px; font-weight:700;
+  padding:3px 11px; border-radius:var(--r-pill); letter-spacing:.08em;
 }
-.q-theme{font-size:11px;color:var(--ink3);letter-spacing:0.06em}
-.q-text{font-size:17px;font-weight:700;color:var(--ink);line-height:1.55;margin-bottom:20px}
+.q-scene { font-size:11px; color:var(--ink3); letter-spacing:.06em }
+.q-txt { font-size:17px; font-weight:700; color:var(--ink); line-height:1.55; margin-bottom:20px }
+.opts { display:flex; flex-direction:column; gap:9px }
+.opt {
+  width:100%; background:var(--card2); border:1.5px solid var(--border);
+  border-radius:var(--r-md); padding:13px 15px; text-align:left;
+  font-size:14px; font-family:inherit; color:var(--ink2);
+  cursor:pointer; transition:all .17s ease; line-height:1.55;
+  display:flex; align-items:flex-start; gap:11px;
+}
+.opt-ltr {
+  flex-shrink:0; width:23px; height:23px; border-radius:50%;
+  background:var(--bg2); border:1.5px solid var(--border2);
+  color:var(--ink3); font-size:11px; font-weight:700;
+  text-align:center; line-height:20px; transition:all .17s ease; margin-top:1px;
+}
+.opt-txt { flex:1 }
+.opt:hover { background:#FFF5F4; border-color:rgba(192,57,43,.35); color:var(--ink) }
+.opt:hover .opt-ltr { background:var(--red-dim); border-color:rgba(192,57,43,.4); color:var(--red) }
+.opt:active { transform:scale(.985) }
+.opt.sel { background:#FFF0EE; border-color:var(--red); color:var(--ink) }
+.opt.sel .opt-ltr { background:var(--red); border-color:var(--red); color:#FFF }
 
-/* OPTIONS */
-.options-list{display:flex;flex-direction:column;gap:9px}
-.option-btn{
-  width:100%;background:var(--bg);border:1.5px solid var(--border);
-  border-radius:var(--radius-md);padding:13px 15px;
-  text-align:left;font-size:14px;font-family:inherit;
-  color:var(--ink2);cursor:pointer;transition:all 0.17s ease;
-  line-height:1.55;display:flex;align-items:flex-start;gap:11px;
-}
-.option-letter{
-  flex-shrink:0;width:22px;height:22px;border-radius:50%;
-  background:var(--white);border:1px solid var(--border2);
-  color:var(--ink3);font-size:11px;font-weight:700;
-  text-align:center;line-height:20px;
-  transition:all 0.17s ease;margin-top:1px;
-}
-.option-text{flex:1}
-.option-btn:hover{background:var(--red-pale);border-color:rgba(192,57,43,0.3);color:var(--ink)}
-.option-btn:hover .option-letter{background:var(--red-dim);border-color:rgba(192,57,43,0.35);color:var(--red)}
-.option-btn:active{transform:scale(0.985)}
-.option-btn.selected{background:var(--red-pale);border-color:rgba(192,57,43,0.45);color:var(--ink)}
-.option-btn.selected .option-letter{background:var(--red);border-color:var(--red);color:#fff}
-
-/* CTA */
-.cta-btn{
-  display:block;width:100%;
-  background:var(--red);color:#fff;border:none;
-  border-radius:var(--radius-pill);padding:17px;
-  font-size:15px;font-weight:900;font-family:inherit;
-  cursor:pointer;transition:all 0.22s ease;
-  letter-spacing:0.05em;margin-top:6px;
-}
-.cta-btn:hover{background:var(--red2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(192,57,43,0.28)}
-.cta-btn:active{transform:scale(0.98) translateY(0)}
-.cta-btn:disabled{opacity:0.28;cursor:not-allowed;transform:none;box-shadow:none;background:var(--red)}
-
-/* RESULT */
-.result-section{display:none;animation:fadeUp 0.45s ease}
-.result-section.visible{display:block}
-
-/* result hero */
-.result-hero{border-radius:var(--radius-xl);overflow:hidden;margin-bottom:16px;border:1px solid var(--border)}
-.result-hero-top{
-  padding:34px 22px 28px;text-align:center;
-  position:relative;overflow:hidden;
-}
-.hero-watermark{
-  position:absolute;top:50%;left:50%;
-  transform:translate(-50%,-50%);
-  font-size:150px;opacity:0.07;
-  pointer-events:none;line-height:1;filter:grayscale(0.3);
-}
-.result-tier-tag{
-  display:inline-block;
-  border:1.5px solid rgba(255,255,255,0.35);
-  color:rgba(255,255,255,0.9);
-  font-size:10px;font-weight:700;padding:4px 14px;
-  border-radius:var(--radius-pill);letter-spacing:0.15em;
-  margin-bottom:14px;position:relative;
-}
-.result-monster-emoji{font-size:68px;display:block;margin-bottom:12px;position:relative;line-height:1}
-.result-monster-type{
-  font-size:11px;letter-spacing:0.18em;font-weight:700;
-  color:rgba(255,255,255,0.65);margin-bottom:6px;position:relative;
-}
-.result-type-name{
-  font-size:22px;font-weight:900;color:#fff;
-  line-height:1.35;margin-bottom:10px;position:relative;
-}
-.result-score-chip{
-  display:inline-block;
-  background:rgba(0,0,0,0.18);border:1px solid rgba(255,255,255,0.2);
-  color:rgba(255,255,255,0.85);font-size:12px;font-weight:700;
-  padding:4px 14px;border-radius:var(--radius-pill);
-  letter-spacing:0.06em;position:relative;
+/* 控制按鈕組區塊 */
+.btn-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
 }
 
-/* danger meter */
-.danger-bar-wrap{
-  padding:16px 20px 18px;display:flex;flex-direction:column;gap:10px;
+.cta {
+  display:block; flex:2; background:var(--red); color:#FFF;
+  border:none; border-radius:var(--r-pill); padding:17px;
+  font-size:15px; font-weight:900; font-family:inherit; cursor:pointer;
+  transition:all .22s ease; letter-spacing:.05em;
 }
-.danger-row{display:flex;align-items:center;gap:10px}
-.danger-label{font-size:11px;color:var(--ink3);font-weight:700;width:68px;flex-shrink:0;letter-spacing:0.04em}
-.danger-bg{flex:1;height:7px;background:var(--bg2);border-radius:var(--radius-pill);overflow:hidden}
-.danger-fill{height:100%;border-radius:var(--radius-pill);transition:width 0.9s cubic-bezier(.4,0,.2,1) 0.2s}
-.danger-pct{font-size:12px;font-weight:700;color:var(--ink2);width:32px;text-align:right}
+.cta:hover { background:var(--red2); transform:translateY(-2px); box-shadow:0 8px 24px rgba(192,57,43,.28) }
+.cta:active { transform:scale(.98) translateY(0) }
+.cta:disabled { opacity:.28; cursor:not-allowed; transform:none; box-shadow:none; background:var(--red) }
 
-/* desc */
-.desc-card{
-  background:var(--white);border:1px solid var(--border);
-  border-radius:var(--radius-lg);padding:22px 20px;margin-bottom:14px;
+/* 返回上一題按鈕樣式 */
+.back-btn {
+  flex: 1;
+  background: var(--card);
+  color: var(--ink2);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-pill);
+  padding: 17px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: .05em;
 }
-.sec-label{
-  font-size:10px;font-weight:700;letter-spacing:0.16em;
-  color:var(--ink3);margin-bottom:11px;padding-bottom:8px;
+.back-btn:hover:not(:disabled) {
+  border-color: rgba(192,57,43,.35);
+  color: var(--red);
+  background: var(--red-dim);
+}
+.back-btn:disabled {
+  opacity: .28;
+  cursor: not-allowed;
+}
+
+/* ── RESULT ── */
+.res { display:none; animation:up .45s ease }
+.res.on { display:block }
+
+.res-hero { border-radius:var(--r-lg); overflow:hidden; margin-bottom:16px; border:1px solid var(--border); box-shadow:0 4px 20px var(--shadow) }
+.res-top { padding:32px 22px 26px; text-align:center; position:relative; overflow:hidden }
+.res-top-bg {
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  font-size:150px; opacity:.055; pointer-events:none; line-height:1; filter:grayscale(1);
+}
+.res-badge {
+  display:inline-block; border:1px solid rgba(255,255,255,.3);
+  color:rgba(255,255,255,.85); font-size:10px; font-weight:700;
+  padding:3px 13px; border-radius:var(--r-pill); letter-spacing:.14em; margin-bottom:14px;
+  background:rgba(255,255,255,.1);
+}
+.res-emoji { font-size:62px; display:block; margin-bottom:12px; position:relative; line-height:1 }
+.res-sub { font-size:11px; letter-spacing:.14em; font-weight:700; margin-bottom:5px; position:relative; opacity:.75 }
+.res-name { font-size:22px; font-weight:900; line-height:1.35; margin-bottom:10px; position:relative }
+.res-pill {
+  display:inline-block; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.22);
+  font-size:12px; font-weight:700; padding:4px 14px; border-radius:var(--r-pill);
+  letter-spacing:.06em; position:relative; color:rgba(255,255,255,.9);
+}
+
+.res-traits { background:rgba(0,0,0,.18); border-top:1px solid rgba(255,255,255,.08); padding:18px 20px }
+.tr-row { display:flex; align-items:center; gap:10px; margin-bottom:9px }
+.tr-row:last-child { margin-bottom:0 }
+.tr-lbl { font-size:11px; font-weight:700; width:68px; flex-shrink:0; opacity:.7; letter-spacing:.04em }
+.tr-bg { flex:1; height:6px; background:rgba(255,255,255,.12); border-radius:var(--r-pill); overflow:hidden }
+.tr-fill { height:100%; border-radius:var(--r-pill); transition:width .85s cubic-bezier(.4,0,.2,1) .2s }
+.tr-pct { font-size:12px; font-weight:700; width:34px; text-align:right; opacity:.8 }
+
+/* ── DESC CARD ── */
+.dcard {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:var(--r-lg); padding:22px 20px; margin-bottom:14px;
+  box-shadow:0 2px 12px var(--shadow2);
+}
+.sec-ttl {
+  font-size:10px; font-weight:700; letter-spacing:.16em;
+  color:var(--ink3); margin-bottom:12px; padding-bottom:8px;
   border-bottom:1px solid var(--border);
 }
-.desc-text{font-size:14px;color:var(--ink2);line-height:2.0;white-space:pre-line;margin-bottom:18px}
-.tsukkomi-box{
-  background:var(--red-pale);border:1px solid rgba(192,57,43,0.18);
-  border-radius:var(--radius-md);padding:14px 16px;margin-bottom:16px;
+.desc-txt { font-size:14px; color:var(--ink2); line-height:1.95; white-space:pre-line; margin-bottom:16px }
+
+.warn {
+  background:var(--red-dim); border:1px solid rgba(192,57,43,.18);
+  border-radius:var(--r-md); padding:13px 15px; margin-bottom:16px;
 }
-.tsukkomi-head{font-size:10px;font-weight:700;letter-spacing:0.13em;color:var(--red);margin-bottom:6px}
-.tsukkomi-body{font-size:13px;color:var(--ink2);line-height:1.75}
-.kw-row{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
-.kw-tag{
-  background:var(--bg);border:1px solid var(--border2);
-  color:var(--ink2);font-size:12px;padding:4px 12px;border-radius:var(--radius-pill);
+.warn-h { font-size:10px; font-weight:700; letter-spacing:.12em; color:var(--red); margin-bottom:5px }
+.warn-b { font-size:13px; color:var(--ink2); line-height:1.7 }
+
+.guide {
+  background:var(--green-dim); border:1px solid rgba(46,125,94,.18);
+  border-radius:var(--r-md); padding:13px 15px; margin-bottom:0;
+}
+.guide-h { font-size:10px; font-weight:700; letter-spacing:.12em; color:var(--green); margin-bottom:5px }
+.guide-b { font-size:13px; color:var(--ink2); line-height:1.7 }
+
+.kws { display:flex; flex-wrap:wrap; gap:7px }
+.kw {
+  background:var(--bg2); border:1px solid var(--border2);
+  color:var(--ink2); font-size:12px; padding:4px 12px; border-radius:var(--r-pill);
 }
 
-/* survival guide */
-.guide-card{
-  background:var(--green-pale);border:1px solid rgba(46,125,90,0.18);
-  border-radius:var(--radius-lg);padding:20px;margin-bottom:14px;
+/* ── QUOTE ── */
+.qcard2 {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:var(--r-lg); padding:22px 20px; margin-bottom:14px;
+  text-align:center; box-shadow:0 2px 12px var(--shadow2);
 }
-.guide-head{font-size:11px;font-weight:700;letter-spacing:0.13em;color:var(--green);margin-bottom:10px}
-.guide-item{
-  display:flex;align-items:flex-start;gap:9px;
-  font-size:13px;color:var(--ink2);line-height:1.7;margin-bottom:8px;
-}
-.guide-item:last-child{margin-bottom:0}
-.guide-dot{
-  flex-shrink:0;width:20px;height:20px;border-radius:50%;
-  background:rgba(46,125,90,0.15);color:var(--green);
-  font-size:10px;font-weight:700;text-align:center;line-height:20px;margin-top:1px;
-}
+.q2-txt { font-size:15px; color:var(--ink); line-height:1.8; font-style:italic; letter-spacing:.02em }
+.q2-attr { font-size:11px; color:var(--ink3); margin-top:8px; letter-spacing:.08em }
 
-/* quote */
-.quote-card{
-  background:var(--white);border:1px solid var(--border);
-  border-radius:var(--radius-lg);padding:22px 20px;margin-bottom:14px;text-align:center;
+/* ── SHARE ── */
+.scard {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:var(--r-lg); padding:20px 18px; margin-bottom:14px;
+  text-align:center; box-shadow:0 2px 12px var(--shadow2);
 }
-.quote-text{font-size:15px;color:var(--ink);line-height:1.85;font-style:italic;letter-spacing:0.02em}
-.quote-attr{font-size:11px;color:var(--ink3);margin-top:9px;letter-spacing:0.08em}
-
-/* share */
-.share-card{
-  background:var(--white);border:1px solid var(--border);
-  border-radius:var(--radius-lg);padding:20px 18px;margin-bottom:16px;text-align:center;
+.s-ttl { font-size:13px; font-weight:700; color:var(--ink2); margin-bottom:14px; letter-spacing:.03em }
+.sbtns { display:flex; gap:8px }
+.sbtn {
+  flex:1; padding:13px 8px; border-radius:var(--r-md); border:none;
+  font-size:12px; font-weight:700; font-family:inherit; cursor:pointer;
+  transition:all .2s ease; letter-spacing:.03em;
 }
-.share-title{font-size:13px;font-weight:700;color:var(--ink2);margin-bottom:14px;letter-spacing:0.04em}
-.share-buttons{display:flex;gap:8px}
-.share-btn{
-  flex:1;padding:13px 8px;border-radius:var(--radius-md);border:none;
-  font-size:12px;font-weight:700;font-family:inherit;
-  cursor:pointer;transition:all 0.2s ease;letter-spacing:0.03em;
+.sbtn:hover { transform:translateY(-2px); opacity:.9 }
+.sbtn:active { transform:scale(.97) }
+.sbtn-x { background:#0F1419; color:#FFF }
+.sbtn-line { background:#06C755; color:#FFF }
+.sbtn-cp { background:var(--bg2); color:var(--ink2); border:1px solid var(--border2)}
+
+/* ── RETRY ── */
+.retry {
+  display:block; width:100%; background:transparent; color:var(--ink3);
+  border:1.5px solid var(--border2); border-radius:var(--r-pill); padding:14px;
+  font-size:13px; font-weight:700; font-family:inherit; cursor:pointer;
+  transition:all .2s ease; margin-bottom:40px; letter-spacing:.05em;
 }
-.share-btn:hover{transform:translateY(-2px);opacity:0.9}
-.share-btn:active{transform:scale(0.97)}
-.share-btn-x{background:#0F1419;color:#fff}
-.share-btn-line{background:#06C755;color:#fff}
-.share-btn-copy{background:var(--bg2);color:var(--ink2);border:1px solid var(--border2)}
+.retry:hover { border-color:rgba(192,57,43,.35); color:var(--red); background:var(--red-dim) }
 
-/* retry */
-.retry-btn{
-  display:block;width:100%;
-  background:transparent;color:var(--ink3);
-  border:1.5px solid var(--border2);border-radius:var(--radius-pill);
-  padding:14px;font-size:13px;font-weight:700;font-family:inherit;
-  cursor:pointer;transition:all 0.2s ease;margin-bottom:40px;letter-spacing:0.06em;
-}
-.retry-btn:hover{border-color:rgba(192,57,43,0.35);color:var(--red);background:var(--red-glow)}
+/* ── FOOTER ── */
+.ftr { text-align:center; font-size:11px; color:var(--ink3); padding-bottom:16px; letter-spacing:.04em }
 
-/* footer */
-.site-footer{text-align:center;font-size:11px;color:var(--ink3);padding-bottom:16px;letter-spacing:0.04em}
-
-/* toast */
-.toast{
-  position:fixed;bottom:24px;left:50%;
+/* ── TOAST ── */
+.toast {
+  position:fixed; bottom:24px; left:50%;
   transform:translateX(-50%) translateY(70px);
-  background:var(--ink);color:#fff;
-  padding:11px 22px;border-radius:var(--radius-pill);
-  font-size:13px;font-weight:700;opacity:0;
-  transition:all 0.28s ease;pointer-events:none;z-index:999;white-space:nowrap;
+  background:var(--ink); color:#FFF;
+  padding:11px 22px; border-radius:var(--r-pill);
+  font-size:13px; font-weight:700; opacity:0;
+  transition:all .28s ease; pointer-events:none; z-index:999; white-space:nowrap;
 }
-.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-.hidden{display:none!important}
+.toast.on { opacity:1; transform:translateX(-50%) translateY(0) }
+.hidden { display:none!important }
 
 @media(max-width:400px){
-  .main-title{font-size:22px}
-  .q-text{font-size:16px}
-  .share-buttons{flex-direction:column}
+  .hdr-title { font-size:22px }
+  .q-txt { font-size:16px }
+  .sbtns { flex-direction:column }
 }
+
+/* ── AD SLOT ── */
+.ad-slot{min-height:250px;background:#f0f0f0;margin:20px 0;text-align:center;line-height:250px;color:#aaa;font-size:12px;border-radius:12px;overflow:hidden;font-family:'Hiragino Kaku Gothic ProN',sans-serif;letter-spacing:.05em}
+/* ── SEO FAQ ── */
+.seo-faq{max-width:520px;margin:28px auto 0;padding:0 16px 40px;font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Noto Sans JP',sans-serif}
+.seo-faq h2{font-size:16px;font-weight:900;margin-bottom:16px;text-align:center;opacity:.55;letter-spacing:.03em}
+.seo-faq details{background:rgba(127,127,127,0.06);border:1px solid rgba(127,127,127,0.16);border-radius:12px;padding:14px 16px;margin-bottom:10px}
+.seo-faq summary{font-size:14px;font-weight:700;cursor:pointer;list-style:none;opacity:.85;line-height:1.6}
+.seo-faq summary::-webkit-details-marker{display:none}
+.seo-faq summary::before{content:'Q. ';color:#C0392B;font-weight:900}
+.seo-faq .faq-a{font-size:13px;line-height:1.85;opacity:.7;margin-top:10px;padding-top:10px;border-top:1px solid rgba(127,127,127,0.16)}
+.seo-faq .faq-a::before{content:'A. ';color:#2E7D5E;font-weight:900}
+
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "職場モンスター診断とは何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "職場での「裏の顔」やモンスター気質を10問で測定する無料の心理テストです。職場 人間関係 占いの観点から、自分でも気づいていない言動のクセを客観的に把握できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "職場の人間関係がうまくいかないのはなぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "職場 人間関係 占いの観点では、自分の言動が無意識に相手へ与える印象が原因のことも多いです。この診断で自分の「裏の顔」タイプを知ると、改善のヒントが見つかります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "性格の裏の顔は変えられますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "性格の裏の顔は完全には変わりませんが、自覚することで言動はコントロールできます。まず診断で自分の傾向を知り、要注意ポイントを意識することが第一歩です。"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
+<div class="wrap">
 
-<div class="container">
-
-  <header class="site-header">
-    <div class="header-eyebrow">👹 職場モンスター診断</div>
-    <h1 class="main-title">
-      知られざるあなたの<br>
-      <span class="red">「裏の顔」</span>
-      <span class="block">— 職場 人間関係 占い的 本性暴露テスト —</span>
-    </h1>
-    <p class="subtitle">全10問 ｜ 6タイプ ｜ 診断 心理テスト 面白い</p>
-    <div class="tag-row">
-      <span class="pill-tag">無料</span>
-      <span class="pill-tag">即時結果</span>
-      <span class="pill-tag">性格の裏の顔</span>
-      <span class="pill-tag">シェア可能</span>
+  <header class="hdr">
+    <div class="hdr-eyebrow">職場モンスター診断</div>
+    <h1 class="hdr-title">知られざるあなたの<br><span class="red">「裏の顔」</span></h1>
+    <p class="hdr-sub">全10問 ― あなたの職場での「本当の姿」を暴きます</p>
+    <div class="hdr-tags">
+      <span class="htag">無料</span>
+      <span class="htag">10問診断</span>
+      <span class="htag">5タイプ</span>
+      <span class="htag">即時結果</span>
     </div>
   </header>
 
-  <div id="quiz-section">
-
-    <div class="intro-card" id="intro-card">
-      <p>「職場では普通の人」――本当にそう？<br>
-      人は誰でも、職場でだけ発動する<strong>隠れたモンスター気質</strong>を持っています。</p>
-      <p>この診断では、あなたの<strong>性格の裏の顔</strong>を10問で特定。<br>
-      職場 人間関係 占い的な視点で、あなたのタイプを暴露します。</p>
-      <div class="intro-warn">診断結果はあくまで娯楽です。職場で実際にモンスター行為をするのはやめましょう。</div>
+  <div id="quiz">
+    <div class="intro" id="intro">
+      <p>職場の人間関係、うまくいってる？<br>
+      誰でも仕事中は「いい人」を演じているけど、<strong>裏の顔</strong>はまた別の話。</p>
+      <p>この診断では、職場 人間関係 占いの観点から、<strong>あなたが気づいていない「モンスター気質」</strong>を10問で特定します。</p>
+      <p>性格の裏の顔・診断 心理テスト 面白い――<strong>同僚に送りつけてみよう。</strong></p>
     </div>
 
-    <div class="progress-wrap hidden" id="progress-wrap">
-      <div class="progress-meta">
-        <span class="progress-label">PROGRESS</span>
-        <span class="progress-count" id="progress-count">1 / 10</span>
+    <div class="prog hidden" id="prog">
+      <div class="prog-meta">
+        <span class="prog-lbl">PROGRESS</span>
+        <span class="prog-cnt" id="pcnt">1 / 10</span>
       </div>
-      <div class="progress-bar-bg">
-        <div class="progress-bar-fill" id="progress-bar" style="width:0%"></div>
-      </div>
+      <div class="prog-bg"><div class="prog-fill" id="pfill" style="width:0%"></div></div>
     </div>
 
-    <div class="question-card hidden" id="question-card">
-      <div class="q-eyebrow">
-        <span class="q-num" id="q-num">Q1</span>
-        <span class="q-theme" id="q-theme"></span>
+    <div class="qcard hidden" id="qcard">
+      <div class="q-brow">
+        <span class="q-tag" id="qtag">Q1</span>
+        <span class="q-scene" id="qscene"></span>
       </div>
-      <div class="q-text" id="q-text"></div>
-      <div class="options-list" id="options-list"></div>
+      <div class="q-txt" id="qtxt"></div>
+      <div class="opts" id="opts"></div>
     </div>
 
-    <button class="cta-btn" id="main-btn" onclick="handleMainBtn()">
-      診断スタート ▶
-    </button>
-
+    <div class="ad-slot" id="ad-top">【スポンサーリンク / 広告】</div>
+    
+    <!-- 控制按鈕組 -->
+    <div class="btn-group">
+      <button class="back-btn hidden" id="back-btn" disabled>戻る</button>
+      <button class="cta" id="mbtn">診断スタート 👺</button>
+    </div>
   </div>
 
-  <div class="result-section" id="result-section">
-
-    <div class="result-hero">
-      <div class="result-hero-top" id="result-hero-top">
-        <div class="hero-watermark" id="hero-watermark"></div>
-        <div class="result-tier-tag" id="result-tier-tag">TYPE</div>
-        <span class="result-monster-emoji" id="result-monster-emoji"></span>
-        <div class="result-monster-type" id="result-monster-type"></div>
-        <div class="result-type-name" id="result-type-name"></div>
-        <div class="result-score-chip" id="result-score-chip">スコア ― 点</div>
+  <div class="res" id="res">
+    <div class="ad-slot" id="ad-result">【スポンサーリンク / 広告】</div>
+    <div class="res-hero">
+      <div class="res-top" id="rtop">
+        <div class="res-top-bg" id="rbg"></div>
+        <div class="res-badge" id="rbadge">TYPE</div>
+        <span class="res-emoji" id="remoji"></span>
+        <div class="res-sub" id="rsub"></div>
+        <div class="res-name" id="rname"></div>
+        <div class="res-pill" id="rpill">スコア ― 点</div>
       </div>
-      <div style="background:#fff;border-top:1px solid var(--border)">
-        <div class="danger-bar-wrap" id="danger-bar-wrap"></div>
+      <div class="res-traits" id="rtraits"></div>
+    </div>
+
+    <div class="dcard">
+      <div class="sec-ttl">MONSTER REPORT</div>
+      <p class="desc-txt" id="rdesc"></p>
+      <div class="warn">
+        <div class="warn-h">⚠ 周囲が本当に困っていること</div>
+        <div class="warn-b" id="rwarn"></div>
       </div>
     </div>
 
-    <div class="desc-card">
-      <div class="sec-label">PERSONALITY ANALYSIS ／ 性格の裏の顔レポート</div>
-      <p class="desc-text" id="desc-text"></p>
-      <div class="tsukkomi-box">
-        <div class="tsukkomi-head">💢 ちょっと待って吐槽タイム</div>
-        <div class="tsukkomi-body" id="tsukkomi-body"></div>
+    <div class="dcard">
+      <div class="sec-ttl">🛡 このタイプとの付き合い方</div>
+      <div class="guide">
+        <div class="guide-h">✦ SURVIVAL GUIDE</div>
+        <div class="guide-b" id="rguide"></div>
       </div>
-      <div class="sec-label" style="margin-top:16px">KEYWORDS</div>
-      <div class="kw-row" id="kw-row"></div>
+      <div class="sec-ttl" style="margin-top:16px">KEYWORDS</div>
+      <div class="kws" id="rkws"></div>
     </div>
 
-    <div class="guide-card" id="guide-card">
-      <div class="guide-head">✅ このタイプとうまくやる「取扱説明書」</div>
-      <div id="guide-items"></div>
+    <div class="qcard2">
+      <div class="q2-txt" id="rquote"></div>
+      <div class="q2-attr" id="rattr"></div>
     </div>
 
-    <div class="quote-card">
-      <div class="quote-text" id="quote-text"></div>
-      <div class="quote-attr" id="quote-attr"></div>
-    </div>
-
-    <div class="share-card">
-      <div class="share-title">あなたの「裏の顔」を職場の人に送りつけよう 👹</div>
+    <div class="scard">
+      <div class="s-ttl">同僚・友達に送りつけよう 👺</div>
       <div class="share-buttons">
-        <button class="share-btn share-btn-x" onclick="shareToX()">X でシェア</button>
-        <button class="share-btn share-btn-line" onclick="shareToLine()">LINE</button>
-        <button class="share-btn share-btn-copy" onclick="copyResult()">コピー</button>
+        <button class="sbtn sbtn-x" id="share-x-btn">X でシェア</button>
+        <button class="sbtn sbtn-line" id="share-line-btn">LINE</button>
+        <button class="sbtn sbtn-cp" id="share-copy-btn">コピー</button>
       </div>
     </div>
 
-    <button class="retry-btn" onclick="resetQuiz()">もう一度診断する ↺</button>
-
+    <button class="retry" id="retry-btn">もう一度診断する ↺</button>
   </div>
 
 </div>
-
-<div class="site-footer">© 2025 職場モンスター診断 ｜ 診断 心理テスト 面白い ｜ 娯楽目的</div>
+<section class="seo-faq">
+  <h2>よくある質問（職場 人間関係 占い・性格の裏の顔）</h2>
+    <details>
+      <summary>職場モンスター診断とは何ですか？</summary>
+      <p class="faq-a">職場での「裏の顔」やモンスター気質を10問で測定する無料の心理テストです。職場 人間関係 占いの観点から、自分でも気づいていない言動のクセを客観的に把握できます。</p>
+    </details>
+    <details>
+      <summary>職場の人間関係がうまくいかないのはなぜですか？</summary>
+      <p class="faq-a">職場 人間関係 占いの観点では、自分の言動が無意識に相手へ与える印象が原因のことも多いです。この診断で自分の「裏の顔」タイプを知ると、改善のヒントが見つかります。</p>
+    </details>
+    <details>
+      <summary>性格の裏の顔は変えられますか？</summary>
+      <p class="faq-a">性格の裏の顔は完全には変わりませんが、自覚することで言動はコントロールできます。まず診断で自分の傾向を知り、要注意ポイントを意識することが第一歩です。</p>
+    </details>
+</section>
+<div class="ftr">© 2026 職場モンスター診断 ｜ 結果は娯楽目的です 👺</div>
 <div class="toast" id="toast"></div>
 
 <script>
-var Q=[
+var Qs=[
   {
-    theme:"会議・ミーティング",
-    text:"会議中、誰かが的外れな発言をした。あなたは？",
+    scene:"会議・ミーティング",
+    txt:"全員参加の会議中。誰かが長々と的外れな発言をしている。あなたは？",
     opts:[
-      {t:"聞こえないふりをして次の議題に進むよう視線で誘導する",s:2},
-      {t:"「少し方向性が違うかもしれませんね」とやんわり軌道修正する",s:1},
-      {t:"心の中で「また始まった」とつぶやきながらスマホのメモを開く",s:0},
-      {t:"すぐに「それは論点がズレていますよね？」と指摘する",s:3}
+      {t:"表情は変えず、内心「早く終われ」と念を送り続ける",s:1},
+      {t:"「少し話を整理しましょうか」と笑顔で割り込む",s:3},
+      {t:"スマホをテーブルの下でこっそり触り始める",s:2},
+      {t:"終わったあと上司に「あの発言、どう思いました？」と聞きに行く",s:4}
     ]
   },
   {
-    theme:"締め切り・仕事の進め方",
-    text:"チームの締め切りが近い。しかし一人だけ全然進んでいない人がいる。あなたは？",
+    scene:"手柄と評価",
+    txt:"自分が主導したプロジェクトが成功。上司が「チーム全員の頑張り」と総括した。あなたは？",
     opts:[
-      {t:"「何か手伝いましょうか？」と声をかけ、さりげなくカバーする",s:0},
-      {t:"上司に「進捗確認をお願いしたい」とそれとなく報告する",s:2},
-      {t:"「正直に言うと、全体のスケジュールに影響が出ています」と直接本人に言う",s:3},
-      {t:"自分の分だけ終わらせて、あとは見て見ぬふりをする",s:1}
+      {t:"まあ仕方ない、と思いながら何も言わない",s:0},
+      {t:"後で上司に個別で「私が主導しました」と伝える",s:3},
+      {t:"次回は最初から自分の名前が残る形で動こうと計画する",s:4},
+      {t:"SNSに「チームで頑張りました！」と投稿しつつ自分を前に出す",s:2}
     ]
   },
   {
-    theme:"手柄・評価",
-    text:"自分が考えたアイデアが、なぜか別の人の名前で発表されていた。どうする？",
+    scene:"後輩・部下への対応",
+    txt:"後輩が同じミスを2回繰り返した。あなたの対応は？",
     opts:[
-      {t:"「あ、それ私が最初に言ったやつなんですよ」と会議中にさらっと訂正する",s:3},
-      {t:"後でその人に「あの件、私のアイデアでしたよね？」と二人きりで話す",s:2},
-      {t:"モヤモヤしながらも何も言わず、心の記録帳に書き留める",s:1},
-      {t:"「よかったですね！」と笑顔で言いながら、心の中で許さないフラグを立てる",s:0}
+      {t:"「次は気をつけてね」とやんわり言うだけ",s:0},
+      {t:"原因を一緒に分析して、二度と起きない仕組みを考える",s:1},
+      {t:"「また？」という表情を隠さず、ため息をつく",s:3},
+      {t:"周囲に聞こえる声量で「さすがにこれは…」と言う",s:4}
     ]
   },
   {
-    theme:"上司との関係",
-    text:"上司の指示が明らかに非効率だと思う。あなたは？",
+    scene:"情報の扱い",
+    txt:"飲み会で上司がうっかり重要な人事情報を漏らした。あなたは？",
     opts:[
-      {t:"「こういう方法もあると思うんですが、いかがでしょうか？」と提案する",s:1},
-      {t:"指示通りにやりつつ、自分のやり方も並行して試す",s:2},
-      {t:"「それは非効率ではないですか？」とミーティングで正直に言う",s:3},
-      {t:"とりあえず従う。上司が失敗したときに「やっぱりね」と思うために",s:0}
+      {t:"聞かなかったことにする",s:0},
+      {t:"信頼できる同僚1人だけに「こっそり」教える",s:2},
+      {t:"自分のポジションに有利になるよう、タイミングを見て活用する",s:4},
+      {t:"次の日、何気ない会話でその情報を使って「知ってる感」を出す",s:3}
     ]
   },
   {
-    theme:"後輩・部下",
-    text:"後輩が何度も同じミスをしている。あなたのアプローチは？",
+    scene:"締め切り・責任",
+    txt:"チームの締め切りが迫っているのに、一人だけ進捗が遅れている。あなたは？",
     opts:[
-      {t:"なぜミスが繰り返されるか原因を一緒に考え、仕組みで解決する",s:1},
-      {t:"「何回言えばわかるんですか？」と直接言ってしまったことがある",s:3},
-      {t:"ミスのたびに記録しておいて、評価の時期に一気に出す",s:2},
-      {t:"もう自分でやった方が早いと思って黙って引き取ってしまう",s:0}
+      {t:"黙ってその人の分も手伝う",s:1},
+      {t:"「状況どう？」と確認して、必要なら巻き取る提案をする",s:0},
+      {t:"遅れている事実をさりげなくチャットに残しておく",s:3},
+      {t:"上司に「このままだと間に合わないかもしれません」と先に報告する",s:4}
     ]
   },
   {
-    theme:"職場の噂・人間関係",
-    text:"職場で「誰かの悪口」を振られた。どう対応する？",
+    scene:"評価面談",
+    txt:"上司との評価面談。思っていたより低い評価をつけられた。あなたは？",
     opts:[
-      {t:"「そうなんですか〜」と返しながら、情報だけしっかり収集する",s:0},
-      {t:"「その話、私には判断できないです」とすっぱり切る",s:1},
-      {t:"乗っかりつつも、後でその人に「こんな話が出てたよ」と伝える",s:2},
-      {t:"「でも〇〇さんにも事情があったのでは？」と議論に参戦する",s:3}
+      {t:"「わかりました」と言って帰り、家でひとり悔しがる",s:1},
+      {t:"「具体的にどの点が課題でしたか？」と冷静に聞く",s:0},
+      {t:"その場では了承しつつ、後日別の上司にアピールを強化する",s:3},
+      {t:"「〇〇さんの評価と比べて、差がある理由を教えてください」と聞く",s:4}
     ]
   },
   {
-    theme:"残業・負担",
-    text:"自分の仕事ではない雑務を押しつけられそうになっている。どうする？",
+    scene:"社内の噂・ゴシップ",
+    txt:"同僚Aと同僚Bが仲違いしている。両方から愚痴を聞かされた。あなたは？",
     opts:[
-      {t:"「今は手が離せないので…」と断れずに結局引き受けてしまう",s:0},
-      {t:"「それは私の担当範囲ではないですよね？」とはっきり言える",s:3},
-      {t:"「誰かに頼んでもらえますか？」と第三者に振る",s:2},
-      {t:"受け入れるが、次の機会に「あのときのお返し」として交換条件を出す",s:1}
+      {t:"「大変だったね」と聞き役に徹し、どちらにも意見しない",s:0},
+      {t:"両方の話を聞きながら、どちらが「正しいか」を内心で判定している",s:2},
+      {t:"片方には「あなたが正しいと思う」、もう片方にも同じことを言う",s:4},
+      {t:"「二人で直接話し合ったほうがいいよ」と促す",s:1}
     ]
   },
   {
-    theme:"チームワーク・協調",
-    text:"グループプロジェクトで、自分の意見が採用されなかった。どう振る舞う？",
+    scene:"リモートワーク・オンライン",
+    txt:"オンライン会議中、自分の発言中に誰かが割り込んできた。あなたの反応は？",
     opts:[
-      {t:"表面上は従いつつも「言ったじゃないですか」の瞬間を待つ",s:0},
-      {t:"「一応、懸念点だけ共有しておきます」と記録に残す",s:2},
-      {t:"もう一度、別の角度から説得を試みる",s:3},
-      {t:"賛成して全力で取り組む。決まったからには結果を出すだけ",s:1}
+      {t:"黙って相手に譲る",s:0},
+      {t:"「少し続けさせてください」とはっきり言う",s:1},
+      {t:"そのまま話し続け、相手が引くまで止まらない",s:4},
+      {t:"表向きは譲るが、後でそいつの発言にダメ出しするチャンスを待つ",s:3}
     ]
   },
   {
-    theme:"感情・ストレス",
-    text:"仕事のストレスがピークに達したとき、あなたの「出力先」は？",
+    scene:"飲み会・社内交流",
+    txt:"歓迎会で自分より若い新入社員が上司に気に入られている。あなたは？",
     opts:[
-      {t:"誰にも見せず、帰宅後に一人でひたすら消費する（食事・ゲーム・ドラマ）",s:0},
-      {t:"信頼できる同僚に愚痴を聞いてもらう",s:1},
-      {t:"原因を箇条書きにして、解決策を考えることで気持ちを落ち着かせる",s:2},
-      {t:"発生源に向けて直接「それはおかしい」と言いに行く",s:3}
+      {t:"「若い子は可愛がられるもの」と気にしない",s:0},
+      {t:"「自分も昔はそうだったな」と懐かしく思う",s:1},
+      {t:"その新入社員の「使えないエピソード」を上司に自然な流れで話す",s:4},
+      {t:"自分のアピールを同時進行で開始する",s:3}
     ]
   },
   {
-    theme:"自己評価・プライド",
-    text:"自分より明らかにスキルが低い人が自分より高い評価を得た。どう思う？",
+    scene:"退社・転職",
+    txt:"同僚が転職を決意したことを打ち明けてくれた。あなたは？",
     opts:[
-      {t:"「なぜそうなったか」を冷静に分析して、自分に何が足りないか考える",s:1},
-      {t:"評価基準そのものに問題があると思い、上に伝えることを検討する",s:2},
-      {t:"表面は「おめでとう」と言い、心の奥底では納得していない",s:0},
-      {t:"「実力が評価されないなら転職します」と上司に直接伝える",s:3}
+      {t:"「すごい！応援してる」と素直に喜ぶ",s:0},
+      {t:"「どこ行くの？給料上がる？」と詳細を聞き出す",s:2},
+      {t:"「うらやましいな、私も考えようかな」と自分の話にする",s:3},
+      {t:"その情報を上司にチクるかどうか5秒間考える",s:4}
     ]
   }
 ];
 
-var RESULTS=[
+var Rs=[
   {
     min:0,max:7,
-    emoji:"🌫️",
-    watermark:"🌫️",
-    type:"サイレント・モンスター",
-    tierTag:"PASSIVE TYPE",
-    name:"静かな復讐者｜微笑みの裏に台帳あり",
-    heroColor:"linear-gradient(135deg,#2C2C3A 0%,#3D3350 100%)",
-    bars:[
-      {label:"表の顔",pct:95,color:"#7B68EE"},
-      {label:"裏の顔",pct:88,color:"#7B68EE"},
-      {label:"記憶力",pct:99,color:"#7B68EE"}
+    emoji:"🕊️",bg:"🕊️",
+    badge:"SAINT TYPE",
+    sub:"職場の良心",
+    name:"ほぼ聖人｜ガラスのハートを持つ調停者",
+    grad:"linear-gradient(135deg,#2E6B5E 0%,#1A4A3A 100%)",
+    traitColor:"#5FCFB0",
+    traits:[
+      {l:"共感力",p:96},
+      {l:"モンスター度",p:6},
+      {l:"八方美人度",p:72}
     ],
-    desc:"表面上はにこやかで穏やか、職場では「あの人、いい人だよね」と言われるタイプ。感情を表に出すことがなく、コンフリクトを避けながらも場の空気を誰より正確に読んでいる。人の発言を忘れず、失礼なことをされても笑顔で流せる精神的な強さは本物。受け流しているように見えて、実はしっかりと観察している、静かな知性の持ち主です。\n\nただ、心の中に密かに「台帳」を持っており、誰が何をしたかを正確に記録している疑いがあります。表情と感情が完全に別回線で動いているため、何を考えているかわからないと言われることも多いはず。",
-    tsukkomi:"「根に持たない」と自分では思ってますが、5年前の一言をまだ覚えてませんか？ 笑顔の裏の台帳、そろそろシュレッダーにかけてみては。",
-    keywords:["静かなる観察者","台帳型","受け流しの達人","笑顔の仮面","長期記憶力MAX","ジワジワ系"],
-    guide:["まず先に感謝と承認を伝えると心を開いてくれます","本音を引き出すには1対1の環境が必須","批判より「一緒に考えよう」のスタンスで接するのがコツ"],
-    quote:"「黙っているのは、何も考えていないからではない。ただ言うべきタイミングを待っているだけだ。」",
-    quoteAttr:"― サイレント・モンスター族の格言"
+    desc:"職場でこれほど「いい人」でいられることは、本当に稀なことです。空気を読む力が高く、誰かが困っていたら自然と動いてしまう。会議では相手の話をちゃんと聞き、飲み会では全員に気を遣う。そのおかげでチームの雰囲気が保たれており、あなたの存在は間接的にかなりの貢献をしています。\n\nただ、それって本当に「好き」でやってるの？自分の意見を言わずに場を収めることを繰り返していると、ある日突然「なんで私だけ…」と思う日が来ます。聖人にも限界はある。爆発する前に一度、自分の「嫌なこと」を誰かに話してみてください。",
+    warn:"「どうぞ、どうぞ」を続けすぎて、気づいたら一番損な役回りを引き受けていることが多いです。周囲は「あの人は頼めばやってくれる」と学習済みです。",
+    guide:"このタイプは頼みやすく、悪口も言わないため職場の宝です。ただし、限界を超えると突然静かにフェードアウトするので、定期的に「最近どう？」と声をかけてあげてください。",
+    kws:["聖人","空気読み","自己犠牲","調停役","爆発寸前","八方美人"],
+    quote:"「いい人でいることは、コストがかかる。誰もそれを教えてくれないけど。」",
+    attr:"― 職場の良心タイプの独白"
   },
   {
-    min:8,max:15,
-    emoji:"🦊",
-    watermark:"🦊",
-    type:"ポリティカル・フォックス",
-    tierTag:"STRATEGIC TYPE",
-    name:"職場の狐型戦略家｜根回しと観察の天才",
-    heroColor:"linear-gradient(135deg,#8B4513 0%,#C07030 100%)",
-    bars:[
-      {label:"情報収集",pct:90,color:"#D4882A"},
-      {label:"根回し力",pct:85,color:"#D4882A"},
-      {label:"正直さ",pct:40,color:"#D4882A"}
+    min:8,max:14,
+    emoji:"🦊",bg:"🦊",
+    badge:"STRATEGIST TYPE",
+    sub:"戦略的サバイバー",
+    name:"腹黒参謀型｜笑顔の裏で全部計算してる",
+    grad:"linear-gradient(135deg,#8B6914 0%,#5C440C 100%)",
+    traitColor:"#F0C96A",
+    traits:[
+      {l:"社交力",p:88},
+      {l:"計算高さ",p:84},
+      {l:"モンスター度",p:38}
     ],
-    desc:"物事を動かすのに「正面突破」より「側面からの根回し」を選ぶ、職場の情報戦に長けた戦略家タイプ。誰が誰とつながっていて、誰が何を気にしているか、頭の中に常に組織図が浮かんでいる。直接言わなくてもうまく話が進む、見えない形で影響力を発揮できるスキルは、ビジネスパーソンとして本物の才能です。\n\nただし、やりすぎると「あの人、裏で何かやってる？」と思われるリスクがあります。効率よく物事を進めることと、透明性を欠くことは紙一重。根回し上手はいいのですが、時々「真っ直ぐ言う」練習もしておくと人間関係が楽になります。",
-    tsukkomi:"「正直に言っても通らないから」という理由で根回しを使いすぎてませんか？ 周囲は思ったより気づいています。「またあの人か…」と思われる前に、時々直球を投げてみましょう。",
-    keywords:["根回し型","情報収集家","戦略的","側面攻略","組織図が頭に入ってる","ポリティカル"],
-    guide:["直接の依頼より「相談」という形で話しかけると動いてくれる","この人を味方につけると百人力、敵に回すと面倒くさい","情報共有を怠ると拗ねるので意識的に巻き込むこと"],
-    quote:"「最短ルートは直線とは限らない。時に曲がりくねった道こそが、確実に目的地に着く。」",
-    quoteAttr:"― ポリティカル・フォックス族の格言"
+    desc:"表では「協調性バツグン」、裏では「この人、私の目標に使えるか？」を常に計算しているタイプ。人当たりがよく、話を聞くのが上手なので周囲からの信頼も高い。でもその情報収集と人脈形成には、しっかり目的がある。処世術の天才であり、職場政治をゲームとして楽しんでいる節があります。実際、出世するのもこのタイプ。\n\nただ、長く一緒にいると「なんか全部計算されてる気がする」と気づかれます。計算が見えた瞬間に信頼が一気に崩れるのがこのタイプの弱点。本音で話せる人を一人くらいは作っておいたほうがいいですよ。",
+    warn:"「この情報は使えそう」「この人はいま利用できる」と思った瞬間、それが表情に0.3秒だけ出ています。鋭い人には読まれています。",
+    guide:"このタイプは敵に回すと面倒なので、基本的に味方にしておくことが重要。お世辞をきちんと返し、手柄を少し譲ると忠実な同盟者になってくれます。",
+    kws:["計算高い","処世術","情報収集","笑顔の腹黒","政治的","戦略家"],
+    quote:"「友好的であることと、純粋に友達であることは、まったく別の話だ。」",
+    attr:"― 戦略的サバイバータイプの格言"
   },
   {
-    min:16,max:21,
-    emoji:"🏗️",
-    watermark:"🏗️",
-    type:"コントロール・アーキテクト",
-    tierTag:"CONTROL TYPE",
-    name:"完璧主義の設計士｜全部把握しないと眠れない",
-    heroColor:"linear-gradient(135deg,#1A3A5C 0%,#2A6090 100%)",
-    bars:[
-      {label:"完璧主義",pct:95,color:"#4A90D9"},
-      {label:"委任力",pct:28,color:"#4A90D9"},
-      {label:"段取り力",pct:92,color:"#4A90D9"}
+    min:15,max:21,
+    emoji:"🐍",bg:"🐍",
+    badge:"SHADOW TYPE",
+    sub:"陰のインフルエンサー",
+    name:"陰湿根回し型｜表は穏やか、裏でじわじわ",
+    grad:"linear-gradient(135deg,#4A2060 0%,#2E1040 100%)",
+    traitColor:"#B89FCC",
+    traits:[
+      {l:"根回し力",p:94},
+      {l:"直接対決嫌い",p:90},
+      {l:"モンスター度",p:62}
     ],
-    desc:"「完璧にやらないくらいならやらない」という強い信念を持ち、仕事のクオリティに対して妥協しない、職場のQC（品質管理）係。段取りと準備が得意で、抜け漏れを未然に防ぐ能力は本物。チームの成果物が「なぜかいつも高品質」なのはあなたのような人がいるからで、その細部へのこだわりは仕事において間違いなく強みです。\n\nしかし、他人の仕事のやり方が気になりすぎて、気づくと「確認」という名の監視状態になっていることも。「これ、私がやった方が早い」が口癖になっていませんか？ 人に任せる恐怖と戦うことが、あなたの最大のボスバトルです。",
-    tsukkomi:"「自分でやった方が早い」を繰り返した結果、あなたが一番忙しくなっていませんか？ 委任できない完璧主義者は、最終的に自分がボトルネックになります。怖くても手放してみましょう。",
-    keywords:["完璧主義","コントロール型","段取り命","確認魔","委任苦手","品質番人"],
-    guide:["作業の目的と完成基準を最初に明確に伝えると安心する","「なんとなく」という曖昧な指示は最大のストレス源","完成後に具体的なフィードバックをするとモチベが上がる"],
-    quote:"「完璧主義者は、不完全なものを見るたびに仕事を増やしている。そのことに気づくのが最大の進化だ。」",
-    quoteAttr:"― コントロール・アーキテクト族の格言"
+    desc:"絶対に正面からは戦わない。でも、気づいたら相手が不利な立場に追い込まれている。それがこのタイプの恐ろしさです。本人は「ただ事実を伝えただけ」と思っているが、その「事実の伝え方」に技術がある。誰かの評判を下げたいとき、直接批判はせず、「心配しているように見せながら」情報を流す。この繊細なコントロール技術は、ある意味で才能です。\n\nただ、そのやり方を長く続けると、周囲が「この人の言うことは額面通りに受け取れない」と学習し始めます。信頼のコストが少しずつ上がっていく。もし今「なんかみんな距離を置いてる気がする」と思ったら、それはそういうことかもしれません。",
+    warn:"「さりげない一言」で誰かを傷つけていることに、自分では気づいていないことが多いです。「悪意はなかった」は通じますが、結果は残ります。",
+    guide:"このタイプには直接対決は逆効果。「あなたの意見を聞かせてください」と主導権を先に渡しつつ、重要情報は共有しすぎないことが鉄則です。",
+    kws:["根回し","陰湿","間接攻撃","情報操作","ガス抜き上手","表は穏やか"],
+    quote:"「毒は、気づかれないときが最も効く。」",
+    attr:"― 陰のインフルエンサータイプの格言"
   },
   {
-    min:22,max:26,
-    emoji:"⚡",
-    watermark:"⚡",
-    type:"カタリスト・バーナー",
-    tierTag:"DISRUPTOR TYPE",
-    name:"職場の起爆剤｜変化を起こさずにいられない",
-    heroColor:"linear-gradient(135deg,#5A1A00 0%,#B03000 100%)",
-    bars:[
-      {label:"行動力",pct:96,color:"#E05A20"},
-      {label:"協調性",pct:45,color:"#E05A20"},
-      {label:"変革力",pct:90,color:"#E05A20"}
+    min:22,max:28,
+    emoji:"🦁",bg:"🦁",
+    badge:"BOSS MONSTER TYPE",
+    sub:"自覚なき支配者",
+    name:"無自覚ハラスメント型｜善意で踏み潰す",
+    grad:"linear-gradient(135deg,#C0392B 0%,#8B1A10 100%)",
+    traitColor:"#FF9080",
+    traits:[
+      {l:"自己正当化",p:95},
+      {l:"支配欲",p:88},
+      {l:"モンスター度",p:80}
     ],
-    desc:"「なぜこのやり方を続けているのか」を常に考え、改善と変化を止められない、職場のエンジン役。現状維持に満足できず、「もっとよくなるはず」という信念で動き続ける推進力は本物です。新しいことへの適応力が高く、旧来のやり方に疑問を持てるあなたの視点は、チームに欠かせないイノベーションの種になっています。\n\nしかし、変化のスピードが周囲と合わないと「あの人、またなんか始めた」となりがち。「変える」ことと「周囲を巻き込む」ことは別のスキルです。爆発力があるだけに、方向を間違えると周囲への被害も大きい。起爆剤は使い所が命です。",
-    tsukkomi:"提案が多すぎて、収拾がつかなくなった経験はありませんか？ アイデアの半分は「実行されない」ではなく「まだ実行する順番じゃない」だけです。優先順位を絞る修行をそろそろ始めましょう。",
-    keywords:["カタリスト","変革型","爆発力","現状打破","巻き込み修行中","アイデア過多"],
-    guide:["「なぜ変えるか」を論理的に説明してもらうと周囲が動きやすい","エネルギーを一点に集中させると成果が倍増する","反対意見への対処法を学ぶと真のリーダーになれる"],
-    quote:"「変化を起こせる人は多い。しかし変化を根付かせられる人は少ない。その違いが、革命家と破壊者を分ける。」",
-    quoteAttr:"― カタリスト・バーナー族の格言"
+    desc:"悪意はない。本当にない。ただ、気づかないうちに周囲を消耗させているタイプです。「正しいことを言っているだけ」「みんなのために言っている」という確信が強く、それゆえに止まれない。会議での発言量が多く、後輩への指導も「熱心すぎる」レベルで、本人は「面倒見がいい」と思っている。実際、能力は高いことが多く、だからこそ「なんでこんな簡単なことができないの？」が止まらない。\n\n周囲はあなたのことを、陰で「あの人の後は大変」「あの人の前では本音が言えない」と話しています。本人が「みんなと仲良くやってる」と思っているほど、その差は大きい。",
+    warn:"「これくらい普通でしょ」「昔はもっと厳しかった」が口から出始めたら黄信号です。その言葉は、あなたが変化を拒否しているサインです。",
+    guide:"直接反論するとエスカレートするので、「おっしゃる通りです、ただ私には少し難しくて…」と一旦受け入れつつフェードアウトする戦略が有効です。",
+    kws:["無自覚","善意の加害","自己正当化","熱血系","見えないハラスメント","支配欲"],
+    quote:"「善意でも、踏み潰されたことに変わりはない。」",
+    attr:"― 無自覚ハラスメントタイプへの証言"
   },
   {
-    min:27,max:30,
-    emoji:"⚔️",
-    watermark:"⚔️",
-    type:"フロントライン・ウォリアー",
-    tierTag:"DIRECT TYPE",
-    name:"直球一本勝負型｜オブラートを持っていない",
-    heroColor:"linear-gradient(135deg,#2A1A00 0%,#6B3A10 100%)",
-    bars:[
-      {label:"直接性",pct:99,color:"#C87A20"},
-      {label:"外交力",pct:30,color:"#C87A20"},
-      {label:"正直さ",pct:98,color:"#C87A20"}
+    min:29,max:40,
+    emoji:"👺",bg:"👺",
+    badge:"FINAL BOSS TYPE",
+    sub:"職場の台風",
+    name:"確信犯モンスター型｜全部わかってやってる",
+    grad:"linear-gradient(135deg,#1A1A2E 0%,#0D0D1A 100%)",
+    traitColor:"#FF6B6B",
+    traits:[
+      {l:"政治力",p:97},
+      {l:"ルール破り",p:92},
+      {l:"モンスター度",p:98}
     ],
-    desc:"思ったことをそのまま言える、職場では希少価値の高い「正直者」タイプ。忖度や遠回しな表現が苦手で、問題を直視し、真実を言い続けるその姿勢は、長期的に見て組織に必要不可欠な存在です。「誰も言わないことを言える人」として、陰ながら感謝されていることも多いはず。ブレない軸は、あなたの最大の強みです。\n\nただ、全員があなたと同じ耐久性を持っているわけではありません。直球が多すぎると、周囲は「また始まった」「今日も怖かった」と感じていることも。剣は時として鞘に収めることで、もっと遠くまで運べます。",
-    tsukkomi:"「オブラートって何？食べるもの？」くらいの感覚で生きているのでは？ 正しいことを言っているのに人間関係がこじれた経験が3回以上あるなら、伝え方の修行時間です。",
-    keywords:["直球型","正直者","オブラートなし","空気読まない（読まない選択をしている）","ブレない軸","直接すぎる"],
-    guide:["最初に「批判ではなく改善のために言っている」と添えると伝わりやすい","1対1の方が本音で話してくれる","感情より事実を先に言ってもらうとコミュニケーションが円滑になる"],
-    quote:"「直球を投げ続ける投手は、バッターに読まれる。でも、変化球を覚えた直球投手は無敵になる。」",
-    quoteAttr:"― フロントライン・ウォリアー族の格言"
+    desc:"おめでとうございます（？）。あなたは本物の職場モンスターです。全部わかっていてやっている、確信犯タイプ。情報操作、評価の誘導、人間関係の分断、根回し、全部「技術」として持っています。そしてそれを使うことに対して、大きな罪悪感がない。むしろ「職場はそういう場所だ」と思っている。実際、このタイプが出世することも多く、それが社会の現実だったりします。\n\nただ、あなたの周囲に「本当の意味での仲間」は何人いますか？利害が一致している間だけ動く人と、本当に信頼できる人は違います。全部計算でやってきた人が、何か大切なものを失ったときに誰もそばにいない――そのリスクは、本当に計算に入れていますか？",
+    warn:"「敵を作り過ぎている」ことに気づいていない可能性があります。職場は長期戦です。10年後にその相手がどこにいるかは、誰にもわかりません。",
+    guide:"このタイプには情報と利益の共有が最大の武器です。「敵よりも味方にした方が得」という構造を作れれば、こちら側に引き込めます。それ以外の方法はほぼ効きません。",
+    kws:["確信犯","政治的天才","最終ボス","計算尽くし","孤独のリスク","職場の台風"],
+    quote:"「最も危険なモンスターは、自分がモンスターだと知っているやつだ。」",
+    attr:"― 職場の台風タイプを観察した人の証言"
   }
 ];
 
-var currentQ=0,totalScore=0,selectedScore=null,quizStarted=false,currentResult=null;
+var cq=0, selectedScoresHistory=[], started=false, cr=null;
 
-function handleMainBtn(){
-  if(!quizStarted){startQuiz();return}
-  if(selectedScore===null){showToast("選択肢を選んでください");return}
-  totalScore+=selectedScore;selectedScore=null;currentQ++;
-  if(currentQ<Q.length){renderQuestion()}else{showResult()}
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('mbtn').addEventListener('click', go);
+  document.getElementById('back-btn').addEventListener('click', handleBackBtn);
+  document.getElementById('retry-btn').addEventListener('click', reset);
+  document.getElementById('share-x-btn').addEventListener('click', sx);
+  document.getElementById('share-line-btn').addEventListener('click', sl);
+  document.getElementById('share-copy-btn').addEventListener('click', sc);
+});
+
+function go(){
+  if(!started){boot();return}
+  
+  const selectedBtn = document.querySelector('.opt.sel');
+  if(!selectedBtn){toast("選択肢を選んでください");return}
+  
+  const scoreVal = parseInt(selectedBtn.getAttribute('data-score'), 10);
+  selectedScoresHistory.push(scoreVal);
+  
+  cq++;
+  if(cq<Qs.length){render()}else{showRes()}
 }
 
-function startQuiz(){
-  quizStarted=true;
-  document.getElementById('intro-card').classList.add('hidden');
-  document.getElementById('progress-wrap').classList.remove('hidden');
-  document.getElementById('question-card').classList.remove('hidden');
-  document.getElementById('main-btn').textContent='次の質問へ →';
-  document.getElementById('main-btn').disabled=true;
-  renderQuestion();
+function handleBackBtn() {
+  if (!started || cq === 0) return;
+  
+  selectedScoresHistory.pop();
+  cq--;
+  render();
 }
 
-function renderQuestion(){
-  var q=Q[currentQ],n=currentQ+1,total=Q.length;
-  document.getElementById('q-num').textContent='Q'+n;
-  document.getElementById('q-theme').textContent=q.theme;
-  document.getElementById('q-text').textContent=q.text;
-  document.getElementById('progress-count').textContent=n+' / '+total;
-  document.getElementById('progress-bar').style.width=(((n-1)/total)*100)+'%';
-  document.getElementById('main-btn').textContent=n===total?'裏の顔を診断する 👹':'次の質問へ →';
-  document.getElementById('main-btn').disabled=true;
-  var letters=['A','B','C','D'],list=document.getElementById('options-list');
-  list.innerHTML='';
-  q.opts.forEach(function(opt,i){
-    var btn=document.createElement('button');
-    btn.className='option-btn';
-    btn.innerHTML='<span class="option-letter">'+letters[i]+'</span><span class="option-text">'+opt.t+'</span>';
-    btn.onclick=(function(b,s){return function(){selectOption(b,s)}})(btn,opt.s);
-    list.appendChild(btn);
+function boot(){
+  started=true;
+  selectedScoresHistory = [];
+  var at=document.getElementById('ad-top'); if(at) at.style.display='none';
+  document.getElementById('intro').classList.add('hidden');
+  document.getElementById('prog').classList.remove('hidden');
+  document.getElementById('qcard').classList.remove('hidden');
+  document.getElementById('back-btn').classList.remove('hidden');
+  render();
+}
+
+function render(){
+  var q=Qs[cq],n=cq+1,tot=Qs.length;
+  document.getElementById('qtag').textContent='Q'+n;
+  document.getElementById('qscene').textContent=q.scene;
+  document.getElementById('qtxt').textContent=q.txt;
+  document.getElementById('pcnt').textContent=n+' / '+tot;
+  document.getElementById('pfill').style.width=(((n-1)/tot)*100)+'%';
+  
+  document.getElementById('back-btn').disabled = (cq === 0);
+  
+  const mainBtn = document.getElementById('mbtn');
+  mainBtn.textContent=n===tot?'診断結果を見る 👺':'次の質問へ →';
+  mainBtn.disabled=true;
+
+  var lets=['A','B','C','D'],ol=document.getElementById('opts');
+  ol.innerHTML='';
+  q.opts.forEach(function(o,i){
+    var b=document.createElement('button');
+    b.className='opt';
+    b.setAttribute('data-score', o.s);
+    b.innerHTML='<span class="opt-ltr">'+lets[i]+'</span><span class="opt-txt">'+o.t+'</span>';
+    b.onclick=function(){pick(b);};
+    ol.appendChild(b);
   });
-  var card=document.getElementById('question-card');
-  card.style.animation='none';void card.offsetWidth;card.style.animation='fadeUp 0.3s ease';
+  var c=document.getElementById('qcard');
+  c.style.animation='none';void c.offsetWidth;c.style.animation='up .3s ease';
 }
 
-function selectOption(btn,score){
-  document.querySelectorAll('.option-btn').forEach(function(b){b.classList.remove('selected')});
-  btn.classList.add('selected');selectedScore=score;
-  document.getElementById('main-btn').disabled=false;
+function pick(btn){
+  document.querySelectorAll('.opt').forEach(function(b){b.classList.remove('sel')});
+  btn.classList.add('sel');
+  document.getElementById('mbtn').disabled=false;
 }
 
-function showResult(){
-  document.getElementById('progress-bar').style.width='100%';
+function showRes(){
+  document.getElementById('pfill').style.width='100%';
+  const totalScore = selectedScoresHistory.reduce((a, b) => a + b, 0);
+
   setTimeout(function(){
-    document.getElementById('quiz-section').style.display='none';
-    document.getElementById('result-section').classList.add('visible');
-    var r=null;
-    for(var i=0;i<RESULTS.length;i++){if(totalScore>=RESULTS[i].min&&totalScore<=RESULTS[i].max){r=RESULTS[i];break}}
-    if(!r)r=RESULTS[RESULTS.length-1];
-    currentResult=r;
+    document.getElementById('quiz').style.display='none';
+    var rs=document.getElementById('res');rs.classList.add('on');
 
-    document.getElementById('result-hero-top').style.background=r.heroColor;
-    document.getElementById('hero-watermark').textContent=r.watermark;
-    document.getElementById('result-tier-tag').textContent=r.tierTag;
-    document.getElementById('result-monster-emoji').textContent=r.emoji;
-    document.getElementById('result-monster-type').textContent=r.type;
-    document.getElementById('result-type-name').textContent=r.name;
-    document.getElementById('result-score-chip').textContent='診断スコア：'+totalScore+' 点';
-    document.getElementById('desc-text').textContent=r.desc;
-    document.getElementById('tsukkomi-body').textContent=r.tsukkomi;
-    document.getElementById('quote-text').textContent=r.quote;
-    document.getElementById('quote-attr').textContent=r.quoteAttr;
+    var r=Rs.find(function(res){return totalScore>=res.min && totalScore<=res.max}) || Rs[Rs.length-1];
+    cr=r;
 
-    var barsHtml='';
-    r.bars.forEach(function(b){
-      barsHtml+='<div class="danger-row"><span class="danger-label">'+b.label+'</span><div class="danger-bg"><div class="danger-fill" style="width:0%;background:'+b.color+'"></div></div><span class="danger-pct">'+b.pct+'%</span></div>';
+    document.getElementById('rtop').style.background=r.grad;
+    document.getElementById('rtop').style.color='#FFF';
+    document.getElementById('rbg').textContent=r.bg;
+    document.getElementById('rbadge').textContent=r.badge;
+    document.getElementById('remoji').textContent=r.emoji;
+    document.getElementById('rsub').textContent=r.sub;
+    document.getElementById('rname').textContent=r.name;
+    document.getElementById('rpill').textContent='診断スコア：'+totalScore+' 点';
+    document.getElementById('rdesc').textContent=r.desc;
+    document.getElementById('rwarn').textContent=r.warn;
+    document.getElementById('rguide').textContent=r.guide;
+    document.getElementById('rquote').textContent=r.quote;
+    document.getElementById('rattr').textContent=r.attr;
+
+    var th='';
+    r.traits.forEach(function(t){
+      th+='<div class="tr-row"><span class="tr-lbl">'+t.l+'</span><div class="tr-bg"><div class="tr-fill" style="width:0%;background:'+r.traitColor+'"></div></div><span class="tr-pct">'+t.p+'%</span></div>';
     });
-    document.getElementById('danger-bar-wrap').innerHTML=barsHtml;
+    document.getElementById('rtraits').innerHTML=th;
+    document.getElementById('rtraits').style.color='#FFF';
 
-    var kwHtml='';r.keywords.forEach(function(k){kwHtml+='<span class="kw-tag">'+k+'</span>'});
-    document.getElementById('kw-row').innerHTML=kwHtml;
-
-    var guideHtml='';r.guide.forEach(function(g,i){
-      guideHtml+='<div class="guide-item"><span class="guide-dot">'+(i+1)+'</span><span>'+g+'</span></div>';
-    });
-    document.getElementById('guide-items').innerHTML=guideHtml;
+    var kh='';r.kws.forEach(function(k){kh+='<span class="kw">'+k+'</span>'});
+    document.getElementById('rkws').innerHTML=kh;
 
     window.scrollTo({top:0,behavior:'smooth'});
     requestAnimationFrame(function(){
       setTimeout(function(){
-        document.querySelectorAll('.danger-fill').forEach(function(el,i){
-          el.style.transition='width 0.9s cubic-bezier(.4,0,.2,1) '+(0.15+i*0.12)+'s';
-          el.style.width=r.bars[i].pct+'%';
+        document.querySelectorAll('.tr-fill').forEach(function(el,i){
+          el.style.transition='width .85s cubic-bezier(.4,0,.2,1) '+(0.15+i*0.12)+'s';
+          el.style.width=r.traits[i].p+'%';
         });
       },150);
     });
-  },280);
+  },260);
 }
 
-function resetQuiz(){
-  currentQ=0;totalScore=0;selectedScore=null;quizStarted=false;currentResult=null;
-  document.getElementById('quiz-section').style.display='block';
-  document.getElementById('result-section').classList.remove('visible');
-  document.getElementById('intro-card').classList.remove('hidden');
-  document.getElementById('progress-wrap').classList.add('hidden');
-  document.getElementById('question-card').classList.add('hidden');
-  document.getElementById('main-btn').textContent='診断スタート ▶';
-  document.getElementById('main-btn').disabled=false;
-  document.getElementById('progress-bar').style.width='0%';
+function reset(){
+  cq=0;selectedScoresHistory=[];started=false;cr=null;
+  var at=document.getElementById('ad-top'); if(at) at.style.display='';
+  document.getElementById('quiz').style.display='block';
+  document.getElementById('res').classList.remove('on');
+  document.getElementById('intro').classList.remove('hidden');
+  document.getElementById('prog').classList.add('hidden');
+  document.getElementById('qcard').classList.add('hidden');
+  document.getElementById('back-btn').classList.add('hidden');
+  
+  document.getElementById('mbtn').textContent='診断スタート 👺';
+  document.getElementById('mbtn').disabled=false;
+  document.getElementById('pfill').style.width='0%';
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
-function getShareText(){
-  if(!currentResult)return'';
-  return '【職場モンスター診断】\n私の裏の顔は「'+currentResult.type+'」\n'+currentResult.name+'\n\n'+currentResult.quote+'\n\nあなたの裏の顔も診断してみて👹\n#職場モンスター診断 #心理テスト #性格の裏の顔';
+function stxt(){
+  if(!cr)return'';
+  return '【職場モンスター診断】\n私のタイプは「'+cr.name+'」でした！\n\n'+cr.quote+'\n\n職場 人間関係 占い・性格の裏の顔が気になる人はやってみて👺';
 }
-function shareToX(){window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(getShareText()),'_blank')}
-function shareToLine(){window.open('https://social-plugins.line.me/lineit/share?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(getShareText()),'_blank')}
-function copyResult(){
-  var text=getShareText()+'\n'+window.location.href;
-  if(navigator.clipboard){navigator.clipboard.writeText(text).then(function(){showToast('コピーしました！👹')})}
-  else{var ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);showToast('コピーしました！👹')}
+function sx(){window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(stxt())+'&url='+encodeURIComponent(location.href)+'&hashtags='+encodeURIComponent('職場モンスター診断,心理テスト,診断テスト,職場の人間関係,性格診断'),'_blank')}
+function sl(){var t=location.href+'\n\n'+stxt();window.location.href='line://msg/text/'+encodeURIComponent(t);setTimeout(function(){window.open('https://line.me/R/msg/text/'+encodeURIComponent(t),'_blank')},500)}
+function sc(){
+  var t=stxt()+'\n'+location.href;
+  if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){toast('コピーしました！')})}
+  else{var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');document.body.removeChild(a);toast('コピーしました！')}
 }
-function showToast(msg){
-  var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
-  setTimeout(function(){t.classList.remove('show')},2100);
+function toast(m){
+  var t=document.getElementById('toast');
+  t.textContent=m;t.classList.add('on');
+  setTimeout(function(){t.classList.remove('on')},2100);
 }
 </script>
 </body>
