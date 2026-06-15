@@ -1102,7 +1102,7 @@ function resetQuiz() {
 
 function getShareText() {
   if (!currentResult) return '';
-  return '【取扱説明書メーカー】\n私のタイプは「' + currentResult.name + '」でした！\n\n' + currentResult.quote + '\n\nあなたのトリセツも作ってみて👇';
+  return '【取扱説明書メーカー】\n私のタイプは「' + currentResult.name + '」でした！\n\n' + currentResult.quote + '\n\nあなたのトリセツも作ってみて👇\n' + window.location.href;
 }
 
 function shareToX() {
@@ -1113,7 +1113,7 @@ function shareToX() {
 function shareToLine(){var t=getShareText();window.location.href='line://msg/text/'+encodeURIComponent(t);setTimeout(function(){window.open('https://line.me/R/msg/text/'+encodeURIComponent(t),'_blank')},500);}
 
 function copyResult() {
-  var text = getShareText() + '\n' + window.location.href;
+  var text = getShareText();
   if (navigator.clipboard) {
     navigator.clipboard.writeText(text).then(function() { showToast("コピーしました！"); });
   } else {
