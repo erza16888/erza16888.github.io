@@ -9,6 +9,10 @@
 <meta property="og:title" content="【隠れメンヘラ診断】あなたの「ポックリ病」度テスト">
 <meta property="og:description" content="全8問の心理テストで隠れメンヘラ度を診断。あなたは何タイプ？">
 <meta property="og:type" content="website">
+<meta property="og:image" content="og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="index, follow">
 <style>
@@ -522,7 +526,52 @@
     .q-text { font-size: 16px; }
     .share-buttons { flex-direction: column; }
   }
+
+/* ── AD SLOT ── */
+.ad-slot{min-height:250px;background:#f0f0f0;margin:20px 0;text-align:center;line-height:250px;color:#aaa;font-size:12px;border-radius:12px;overflow:hidden;font-family:'Hiragino Kaku Gothic ProN',sans-serif;letter-spacing:.05em}
+/* ── SEO FAQ ── */
+.seo-faq{max-width:520px;margin:28px auto 0;padding:0 16px 40px;font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Noto Sans JP',sans-serif}
+.seo-faq h2{font-size:16px;font-weight:900;margin-bottom:16px;text-align:center;opacity:.55;letter-spacing:.03em}
+.seo-faq details{background:rgba(127,127,127,0.06);border:1px solid rgba(127,127,127,0.16);border-radius:12px;padding:14px 16px;margin-bottom:10px}
+.seo-faq summary{font-size:14px;font-weight:700;cursor:pointer;list-style:none;opacity:.85;line-height:1.6}
+.seo-faq summary::-webkit-details-marker{display:none}
+.seo-faq summary::before{content:'Q. ';color:#C0392B;font-weight:900}
+.seo-faq .faq-a{font-size:13px;line-height:1.85;opacity:.7;margin-top:10px;padding-top:10px;border-top:1px solid rgba(127,127,127,0.16)}
+.seo-faq .faq-a::before{content:'A. ';color:#2E7D5E;font-weight:900}
+
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "隠れメンヘラ診断とは何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "全8問の心理テストから、自分では気づきにくい「隠れメンヘラ」度（ポックリ病度）を測定する無料の診断です。恋愛や人間関係での感情の傾向を客観的に把握できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "結果は何タイプに分かれますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ほぼ健全な「精神の女王」から上級の「深海感情モンスター」まで、スコアに応じて複数タイプに分類されます。各タイプにポックリ病レベルと特徴が表示されます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "結果をシェアできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。結果ページのシェアボタンからX・LINE・コピーで結果と診断リンクを共有できます。友達と診断し合って楽しめます。"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -565,6 +614,7 @@
       <div class="options-list" id="options-list"></div>
     </div>
 
+    <div class="ad-slot" id="ad-top">【スポンサーリンク / 広告】</div>
     <button class="cta-btn" id="main-btn" onclick="handleMainBtn()">
       診断スタート ✦
     </button>
@@ -573,6 +623,7 @@
 
   <!-- RESULT SECTION -->
   <div class="result-section" id="result-section">
+    <div class="ad-slot" id="ad-result">【スポンサーリンク / 広告】</div>
 
     <div class="result-card" id="result-card">
       <div class="result-header">
@@ -611,6 +662,21 @@
 
 </div>
 
+<section class="seo-faq">
+  <h2>よくある質問（隠れメンヘラ診断・心理テスト）</h2>
+    <details>
+      <summary>隠れメンヘラ診断とは何ですか？</summary>
+      <p class="faq-a">全8問の心理テストから、自分では気づきにくい「隠れメンヘラ」度（ポックリ病度）を測定する無料の診断です。恋愛や人間関係での感情の傾向を客観的に把握できます。</p>
+    </details>
+    <details>
+      <summary>結果は何タイプに分かれますか？</summary>
+      <p class="faq-a">ほぼ健全な「精神の女王」から上級の「深海感情モンスター」まで、スコアに応じて複数タイプに分類されます。各タイプにポックリ病レベルと特徴が表示されます。</p>
+    </details>
+    <details>
+      <summary>結果をシェアできますか？</summary>
+      <p class="faq-a">はい。結果ページのシェアボタンからX・LINE・コピーで結果と診断リンクを共有できます。友達と診断し合って楽しめます。</p>
+    </details>
+</section>
 <div class="site-footer">
   © 2026 隠れメンヘラ診断 ｜ 結果はあくまで娯楽目的です
 </div>
@@ -755,6 +821,7 @@ function handleMainBtn() {
 
 function startQuiz() {
   quizStarted = true;
+  var at=document.getElementById('ad-top'); if(at) at.style.display='none';
   document.getElementById('intro-card').classList.add('hidden');
   document.getElementById('progress-wrap').classList.remove('hidden');
   document.getElementById('question-card').classList.remove('hidden');
@@ -831,6 +898,7 @@ function showResult() {
 }
 
 function resetQuiz() {
+  var at=document.getElementById('ad-top'); if(at) at.style.display='';
   currentQ = 0;
   totalScore = 0;
   selectedScore = null;
@@ -851,19 +919,17 @@ function resetQuiz() {
 
 function getShareText() {
   if (!currentResult) return '';
-  return `【隠れメンヘラ診断】\n私のタイプは「${currentResult.name}」でした！\nポックリ病レベル：${currentResult.pct}%\n\n${currentResult.highlight}\n\nあなたも診断してみて👇\n${window.location.href}`;
+  return `【隠れメンヘラ診断】\n私のタイプは「${currentResult.name}」でした！\nポックリ病レベル：${currentResult.pct}%\n\n${currentResult.highlight}\n\nあなたも診断してみて👇`;
 }
 
-function shareToX() {
-  const text = getShareText();
-  const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
-  window.open(url, '_blank');
-}
+function shareToX(){window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(getShareText())+'&url='+encodeURIComponent(window.location.href),'_blank');}
 
-function shareToLine(){var t=getShareText();window.location.href='line://msg/text/'+encodeURIComponent(t);setTimeout(function(){window.open('https://line.me/R/msg/text/'+encodeURIComponent(t),'_blank')},500);}
+function shareToLine(){var t=window.location.href+'
+
+'+getShareText();window.location.href='line://msg/text/'+encodeURIComponent(t);setTimeout(function(){window.open('https://line.me/R/msg/text/'+encodeURIComponent(t),'_blank')},500);}
 
 function copyResult() {
-  const text = getShareText();
+  const text = getShareText() + `\n${window.location.href}`;
   if (navigator.clipboard) {
     navigator.clipboard.writeText(text).then(() => showToast("コピーしました！"));
   } else {
