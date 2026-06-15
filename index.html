@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>推し活タイプ診断｜あなたはどのオタク生態？【無料診断テスト2026】</title>
+  <meta name="description" content="あなたの推し活スタイルを8問で診断！沼落ち系・課金廃人・雑食オタクなど、全6タイプから本当の自分を発見。友達とシェアして盛り上がろう。オタク診断・推し活テスト・心理テスト。" />
+  <meta name="keywords" content="推し活, オタク診断, 心理テスト, 推しタイプ診断, アイドルオタク, 沼落ち, 課金, 推し活タイプ, 無料診断, 2026" />
+  <meta property="og:title" content="推し活タイプ診断｜あなたはどのオタク生態？" />
+  <meta property="og:description" content="8問の質問であなたの推し活スタイルが分かる！全6タイプ診断。シェアして友達と比べよう。" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0d0d14;
+      --surface: #16161f;
+      --surface2: #1e1e2c;
+      --border: #2e2e42;
+      --accent: #c084fc;
+      --accent2: #f472b6;
+      --accent3: #818cf8;
+      --text: #e8e8f0;
+      --text-muted: #8888a8;
+      --glow: rgba(192, 132, 252, 0.18);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Noto Sans JP', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── Stars background ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,.5) 0%, transparent 100%),
+        radial-gradient(1px 1px at 30% 40%, rgba(255,255,255,.3) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 55% 20%, rgba(255,255,255,.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 75% 60%, rgba(255,255,255,.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 10%, rgba(255,255,255,.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 20% 80%, rgba(255,255,255,.2) 0%, transparent 100%),
+        radial-gradient(1px 1px at 65% 85%, rgba(255,255,255,.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 42% 70%, rgba(255,255,255,.2) 0%, transparent 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 16px 64px;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      text-align: center;
+      padding: 56px 0 40px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      border-radius: 100px;
+      padding: 4px 14px;
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      font-family: 'Zen Kaku Gothic New', sans-serif;
+      font-size: clamp(28px, 7vw, 44px);
+      font-weight: 900;
+      line-height: 1.2;
+      background: linear-gradient(135deg, #c084fc 0%, #f472b6 50%, #818cf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 12px;
+    }
+
+    .hero-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: .04em;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .hero-meta {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .hero-meta span {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .hero-meta span::before {
+      content: attr(data-icon);
+    }
+
+    /* ── Progress ── */
+    .progress-bar-wrap {
+      height: 4px;
+      background: var(--border);
+      border-radius: 4px;
+      margin: 32px 0 8px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      border-radius: 4px;
+      transition: width .5s cubic-bezier(.4,0,.2,1);
+    }
+
+    .progress-label {
+      font-size: 11px;
+      color: var(--text-muted);
+      text-align: right;
+      margin-bottom: 20px;
+    }
+
+    /* ── Question card ── */
+    .q-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px 24px;
+      margin-bottom: 16px;
+      animation: fadeUp .4s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .q-number {
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: .1em;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .q-text {
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.65;
+      color: var(--text);
+      margin-bottom: 22px;
+    }
+
+    /* ── Options ── */
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .opt-btn {
+      background: var(--surface2);
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 18px;
+      color: var(--text);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      cursor: pointer;
+      text-align: left;
+      transition: border-color .2s, background .2s, transform .15s;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .opt-btn:hover {
+      border-color: var(--accent);
+      background: rgba(192,132,252,.08);
+      transform: translateX(3px);
+    }
+
+    .opt-btn.selected {
+      border-color: var(--accent2);
+      background: rgba(244,114,182,.10);
+    }
+
+    .opt-label {
+      min-width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .opt-btn.selected .opt-label {
+      background: var(--accent2);
+      color: #fff;
+    }
+
+    /* ── Nav ── */
+    .nav-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      gap: 12px;
+    }
+
+    .btn-prev {
+      background: transparent;
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 20px;
+      color: var(--text-muted);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 14px;
+      cursor: pointer;
+      transition: border-color .2s, color .2s;
+    }
+
+    .btn-prev:hover { border-color: var(--accent); color: var(--text); }
+    .btn-prev:disabled { opacity: .3; cursor: not-allowed; }
+
+    .btn-next {
+      flex: 1;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border: none;
+      border-radius: 12px;
+      padding: 14px 20px;
+      color: #fff;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: opacity .2s, transform .15s;
+    }
+
+    .btn-next:hover { opacity: .88; transform: scale(1.02); }
+    .btn-next:disabled { opacity: .35; cursor: not-allowed; transform: none; }
+
+    /* ── Result ── */
+    #result-section {
+      display: none;
+      animation: fadeUp .5s ease both;
+    }
+
+    #result-section.visible { display: block; }
+
+    .result-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .result-header {
+      padding: 32px 28px 24px;
+      background: linear-gradient(135deg, rgba(192,132,252,.15) 0%, rgba(244,114,182,.10) 100%);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .result-type-label {
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .result-emoji {
+      font-size: 52px;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .result-type-name {
+      font-family: 'Zen Kaku Gothic New', sans-serif;
+      font-size: clamp(22px, 6vw, 32px);
+      font-weight: 900;
+      background: linear-gradient(135deg, #c084fc, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 6px;
+    }
+
+    .result-type-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .result-body {
+      padding: 28px;
+    }
+
+    .result-desc {
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    .result-roast {
+      background: rgba(244,114,182,.08);
+      border-left: 3px solid var(--accent2);
+      border-radius: 0 12px 12px 0;
+      padding: 14px 18px;
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.75;
+      margin-bottom: 24px;
+    }
+
+    .result-traits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .trait-tag {
+      background: rgba(129,140,248,.12);
+      border: 1px solid rgba(129,140,248,.3);
+      border-radius: 100px;
+      padding: 5px 14px;
+      font-size: 12px;
+      color: var(--accent3);
+    }
+
+    .share-section {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .share-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .share-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+
+    .share-buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .share-btn {
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      transition: opacity .2s, transform .15s;
+    }
+
+    .share-btn:hover { opacity: .85; transform: scale(1.04); }
+
+    .share-x    { background: #000; color: #fff; border: 1px solid #333; }
+    .share-line { background: #06c755; color: #fff; }
+    .share-copy { background: var(--surface); color: var(--accent); border: 1px solid var(--accent); }
+
+    .retry-btn {
+      display: block;
+      width: 100%;
+      margin-top: 16px;
+      background: transparent;
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
+      padding: 13px;
+      color: var(--text-muted);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 14px;
+      cursor: pointer;
+      transition: border-color .2s, color .2s;
+    }
+
+    .retry-btn:hover { border-color: var(--accent); color: var(--text); }
+
+    /* ── Divider ── */
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 36px 0;
+      color: var(--border);
+      font-size: 11px;
+      letter-spacing: .1em;
+      color: var(--text-muted);
+    }
+    .divider::before, .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── Toast ── */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--accent);
+      color: #fff;
+      font-size: 13px;
+      padding: 10px 20px;
+      border-radius: 100px;
+      opacity: 0;
+      transition: opacity .3s, transform .3s;
+      pointer-events: none;
+      z-index: 999;
+      white-space: nowrap;
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* ── Footer ── */
+    .footer {
+      text-align: center;
+      font-size: 11px;
+      color: var(--text-muted);
+      padding-top: 20px;
+      opacity: .5;
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-badge">✦ 無料 心理テスト 2026 ✦</div>
+    <h1 class="hero-title">推し活タイプ診断</h1>
+    <p class="hero-sub">あなたに近いオタクの生態、正直に答えたら<br>バレちゃうかもしれない。</p>
+    <div class="hero-meta">
+      <span data-icon="📋">全8問</span>
+      <span data-icon="⏱">所要2分</span>
+      <span data-icon="🔮">全6タイプ</span>
+    </div>
+  </div>
+
+  <!-- Quiz section -->
+  <div id="quiz-section">
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill" id="progress-bar" style="width:0%"></div>
+    </div>
+    <div class="progress-label" id="progress-label">0 / 8</div>
+
+    <div class="q-card" id="q-card">
+      <div class="q-number" id="q-number">Q1</div>
+      <div class="q-text" id="q-text"></div>
+      <div class="options" id="options"></div>
+    </div>
+
+    <div class="nav-row">
+      <button class="btn-prev" id="btn-prev" disabled>← 戻る</button>
+      <button class="btn-next" id="btn-next" disabled>次の質問 →</button>
+    </div>
+  </div>
+
+  <div class="divider" id="divider-mid" style="display:none">✦</div>
+
+  <!-- Result section -->
+  <div id="result-section">
+    <div class="result-card">
+      <div class="result-header">
+        <div class="result-type-label">診断結果</div>
+        <div class="result-emoji" id="res-emoji"></div>
+        <div class="result-type-name" id="res-name"></div>
+        <div class="result-type-sub" id="res-sub"></div>
+      </div>
+      <div class="result-body">
+        <p class="result-desc" id="res-desc"></p>
+        <div class="result-roast" id="res-roast"></div>
+        <div class="result-traits" id="res-traits"></div>
+      </div>
+    </div>
+
+    <div class="share-section">
+      <div class="share-title">📣 結果をシェアする</div>
+      <div class="share-sub">あなたのタイプ、友達に当ててもらおう</div>
+      <div class="share-buttons">
+        <button class="share-btn share-x" onclick="shareX()">𝕏 でポスト</button>
+        <button class="share-btn share-line" onclick="shareLine()">LINE で送る</button>
+        <button class="share-btn share-copy" onclick="copyResult()">🔗 リンクをコピー</button>
+      </div>
+    </div>
+
+    <button class="retry-btn" onclick="resetQuiz()">🔄 もう一度診断する</button>
+  </div>
+
+  <div class="footer">© 2026 推し活タイプ診断 | All rights reserved.</div>
+</div>
+
+<div class="toast" id="toast">リンクをコピーしました！</div>
+
+<script>
+// ─────────────────────────────────────────────
+//  DATA
+// ─────────────────────────────────────────────
+const questions = [
+  {
+    text: "推しに新しいグッズが発売された！あなたが最初にすること？",
+    options: [
+      { text: "公式サイトを秒で開いてコンプ買い。迷う時間が無駄。", score: 4 },
+      { text: "全種類チェックして、本当に欲しいものだけ厳選する。", score: 2 },
+      { text: "SNSで友達の反応を見てから判断する。", score: 1 },
+      { text: "グッズより生で見たいので、ライブのチケットに予算を使う。", score: 3 },
+    ]
+  },
+  {
+    text: "推しのライブ当日。テンションを表すと？",
+    options: [
+      { text: "前日から眠れない。当日は開場の3時間前に並ぶ。", score: 4 },
+      { text: "テンション上がるけど、適度にリラックスして楽しむ。", score: 2 },
+      { text: "自分より推しを愛している人を見て、「すごいなぁ」と思う観察者。", score: 1 },
+      { text: "本番より物販の時間の方が真剣かもしれない。", score: 3 },
+    ]
+  },
+  {
+    text: "推しがSNSを更新した！内容は超普通の日常投稿。あなたは？",
+    options: [
+      { text: "秒でスクショ。背景から自宅の場所を特定しようとする（しない）。", score: 4 },
+      { text: "何度も読んで、行間の感情を読み解こうとする。", score: 3 },
+      { text: "「かわいい」と思いながらいいねして終わり。", score: 1 },
+      { text: "同担の友達にすぐ転送して感想を言い合う。", score: 2 },
+    ]
+  },
+  {
+    text: "推し活にかける月の予算は？",
+    options: [
+      { text: "上限？　そんなものは存在しない。来月の自分がどうにかする。", score: 4 },
+      { text: "3〜5万円。計画的に使っているつもりではある。", score: 3 },
+      { text: "1万円以内。節度のある推し活を心がけている。", score: 2 },
+      { text: "お金より時間を使う派。コンテンツ消費に全力。", score: 1 },
+    ]
+  },
+  {
+    text: "推しに関係ないコンテンツをすすめられたとき、どうする？",
+    options: [
+      { text: "推し以外に時間を使う余裕がない。丁重に断る。", score: 4 },
+      { text: "「推し成分」が少しでもあれば試す。意外と沼る。", score: 2 },
+      { text: "なんでも見る。最終的に全部推しに結びつけて語る。", score: 1 },
+      { text: "複数の推しがいるので、そっちを優先するだけ。", score: 3 },
+    ]
+  },
+  {
+    text: "推しが「卒業」「解散」「引退」を発表した。あなたの反応は？",
+    options: [
+      { text: "発表後30分は何も手につかない。しばらく放心。", score: 4 },
+      { text: "悲しいけど、最後まで全力応援に切り替える。", score: 3 },
+      { text: "「いつかはこうなると思ってた」と達観した気持ちになる。", score: 1 },
+      { text: "次の推しをもう探し始めている（でも悲しい）。", score: 2 },
+    ]
+  },
+  {
+    text: "推しについて語るとき、あなたは？",
+    options: [
+      { text: "気づいたら1時間しゃべっている。聞いた側が先に疲れる。", score: 4 },
+      { text: "語りたいけど、引かれるのが怖くてSNSだけで発散する。", score: 3 },
+      { text: "同担にしか本当のことが言えない。一般人には隠している。", score: 2 },
+      { text: "推しトークで仲良くなった友達が人生の財産。", score: 1 },
+    ]
+  },
+  {
+    text: "推しのいない休日。あなたは何をしている？",
+    options: [
+      { text: "過去のライブ映像を見返す。推し成分を補給しないと生きられない。", score: 4 },
+      { text: "推しのいない世界を楽しもうとするが、なんか物足りない。", score: 3 },
+      { text: "別ジャンルのコンテンツを全力消費。オタク切り替えが早い。", score: 2 },
+      { text: "充電期間として過ごす。次のライブに向けて節約もする。", score: 1 },
+    ]
+  },
+];
+
+const results = [
+  {
+    minScore: 8,
+    maxScore: 13,
+    emoji: "🌸",
+    name: "エモ観察者タイプ",
+    sub: "推しは好き。でも距離感は大切に。",
+    desc: "あなたは「推し活の教科書」に載るべき、バランス型オタクの鑑。感情的になりすぎず、でも確かな愛を持って推しを見守ることができる。その落ち着きと客観性で、周りのオタク友達からは「一番まともなやつ」と思われているはず。コンテンツを深く楽しみながらも、自分の生活も大切にできる——それは実は、才能の一種です。",
+    roast: "……ただ、たまに「そこまで好きじゃないの？」って誤解されてるよね？本人は全力なのに、テンションが低く見えちゃう不思議な人。ライブ会場で「この人大丈夫かな」って隣の人に心配されたことないですか。",
+    traits: ["冷静系オタク", "観察者気質", "生活も推しも両立", "周りへのダメージ少なめ"]
+  },
+  {
+    minScore: 14,
+    maxScore: 19,
+    emoji: "🎭",
+    name: "ソーシャル沼人タイプ",
+    sub: "推し活は孤独じゃない、一緒に語れる人がいれば最高。",
+    desc: "あなたにとって推し活は「体験」だけでなく「共有」が本質。同担の友達とのDMで深夜2時まで語り合い、ライブ後の感想戦があってこそ完結する——そんな推し活スタイル。人の熱量に共鳴する力が高く、コミュニティの中心にいることが多い。あなたがいるだけで、周りのオタクのテンションが上がる「場の空気を作れる人」です。",
+    roast: "ただ、一人の時間が少なくて、気づいたら推し活グループの調整役になってませんか？「今日はどこに並ぶ？」「チケット取れた？」「誰が物販行く？」……幹事仕事、お疲れ様です。あとSNSに上げた感想が、自分より友達の話になってることも多い気がします。",
+    traits: ["コミュニティ型オタク", "共感力高め", "場のムードメーカー", "グループ幹事になりがち"]
+  },
+  {
+    minScore: 20,
+    maxScore: 24,
+    emoji: "📦",
+    name: "コレクター廃人タイプ",
+    sub: "部屋が聖地。物が増えることで愛が可視化される。",
+    desc: "グッズを持つことは、推しを自分の空間に迎えることと同義——あなたにとってはそういうことです。コンプリートへの情熱は本物で、入手困難なグッズを手に入れた瞬間の達成感は、他の何にも替えがたい。飾り方にも美学があり、「推しの部屋」はある意味、芸術作品。管理能力と愛の組み合わせは、並のオタクには真似できません。",
+    roast: "しかし収納、大丈夫ですか？段ボールの山の中で生活してますよね？「捨てられないから」という理由で、3年前のフライヤーを6枚キープしてるの知ってます。引っ越しのたびに運送屋さんが絶望する量の荷物、一度棚卸しをすすめます。あと「もったいなくて開けられない」グッズが、あなたの部屋に何個ありますか。",
+    traits: ["グッズ収集特化", "コンプ欲強め", "管理能力が高い（高すぎる）", "部屋が第二の聖地"]
+  },
+  {
+    minScore: 25,
+    maxScore: 27,
+    emoji: "🎪",
+    name: "雑食オタクタイプ",
+    sub: "推しは多ければ多いほどいい。ジャンルは関係ない。",
+    desc: "あなたの推し活は「専念」より「多様性」。アイドル、2次元、スポーツ、配信者——ジャンルを超えて愛を分配できる、稀有な才能の持ち主です。好きなものの幅が広いぶん、どんな話題にも乗れる「最強コミュ力タイプ」でもある。推しが引退しても、ダメージリカバリーが早く、気づいたらもう次の沼の入口に立っているメンタルの強さは見習いたい。",
+    roast: "ただ、「一番は誰ですか？」って聞かれたとき、答えるのに3分かかりますよね。最推しが多すぎて、自分でも把握できていないのでは。課金も分散されるから財政的には安全かと思いきや、ジャンル数が多すぎてトータルで見たらかなりの出費になっている説があります。",
+    traits: ["マルチジャンル対応", "切り替えが早い", "話題の引き出しが多い", "最推しが5人いる"]
+  },
+  {
+    minScore: 28,
+    maxScore: 30,
+    emoji: "🔥",
+    name: "熱量過多の一途タイプ",
+    sub: "推しへの愛は、もはや信仰に近い。",
+    desc: "あなたの推し活は「好き」という言葉では足りない。それは生き方です。推しのために早起きし、推しのために遠征し、推しのために人生のスケジュールが組まれている。その情熱の純度は本物で、推しへのリスペクトと愛情の深さは誰にも負けない。推しも、きっとあなたのような存在に支えられていると感じているはず。",
+    roast: "ただ、最後に「推し以外のこと」について話したのはいつですか？友達との会話が100%推しの話になって久しいですよね。あと来月の貯金残高、ちゃんと確認しましたか？財布の中のレシートが全部ライブとグッズ代になっているの、もはや家計簿として機能してません。体は大丈夫ですか。睡眠取れてますか。",
+    traits: ["一途系最上位", "推しが人生の軸", "情熱の純度MAX", "財布と睡眠が常に瀕死"]
+  },
+  {
+    minScore: 31,
+    maxScore: 32,
+    emoji: "🌊",
+    name: "深淵の沼主タイプ",
+    sub: "もはや「オタク」じゃない。「崇拝者」だ。",
+    desc: "あなたは推し活の最終形態に到達しています。グッズはコンプ、ライブは全通、推しのことなら経歴・誕生日・利き手まで言えてしまう百科事典。その愛の純度と行動力は、ファンアートにされてもおかしくない伝説級。周囲から「あなたのこと、推しに伝えてあげたい」と言われるレベルの、愛の化身です。",
+    roast: "でも正直に聞きます。最後に推しのいない話題で盛り上がったのはいつですか？友達に「ちょっと推しの話やめて」と言われた回数、両手で足りてますよね？あと、推しが引退した後の人生プランは一応ありますか。「考えたくない」以外の答えでお願いします。",
+    traits: ["推し活マスター", "全通・コンプ当たり前", "推しの生き字引", "でも睡眠と貯金は要相談"]
+  }
+];
+
+// ─────────────────────────────────────────────
+//  STATE
+// ─────────────────────────────────────────────
+let currentQ = 0;
+let answers = new Array(questions.length).fill(null);
+
+// ─────────────────────────────────────────────
+//  RENDER QUESTION
+// ─────────────────────────────────────────────
+function renderQuestion() {
+  const q = questions[currentQ];
+  const total = questions.length;
+
+  document.getElementById('progress-bar').style.width = `${(currentQ / total) * 100}%`;
+  document.getElementById('progress-label').textContent = `${currentQ} / ${total}`;
+  document.getElementById('q-number').textContent = `Q${currentQ + 1}`;
+  document.getElementById('q-text').textContent = q.text;
+
+  const optContainer = document.getElementById('options');
+  optContainer.innerHTML = '';
+
+  const labels = ['A', 'B', 'C', 'D'];
+  q.options.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'opt-btn' + (answers[currentQ] === i ? ' selected' : '');
+    btn.innerHTML = `<span class="opt-label">${labels[i]}</span><span>${opt.text}</span>`;
+    btn.addEventListener('click', () => selectOption(i));
+    optContainer.appendChild(btn);
+  });
+
+  document.getElementById('btn-prev').disabled = currentQ === 0;
+  updateNextButton();
+
+  // Reset animation
+  const card = document.getElementById('q-card');
+  card.style.animation = 'none';
+  card.offsetHeight; // reflow
+  card.style.animation = 'fadeUp .4s ease both';
+}
+
+function selectOption(index) {
+  answers[currentQ] = index;
+  document.querySelectorAll('.opt-btn').forEach((btn, i) => {
+    btn.classList.toggle('selected', i === index);
+  });
+  updateNextButton();
+}
+
+function updateNextButton() {
+  const btn = document.getElementById('btn-next');
+  const isLast = currentQ === questions.length - 1;
+  const hasAnswer = answers[currentQ] !== null;
+  btn.disabled = !hasAnswer;
+  btn.textContent = isLast ? '診断結果を見る ✨' : '次の質問 →';
+}
+
+document.getElementById('btn-next').addEventListener('click', () => {
+  if (answers[currentQ] === null) return;
+  if (currentQ < questions.length - 1) {
+    currentQ++;
+    renderQuestion();
+  } else {
+    showResult();
+  }
+});
+
+document.getElementById('btn-prev').addEventListener('click', () => {
+  if (currentQ > 0) {
+    currentQ--;
+    renderQuestion();
+  }
+});
+
+// ─────────────────────────────────────────────
+//  CALCULATE + SHOW RESULT
+// ─────────────────────────────────────────────
+function calcScore() {
+  return answers.reduce((sum, ansIdx, qIdx) => {
+    if (ansIdx === null) return sum;
+    return sum + questions[qIdx].options[ansIdx].score;
+  }, 0);
+}
+
+function getResult(score) {
+  return results.find(r => score >= r.minScore && score <= r.maxScore) || results[0];
+}
+
+function showResult() {
+  const score = calcScore();
+  const r = getResult(score);
+
+  document.getElementById('res-emoji').textContent = r.emoji;
+  document.getElementById('res-name').textContent = r.name;
+  document.getElementById('res-sub').textContent = r.sub;
+  document.getElementById('res-desc').textContent = r.desc;
+  document.getElementById('res-roast').textContent = r.roast;
+
+  const traitsEl = document.getElementById('res-traits');
+  traitsEl.innerHTML = r.traits.map(t => `<span class="trait-tag">${t}</span>`).join('');
+
+  document.getElementById('quiz-section').style.display = 'none';
+  document.getElementById('divider-mid').style.display = 'flex';
+  const resultSection = document.getElementById('result-section');
+  resultSection.classList.add('visible');
+  resultSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ─────────────────────────────────────────────
+//  SHARE FUNCTIONS
+// ─────────────────────────────────────────────
+function getShareText() {
+  const score = calcScore();
+  const r = getResult(score);
+  return `【推し活タイプ診断】\n私は「${r.name}」でした！\n${r.sub}\n\nあなたも診断してみて👇\n${location.href}`;
+}
+
+function shareX() {
+  const text = encodeURIComponent(getShareText());
+  const webUrl = `https://twitter.com/intent/tweet?text=${text}`;
+  // Try X app deep link first; if it doesn't open within 1.2s, fall back to web
+  const appUrl = `twitter://post?message=${text}`;
+  const start = Date.now();
+  const iframe = document.createElement('iframe');
+  iframe.style.display = 'none';
+  iframe.src = appUrl;
+  document.body.appendChild(iframe);
+  setTimeout(() => {
+    document.body.removeChild(iframe);
+    // If page is still visible (app didn't open), go to web
+    if (Date.now() - start < 1500) {
+      window.open(webUrl, '_blank');
+    }
+  }, 1200);
+}
+
+function shareLine() {
+  const text = encodeURIComponent(getShareText());
+  const url = encodeURIComponent(location.href);
+  // line:// deep link opens LINE app directly on mobile
+  // falls back to web LINE share if app not installed
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  if (isMobile) {
+    // LINE app deep link: line://msg/text/<encoded text>
+    const lineAppUrl = `line://msg/text/${text}`;
+    const lineWebUrl = `https://social-plugins.line.me/lineit/share?url=${url}&text=${text}`;
+    const start = Date.now();
+    window.location.href = lineAppUrl;
+    setTimeout(() => {
+      if (Date.now() - start < 1500) {
+        window.open(lineWebUrl, '_blank');
+      }
+    }, 1200);
+  } else {
+    window.open(`https://social-plugins.line.me/lineit/share?url=${url}&text=${text}`, '_blank');
+  }
+}
+
+function copyResult() {
+  const text = getShareText();
+  navigator.clipboard.writeText(text).then(() => {
+    const toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2500);
+  });
+}
+
+// ─────────────────────────────────────────────
+//  RESET
+// ─────────────────────────────────────────────
+function resetQuiz() {
+  currentQ = 0;
+  answers = new Array(questions.length).fill(null);
+  document.getElementById('quiz-section').style.display = 'block';
+  document.getElementById('divider-mid').style.display = 'none';
+  document.getElementById('result-section').classList.remove('visible');
+  renderQuestion();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ─────────────────────────────────────────────
+//  INIT
+// ─────────────────────────────────────────────
+renderQuestion();
+</script>
+</body>
+</html>
