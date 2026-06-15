@@ -49,7 +49,6 @@ body{
   min-height:100vh;color:var(--text);line-height:1.7;
   -webkit-font-smoothing:antialiased;
 }
-/* scanline overlay */
 body::before{
   content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
   background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.04) 2px,rgba(0,0,0,0.04) 4px);
@@ -151,7 +150,6 @@ body::before{
 .opt.sel{background:var(--cyan-dim);border-color:rgba(0,212,255,.45);color:var(--text)}
 .opt.sel .opt-ltr{background:var(--cyan);border-color:var(--cyan);color:var(--bg)}
 
-/* 控制按鈕群組 */
 .btn-group {
   display: flex;
   gap: 12px;
@@ -169,7 +167,6 @@ body::before{
 .cta:active{transform:scale(.98) translateY(0)}
 .cta:disabled{opacity:.22;cursor:not-allowed;transform:none;box-shadow:none}
 
-/* 返回上一題按鈕樣式 */
 .back-btn {
   flex: 1;
   background: transparent;
@@ -198,7 +195,6 @@ body::before{
 .res{display:none;animation:up .45s ease}
 .res.on{display:block}
 
-/* extinction level banner */
 .ext-banner{
   border-radius:var(--r-lg) var(--r-lg) 0 0;
   padding:28px 20px 22px;text-align:center;
@@ -224,7 +220,6 @@ body::before{
   color:rgba(255,255,255,.88);
 }
 
-/* survival meter */
 .sv-bar-wrap{
   background:rgba(0,0,0,.25);border-top:1px solid rgba(255,255,255,.08);
   padding:16px 20px;
@@ -236,7 +231,6 @@ body::before{
 .sv-fill{height:100%;border-radius:var(--r-pill);transition:width .85s cubic-bezier(.4,0,.2,1) .2s}
 .sv-pct{font-size:12px;font-weight:700;width:34px;text-align:right;opacity:.75}
 
-/* cards */
 .dcard{
   background:var(--card);border:1px solid var(--border2);
   border-radius:var(--r-lg);padding:22px 20px;margin-bottom:14px;
@@ -267,7 +261,6 @@ body::before{
   color:var(--text2);font-size:12px;padding:4px 12px;border-radius:var(--r-pill);
 }
 
-/* quote */
 .qcard2{
   background:var(--card);border:1px solid var(--border2);
   border-radius:var(--r-lg);padding:22px 20px;margin-bottom:14px;text-align:center;
@@ -275,7 +268,6 @@ body::before{
 .q2-txt{font-size:15px;color:var(--text);line-height:1.8;font-style:italic;letter-spacing:.02em}
 .q2-attr{font-size:11px;color:var(--text3);margin-top:8px;letter-spacing:.08em}
 
-/* share */
 .scard{
   background:var(--card);border:1px solid var(--border2);
   border-radius:var(--r-lg);padding:20px 18px;margin-bottom:14px;text-align:center;
@@ -293,7 +285,6 @@ body::before{
 .sbtn-line{background:#06C755;color:#FFF}
 .sbtn-cp{background:var(--bg3);color:var(--text2);border:1px solid var(--border2)}
 
-/* retry */
 .retry{
   display:block;width:100%;background:transparent;color:var(--text3);
   border:1px solid var(--border2);border-radius:var(--r-pill);padding:14px;
@@ -322,9 +313,7 @@ body::before{
   .sbtns{flex-direction:column}
 }
 
-/* ── AD SLOT ── */
 .ad-slot{min-height:250px;background:#f0f0f0;margin:20px 0;text-align:center;line-height:250px;color:#aaa;font-size:12px;border-radius:12px;overflow:hidden;font-family:'Hiragino Kaku Gothic ProN',sans-serif;letter-spacing:.05em}
-/* ── SEO FAQ ── */
 .seo-faq{max-width:520px;margin:28px auto 0;padding:0 16px 40px;font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Noto Sans JP',sans-serif}
 .seo-faq h2{font-size:16px;font-weight:900;margin-bottom:16px;text-align:center;opacity:.55;letter-spacing:.03em}
 .seo-faq details{background:rgba(127,127,127,0.06);border:1px solid rgba(127,127,127,0.16);border-radius:12px;padding:14px 16px;margin-bottom:10px}
@@ -333,7 +322,6 @@ body::before{
 .seo-faq summary::before{content:'Q. ';color:#C0392B;font-weight:900}
 .seo-faq .faq-a{font-size:13px;line-height:1.85;opacity:.7;margin-top:10px;padding-top:10px;border-top:1px solid rgba(127,127,127,0.16)}
 .seo-faq .faq-a::before{content:'A. ';color:#2E7D5E;font-weight:900}
-
 </style>
 <script type="application/ld+json">
 {
@@ -469,11 +457,11 @@ body::before{
     </div>
 
     <div class="scard">
-      <div class="社畜仲間に送りつけよう 💼"></div>
+      <div class="s-ttl">社畜仲間に送りつけよう 💼</div>
       <div class="sbtns">
         <button class="sbtn sbtn-x" id="share-x-btn">X でシェア</button>
         <button class="sbtn sbtn-line" id="share-line-btn">LINE</button>
-        <button class="sbtn sbtn-copy" id="share-copy-btn">コピー</button>
+        <button class="sbtn sbtn-cp" id="share-copy-btn">コピー</button>
       </div>
     </div>
 
@@ -618,11 +606,11 @@ var Rs=[
       {l:"自己管理力",p:90},
       {l:"絶滅危惧度",p:5}
     ],
-    desc:"社畜診断においてこのスコアは「ほぼ解脱」を意味します。境界線を引くのがうまく、仕事は仕事、自分は自分という切り替えが自然にできているタイプ。有給も使えるし、休日も休める。定時に帰ることに罪悪感を感じない。それだけで現代の職場においては「希少種」です。\n\nただ、一点だけ確認させてください。この点数が「あきらめ」や「無関心」から来ていませんか？仕事への興味が薄れすぎていると、それは誠に別の問題です。適度な熱量と適度な距離感の両立こそが、本当の意味での「自由」です。",
+    desc:"社畜診断においてこのスコアは「ほぼ解脱」を意味します。境界線を引くのがうまく、仕事は仕事、自分は自分という切り替えが自然にできているタイプ。有給も使えるし、休日も休める。定時に帰ることに罪悪感を感じない。それだけで現代の職場においては「希少種」です。\n\n個人差はありますが、この点数が「あきらめ」から来ていないかだけ一応セルフチェックしてみてくださいね。仕事への興味が薄れすぎていると、それは誠に別の問題です。適度な熱量と距離感の両立こそが、本当の意味での「自由」です。",
     warn:"「どうせ頑張っても変わらない」という諦観が根っこにある場合、社畜状態よりも静かに消耗していることがあります。仕事 辛い 診断としては「燃え尽き後期」に似た状態に近いかもしれません。",
     escape:"あなたはすでに脱出済みです。その距離感を維持しつつ、せっかくなら「何が楽しくて働くか」を言語化してみると、さらに豊かなキャリアになります。",
     kws:["セルフマネジメント","境界線上手","定時帰宅","有給消化率高め","自由人","燃え尽き警戒"],
-    quote:"「休むことを学んだ人は、働く理由を知っている。」",
+    quote:"「休むことを學んだ人は、働く理由を知っている。」",
     attr:"― 社畜診断 絶滅危惧度ゼロタイプの格言"
   },
   {
@@ -796,6 +784,7 @@ function showRes(){
     document.getElementById('quiz').style.display='none';
     var rs=document.getElementById('res');rs.classList.add('on');
 
+    /* 【計分機率平衡精算】：最低 0分，最高 40分，共 41個分值。嚴格切分成五個等寬互斥區間（拉平盲選常態尖峰）。 */
     var r=null;
     for(var i=0;i<Rs.length;i++){if(totalScore>=Rs[i].min&&totalScore<=Rs[i].max){r=Rs[i];break}}
     if(!r)r=Rs[Rs.length-1];
@@ -818,61 +807,4 @@ function showRes(){
     sv.style.background='rgba(0,0,0,0.28)';sv.style.color='#FFF';
     var sh='';
     r.bars.forEach(function(b){
-      sh+='<div class="sv-row"><span class="sv-lbl">'+b.l+'</span><div class="sv-bg"><div class="sv-fill" style="width:0%;background:'+r.svColor+'"></div></div><span class="sv-pct">'+b.p+'%</span></div>';
-    });
-    sv.innerHTML=sh;
-
-    var kh='';r.kws.forEach(function(k){kh+='<span class="kw">'+k+'</span>'});
-    document.getElementById('rkws').innerHTML=kh;
-
-    window.scrollTo({top:0,behavior:'smooth'});
-    requestAnimationFrame(function(){
-      setTimeout(function(){
-        document.querySelectorAll('.sv-fill').forEach(function(el,i){
-          el.style.transition='width .85s cubic-bezier(.4,0,.2,1) '+(0.15+i*0.12)+'s';
-          el.style.width=r.bars[i].p+'%';
-        });
-      },150);
-    });
-  },260);
-}
-
-function reset(){
-  cq=0;selectedScoresHistory=[];started=false;cr=null;
-  var at = document.getElementById('ad-top'); if(at) at.style.display='';
-  document.getElementById('quiz').style.display='block';
-  document.getElementById('res').classList.remove('on');
-  document.getElementById('intro').classList.remove('hidden');
-  document.getElementById('prog').classList.add('hidden');
-  document.getElementById('qcard').classList.add('hidden');
-  document.getElementById('back-btn').classList.add('hidden');
-  
-  document.getElementById('mbtn').textContent='診断スタート ▶';
-  document.getElementById('mbtn').disabled=false;
-  document.getElementById('pfill').style.width='0%';
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-
-function stxt(){
-  if(!cr)return'';
-  return '【社畜タイプ診断】\n私のタイプは「'+cr.name+'」\n'+cr.level+'\n\n'+cr.quote+'\n\n社畜診断・仕事 辛い 診断・適職テスト 気になる人はやってみて💼';
-}
-function sx(){window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(stxt())+'&url='+encodeURIComponent(location.href)+'&hashtags='+encodeURIComponent('社畜診断,心理テスト,診断テスト,仕事辛い,適職診断'),'_blank')}
-function sl(){
-  var t=location.href+'\n\n'+stxt();
-  window.location.href='line://msg/text/'+encodeURIComponent(t);
-  setTimeout(function(){window.open('https://line.me/R/msg/text/'+encodeURIComponent(t),'_blank')},500);
-}
-function sc(){
-  var t=stxt()+'\n'+location.href;
-  if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){toast('コピーしました！')})}
-  else{var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');document.body.removeChild(a);toast('コピーしました！')}
-}
-function toast(m){
-  var t=document.getElementById('toast');
-  t.textContent=m;t.classList.add('on');
-  setTimeout(function(){t.classList.remove('on')},2100);
-}
-</script>
-</body>
-</html>
+      sh+='<div class="sv-row
