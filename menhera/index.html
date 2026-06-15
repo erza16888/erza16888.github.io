@@ -538,7 +538,6 @@
 .seo-faq summary::before{content:'Q. ';color:#C0392B;font-weight:900}
 .seo-faq .faq-a{font-size:13px;line-height:1.85;opacity:.7;margin-top:10px;padding-top:10px;border-top:1px solid rgba(127,127,127,0.16)}
 .seo-faq .faq-a::before{content:'A. ';color:#2E7D5E;font-weight:900}
-
 </style>
 <script type="application/ld+json">
 {
@@ -589,6 +588,7 @@
     </div>
   </header>
 
+  <!-- QUIZ SECTION -->
   <div id="quiz-section">
 
     <div class="intro-card" id="intro-card">
@@ -614,12 +614,13 @@
     </div>
 
     <div class="ad-slot" id="ad-top">【スポンサーリンク / 広告】</div>
-    <button class="cta-btn" id="main-btn" onclick="handleMainBtn()">
+    <button class="cta-btn" id="main-btn">
       診断スタート ✦
     </button>
 
   </div>
 
+  <!-- RESULT SECTION -->
   <div class="result-section" id="result-section">
     <div class="ad-slot" id="ad-result">【スポンサーリンク / 広告】</div>
 
@@ -628,7 +629,7 @@
         <span class="result-emoji" id="res-emoji">💊</span>
         <div class="result-type-label">あなたのタイプ</div>
         <div class="result-type-name" id="res-name">――</div>
-        <div class="result-score-badge" id="res-score-badge">スコア ― 点</div>
+        <div class="result-score-badge" id="res-score-badge">スコア 0 点</div>
       </div>
       <div class="result-body">
         <p class="result-desc" id="res-desc"></p>
@@ -648,13 +649,13 @@
     <div class="share-section">
       <div class="share-title">結果をシェアして友達を試そう🩷</div>
       <div class="share-buttons">
-        <button class="share-btn share-btn-x" onclick="shareToX()">X (Twitter)</button>
-        <button class="share-btn share-btn-line" onclick="shareToLine()">LINE</button>
-        <button class="share-btn share-btn-copy" onclick="copyResult()">コピー</button>
+        <button class="share-btn share-btn-x" id="share-x-btn">X (Twitter)</button>
+        <button class="share-btn share-btn-line" id="share-line-btn">LINE</button>
+        <button class="share-btn share-btn-copy" id="share-copy-btn">コピー</button>
       </div>
     </div>
 
-    <button class="retry-btn" onclick="resetQuiz()">もう一度診断する ↺</button>
+    <button class="retry-btn" id="retry-btn">もう一度診断する ↺</button>
 
   </div>
 
@@ -689,7 +690,7 @@ const questions = [
       { text: "気にしない。向こうも忙しいよね", score: 0 },
       { text: "まあ待つけど、内心ちょっとソワソワしてる", score: 1 },
       { text: "スタンプを送って「気づいた？」とアピールする", score: 2 },
-      { text: "既読無視か確認するため、わざと別の話題で連絡してみる", score: 3 },
+      { text: "既読無視か確認するため、わざと別の話題で連絡してみる", score: 3 }
     ]
   },
   {
@@ -698,7 +699,7 @@ const questions = [
       { text: "そんなことは考えたことすらない", score: 0 },
       { text: "頭をよぎったことはあるが送ったことはない", score: 1 },
       { text: "3回以上送ったことがある", score: 2 },
-      { text: "送って反応を確認するのがもはや作戦", score: 3 },
+      { text: "送って反応を確認するのがもはや作戦", score: 3 }
     ]
   },
   {
@@ -707,7 +708,7 @@ const questions = [
       { text: "もうブロックしたのでそもそも見られない", score: 0 },
       { text: "たまに思い出したときだけ", score: 1 },
       { text: "週に数回、習慣になってる", score: 2 },
-      { text: "毎日。むしろルーティン化してる", score: 3 },
+      { text: "毎日。むしろルーティン化してる", score: 3 }
     ]
   },
   {
@@ -716,7 +717,7 @@ const questions = [
       { text: "大した話じゃなかったからスルーされても普通に次の話題に乗る", score: 0 },
       { text: "内心傷つくけど、気にしてないフリをする", score: 1 },
       { text: "しばらく既読だけつけてわざと返信しない", score: 2 },
-      { text: "グループを抜けることを検討し始める", score: 3 },
+      { text: "グループを抜けることを検討し始める", score: 3 }
     ]
   },
   {
@@ -725,7 +726,7 @@ const questions = [
       { text: "「それ傷つくからやめて」とはっきり伝える", score: 0 },
       { text: "傷ついてもニコニコしながら流す", score: 1 },
       { text: "態度で察してほしいので無言になる", score: 2 },
-      { text: "後から「あのとき実は…」と溜め込んだ感情を一気に放出", score: 3 },
+      { text: "後から「あのとき実は…」と溜め込んだ感情を一気に放出", score: 3 }
     ]
   },
   {
@@ -734,7 +735,7 @@ const questions = [
       { text: "あの人もリア充だな、以上。", score: 0 },
       { text: "少しモヤっとするけどすぐ忘れる", score: 1 },
       { text: "「私のこと好きなんじゃないの？」と後でネチネチ確認する", score: 2 },
-      { text: "その場でテンションが0になり、翌日まで引きずる", score: 3 },
+      { text: "その場でテンションが0になり、翌日まで引きずる", score: 3 }
     ]
   },
   {
@@ -743,18 +744,18 @@ const questions = [
       { text: "ない。深夜は普通に寝てる", score: 0 },
       { text: "たまにあるが、朝になると忘れる", score: 1 },
       { text: "月に数回、定期的にくる", score: 2 },
-      { text: "もはや恒例行事。夜の方が本来の自分", score: 3 },
+      { text: "もはや恒例行事。夜の方が本来の自分", score: 3 }
     ]
   },
   {
     text: "「あなたって本当に繊細だよね」と言われたら？",
     options: [
-      { text: "「そうかな？」と思いながらもあっあっさり流す", score: 0 },
-      { text: "少し複雑な気持ちになるが素直に受け取る", score: 1 },
+      { text: "「そうかな？」と思いながらもあっさり流す", score: 0 },
+      { text: "少し複雑な気持ちになるが素真面目に受け取る", score: 1 },
       { text: "心の中で「これは褒め言葉？それとも……」と30分考える", score: 2 },
-      { text: "「繊細じゃなくて、あなたが鈍感なんだけど？」と思う", score: 3 },
+      { text: "「繊細じゃなくて、あなたが鈍感なんだけど？」と思う", score: 3 }
     ]
-  },
+  }
 ];
 
 const results = [
@@ -764,7 +765,7 @@ const results = [
     name: "ほぼ健全系｜精神の女王",
     desc: "メンタルの安定感、まじで天才。感情の波がほとんどなく、自分軸がしっかりしているため、相手に依存したり振り回されたりすることが少ないタイプです。友達からは「一緒にいると落ち着く」と言われることが多く、無意識にグループの精神的支柱になっていたりします。\n\n……ただ、正直すぎて「空気読んでる？」と言われることもそこそこあるのでは？感情が薄いわけじゃないけど、人の気持ちの細かいニュアンスを「そんなことで？」と流してしまいがちなのが玉に瑕。",
     highlight: "「感情を乗りこなしてるのか、感じてないのかは、自分にしかわからない。」",
-    pct: 10,
+    pct: 10
   },
   {
     min: 6, max: 11,
@@ -772,15 +773,15 @@ const results = [
     name: "隠れメンヘラ予備軍｜月光型センシティブ",
     desc: "表面上はクールで理性的なのに、内側では小さな感情の嵐が吹き荒れているタイプ。誰にも心配かけたくないから、傷ついても笑顔で乗り切るのが得意。その気遣い力と察する能力は本当に素晴らしく、友人関係でも評価が高いはず。\n\nでも、気づいてる？自分が「大丈夫」と言うたびに、少しずつ感情が積み重なってること。ある日突然ポキッといくやつ。まさにポックリ病の入口にいる。",
     highlight: "「大丈夫、が口癖の人ほど、大丈夫じゃないことを知ってる。」",
-    pct: 38,
+    pct: 38
   },
   {
     min: 12, max: 17,
     emoji: "💊",
     name: "中級メンヘラ｜感情過多ロマンチスト",
-    desc: "感情豊かで共感力が高く、人の痛みを自分のことのように感じられる、繊細で優しいタイプ。あなたといると「わかってもらえた」と感じる人が多く、人を惹きつける不思議な魅力があります。その深さは本物の才能です。\n\nただ……自分の感情を「試す道具」として使ってしまうクセがそろそろ自覚できてませんか？「消えます」「もういい」「察してよ」。これ、言葉じゃなくて爆弾なんいますが、自覚ある？",
+    desc: "感情豊かで共感力が高く、人の痛みを自分のことのように感じられる、繊細で優しいタイプ。あなたといると「わかってもらえた」と感じる人が多く、人を惹きつける不思議な魅力があります。その深さは本物の才能です。\n\nただ……自分の感情を「試す道具」として使ってしまうクセがそろそろ自覚できてませんか？「消えます」「もういい」「察してよ」。これ、言葉じゃなくて爆弾なんですが、自覚ある？",
     highlight: "「愛されたい気持ちが強いほど、相手を試したくなる。それがポックリ病の正体。」",
-    pct: 65,
+    pct: 65
   },
   {
     min: 18, max: 24,
@@ -788,8 +789,8 @@ const results = [
     name: "上級隠れメンヘラ｜深海感情モンスター",
     desc: "おめでとうございます（？）。あなたは感情の深海に生きる、類まれなる繊細さの持ち主です。その情緒の豊かさは、詩人や芸術家に通じるものがあり、表現力と共感力は本物。きっと人生の色が、他の人より鮮やかに見えているはず。\n\nしかし現実問題として、あなたは定期的に周囲に「ポックリ」するリスクが高い。突然SNSを消す、連絡を絶つ、感情のシャッターを下ろす。その背後に「構ってほしい」があることに、まだ気づいてないふりをしてる？",
     highlight: "「嵐のような感情は、愛し方を知らなかったころの自分が作ったもの。」",
-    pct: 92,
-  },
+    pct: 92
+  }
 ];
 
 let currentQ = 0;
@@ -797,6 +798,15 @@ let totalScore = 0;
 let selectedScore = null;
 let quizStarted = false;
 let currentResult = null;
+
+// 使用標準事件監聽器取代 HTML 的 onclick
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('main-btn').addEventListener('click', handleMainBtn);
+  document.getElementById('retry-btn').addEventListener('click', resetQuiz);
+  document.getElementById('share-x-btn').addEventListener('click', shareToX);
+  document.getElementById('share-line-btn').addEventListener('click', shareToLine);
+  document.getElementById('share-copy-btn').addEventListener('click', copyResult);
+});
 
 function handleMainBtn() {
   if (!quizStarted) {
@@ -819,7 +829,8 @@ function handleMainBtn() {
 
 function startQuiz() {
   quizStarted = true;
-  var at=document.getElementById('ad-top'); if(at) at.style.display='none';
+  const at = document.getElementById('ad-top'); 
+  if (at) at.style.display = 'none';
   document.getElementById('intro-card').classList.add('hidden');
   document.getElementById('progress-wrap').classList.remove('hidden');
   document.getElementById('question-card').classList.remove('hidden');
@@ -836,18 +847,20 @@ function renderQuestion() {
   document.getElementById('q-number').textContent = `Q${n}`;
   document.getElementById('q-text').textContent = q.text;
   document.getElementById('progress-count').textContent = `${n} / ${total}`;
-  document.getElementById('progress-bar').style.width = `${((n-1)/total)*100}%`;
+  document.getElementById('progress-bar').style.width = `${((n - 1) / total) * 100}%`;
 
+  const mainBtn = document.getElementById('main-btn');
   if (n === total) {
-    document.getElementById('main-btn').textContent = "診断結果を見る ✦";
+    mainBtn.textContent = "診断結果を見る ✦";
   } else {
-    document.getElementById('main-btn').textContent = "次へ →";
+    mainBtn.textContent = "次へ →";
   }
-  document.getElementById('main-btn').disabled = true;
+  mainBtn.disabled = true;
 
   const letters = ['A', 'B', 'C', 'D'];
   const list = document.getElementById('options-list');
   list.innerHTML = '';
+  
   q.options.forEach((opt, i) => {
     const btn = document.createElement('button');
     btn.className = 'option-btn';
@@ -856,9 +869,10 @@ function renderQuestion() {
     list.appendChild(btn);
   });
 
-  document.getElementById('question-card').style.animation = 'none';
-  void document.getElementById('question-card').offsetWidth;
-  document.getElementById('question-card').style.animation = 'slideIn 0.3s ease';
+  const qCard = document.getElementById('question-card');
+  qCard.style.animation = 'none';
+  void qCard.offsetWidth;
+  qCard.style.animation = 'slideIn 0.3s ease';
 }
 
 function selectOption(btn, score) {
@@ -896,7 +910,8 @@ function showResult() {
 }
 
 function resetQuiz() {
-  var at=document.getElementById('ad-top'); if(at) at.style.display='';
+  const at = document.getElementById('ad-top'); 
+  if (at) at.style.display = '';
   currentQ = 0;
   totalScore = 0;
   selectedScore = null;
@@ -920,9 +935,17 @@ function getShareText() {
   return `【隠れメンヘラ診断】\n私のタイプは「${currentResult.name}」でした！\nポックリ病レベル：${currentResult.pct}%\n\n${currentResult.highlight}\n\nあなたも診断してみて👇`;
 }
 
-function shareToX(){window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(getShareText())+'&url='+encodeURIComponent(window.location.href)+'&hashtags='+encodeURIComponent('隠れメンヘラ診断,メンヘラ診断,心理テスト,診断テスト,性格診断'),'_blank');}
+function shareToX() {
+  window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(getShareText()) + '&url=' + encodeURIComponent(window.location.href) + '&hashtags=' + encodeURIComponent('隠れメンヘラ診断,メンヘラ診断,心理テスト,診断テスト,性格診断'), '_blank');
+}
 
-function shareToLine(){var t=window.location.href+'\n\n'+getShareText();window.location.href='line://msg/text/'+encodeURIComponent(t);setTimeout(function(){window.open('https://line.me/R/msg/text/'+encodeURIComponent(t),'_blank')},500);}
+function shareToLine() {
+  const t = window.location.href + '\n\n' + getShareText();
+  window.location.href = 'line://msg/text/' + encodeURIComponent(t);
+  setTimeout(() => {
+    window.open('https://line.me/R/msg/text/' + encodeURIComponent(t), '_blank');
+  }, 500);
+}
 
 function copyResult() {
   const text = getShareText() + `\n${window.location.href}`;
