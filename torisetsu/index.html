@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【取扱説明書メーカー】あなたの相性診断トリセツを自動生成｜無料性格診断</title>
+<meta name="description" content="あなただけの「取扱説明書（トリセツ）」を自動生成！全8問の相性診断で、あなたの扱い方・地雷・おすすめの接し方を暴露。友達・恋人に送りつけよう。無料・即時結果。">
+<meta name="keywords" content="取扱説明書,トリセツ,相性診断,性格診断,無料診断,心理テスト,恋愛診断,人間関係,メーカー,性格テスト,相性テスト,無料心理テスト">
+<meta property="og:title" content="【取扱説明書メーカー】あなたのトリセツを自動生成">
+<meta property="og:description" content="全8問の診断で、あなただけの「取扱説明書」を作成。友達・恋人に送って相性チェック！">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow">
+<style>
+:root {
+  --cream: #FAF7F2;
+  --cream-mid: #F0EAE0;
+  --cream-border: #E0D5C5;
+  --ink: #2A2118;
+  --ink-mid: #5C4A38;
+  --ink-muted: #9C8B7A;
+  --amber: #C8820A;
+  --amber-light: #FDF3DE;
+  --amber-mid: #EDBE72;
+  --teal: #1A7A6E;
+  --teal-light: #E0F4F1;
+  --coral: #C0442A;
+  --coral-light: #FAECE8;
+  --white: #FFFFFF;
+  --shadow: rgba(60,35,10,0.10);
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif JP', Georgia, serif;
+  background: var(--cream);
+  min-height: 100vh;
+  color: var(--ink);
+  line-height: 1.75;
+}
+
+.container {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 0 18px 72px;
+}
+
+/* ─── HEADER ─── */
+.site-header {
+  text-align: center;
+  padding: 44px 0 28px;
+  position: relative;
+}
+
+.header-rule {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.header-rule span {
+  height: 1px;
+  width: 40px;
+  background: var(--amber-mid);
+  display: block;
+}
+
+.header-rule em {
+  font-style: normal;
+  font-size: 13px;
+  color: var(--amber);
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.main-title {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--ink);
+  line-height: 1.3;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.main-title .accent { color: var(--amber); }
+
+.subtitle {
+  font-size: 13px;
+  color: var(--ink-muted);
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.stamp-row {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.stamp {
+  display: inline-block;
+  border: 2px solid var(--amber);
+  border-radius: var(--radius-sm);
+  color: var(--amber);
+  font-size: 10px;
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+  font-weight: 700;
+  padding: 3px 10px;
+  letter-spacing: 0.1em;
+  opacity: 0.85;
+}
+
+/* ─── INTRO ─── */
+.intro-card {
+  background: var(--white);
+  border: 1px solid var(--cream-border);
+  border-radius: var(--radius-lg);
+  padding: 22px 20px 20px;
+  margin-bottom: 22px;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-card::before {
+  content: '取扱説明書';
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  font-size: 72px;
+  font-weight: 900;
+  color: var(--cream-mid);
+  line-height: 1;
+  pointer-events: none;
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+}
+
+.intro-card p {
+  font-size: 14px;
+  color: var(--ink-mid);
+  line-height: 1.9;
+  margin-bottom: 10px;
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+  position: relative;
+}
+
+.intro-card p:last-child { margin-bottom: 0; }
+.intro-card strong { color: var(--amber); font-weight: 700; }
+
+/* ─── PROGRESS ─── */
+.progress-wrap {
+  margin-bottom: 18px;
+}
+
+.progress-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.progress-label {
+  font-size: 11px;
+  color: var(--ink-muted);
+  font-weight: 700;
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.progress-count {
+  font-size: 13px;
+  color: var(--amber);
+  font-weight: 700;
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+}
+
+.progress-bar-bg {
+  background: var(--cream-mid);
+  border-radius: var(--radius-pill);
+  height: 6px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--amber);
+  border-radius: var(--radius-pill);
+  transition: width 0.45s cubic-bezier(.4,0,.2,1);
+}
+
+/* ─── QUESTION CARD ─── */
+.question-card {
+  background: var(--white);
+  border: 1px solid var(--cream-border);
+  border-radius: var(--radius-lg);
+  padding: 24px 20px 20px;
+  margin-bottom: 14px;
+  animation: fadeUp 0.32s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.q-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.q-num-box {
+  background: var(--amber);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 700;
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+  padding: 3px 11px;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.06em;
+}
+
+.q-topic {
+  font-size: 11px;
+  color: var(--ink-muted);
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+  letter-spacing: 0.06em;
+}
+
+.q-text {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.55;
+  margin-bottom: 20px;
+}
+
+/* ─── OPTIONS ─── */
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.option-btn {
+  width: 100%;
+  background: var(--cream);
+  border: 1.5px solid var(--cream-border);
+  border-radius: var(--radius-md);
+  padding: 13px 15px;
+  text-align: left;
+  font-size: 14px;
+  font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+  color: var(--ink-mid);
+  cursor: pointer;
+  transition: all 0.18s ease;
+  line-height: 1.55;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.option-letter {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-pill);
+  background: var(--cream-border);
+  color: var(--ink-muted);
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 22px;
+  transition: all 0.18s ease;
+  margin-top: 1px;
+}
+
+.option-text { flex: 1; }
+
+.option-btn:hover {
+  border-color: var(--amber-mid);
+  background: var(--amber-light);
+  color: var(--ink);
+}
+
+.option-btn:hover .option-letter {
+  background: var(--amber-mid);
+  color: var(--white);
+}
+
+.option-btn:active { transform: scale(0.985); }
+
+.option-btn.selected {
+  border-color: var(--amber);
+  background: var(--amber-light);
+  color: var(--ink);
+}
+
+.option-btn.selected .option-letter {
+  background: var(--amber);
+  color: var(--white);
+}
+
+/* ─── CTA BUTTON ─── */
+.cta-btn {
+  display: block;
+  width: 100%;
+  background: var(--ink);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 17px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  letter-spacing: 0.05em;
+  margin-top: 6px;
+}
+
+.cta-btn:hover {
+  background: var(--amber);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(200,130,10,0.28);
+}
+
+.cta-btn:active { transform: scale(0.98) translateY(0); }
+
+.cta-btn:disabled {
+  opacity: 0.32;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  background: var(--ink);
+}
+
+/* ─── RESULT ─── */
+.result-section {
+  display: none;
+  animation: fadeUp 0.45s ease;
+}
+
+.result-section.visible { display: block; }
+
+/* — トリセツ document frame — */
+.torisetsu-doc {
+  background: var(--white);
+  border: 1px solid var(--cream-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 28px var(--shadow);
+}
+
+.doc-header {
+  background: var(--ink);
+  padding: 26px 22px 22px;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.doc-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: repeating-linear-gradient(90deg, var(--amber) 0 8px, transparent 8px 14px);
+}
+
+.doc-type-label {
+  font-size: 10px;
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+
+.doc-model-num {
+  font-size: 11px;
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--amber-mid);
+  margin-bottom: 6px;
+}
+
+.doc-emoji {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.doc-type-name {
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+
+.doc-score-tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: var(--radius-pill);
+  padding: 3px 14px;
+  font-size: 12px;
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+/* — spec rows — */
+.doc-body { padding: 20px 20px 24px; }
+
+.spec-section {
+  margin-bottom: 20px;
+}
+
+.spec-heading {
+  font-size: 11px;
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--amber);
+  border-bottom: 1px solid var(--cream-border);
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+}
+
+.spec-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+  font-size: 13px;
+}
+
+.spec-key {
+  flex-shrink: 0;
+  width: 72px;
+  color: var(--ink-muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding-top: 2px;
+}
+
+.spec-val {
+  flex: 1;
+  color: var(--ink);
+  line-height: 1.65;
+}
+
+.spec-val.highlight { color: var(--amber); font-weight: 700; }
+.spec-val.danger { color: var(--coral); font-weight: 700; }
+.spec-val.good { color: var(--teal); font-weight: 700; }
+
+/* — main description — */
+.desc-section { margin-bottom: 20px; }
+
+.desc-text {
+  font-size: 14px;
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+  color: var(--ink-mid);
+  line-height: 1.95;
+  white-space: pre-line;
+}
+
+/* — warning box — */
+.warning-box {
+  background: var(--coral-light);
+  border: 1px solid rgba(192,68,42,0.2);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  margin-bottom: 20px;
+}
+
+.warning-title {
+  font-size: 11px;
+  font-weight: 700;
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+  letter-spacing: 0.12em;
+  color: var(--coral);
+  margin-bottom: 6px;
+}
+
+.warning-text {
+  font-size: 13px;
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+  color: var(--ink-mid);
+  line-height: 1.7;
+}
+
+/* — compatibility meter — */
+.compat-row {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 4px;
+}
+
+.compat-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+}
+
+.compat-label {
+  font-size: 12px;
+  color: var(--ink-muted);
+  width: 70px;
+  flex-shrink: 0;
+}
+
+.compat-bar-bg {
+  flex: 1;
+  height: 7px;
+  background: var(--cream-mid);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.compat-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-pill);
+  transition: width 0.8s cubic-bezier(.4,0,.2,1) 0.2s;
+}
+
+.compat-pct {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink-mid);
+  width: 34px;
+  text-align: right;
+}
+
+/* — quote — */
+.doc-quote {
+  background: var(--cream);
+  border: 1px solid var(--cream-border);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  font-size: 13px;
+  font-family: 'Hiragino Mincho ProN', 'Noto Serif JP', Georgia, serif;
+  color: var(--ink);
+  line-height: 1.8;
+  font-style: italic;
+  text-align: center;
+  margin-top: 16px;
+}
+
+/* ─── SHARE ─── */
+.share-card {
+  background: var(--white);
+  border: 1px solid var(--cream-border);
+  border-radius: var(--radius-lg);
+  padding: 20px 18px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.share-title {
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+  color: var(--ink-mid);
+  margin-bottom: 14px;
+  letter-spacing: 0.04em;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 9px;
+}
+
+.share-btn {
+  flex: 1;
+  padding: 13px 8px;
+  border-radius: var(--radius-md);
+  border: none;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.02em;
+}
+
+.share-btn:hover { transform: translateY(-2px); }
+.share-btn:active { transform: scale(0.97); }
+
+.share-btn-x { background: #0F1419; color: #FFF; border-radius: var(--radius-md); }
+.share-btn-line { background: #06C755; color: #FFF; }
+.share-btn-copy { background: var(--cream-mid); color: var(--ink-mid); border: 1px solid var(--cream-border); }
+
+/* ─── RETRY ─── */
+.retry-btn {
+  display: block;
+  width: 100%;
+  background: transparent;
+  color: var(--ink-muted);
+  border: 1.5px solid var(--cream-border);
+  border-radius: var(--radius-pill);
+  padding: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 40px;
+  letter-spacing: 0.05em;
+}
+
+.retry-btn:hover {
+  border-color: var(--amber-mid);
+  color: var(--amber);
+  background: var(--amber-light);
+}
+
+/* ─── FOOTER ─── */
+.site-footer {
+  text-align: center;
+  font-size: 11px;
+  color: var(--ink-muted);
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+  padding-bottom: 16px;
+  letter-spacing: 0.04em;
+}
+
+/* ─── TOAST ─── */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(70px);
+  background: var(--ink);
+  color: var(--white);
+  padding: 11px 22px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+  opacity: 0;
+  transition: all 0.28s ease;
+  pointer-events: none;
+  z-index: 999;
+  white-space: nowrap;
+}
+
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+.hidden { display: none !important; }
+
+@media (max-width: 400px) {
+  .main-title { font-size: 23px; }
+  .q-text { font-size: 16px; }
+  .share-buttons { flex-direction: column; }
+  .spec-key { width: 60px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header class="site-header">
+    <div class="header-rule">
+      <span></span>
+      <em>FREE PERSONALITY MAKER</em>
+      <span></span>
+    </div>
+    <h1 class="main-title">
+      あなたの<span class="accent">「取扱説明書」</span><br>自動生成メーカー
+    </h1>
+    <p class="subtitle">全8問の相性診断 ― あなたの本当の扱い方、暴きます。</p>
+    <div class="stamp-row">
+      <span class="stamp">無料</span>
+      <span class="stamp">即時結果</span>
+      <span class="stamp">シェア可能</span>
+    </div>
+  </header>
+
+  <!-- QUIZ SECTION -->
+  <div id="quiz-section">
+
+    <div class="intro-card" id="intro-card">
+      <p>「私って扱いにくいのかな？」と思ったこと、一度くらいはあるはず。<br>
+      この診断では、あなたの<strong>本当の取扱説明書</strong>を8問で生成します。</p>
+      <p>地雷・推奨される接し方・相性のいいタイプまで全部わかる。<br>
+      友達や恋人に<strong>送りつけてみよう。</strong></p>
+    </div>
+
+    <div class="progress-wrap hidden" id="progress-wrap">
+      <div class="progress-meta">
+        <span class="progress-label">PROGRESS</span>
+        <span class="progress-count" id="progress-count">1 / 8</span>
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progress-bar" style="width:0%"></div>
+      </div>
+    </div>
+
+    <div class="question-card hidden" id="question-card">
+      <div class="q-eyebrow">
+        <span class="q-num-box" id="q-num-box">Q1</span>
+        <span class="q-topic" id="q-topic"></span>
+      </div>
+      <div class="q-text" id="q-text"></div>
+      <div class="options-list" id="options-list"></div>
+    </div>
+
+    <button class="cta-btn" id="main-btn" onclick="handleMainBtn()">
+      診断スタート ▶
+    </button>
+
+  </div>
+
+  <!-- RESULT SECTION -->
+  <div class="result-section" id="result-section">
+
+    <div class="torisetsu-doc" id="torisetsu-doc">
+      <div class="doc-header">
+        <div class="doc-type-label">PERSONAL INSTRUCTION MANUAL ／ 取扱説明書</div>
+        <div class="doc-model-num" id="doc-model-num">MODEL: ----</div>
+        <span class="doc-emoji" id="doc-emoji">📋</span>
+        <div class="doc-type-name" id="doc-type-name">――</div>
+        <div class="doc-score-tag" id="doc-score-tag">診断スコア：― 点</div>
+      </div>
+
+      <div class="doc-body">
+
+        <div class="spec-section">
+          <div class="spec-heading">■ 基本スペック</div>
+          <div id="spec-rows"></div>
+        </div>
+
+        <div class="desc-section">
+          <div class="spec-heading">■ 製品説明</div>
+          <p class="desc-text" id="desc-text"></p>
+        </div>
+
+        <div class="warning-box">
+          <div class="warning-title">⚠ 取扱注意事項</div>
+          <div class="warning-text" id="warning-text"></div>
+        </div>
+
+        <div class="spec-section">
+          <div class="spec-heading">■ 相性インジケーター</div>
+          <div class="compat-row" id="compat-row"></div>
+        </div>
+
+        <div class="doc-quote" id="doc-quote"></div>
+
+      </div>
+    </div>
+
+    <div class="share-card">
+      <div class="share-title">自分のトリセツを友達・恋人に送ろう 📄</div>
+      <div class="share-buttons">
+        <button class="share-btn share-btn-x" onclick="shareToX()">X でシェア</button>
+        <button class="share-btn share-btn-line" onclick="shareToLine()">LINE で送る</button>
+        <button class="share-btn share-btn-copy" onclick="copyResult()">テキストコピー</button>
+      </div>
+    </div>
+
+    <button class="retry-btn" onclick="resetQuiz()">もう一度診断する ↺</button>
+
+  </div>
+
+</div>
+
+<div class="site-footer">© 2025 取扱説明書メーカー ｜ 診断結果は娯楽目的です</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const questions = [
+  {
+    topic: "コミュニケーション",
+    text: "グループLINEで話題が盛り上がっている。あなたはどのポジション？",
+    options: [
+      { text: "面白いことをどんどん投下して場を回す", score: 3 },
+      { text: "面白いと思ったものにリアクションするのが基本", score: 1 },
+      { text: "よく読んでいるけど、基本ROM（読み専）", score: 0 },
+      { text: "タイミングを見て一言刺さるコメントを入れる", score: 2 },
+    ]
+  },
+  {
+    topic: "ストレス処理",
+    text: "嫌なことがあった日の夜、あなたの行動は？",
+    options: [
+      { text: "誰かに電話かLINEして「聞いて！」と話す", score: 3 },
+      { text: "一人で好きなことをして気分転換", score: 1 },
+      { text: "何もせず早めに寝る。起きたら忘れてるから", score: 0 },
+      { text: "日記やメモに感情を書き出して整理する", score: 2 },
+    ]
+  },
+  {
+    topic: "地雷ポイント",
+    text: "次のうち、一番イライラするシチュエーションは？",
+    options: [
+      { text: "会話の途中で「でもさ〜」と否定から入られる", score: 2 },
+      { text: "約束の時間に遅れてきて謝りもしない", score: 1 },
+      { text: "「みんなそう言ってたよ」という伝聞形式の攻撃", score: 3 },
+      { text: "良かれと思って言ったことを後でいじられる", score: 0 },
+    ]
+  },
+  {
+    topic: "意思決定",
+    text: "「今日のランチ、何がいい？」と聞かれたとき、あなたは？",
+    options: [
+      { text: "「なんでもいい」→その後「それは嫌」のコンボをやりがち", score: 2 },
+      { text: "すぐ「○○がいい！」と答える。決める係が好き", score: 3 },
+      { text: "「何食べたい？」と逆に聞く。相手に合わせたい", score: 0 },
+      { text: "候補を2つ出して相手に選ばせる", score: 1 },
+    ]
+  },
+  {
+    topic: "感情表現",
+    text: "褒められたとき、あなたの反応は？",
+    options: [
+      { text: "素直に「ありがとう！嬉しい！」と受け取る", score: 3 },
+      { text: "照れて「そんなことないよ〜」と否定してしまう", score: 1 },
+      { text: "「え、どういう意味で言ってる？」と裏を読んでしまう", score: 2 },
+      { text: "クールに「どうも」と言いながら内心めちゃくちゃ嬉しい", score: 0 },
+    ]
+  },
+  {
+    topic: "対人関係",
+    text: "初対面の人が多い飲み会。あなたはどう過ごす？",
+    options: [
+      { text: "気づいたら幹事役・まとめ役をやっている", score: 3 },
+      { text: "知り合いの隣から離れず、静かに楽しむ", score: 0 },
+      { text: "隣の人と1対1での会話を深めるのが好き", score: 1 },
+      { text: "何人かに自分から話しかけるが、疲れたら一人になりたい", score: 2 },
+    ]
+  },
+  {
+    topic: "怒りのパターン",
+    text: "友達に裏切られた（秘密を他人に話されたなど）。どう対応する？",
+    options: [
+      { text: "その場で直接「なんでそんなこと言ったの？」と問い詰める", score: 3 },
+      { text: "何も言わず、少しずつ距離を置いていく", score: 0 },
+      { text: "怒った顔はしないが、心の中でそっと人生から退場させる", score: 2 },
+      { text: "後日、冷静になってから話し合いの場を設ける", score: 1 },
+    ]
+  },
+  {
+    topic: "自己認識",
+    text: "「あなたって変わってるよね」と言われたとき、どう思う？",
+    options: [
+      { text: "「え？普通じゃないの？」と本気でびっくりする", score: 3 },
+      { text: "「そうかもね」と思いながら少し傷つく", score: 1 },
+      { text: "「ありがとう（褒め言葉として受け取った）」", score: 2 },
+      { text: "「そうだよ、知ってた」と無表情で返す", score: 0 },
+    ]
+  },
+];
+
+const results = [
+  {
+    min: 0, max: 6,
+    emoji: "🪨",
+    name: "無口な岩タイプ｜不動心の孤高モデル",
+    model: "SOLO-TYPE / 岩盤モデル",
+    specs: [
+      { key: "性格", val: "内向型・観察力高め", cls: "" },
+      { key: "強み", val: "ブレない自分軸、深い集中力", cls: "good" },
+      { key: "弱点", val: "感情の見えなさすぎ問題", cls: "danger" },
+      { key: "口癖", val: "「別に」「まあ」「知ってた」", cls: "" },
+      { key: "充電方法", val: "一人時間・静けさ・好きなコンテンツ", cls: "" },
+    ],
+    desc: "多くを語らず、それでいてなぜか存在感がある。観察力が異様に鋭く、場の空気を誰よりも読んでいるのに、自分からは動かない。「実は気づいてた」「前から思ってた」が口癖で、後から「え、わかってたの！？」と言われるタイプ。信頼できる人には深く、深く付き合うので、一度懐に入った人間はずっと大事にされます。\n\nただ、感情が岩の中に埋まりすぎていて、周囲が「今何を考えているの？」と不安になりがち。「大丈夫？」と聞かれるたびに「別に」と答えてきた回数を今すぐ数えてみてください。",
+    warning: "「察してくれ」は通じません。言葉に出さないと本当に誰にも伝わりません。リアクション1ミリ増やすだけで人間関係が激変する可能性があります。",
+    compat: [
+      { label: "世話好き系", pct: 95, color: "#1A7A6E" },
+      { label: "同じ岩系", pct: 25, color: "#C8820A" },
+      { label: "騒がしい系", pct: 40, color: "#C8820A" },
+    ],
+    quote: "「静かな人ほど、言葉を選ぶ。選びすぎて、結局何も言わない。」",
+  },
+  {
+    min: 7, max: 12,
+    emoji: "📐",
+    name: "分析型バランサー｜理性優先の設計士モデル",
+    model: "ANALYST-TYPE / 設計士モデル",
+    specs: [
+      { key: "性格", val: "両向型・状況適応タイプ", cls: "" },
+      { key: "強み", val: "冷静な分析力、場を荒らさない安定感", cls: "good" },
+      { key: "弱点", val: "自分の本音がわかりにくい", cls: "danger" },
+      { key: "口癖", val: "「それはケースバイケースで」", cls: "" },
+      { key: "充電方法", val: "一人で整理する時間＋信頼できる人との深い対話", cls: "" },
+    ],
+    desc: "感情と理性のバランスが絶妙で、場の空気を壊さずに自分の意見も通せる、実はかなり希少なタイプ。人の話をちゃんと聞いた上で「でもこういう視点もある」と付け加えるのがうまく、会議でも飲み会でも地味に頼りにされています。感情に振り回されない安定感は、周囲にとって「この人といると落ち着く」という安心感を与えます。\n\nただし、八方美人的に見られることもあり、「結局あなたはどうしたいの？」と聞かれると少し詰まる場面があるはず。自分でも自分の本音を把握しきれていないことが、実は一番の課題かも。",
+    warning: "「どっちでもいい」と「本当にどっちでもいい」の違いを、自分でも把握してください。周囲はそこで結構混乱しています。",
+    compat: [
+      { label: "直感型", pct: 80, color: "#1A7A6E" },
+      { label: "分析型", pct: 70, color: "#1A7A6E" },
+      { label: "感情型", pct: 55, color: "#C8820A" },
+    ],
+    quote: "「考えすぎる人は、決めるのが遅い。でも決めたときは正確だ。」",
+  },
+  {
+    min: 13, max: 18,
+    emoji: "🌀",
+    name: "感情型クリエイター｜共感過多の発電機モデル",
+    model: "CREATOR-TYPE / 発電機モデル",
+    specs: [
+      { key: "性格", val: "両向型・感情主導タイプ", cls: "" },
+      { key: "強み", val: "共感力・発想力・巻き込み力", cls: "good" },
+      { key: "弱点", val: "テンションの波が激しい・疲れやすい", cls: "danger" },
+      { key: "口癖", val: "「わかる！！！」「絶対これいける」", cls: "" },
+      { key: "充電方法", val: "好きな人と好きな話をする", cls: "" },
+    ],
+    desc: "感情表現が豊かで、場に入るだけでエネルギーが上がる、周囲を動かす天然のエンジン。共感力が高く「それわかる！」「それ天才じゃん！」という言葉がすぐ出てくるため、一緒にいると「自分の話を聞いてもらえた」と感じさせる不思議な才能の持ち主。アイデアも豊富で、やる気になったときの爆発力は本物です。\n\nただ、テンションの上がり下がりが激しく、昨日あんなに「絶対やる！」と言っていたことが今日どこかに消えていることも。あと感情に引きずられて判断が変わることがあるので、大事な決断は少し寝かせてから行うことを強くお勧めします。",
+    warning: "「今の感情」で返したLINEが翌日後悔の種になりがちです。特に深夜2時以降の送信には取扱注意シールを貼ることを推奨します。",
+    compat: [
+      { label: "安定型", pct: 90, color: "#1A7A6E" },
+      { label: "同エネ系", pct: 65, color: "#C8820A" },
+      { label: "静かな岩系", pct: 50, color: "#C8820A" },
+    ],
+    quote: "「熱量がある人は、周りを燃やすこともある。でもその火に集まってくる人も多い。」",
+  },
+  {
+    min: 19, max: 24,
+    emoji: "🎤",
+    name: "天然カリスマ｜空気支配型・無自覚リーダーモデル",
+    model: "LEADER-TYPE / カリスマモデル",
+    specs: [
+      { key: "性格", val: "外向型・エネルギー過多タイプ", cls: "" },
+      { key: "強み", val: "場を作る力・人を動かす熱量", cls: "good" },
+      { key: "弱点", val: "無自覚に場を支配してしまう", cls: "danger" },
+      { key: "口癖", val: "「ね！絶対そうじゃん！」「え、なんで？」", cls: "" },
+      { key: "充電方法", val: "人と話すこと・注目されること", cls: "" },
+    ],
+    desc: "気づいたら場の中心にいる、周囲が自然と引き寄せられるタイプ。発言の熱量が高く、自分が面白いと思ったことを全力で共有するため、周囲のテンションを一気に引き上げることができます。リーダーシップを意識しているわけでもないのに、なんかまとめ役になってしまっている「無自覚カリスマ」。グループに一人いると場が締まる、貴重な存在です。\n\n問題は「みんなも同じテンションで楽しんでいる」と思いがちなこと。静かに疲弊している人を見落とすことがあります。「聞く」より「話す」が圧倒的に多くなっていないか、週一回くらいセルフチェックするといいかもしれません。",
+    warning: "「とりあえず自分が正しいと思ってしまう」癖があります。反論されたとき「え、なんで？」の前に、相手の話を最後まで聞いてみてください。それだけで人間関係の質が変わります。",
+    compat: [
+      { label: "受け止め型", pct: 95, color: "#1A7A6E" },
+      { label: "分析型", pct: 70, color: "#1A7A6E" },
+      { label: "同カリスマ", pct: 35, color: "#C0442A" },
+    ],
+    quote: "「場を作れる人は、場を壊す力も持っている。それを知っているかどうかが全て。」",
+  },
+];
+
+let currentQ = 0;
+let totalScore = 0;
+let selectedScore = null;
+let quizStarted = false;
+let currentResult = null;
+
+function handleMainBtn() {
+  if (!quizStarted) {
+    startQuiz();
+    return;
+  }
+  if (selectedScore === null) {
+    showToast("選択肢を選んでください");
+    return;
+  }
+  totalScore += selectedScore;
+  selectedScore = null;
+  currentQ++;
+  if (currentQ < questions.length) {
+    renderQuestion();
+  } else {
+    showResult();
+  }
+}
+
+function startQuiz() {
+  quizStarted = true;
+  document.getElementById('intro-card').classList.add('hidden');
+  document.getElementById('progress-wrap').classList.remove('hidden');
+  document.getElementById('question-card').classList.remove('hidden');
+  document.getElementById('main-btn').textContent = "次の質問へ →";
+  document.getElementById('main-btn').disabled = true;
+  renderQuestion();
+}
+
+function renderQuestion() {
+  const q = questions[currentQ];
+  const n = currentQ + 1;
+  const total = questions.length;
+
+  document.getElementById('q-num-box').textContent = 'Q' + n;
+  document.getElementById('q-topic').textContent = q.topic;
+  document.getElementById('q-text').textContent = q.text;
+  document.getElementById('progress-count').textContent = n + ' / ' + total;
+  document.getElementById('progress-bar').style.width = (((n - 1) / total) * 100) + '%';
+
+  document.getElementById('main-btn').textContent = n === total ? "トリセツを生成する ▶" : "次の質問へ →";
+  document.getElementById('main-btn').disabled = true;
+
+  const letters = ['A', 'B', 'C', 'D'];
+  const list = document.getElementById('options-list');
+  list.innerHTML = '';
+
+  q.options.forEach(function(opt, i) {
+    var btn = document.createElement('button');
+    btn.className = 'option-btn';
+    btn.innerHTML = '<span class="option-letter">' + letters[i] + '</span><span class="option-text">' + opt.text + '</span>';
+    btn.onclick = (function(b, s) {
+      return function() { selectOption(b, s); };
+    })(btn, opt.score);
+    list.appendChild(btn);
+  });
+
+  var card = document.getElementById('question-card');
+  card.style.animation = 'none';
+  void card.offsetWidth;
+  card.style.animation = 'fadeUp 0.32s ease';
+}
+
+function selectOption(btn, score) {
+  document.querySelectorAll('.option-btn').forEach(function(b) { b.classList.remove('selected'); });
+  btn.classList.add('selected');
+  selectedScore = score;
+  document.getElementById('main-btn').disabled = false;
+}
+
+function showResult() {
+  document.getElementById('progress-bar').style.width = '100%';
+
+  setTimeout(function() {
+    document.getElementById('quiz-section').style.display = 'none';
+    var rs = document.getElementById('result-section');
+    rs.classList.add('visible');
+
+    var r = results.find(function(res) { return totalScore >= res.min && totalScore <= res.max; }) || results[results.length - 1];
+    currentResult = r;
+
+    document.getElementById('doc-emoji').textContent = r.emoji;
+    document.getElementById('doc-model-num').textContent = 'MODEL: ' + r.model;
+    document.getElementById('doc-type-name').textContent = r.name;
+    document.getElementById('doc-score-tag').textContent = '診断スコア：' + totalScore + ' 点';
+    document.getElementById('desc-text').textContent = r.desc;
+    document.getElementById('warning-text').textContent = r.warning;
+    document.getElementById('doc-quote').textContent = r.quote;
+
+    var specHtml = '';
+    r.specs.forEach(function(s) {
+      specHtml += '<div class="spec-row"><span class="spec-key">' + s.key + '</span><span class="spec-val' + (s.cls ? ' ' + s.cls : '') + '">' + s.val + '</span></div>';
+    });
+    document.getElementById('spec-rows').innerHTML = specHtml;
+
+    var compatHtml = '';
+    r.compat.forEach(function(c) {
+      compatHtml += '<div class="compat-item"><span class="compat-label">' + c.label + '</span><div class="compat-bar-bg"><div class="compat-bar-fill" style="width:0%;background:' + c.color + '"></div></div><span class="compat-pct">' + c.pct + '%</span></div>';
+    });
+    document.getElementById('compat-row').innerHTML = compatHtml;
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    requestAnimationFrame(function() {
+      setTimeout(function() {
+        document.querySelectorAll('.compat-bar-fill').forEach(function(el, i) {
+          el.style.transition = 'width 0.8s cubic-bezier(.4,0,.2,1) ' + (0.15 + i * 0.1) + 's';
+          el.style.width = r.compat[i].pct + '%';
+        });
+      }, 120);
+    });
+
+  }, 280);
+}
+
+function resetQuiz() {
+  currentQ = 0;
+  totalScore = 0;
+  selectedScore = null;
+  quizStarted = false;
+  currentResult = null;
+
+  document.getElementById('quiz-section').style.display = 'block';
+  document.getElementById('result-section').classList.remove('visible');
+  document.getElementById('intro-card').classList.remove('hidden');
+  document.getElementById('progress-wrap').classList.add('hidden');
+  document.getElementById('question-card').classList.add('hidden');
+  document.getElementById('main-btn').textContent = "診断スタート ▶";
+  document.getElementById('main-btn').disabled = false;
+  document.getElementById('progress-bar').style.width = '0%';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function getShareText() {
+  if (!currentResult) return '';
+  return '【取扱説明書メーカー】\n私のタイプは「' + currentResult.name + '」でした！\n\n' + currentResult.quote + '\n\nあなたのトリセツも作ってみて👇';
+}
+
+function shareToX() {
+  var text = getShareText();
+  window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text), '_blank');
+}
+
+function shareToLine() {
+  var text = getShareText();
+  window.open('https://social-plugins.line.me/lineit/share?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(text), '_blank');
+}
+
+function copyResult() {
+  var text = getShareText() + '\n' + window.location.href;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(function() { showToast("コピーしました！"); });
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    showToast("コピーしました！");
+  }
+}
+
+function showToast(msg) {
+  var t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(function() { t.classList.remove('show'); }, 2100);
+}
+</script>
+</body>
+</html>
