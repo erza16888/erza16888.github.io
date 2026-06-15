@@ -3,12 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>【MBTI風】あなたの「隠れネコ科」性格テスト｜無料性格診断2025</title>
+<title>【MBTI風】あなたの「隠れネコ科」性格テスト｜無料性格診断2026</title>
 <meta name="description" content="あなたの隠れた「ネコ科」気質を診断！全8問のMBTI風性格テストで、あなたはライオン・ヒョウ・チーター・イエネコ・クロヒョウ・スナドリネコのどのタイプ？無料・即時結果・シェア機能付き。">
-<meta name="keywords" content="MBTI,ネコ科診断,性格テスト,無料診断,心理テスト,性格診断,猫 性格,MBTI風,ネコ科,性格タイプ,無料心理テスト,2025診断">
+<meta name="keywords" content="MBTI,ネコ科診断,性格テスト,無料診断,心理テスト,性格診断,猫 性格,MBTI風,ネコ科,性格タイプ,無料心理テスト,2026診断">
 <meta property="og:title" content="【MBTI風】あなたの「隠れネコ科」性格テスト">
 <meta property="og:description" content="全8問で隠れネコ科気質を診断。あなたは6タイプのうちどれ？結果をシェアしよう！">
 <meta property="og:type" content="website">
+<meta property="og:image" content="og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="index, follow">
 <style>
@@ -298,9 +302,15 @@ body {
   color: var(--bg);
 }
 
+/* 控制按鈕組區塊 */
+.btn-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+}
+
 .cta-btn {
-  display: block;
-  width: 100%;
+  flex: 2;
   background: var(--gold);
   color: var(--bg);
   border: none;
@@ -312,7 +322,6 @@ body {
   cursor: pointer;
   transition: all 0.22s ease;
   letter-spacing: 0.05em;
-  margin-top: 6px;
 }
 
 .cta-btn:hover {
@@ -328,6 +337,31 @@ body {
   cursor: not-allowed;
   transform: none;
   box-shadow: none;
+}
+
+/* 返回上一題按鈕樣式 */
+.back-btn {
+  flex: 1;
+  background: transparent;
+  color: var(--text2);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-pill);
+  padding: 17px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.05em;
+}
+.back-btn:hover:not(:disabled) {
+  border-color: rgba(212,168,67,0.35);
+  color: var(--gold);
+  background: var(--gold-glow);
+}
+.back-btn:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
 }
 
 .result-section { display: none; animation: fadeUp 0.45s ease; }
@@ -643,7 +677,52 @@ body {
   .q-text { font-size: 16px; }
   .share-buttons { flex-direction: column; }
 }
+
+/* ── AD SLOT ── */
+.ad-slot{min-height:250px;background:#f0f0f0;margin:20px 0;text-align:center;line-height:250px;color:#aaa;font-size:12px;border-radius:12px;overflow:hidden;font-family:'Hiragino Kaku Gothic ProN',sans-serif;letter-spacing:.05em}
+/* ── SEO FAQ ── */
+.seo-faq{max-width:520px;margin:28px auto 0;padding:0 16px 40px;font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Noto Sans JP',sans-serif}
+.seo-faq h2{font-size:16px;font-weight:900;margin-bottom:16px;text-align:center;opacity:.55;letter-spacing:.03em}
+.seo-faq details{background:rgba(127,127,127,0.06);border:1px solid rgba(127,127,127,0.16);border-radius:12px;padding:14px 16px;margin-bottom:10px}
+.seo-faq summary{font-size:14px;font-weight:700;cursor:pointer;list-style:none;opacity:.85;line-height:1.6}
+.seo-faq summary::-webkit-details-marker{display:none}
+.seo-faq summary::before{content:'Q. ';color:#C0392B;font-weight:900}
+.seo-faq .faq-a{font-size:13px;line-height:1.85;opacity:.7;margin-top:10px;padding-top:10px;border-top:1px solid rgba(127,127,127,0.16)}
+.seo-faq .faq-a::before{content:'A. ';color:#2E7D5E;font-weight:900}
+
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ネコ科診断（MBTI風）とは何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "全8問の質問から、あなたの隠れた「ネコ科」気質をライオン・ヒョウ・チーターなど6タイプに分類する無料の性格テストです。MBTI風の手軽さで自分の性格傾向を楽しく把握できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "診断結果は何タイプありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "イエネコ・クロヒョウ・スナドリネコ・ヒョウ・チーター・ライオンの全6タイプです。それぞれに性格の強み・弱み・相性のよいタイプが用意されています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "結果をシェアできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。結果ページのシェアボタンから、X・LINE・コピーで結果と診断リンクを共有できます。友達と性格タイプを比べて楽しめます。"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -692,13 +771,18 @@ body {
       <div class="options-list" id="options-list"></div>
     </div>
 
-    <button class="cta-btn" id="main-btn" onclick="handleMainBtn()">
-      診断スタート ▶
-    </button>
+    <div class="ad-slot" id="ad-top">【スポンサーリンク / 広告】</div>
+    
+    <!-- 按鈕控制群組 -->
+    <div class="btn-group">
+      <button class="back-btn hidden" id="back-btn" disabled>戻る</button>
+      <button class="cta-btn" id="main-btn">診断スタート ▶</button>
+    </div>
 
   </div>
 
   <div class="result-section" id="result-section">
+    <div class="ad-slot" id="ad-result">【スポンサーリンク / 広告】</div>
 
     <div class="result-hero" id="result-hero">
       <div class="result-hero-top" id="result-hero-top">
@@ -731,19 +815,34 @@ body {
     <div class="share-card">
       <div class="share-title">あなたのネコ科タイプをシェアしよう 🐾</div>
       <div class="share-buttons">
-        <button class="share-btn share-btn-x" onclick="shareToX()">X でシェア</button>
-        <button class="share-btn share-btn-line" onclick="shareToLine()">LINE</button>
-        <button class="share-btn share-btn-copy" onclick="copyResult()">コピー</button>
+        <button class="share-btn share-btn-x" id="share-x-btn">X でシェア</button>
+        <button class="share-btn share-btn-line" id="share-line-btn">LINE</button>
+        <button class="share-btn share-btn-copy" id="share-copy-btn">コピー</button>
       </div>
     </div>
 
-    <button class="retry-btn" onclick="resetQuiz()">もう一度診断する ↺</button>
+    <button class="retry-btn" id="retry-btn">もう一度診断する ↺</button>
 
   </div>
 
 </div>
 
-<div class="site-footer">© 2025 隠れネコ科診断 ｜ 結果は娯楽目的です 🐾</div>
+<section class="seo-faq">
+  <h2>よくある質問（ネコ科診断・MBTI風性格テスト）</h2>
+    <details>
+      <summary>ネコ科診断（MBTI風）とは何ですか？</summary>
+      <p class="faq-a">全8問の質問から、あなたの隠れた「ネコ科」気質をライオン・ヒョウ・チーターなど6タイプに分類する無料の性格テストです。MBTI風の手軽さで自分の性格傾向を楽しく把握できます。</p>
+    </details>
+    <details>
+      <summary>診断結果は何タイプありますか？</summary>
+      <p class="faq-a">イエネコ・クロヒョウ・スナドリネコ・ヒョウ・チーター・ライオンの全6タイプです。それぞれに性格の強み・弱み・相性のよいタイプが用意されています。</p>
+    </details>
+    <details>
+      <summary>結果をシェアできますか？</summary>
+      <p class="faq-a">はい。結果ページのシェアボタンから、X・LINE・コピーで結果と診断リンクを共有できます。友達と性格タイプを比べて楽しめます。</p>
+    </details>
+</section>
+<div class="site-footer">© 2026 隠れネコ科診断 ｜ 結果は娯楽目的です 🐾</div>
 <div class="toast" id="toast"></div>
 
 <script>
@@ -785,7 +884,7 @@ var questions = [
       { text: "すぐその場で「それはないんじゃない？」とはっきり言う", score: 4 },
       { text: "笑顔のまま何も言わず、心の中でそっと縁を切る", score: 1 },
       { text: "その場は流すが、一人になってから本気でイライラする", score: 2 },
-      { text: "「え、なんで？」と素直に聞き返してしまう", score: 3 }
+      { text: "「え、んで？」と素直に聞き返してしまう", score: 3 }
     ]
   },
   {
@@ -863,8 +962,8 @@ var results = [
       { label: "社交性", pct: 22, color: "#5BA8CC" },
       { label: "神秘度", pct: 90, color: "#5BA8CC" }
     ],
-    desc: "表に出ることは少ないが、場の全員のことをちゃんと見ている。「気づいてたの？」と後から驚かれることが多く、観察力と洞察力がずば抜けているタイプ。感情をあまり表に出さないため周囲からはクールに見られることが多いが、信頼できる数人の前では別人のように雄弁になる。その落差こそが最大の武器であり、人を惹きつける秘密でもある。\n\nただ、「何を考えているかわからない」と言われすぎて、本人も少し慣れてしまっているかも。たまには感情を表に出さないと、周囲は本当にあなたが興味を持っているかどうかわからなくなります。リアクション3割増しで生きると人間関係が劇的に変わります。",
-    warning: "「言わなくてもわかるでしょ」は通じません。あなたの沈黙は周囲に「怒ってる？」と解釈されがちです。無表情OKですが、一言添えてください。",
+    desc: "表に出ることは少ないが、場の全員のことをちゃんと見ている。「気づいてたの？」と後から驚かれることが多く、観察力と洞察力がずば抜けているタイプ。感情をあまり表に出さないため周囲からはクールに見られることが多いが、信頼できる数人の前では別人のように雄べきになる。その落差こそが最大の武器であり、人を惹きつける秘密でもある。\n\n shadow 型の名の通り、たまには感情を表に出さないと周囲は本当に興味を持っているか分からなくなります。リアクション3割増しで生きると人間関係が激変します。",
+    warning: "「言わなくてもわかるでしょ」は通じません。あなたの沈黙は周囲に「怒ってる？」と解釈されがちです。一言添えてください。",
     keywords: ["観察眼", "夜行性", "ミステリアス", "内向型", "少数精鋭", "洞察力"],
     quote: "「暗闇の中でしか見えないものが、確かに存在する。」",
     quoteAttr: "― クロヒョウ族の格言"
@@ -947,51 +1046,90 @@ var results = [
   }
 ];
 
-var currentQ = 0;
-var totalScore = 0;
-var selectedScore = null;
-var quizStarted = false;
-var currentResult = null;
+let currentQ = 0;
+let selectedScoresHistory = []; // 紀錄選擇的分數歷史供返回上一題使用
+let quizStarted = false;
+let currentResult = null;
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('main-btn').addEventListener('click', handleMainBtn);
+  document.getElementById('back-btn').addEventListener('click', handleBackBtn);
+  document.getElementById('retry-btn').addEventListener('click', resetQuiz);
+  document.getElementById('share-x-btn').addEventListener('click', shareToX);
+  document.getElementById('share-line-btn').addEventListener('click', shareToLine);
+  document.getElementById('share-copy-btn').addEventListener('click', copyResult);
+});
 
 function handleMainBtn() {
-  if (!quizStarted) { startQuiz(); return; }
-  if (selectedScore === null) { showToast("選択肢を選んでください"); return; }
-  totalScore += selectedScore;
-  selectedScore = null;
+  if (!quizStarted) {
+    startQuiz();
+    return;
+  }
+  
+  const selectedBtn = document.querySelector('.option-btn.selected');
+  if (!selectedBtn) {
+    showToast("選択肢を選んでください");
+    return;
+  }
+  
+  const score = parseInt(selectedBtn.getAttribute('data-score'), 10);
+  selectedScoresHistory.push(score);
+  
   currentQ++;
-  if (currentQ < questions.length) { renderQuestion(); } else { showResult(); }
+  if (currentQ < questions.length) {
+    renderQuestion();
+  } else {
+    showResult();
+  }
+}
+
+function handleBackBtn() {
+  if (!quizStarted || currentQ === 0) return;
+  
+  selectedScoresHistory.pop();
+  currentQ--;
+  renderQuestion();
 }
 
 function startQuiz() {
   quizStarted = true;
+  selectedScoresHistory = [];
+  var at = document.getElementById('ad-top'); 
+  if (at) at.style.display = 'none';
   document.getElementById('intro-card').classList.add('hidden');
   document.getElementById('progress-wrap').classList.remove('hidden');
   document.getElementById('question-card').classList.remove('hidden');
-  document.getElementById('main-btn').textContent = '次の質問へ →';
-  document.getElementById('main-btn').disabled = true;
+  document.getElementById('back-btn').classList.remove('hidden');
   renderQuestion();
 }
 
 function renderQuestion() {
-  var q = questions[currentQ];
-  var n = currentQ + 1;
-  var total = questions.length;
+  const q = questions[currentQ];
+  const n = currentQ + 1;
+  const total = questions.length;
+
   document.getElementById('q-num').textContent = 'Q' + n;
   document.getElementById('q-scene').textContent = q.scene;
   document.getElementById('q-text').textContent = q.text;
   document.getElementById('progress-count').textContent = n + ' / ' + total;
   document.getElementById('progress-bar').style.width = (((n - 1) / total) * 100) + '%';
-  document.getElementById('main-btn').textContent = n === total ? 'ネコ科タイプを診断する 🐾' : '次の質問へ →';
-  document.getElementById('main-btn').disabled = true;
 
-  var letters = ['A', 'B', 'C', 'D'];
-  var list = document.getElementById('options-list');
+  document.getElementById('back-btn').disabled = (currentQ === 0);
+
+  const mainBtn = document.getElementById('main-btn');
+  mainBtn.textContent = n === total ? 'ネコ科タイプを診断する 🐾' : '次の質問へ →';
+  mainBtn.disabled = true;
+
+  const letters = ['A', 'B', 'C', 'D'];
+  const list = document.getElementById('options-list');
   list.innerHTML = '';
+
   q.options.forEach(function(opt, i) {
     var btn = document.createElement('button');
     btn.className = 'option-btn';
+    btn.setAttribute('data-score', opt.score);
     btn.innerHTML = '<span class="option-letter">' + letters[i] + '</span><span class="option-text">' + opt.text + '</span>';
-    btn.onclick = (function(b, s) { return function() { selectOption(b, s); }; })(btn, opt.score);
+    btn.onclick = function() { selectOption(btn); };
     list.appendChild(btn);
   });
 
@@ -1001,25 +1139,22 @@ function renderQuestion() {
   card.style.animation = 'fadeUp 0.3s ease';
 }
 
-function selectOption(btn, score) {
+function selectOption(btn) {
   document.querySelectorAll('.option-btn').forEach(function(b) { b.classList.remove('selected'); });
   btn.classList.add('selected');
-  selectedScore = score;
   document.getElementById('main-btn').disabled = false;
 }
 
 function showResult() {
   document.getElementById('progress-bar').style.width = '100%';
+  const totalScore = selectedScoresHistory.reduce((a, b) => a + b, 0);
+
   setTimeout(function() {
     document.getElementById('quiz-section').style.display = 'none';
     var rs = document.getElementById('result-section');
     rs.classList.add('visible');
 
-    var r = null;
-    for (var i = 0; i < results.length; i++) {
-      if (totalScore >= results[i].min && totalScore <= results[i].max) { r = results[i]; break; }
-    }
-    if (!r) r = results[results.length - 1];
+    var r = results.find(function(res) { return totalScore >= res.min && totalScore <= res.max; }) || results[results.length - 1];
     currentResult = r;
 
     document.getElementById('result-hero-top').style.background = r.heroColor;
@@ -1058,12 +1193,20 @@ function showResult() {
 }
 
 function resetQuiz() {
-  currentQ = 0; totalScore = 0; selectedScore = null; quizStarted = false; currentResult = null;
+  var at = document.getElementById('ad-top'); 
+  if (at) at.style.display = '';
+  currentQ = 0; 
+  selectedScoresHistory = []; 
+  quizStarted = false; 
+  currentResult = null;
+  
   document.getElementById('quiz-section').style.display = 'block';
   document.getElementById('result-section').classList.remove('visible');
   document.getElementById('intro-card').classList.remove('hidden');
   document.getElementById('progress-wrap').classList.add('hidden');
   document.getElementById('question-card').classList.add('hidden');
+  document.getElementById('back-btn').classList.add('hidden');
+  
   document.getElementById('main-btn').textContent = '診断スタート ▶';
   document.getElementById('main-btn').disabled = false;
   document.getElementById('progress-bar').style.width = '0%';
@@ -1076,11 +1219,15 @@ function getShareText() {
 }
 
 function shareToX() {
-  window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(getShareText()), '_blank');
+  window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(getShareText()) + '&url=' + encodeURIComponent(window.location.href) + '&hashtags=' + encodeURIComponent('ネコ科診断,MBTI,性格診断,心理テスト,診断テスト'), '_blank');
 }
 
 function shareToLine() {
-  window.open('https://social-plugins.line.me/lineit/share?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(getShareText()), '_blank');
+  var t = window.location.href + '\n\n' + getShareText();
+  window.location.href = 'line://msg/text/' + encodeURIComponent(t);
+  setTimeout(function() {
+    window.open('https://line.me/R/msg/text/' + encodeURIComponent(t), '_blank');
+  }, 500);
 }
 
 function copyResult() {
