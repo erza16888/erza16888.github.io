@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【MBTI風】あなたの「隠れネコ科」性格テスト｜無料性格診断2025</title>
+<meta name="description" content="あなたの隠れた「ネコ科」気質を診断！全8問のMBTI風性格テストで、あなたはライオン・ヒョウ・チーター・イエネコ・クロヒョウ・スナドリネコのどのタイプ？無料・即時結果・シェア機能付き。">
+<meta name="keywords" content="MBTI,ネコ科診断,性格テスト,無料診断,心理テスト,性格診断,猫 性格,MBTI風,ネコ科,性格タイプ,無料心理テスト,2025診断">
+<meta property="og:title" content="【MBTI風】あなたの「隠れネコ科」性格テスト">
+<meta property="og:description" content="全8問で隠れネコ科気質を診断。あなたは6タイプのうちどれ？結果をシェアしよう！">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow">
+<style>
+:root {
+  --bg: #0E0C0F;
+  --bg2: #171319;
+  --bg3: #1E1921;
+  --card: #211C24;
+  --card2: #2A2430;
+  --border: rgba(255,255,255,0.07);
+  --border2: rgba(255,255,255,0.13);
+  --text: #F0EBF4;
+  --text2: #B0A8BB;
+  --text3: #736B80;
+  --gold: #D4A843;
+  --gold2: #F0C96A;
+  --gold-dim: rgba(212,168,67,0.15);
+  --gold-glow: rgba(212,168,67,0.08);
+  --rose-dim: rgba(224,96,128,0.12);
+  --rose: #E06080;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+  background: var(--bg);
+  min-height: 100vh;
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 0 16px 72px;
+}
+
+.site-header {
+  text-align: center;
+  padding: 48px 0 30px;
+}
+
+.header-kana {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.header-kana::before,
+.header-kana::after {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.5;
+}
+
+.main-title {
+  font-size: 27px;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+
+.main-title .gold { color: var(--gold2); }
+.main-title .thin { font-weight: 400; color: var(--text2); font-size: 20px; }
+
+.subtitle {
+  font-size: 13px;
+  color: var(--text3);
+  margin-bottom: 22px;
+  letter-spacing: 0.04em;
+}
+
+.tag-row {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  display: inline-block;
+  background: var(--gold-dim);
+  border: 1px solid rgba(212,168,67,0.3);
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.08em;
+}
+
+.intro-card {
+  background: var(--card);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-lg);
+  padding: 22px 20px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-card::before {
+  content: '🐈';
+  position: absolute;
+  right: 14px;
+  top: 10px;
+  font-size: 56px;
+  opacity: 0.07;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.intro-card p {
+  font-size: 14px;
+  color: var(--text2);
+  line-height: 1.9;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.intro-card p:last-child { margin-bottom: 0; }
+.intro-card strong { color: var(--gold2); font-weight: 700; }
+
+.progress-wrap { margin-bottom: 18px; }
+
+.progress-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.progress-label {
+  font-size: 10px;
+  color: var(--text3);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.progress-count {
+  font-size: 12px;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.progress-bar-bg {
+  background: var(--bg3);
+  border-radius: var(--radius-pill);
+  height: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold) 0%, var(--gold2) 100%);
+  border-radius: var(--radius-pill);
+  transition: width 0.45s cubic-bezier(.4,0,.2,1);
+}
+
+.question-card {
+  background: var(--card);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-lg);
+  padding: 24px 20px 20px;
+  margin-bottom: 14px;
+  animation: fadeUp 0.3s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.q-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 14px;
+}
+
+.q-num {
+  background: var(--gold-dim);
+  border: 1px solid rgba(212,168,67,0.3);
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.1em;
+}
+
+.q-scene {
+  font-size: 11px;
+  color: var(--text3);
+  letter-spacing: 0.07em;
+}
+
+.q-text {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.55;
+  margin-bottom: 22px;
+}
+
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.option-btn {
+  width: 100%;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 13px 15px;
+  text-align: left;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--text2);
+  cursor: pointer;
+  transition: all 0.18s ease;
+  line-height: 1.55;
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+}
+
+.option-letter {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  color: var(--text3);
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 20px;
+  transition: all 0.18s ease;
+  margin-top: 1px;
+}
+
+.option-text { flex: 1; }
+
+.option-btn:hover {
+  background: var(--card2);
+  border-color: rgba(212,168,67,0.35);
+  color: var(--text);
+}
+
+.option-btn:hover .option-letter {
+  background: var(--gold-dim);
+  border-color: rgba(212,168,67,0.4);
+  color: var(--gold);
+}
+
+.option-btn:active { transform: scale(0.985); }
+
+.option-btn.selected {
+  background: var(--gold-dim);
+  border-color: rgba(212,168,67,0.5);
+  color: var(--text);
+}
+
+.option-btn.selected .option-letter {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--bg);
+}
+
+.cta-btn {
+  display: block;
+  width: 100%;
+  background: var(--gold);
+  color: var(--bg);
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 17px;
+  font-size: 15px;
+  font-weight: 900;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  letter-spacing: 0.05em;
+  margin-top: 6px;
+}
+
+.cta-btn:hover {
+  background: var(--gold2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(212,168,67,0.3);
+}
+
+.cta-btn:active { transform: scale(0.98) translateY(0); }
+
+.cta-btn:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.result-section { display: none; animation: fadeUp 0.45s ease; }
+.result-section.visible { display: block; }
+
+.result-hero {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 1px solid var(--border2);
+}
+
+.result-hero-top {
+  padding: 32px 22px 26px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg-animal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 140px;
+  opacity: 0.06;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.result-mbti-tag {
+  display: inline-block;
+  background: var(--gold-dim);
+  border: 1px solid rgba(212,168,67,0.4);
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.14em;
+  margin-bottom: 14px;
+}
+
+.result-animal-emoji {
+  font-size: 64px;
+  display: block;
+  margin-bottom: 12px;
+  position: relative;
+  line-height: 1;
+}
+
+.result-animal-name {
+  font-size: 11px;
+  color: var(--text3);
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  margin-bottom: 6px;
+  position: relative;
+}
+
+.result-type-name {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1.35;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.result-score-pill {
+  display: inline-block;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid var(--border2);
+  color: var(--text2);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.06em;
+  position: relative;
+}
+
+.trait-section {
+  background: var(--card);
+  border-top: 1px solid var(--border);
+  padding: 18px 20px;
+}
+
+.trait-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.trait-row:last-child { margin-bottom: 0; }
+
+.trait-label {
+  font-size: 11px;
+  color: var(--text3);
+  font-weight: 700;
+  width: 64px;
+  flex-shrink: 0;
+  letter-spacing: 0.04em;
+}
+
+.trait-bar-bg {
+  flex: 1;
+  height: 6px;
+  background: var(--bg3);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.trait-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-pill);
+  transition: width 0.85s cubic-bezier(.4,0,.2,1) 0.2s;
+}
+
+.trait-pct {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text2);
+  width: 32px;
+  text-align: right;
+}
+
+.desc-card {
+  background: var(--card);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-lg);
+  padding: 22px 20px;
+  margin-bottom: 14px;
+}
+
+.desc-section-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--text3);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.desc-text {
+  font-size: 14px;
+  color: var(--text2);
+  line-height: 1.95;
+  white-space: pre-line;
+  margin-bottom: 16px;
+}
+
+.warning-strip {
+  background: var(--rose-dim);
+  border: 1px solid rgba(224,96,128,0.2);
+  border-radius: var(--radius-md);
+  padding: 13px 15px;
+  margin-bottom: 16px;
+}
+
+.warning-head {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--rose);
+  margin-bottom: 5px;
+}
+
+.warning-body {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.7;
+}
+
+.kw-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.kw-tag {
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  color: var(--text2);
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.quote-card {
+  background: var(--card);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-lg);
+  padding: 22px 20px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.quote-text {
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.8;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+.quote-attr {
+  font-size: 11px;
+  color: var(--text3);
+  margin-top: 10px;
+  letter-spacing: 0.08em;
+}
+
+.share-card {
+  background: var(--card);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-lg);
+  padding: 20px 18px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.share-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text2);
+  margin-bottom: 14px;
+  letter-spacing: 0.04em;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.share-btn {
+  flex: 1;
+  padding: 13px 8px;
+  border-radius: var(--radius-md);
+  border: none;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.03em;
+}
+
+.share-btn:hover { transform: translateY(-2px); opacity: 0.9; }
+.share-btn:active { transform: scale(0.97); }
+
+.share-btn-x { background: #E7E7E7; color: #0F1419; }
+.share-btn-line { background: #06C755; color: #FFF; }
+.share-btn-copy { background: var(--bg3); color: var(--text2); border: 1px solid var(--border2); }
+
+.retry-btn {
+  display: block;
+  width: 100%;
+  background: transparent;
+  color: var(--text3);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-pill);
+  padding: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 40px;
+  letter-spacing: 0.06em;
+}
+
+.retry-btn:hover {
+  border-color: rgba(212,168,67,0.35);
+  color: var(--gold);
+  background: var(--gold-glow);
+}
+
+.site-footer {
+  text-align: center;
+  font-size: 11px;
+  color: var(--text3);
+  padding-bottom: 16px;
+  letter-spacing: 0.04em;
+}
+
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(70px);
+  background: var(--card2);
+  border: 1px solid var(--border2);
+  color: var(--text);
+  padding: 11px 22px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 700;
+  opacity: 0;
+  transition: all 0.28s ease;
+  pointer-events: none;
+  z-index: 999;
+  white-space: nowrap;
+}
+
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+.hidden { display: none !important; }
+
+@media (max-width: 400px) {
+  .main-title { font-size: 22px; }
+  .q-text { font-size: 16px; }
+  .share-buttons { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header class="site-header">
+    <div class="header-kana">MBTI風 ネコ科性格診断</div>
+    <h1 class="main-title">
+      あなたの<span class="gold">「隠れネコ科」</span><br>
+      <span class="thin">性格テスト</span>
+    </h1>
+    <p class="subtitle">全8問 ― 6タイプのネコ科からあなたの本性を特定します</p>
+    <div class="tag-row">
+      <span class="tag">無料</span>
+      <span class="tag">MBTI風</span>
+      <span class="tag">6タイプ診断</span>
+      <span class="tag">即時結果</span>
+    </div>
+  </header>
+
+  <div id="quiz-section">
+
+    <div class="intro-card" id="intro-card">
+      <p>人間に生まれたけど、魂はネコ科――そんな気質を持つ人は意外と多い。<br>
+      この診断では、あなたの隠れた<strong>ネコ科の本能</strong>を8問で特定します。</p>
+      <p>ライオン・ヒョウ・チーター・イエネコ・クロヒョウ・スナドリネコ。<br>
+      <strong>どのタイプに分類されるか、正直に答えてみよう。</strong></p>
+    </div>
+
+    <div class="progress-wrap hidden" id="progress-wrap">
+      <div class="progress-meta">
+        <span class="progress-label">PROGRESS</span>
+        <span class="progress-count" id="progress-count">1 / 8</span>
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progress-bar" style="width:0%"></div>
+      </div>
+    </div>
+
+    <div class="question-card hidden" id="question-card">
+      <div class="q-eyebrow">
+        <span class="q-num" id="q-num">Q1</span>
+        <span class="q-scene" id="q-scene"></span>
+      </div>
+      <div class="q-text" id="q-text"></div>
+      <div class="options-list" id="options-list"></div>
+    </div>
+
+    <button class="cta-btn" id="main-btn" onclick="handleMainBtn()">
+      診断スタート ▶
+    </button>
+
+  </div>
+
+  <div class="result-section" id="result-section">
+
+    <div class="result-hero" id="result-hero">
+      <div class="result-hero-top" id="result-hero-top">
+        <div class="hero-bg-animal" id="hero-bg-animal"></div>
+        <div class="result-mbti-tag" id="result-mbti-tag">TYPE</div>
+        <span class="result-animal-emoji" id="result-animal-emoji"></span>
+        <div class="result-animal-name" id="result-animal-name"></div>
+        <div class="result-type-name" id="result-type-name"></div>
+        <div class="result-score-pill" id="result-score-pill">スコア ― 点</div>
+      </div>
+      <div class="trait-section" id="trait-section"></div>
+    </div>
+
+    <div class="desc-card">
+      <div class="desc-section-title">PERSONALITY REPORT</div>
+      <p class="desc-text" id="desc-text"></p>
+      <div class="warning-strip">
+        <div class="warning-head">⚠ 要注意ポイント</div>
+        <div class="warning-body" id="warning-body"></div>
+      </div>
+      <div class="desc-section-title" style="margin-top:16px">KEYWORDS</div>
+      <div class="kw-row" id="kw-row"></div>
+    </div>
+
+    <div class="quote-card">
+      <div class="quote-text" id="quote-text"></div>
+      <div class="quote-attr" id="quote-attr"></div>
+    </div>
+
+    <div class="share-card">
+      <div class="share-title">あなたのネコ科タイプをシェアしよう 🐾</div>
+      <div class="share-buttons">
+        <button class="share-btn share-btn-x" onclick="shareToX()">X でシェア</button>
+        <button class="share-btn share-btn-line" onclick="shareToLine()">LINE</button>
+        <button class="share-btn share-btn-copy" onclick="copyResult()">コピー</button>
+      </div>
+    </div>
+
+    <button class="retry-btn" onclick="resetQuiz()">もう一度診断する ↺</button>
+
+  </div>
+
+</div>
+
+<div class="site-footer">© 2025 隠れネコ科診断 ｜ 結果は娯楽目的です 🐾</div>
+<div class="toast" id="toast"></div>
+
+<script>
+var questions = [
+  {
+    scene: "朝の行動パターン",
+    text: "休日の朝、目が覚めたとき最初にすることは？",
+    options: [
+      { text: "布団の中でスマホを1時間眺めてから、ようやく起き上がる", score: 1 },
+      { text: "すぐ起きて今日やることをリストアップし始める", score: 4 },
+      { text: "気が向くまで二度寝。起きる時間は気分次第", score: 0 },
+      { text: "窓の外の天気と光を確認してから、ゆっくり体を起こす", score: 2 }
+    ]
+  },
+  {
+    scene: "グループでの立ち位置",
+    text: "初対面の人が多いパーティーに参加した。あなたは？",
+    options: [
+      { text: "自然と場の中心にいて、気づいたら全員と話してる", score: 4 },
+      { text: "入口付近で飲み物を持ちながら、場を観察している", score: 2 },
+      { text: "知り合いを見つけてその人とずっと話し続ける", score: 1 },
+      { text: "適度に挨拶しつつ、一人でいる時間も確保する", score: 3 }
+    ]
+  },
+  {
+    scene: "問題発生時の反応",
+    text: "突然、大事な予定が全部キャンセルになった。どう対応する？",
+    options: [
+      { text: "一瞬ムッとするが、5分後には次の計画を立て始める", score: 3 },
+      { text: "「ラッキー、何もしない日だ」と即切り替え", score: 0 },
+      { text: "キャンセルした相手に状況確認の連絡を入れ原因を把握する", score: 4 },
+      { text: "少し凹むが、別にやりたかったことを探し始める", score: 2 }
+    ]
+  },
+  {
+    scene: "怒りの表現",
+    text: "誰かにひどいことを言われた。あなたの第一反応は？",
+    options: [
+      { text: "すぐその場で「それはないんじゃない？」とはっきり言う", score: 4 },
+      { text: "笑顔のまま何も言わず、心の中でそっと縁を切る", score: 1 },
+      { text: "その場は流すが、一人になってから本気でイライラする", score: 2 },
+      { text: "「え、なんで？」と素直に聞き返してしまう", score: 3 }
+    ]
+  },
+  {
+    scene: "集中力のパターン",
+    text: "好きなことをやっているとき、あなたはどんな状態？",
+    options: [
+      { text: "気づいたら何時間も経ってて、腹も減ってない", score: 2 },
+      { text: "集中はするが、定期的に休憩を入れながら効率よくこなす", score: 3 },
+      { text: "やる気があるときは神がかり的に速い。ないときはゼロ", score: 1 },
+      { text: "常にハイテンションで取り組む。疲れたらバタッと倒れる", score: 4 }
+    ]
+  },
+  {
+    scene: "縄張り意識",
+    text: "自分の「スペース」（席・部屋・時間）を誰かに侵されたとき？",
+    options: [
+      { text: "「ちょっといい？ここ私の場所なんだけど」とすぐ言える", score: 4 },
+      { text: "無言でフェードアウトして別の場所を確保する", score: 1 },
+      { text: "少し不快だが、まあいいかと我慢してしまう", score: 2 },
+      { text: "相手が去るまでじっと待って、その後しれっと戻る", score: 0 }
+    ]
+  },
+  {
+    scene: "夜のモード",
+    text: "夜10時、気分はどんな感じ？",
+    options: [
+      { text: "まだまだ活動できる。むしろこれからが本番", score: 1 },
+      { text: "一番冴えている時間帯。深夜に最高の仕事をする", score: 2 },
+      { text: "少しずつ落ち着いて、明日の準備を始めている", score: 3 },
+      { text: "もう眠い。早く寝ることが次の日のパフォーマンスへの投資", score: 4 }
+    ]
+  },
+  {
+    scene: "自己認識",
+    text: "「あなたって、どんな人？」と聞かれたら？",
+    options: [
+      { text: "「うーん、自分でもよくわからないんだよね」と答える", score: 1 },
+      { text: "「一言では言えないかな」と言いながら3分くらい話す", score: 3 },
+      { text: "「気分屋だけど、根はいい人だと思う」とさらっと言う", score: 0 },
+      { text: "「強いて言えば〇〇かな」と即座に明確に答える", score: 4 }
+    ]
+  }
+];
+
+var results = [
+  {
+    min: 0, max: 5,
+    emoji: "🐱",
+    bgEmoji: "🐱",
+    animal: "イエネコ",
+    mbtiTag: "FREE-SPIRIT TYPE",
+    name: "マイペース気まま型｜スーパー自由人ネコ",
+    heroColor: "#1a1520",
+    traits: [
+      { label: "自由度", pct: 98, color: "#B89FCC" },
+      { label: "計画性", pct: 8, color: "#B89FCC" },
+      { label: "独自性", pct: 85, color: "#B89FCC" }
+    ],
+    desc: "誰に縛られることもなく、自分のペースで生きることへの執着が人類最強レベル。気分が乗れば奇跡的なクオリティのものを生み出すし、好きな人には限りなく甘い。一緒にいると不思議と「まあいいか」という気持ちにさせてくれる、天然の癒しオーラを持ったタイプ。そのマイペースさはもはや才能であり、あなたといると時間の感覚が溶ける。\n\nただし「やる気スイッチ」の場所を本人も把握しておらず、約束の時間は「目安」として処理している節があります。「昨日やるって言ってたじゃん」は通じない相手です。ご注意を。",
+    warning: "「気分が乗ったらやる」は永遠に来ないことがあります。締め切りとカレンダーはあなたの友達です。一度試してみてください。",
+    keywords: ["マイペース", "感覚優先", "気まぐれ", "癒し系", "自由人", "独自路線"],
+    quote: "「気ままに生きているのではない。気まま以外の生き方を知らないだけだ。」",
+    quoteAttr: "― イエネコ族の格言"
+  },
+  {
+    min: 6, max: 11,
+    emoji: "🐈‍⬛",
+    bgEmoji: "🐈‍⬛",
+    animal: "クロヒョウ",
+    mbtiTag: "SHADOW TYPE",
+    name: "謎めいた観察者型｜夜行性クロヒョウ",
+    heroColor: "#141820",
+    traits: [
+      { label: "観察力", pct: 96, color: "#5BA8CC" },
+      { label: "社交性", pct: 22, color: "#5BA8CC" },
+      { label: "神秘度", pct: 90, color: "#5BA8CC" }
+    ],
+    desc: "表に出ることは少ないが、場の全員のことをちゃんと見ている。「気づいてたの？」と後から驚かれることが多く、観察力と洞察力がずば抜けているタイプ。感情をあまり表に出さないため周囲からはクールに見られることが多いが、信頼できる数人の前では別人のように雄弁になる。その落差こそが最大の武器であり、人を惹きつける秘密でもある。\n\nただ、「何を考えているかわからない」と言われすぎて、本人も少し慣れてしまっているかも。たまには感情を表に出さないと、周囲は本当にあなたが興味を持っているかどうかわからなくなります。リアクション3割増しで生きると人間関係が劇的に変わります。",
+    warning: "「言わなくてもわかるでしょ」は通じません。あなたの沈黙は周囲に「怒ってる？」と解釈されがちです。無表情OKですが、一言添えてください。",
+    keywords: ["観察眼", "夜行性", "ミステリアス", "内向型", "少数精鋭", "洞察力"],
+    quote: "「暗闇の中でしか見えないものが、確かに存在する。」",
+    quoteAttr: "― クロヒョウ族の格言"
+  },
+  {
+    min: 12, max: 16,
+    emoji: "🦦",
+    bgEmoji: "🦦",
+    animal: "スナドリネコ",
+    mbtiTag: "NICHE GENIUS TYPE",
+    name: "独自領域の達人型｜水辺の変わり者ネコ",
+    heroColor: "#121A1A",
+    traits: [
+      { label: "専門性", pct: 92, color: "#3BBFAA" },
+      { label: "汎用性", pct: 38, color: "#3BBFAA" },
+      { label: "独自性", pct: 88, color: "#3BBFAA" }
+    ],
+    desc: "「水の中で魚を取る猫」という存在しないはずのニッチを攻める、唯一無二のポジション取りが得意なタイプ。自分だけのフィールドを見つけたとき、他の追随を許さない集中力を発揮する。普通の人が「そんなの無理だろ」と思うことを、黙々とやり遂げてしまう実行力の持ち主。変わり者と言われることには慣れているが、実は先を見る目がある。\n\n問題は、その専門性がマニアックすぎて「すごいのはわかるけど何に使えるの？」と言われることがあること。自分の世界観に自信を持ちながら、たまには橋渡し役を誰かに頼んでみると、才能がもっと外に届くかもしれません。",
+    warning: "「自分のやり方が正しい」という確信は時として孤立を生みます。コラボ上手な人を一人味方につけるだけで、活躍の幅が10倍になります。",
+    keywords: ["ニッチ特化", "変わり者", "実行力", "独自路線", "水辺の賢者", "唯一無二"],
+    quote: "「他の猫が陸で待つとき、私は水に入る。それだけのことだ。」",
+    quoteAttr: "― スナドリネコ族の格言"
+  },
+  {
+    min: 17, max: 20,
+    emoji: "🐆",
+    bgEmoji: "🐆",
+    animal: "ヒョウ",
+    mbtiTag: "ADAPTIVE TYPE",
+    name: "環境適応の名手型｜単独行動ヒョウ",
+    heroColor: "#1A1710",
+    traits: [
+      { label: "適応力", pct: 94, color: "#D4A843" },
+      { label: "独立心", pct: 85, color: "#D4A843" },
+      { label: "判断力", pct: 80, color: "#D4A843" }
+    ],
+    desc: "どんな環境にも溶け込める高い適応力と、しかし最終的には「一人でできます」という強い自立心を併せ持つバランス型。群れることなく、しかし孤立もしない絶妙なポジショニング。状況判断が早く、いざというときに頭が冷静に動くため、周囲から「この人に聞けばいい」と思われることが多いタイプ。地味に信頼されている。\n\nただし「なんでも一人で解決しようとしすぎる」という傾向があり、助けを求めるのが苦手。「大丈夫？」と聞かれても「大丈夫です」と言い続けた結果、本当に大丈夫じゃなくなったあとに初めて発覚する、というパターンに心当たりはありませんか。",
+    warning: "「助けを求めること」は弱さではありません。ヒョウは木の上に獲物を隠しますが、一人で食べ続けることには限界があります。",
+    keywords: ["適応力", "自立心", "冷静判断", "単独行動", "信頼感", "隠れた頑固"],
+    quote: "「どこにでも登れる。しかし、どこにも縛られない。」",
+    quoteAttr: "― ヒョウ族の格言"
+  },
+  {
+    min: 21, max: 25,
+    emoji: "🐅",
+    bgEmoji: "🐅",
+    animal: "チーター",
+    mbtiTag: "SPEEDSTER TYPE",
+    name: "瞬発力MAX型｜全力疾走チーター",
+    heroColor: "#1A1710",
+    traits: [
+      { label: "瞬発力", pct: 99, color: "#E8A030" },
+      { label: "持久力", pct: 35, color: "#E8A030" },
+      { label: "決断力", pct: 90, color: "#E8A030" }
+    ],
+    desc: "やると決めたら誰よりも速い。圧倒的な瞬発力と決断力で、他の人がまだ悩んでいる間にもう動き出しているタイプ。「あとで考えよう」という概念がなく、直感と行動力がセットになっている。エネルギーが高いときは周囲を引っ張る推進力になり、その熱量に感化される人も多い。物事を前に進める力は本物。\n\nただし、チーターは全力疾走のあと、長時間動けなくなります。あなたも「全力モード」のあとにバタンキューする傾向がありませんか？また、スタートダッシュは得意でも、長期プロジェクトの中盤以降に興味が薄れてくることも。「走った後の休憩」と「最後まで走り切る設計」が鍵です。",
+    warning: "衝動的に始めたことの半分は、3週間後に止まっています。次のプロジェクトを始める前に「なぜやめたか」を一度棚卸しするとよいかもしれません。",
+    keywords: ["瞬発力", "直感型", "行動派", "熱量高め", "ムラがある", "スタートダッシュ"],
+    quote: "「世界で最も速い動物は、長くは走れない。だから全力を、一瞬に込める。」",
+    quoteAttr: "― チーター族の格言"
+  },
+  {
+    min: 26, max: 32,
+    emoji: "🦁",
+    bgEmoji: "🦁",
+    animal: "ライオン",
+    mbtiTag: "KING / QUEEN TYPE",
+    name: "生まれながらの統率者型｜百獣の王ライオン",
+    heroColor: "#1A1510",
+    traits: [
+      { label: "統率力", pct: 96, color: "#D4A843" },
+      { label: "カリスマ", pct: 92, color: "#D4A843" },
+      { label: "柔軟性", pct: 48, color: "#D4A843" }
+    ],
+    desc: "気づいたら場を仕切っていて、なぜか周囲が「この人についていこう」と思ってしまう天然のカリスマ性を持つタイプ。発言に重みがあり、黙っていても存在感がある。物事をはっきり言えるため、周囲からは「頼りになる」「ブレない」と評価されることが多い。グループに一人いると場が締まり、何かあったときにみんなが顔を向ける存在。\n\nただし、「自分が正しい」という確信が強すぎると、反対意見を「間違い」と処理してしまうことがあります。ライオンの群れにも、方向性を間違えたときに指摘できる「サブリーダー」が必要です。あなたにそれを言える人が身近にいるか、今すぐ確認してみてください。",
+    warning: "「なぜ私の言う通りにしないのか」と思う瞬間は、むしろ相手の話を聞く黄金チャンスです。強さは、聞く耳を持っているときこそ本物になります。",
+    keywords: ["カリスマ", "統率力", "決断力", "存在感", "頑固な面も", "百獣の王"],
+    quote: "「百獣の王の条件は、強さではない。群れが安心して眠れる場所を作れることだ。」",
+    quoteAttr: "― ライオン族の格言"
+  }
+];
+
+var currentQ = 0;
+var totalScore = 0;
+var selectedScore = null;
+var quizStarted = false;
+var currentResult = null;
+
+function handleMainBtn() {
+  if (!quizStarted) { startQuiz(); return; }
+  if (selectedScore === null) { showToast("選択肢を選んでください"); return; }
+  totalScore += selectedScore;
+  selectedScore = null;
+  currentQ++;
+  if (currentQ < questions.length) { renderQuestion(); } else { showResult(); }
+}
+
+function startQuiz() {
+  quizStarted = true;
+  document.getElementById('intro-card').classList.add('hidden');
+  document.getElementById('progress-wrap').classList.remove('hidden');
+  document.getElementById('question-card').classList.remove('hidden');
+  document.getElementById('main-btn').textContent = '次の質問へ →';
+  document.getElementById('main-btn').disabled = true;
+  renderQuestion();
+}
+
+function renderQuestion() {
+  var q = questions[currentQ];
+  var n = currentQ + 1;
+  var total = questions.length;
+  document.getElementById('q-num').textContent = 'Q' + n;
+  document.getElementById('q-scene').textContent = q.scene;
+  document.getElementById('q-text').textContent = q.text;
+  document.getElementById('progress-count').textContent = n + ' / ' + total;
+  document.getElementById('progress-bar').style.width = (((n - 1) / total) * 100) + '%';
+  document.getElementById('main-btn').textContent = n === total ? 'ネコ科タイプを診断する 🐾' : '次の質問へ →';
+  document.getElementById('main-btn').disabled = true;
+
+  var letters = ['A', 'B', 'C', 'D'];
+  var list = document.getElementById('options-list');
+  list.innerHTML = '';
+  q.options.forEach(function(opt, i) {
+    var btn = document.createElement('button');
+    btn.className = 'option-btn';
+    btn.innerHTML = '<span class="option-letter">' + letters[i] + '</span><span class="option-text">' + opt.text + '</span>';
+    btn.onclick = (function(b, s) { return function() { selectOption(b, s); }; })(btn, opt.score);
+    list.appendChild(btn);
+  });
+
+  var card = document.getElementById('question-card');
+  card.style.animation = 'none';
+  void card.offsetWidth;
+  card.style.animation = 'fadeUp 0.3s ease';
+}
+
+function selectOption(btn, score) {
+  document.querySelectorAll('.option-btn').forEach(function(b) { b.classList.remove('selected'); });
+  btn.classList.add('selected');
+  selectedScore = score;
+  document.getElementById('main-btn').disabled = false;
+}
+
+function showResult() {
+  document.getElementById('progress-bar').style.width = '100%';
+  setTimeout(function() {
+    document.getElementById('quiz-section').style.display = 'none';
+    var rs = document.getElementById('result-section');
+    rs.classList.add('visible');
+
+    var r = null;
+    for (var i = 0; i < results.length; i++) {
+      if (totalScore >= results[i].min && totalScore <= results[i].max) { r = results[i]; break; }
+    }
+    if (!r) r = results[results.length - 1];
+    currentResult = r;
+
+    document.getElementById('result-hero-top').style.background = r.heroColor;
+    document.getElementById('hero-bg-animal').textContent = r.bgEmoji;
+    document.getElementById('result-mbti-tag').textContent = r.mbtiTag;
+    document.getElementById('result-animal-emoji').textContent = r.emoji;
+    document.getElementById('result-animal-name').textContent = r.animal;
+    document.getElementById('result-type-name').textContent = r.name;
+    document.getElementById('result-score-pill').textContent = '診断スコア：' + totalScore + ' 点';
+    document.getElementById('desc-text').textContent = r.desc;
+    document.getElementById('warning-body').textContent = r.warning;
+    document.getElementById('quote-text').textContent = r.quote;
+    document.getElementById('quote-attr').textContent = r.quoteAttr;
+
+    var traitHtml = '';
+    r.traits.forEach(function(t) {
+      traitHtml += '<div class="trait-row"><span class="trait-label">' + t.label + '</span><div class="trait-bar-bg"><div class="trait-bar-fill" style="width:0%;background:' + t.color + '"></div></div><span class="trait-pct">' + t.pct + '%</span></div>';
+    });
+    document.getElementById('trait-section').innerHTML = traitHtml;
+
+    var kwHtml = '';
+    r.keywords.forEach(function(k) { kwHtml += '<span class="kw-tag">' + k + '</span>'; });
+    document.getElementById('kw-row').innerHTML = kwHtml;
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    requestAnimationFrame(function() {
+      setTimeout(function() {
+        document.querySelectorAll('.trait-bar-fill').forEach(function(el, i) {
+          el.style.transition = 'width 0.85s cubic-bezier(.4,0,.2,1) ' + (0.15 + i * 0.12) + 's';
+          el.style.width = r.traits[i].pct + '%';
+        });
+      }, 150);
+    });
+  }, 250);
+}
+
+function resetQuiz() {
+  currentQ = 0; totalScore = 0; selectedScore = null; quizStarted = false; currentResult = null;
+  document.getElementById('quiz-section').style.display = 'block';
+  document.getElementById('result-section').classList.remove('visible');
+  document.getElementById('intro-card').classList.remove('hidden');
+  document.getElementById('progress-wrap').classList.add('hidden');
+  document.getElementById('question-card').classList.add('hidden');
+  document.getElementById('main-btn').textContent = '診断スタート ▶';
+  document.getElementById('main-btn').disabled = false;
+  document.getElementById('progress-bar').style.width = '0%';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function getShareText() {
+  if (!currentResult) return '';
+  return '【隠れネコ科診断】\n私のタイプは「' + currentResult.animal + '」\n' + currentResult.name + '\n\n' + currentResult.quote + '\n\nあなたのネコ科タイプも診断してみて🐾';
+}
+
+function shareToX() {
+  window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(getShareText()), '_blank');
+}
+
+function shareToLine() {
+  window.open('https://social-plugins.line.me/lineit/share?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(getShareText()), '_blank');
+}
+
+function copyResult() {
+  var text = getShareText() + '\n' + window.location.href;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(function() { showToast('コピーしました！🐾'); });
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text; document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); document.body.removeChild(ta);
+    showToast('コピーしました！🐾');
+  }
+}
+
+function showToast(msg) {
+  var t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(function() { t.classList.remove('show'); }, 2100);
+}
+</script>
+</body>
+</html>
