@@ -565,7 +565,7 @@ var Qs=[
     scene:"自己評価",
     text:"「あなたって真面目だよね」と言われたとき、本音は？",
     options:[
-      {text:"「いや、そうでもないよ」と本気で思う",score:0},
+      {text:"「いや、そうでもないよ」本気で思う",score:0},
       {text:"褒め言葉として素直に受け取る",score:1},
       {text:"「真面目すぎて損してるな」と思いながら苦笑いする",score:3},
       {text:"「それしか取り柄がないから……」と内心しみじみする",score:4}
@@ -618,7 +618,7 @@ var Rs=[
       {l:"自己管理力",p:90},
       {l:"絶滅危惧度",p:5}
     ],
-    desc:"社畜診断においてこのスコアは「ほぼ解脱」を意味します。境界線を引くのがうまく、仕事は仕事、自分は自分という切り替えが自然にできているタイプ。有給も使えるし、休日も休める。定時に帰ることに罪悪感を感じない。それだけで現代の職場においては「希少種」です。\n\nただ、一点だけ確認させてください。この点数が「あきらめ」や「無関心」から来ていませんか？仕事への興味が薄れすぎていると、それはそれで別の問題です。適度な熱量と適度な距離感の両立こそが、本当の意味での「自由」です。",
+    desc:"社畜診断においてこのスコアは「ほぼ解脱」を意味します。境界線を引くのがうまく、仕事は仕事、自分は自分という切り替えが自然にできているタイプ。有給も使えるし、休日も休める。定時に帰ることに罪悪感を感じない。それだけで現代の職場においては「希少種」です。\n\nただ、一点だけ確認させてください。この点数が「あきらめ」や「無関心」から来ていませんか？仕事への興味が薄れすぎていると、それは誠に別の問題です。適度な熱量と適度な距離感の両立こそが、本当の意味での「自由」です。",
     warn:"「どうせ頑張っても変わらない」という諦観が根っこにある場合、社畜状態よりも静かに消耗していることがあります。仕事 辛い 診断としては「燃え尽き後期」に似た状態に近いかもしれません。",
     escape:"あなたはすでに脱出済みです。その距離感を維持しつつ、せっかくなら「何が楽しくて働くか」を言語化してみると、さらに豊かなキャリアになります。",
     kws:["セルフマネジメント","境界線上手","定時帰宅","有給消化率高め","自由人","燃え尽き警戒"],
@@ -711,23 +711,46 @@ var Rs=[
   }
 ];
 
-var cq=0,score=0,sel=null,started=false,cr=null;
+var cq=0,selectedScoresHistory=[],started=false,cr=null;
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('mbtn').addEventListener('click', go);
+  document.getElementById('back-btn').addEventListener('click', handleBackBtn);
+  document.getElementById('retry-btn').addEventListener('click', reset);
+  document.getElementById('share-x-btn').addEventListener('click', sx);
+  document.getElementById('share-line-btn').addEventListener('click', sl);
+  document.getElementById('share-copy-btn').addEventListener('click', sc);
+});
 
 function go(){
   if(!started){boot();return}
-  if(sel===null){toast("選択肢を選んでください");return}
-  score+=sel;sel=null;cq++;
+  
+  const selectedBtn = document.querySelector('.opt.sel');
+  if(!selectedBtn){toast("選択肢を選んでください");return}
+  
+  const score = parseInt(selectedBtn.getAttribute('data-score'), 10);
+  selectedScoresHistory.push(score);
+  
+  cq++;
   if(cq<Qs.length){render()}else{showRes()}
+}
+
+function handleBackBtn() {
+  if (!started || cq === 0) return;
+  
+  selectedScoresHistory.pop();
+  cq--;
+  render();
 }
 
 function boot(){
   started=true;
+  selectedScoresHistory = [];
   var at=document.getElementById('ad-top'); if(at) at.style.display='none';
   document.getElementById('intro').classList.add('hidden');
   document.getElementById('prog').classList.remove('hidden');
   document.getElementById('qcard').classList.remove('hidden');
-  document.getElementById('mbtn').textContent='次の質問へ →';
-  document.getElementById('mbtn').disabled=true;
+  document.getElementById('back-btn').classList.remove('hidden');
   render();
 }
 
@@ -738,36 +761,43 @@ function render(){
   document.getElementById('qtxt').textContent=q.text;
   document.getElementById('pcnt').textContent=n+' / '+tot;
   document.getElementById('pfill').style.width=(((n-1)/tot)*100)+'%';
-  document.getElementById('mbtn').textContent=n===tot?'診断結果を見る ▶':'次の質問へ →';
-  document.getElementById('mbtn').disabled=true;
+
+  document.getElementById('back-btn').disabled = (cq === 0);
+
+  const mainBtn = document.getElementById('mbtn');
+  mainBtn.textContent=n===tot?'診断結果を見る ▶':'次の質問へ →';
+  mainBtn.disabled=true;
 
   var lets=['A','B','C','D'],ol=document.getElementById('opts');
   ol.innerHTML='';
   q.options.forEach(function(o,i){
     var b=document.createElement('button');
     b.className='opt';
+    b.setAttribute('data-score', o.score);
     b.innerHTML='<span class="opt-ltr">'+lets[i]+'</span><span class="opt-txt">'+o.text+'</span>';
-    b.onclick=(function(btn,sc){return function(){pick(btn,sc)}})(b,o.score);
+    b.onclick=function(){pick(b);};
     ol.appendChild(b);
   });
   var c=document.getElementById('qcard');
   c.style.animation='none';void c.offsetWidth;c.style.animation='up .3s ease';
 }
 
-function pick(btn,sc){
+function pick(btn){
   document.querySelectorAll('.opt').forEach(function(b){b.classList.remove('sel')});
-  btn.classList.add('sel');sel=sc;
+  btn.classList.add('sel');
   document.getElementById('mbtn').disabled=false;
 }
 
 function showRes(){
   document.getElementById('pfill').style.width='100%';
+  const totalScore = selectedScoresHistory.reduce((a, b) => a + b, 0);
+
   setTimeout(function(){
     document.getElementById('quiz').style.display='none';
     var rs=document.getElementById('res');rs.classList.add('on');
 
     var r=null;
-    for(var i=0;i<Rs.length;i++){if(score>=Rs[i].min&&score<=Rs[i].max){r=Rs[i];break}}
+    for(var i=0;i<Rs.length;i++){if(totalScore>=Rs[i].min&&totalScore<=Rs[i].max){r=Rs[i];break}}
     if(!r)r=Rs[Rs.length-1];
     cr=r;
 
@@ -777,7 +807,7 @@ function showRes(){
     document.getElementById('eemoji').textContent=r.emoji;
     document.getElementById('elevel').textContent=r.level;
     document.getElementById('ename').textContent=r.name;
-    document.getElementById('epill').textContent='診断スコア：'+score+' 点';
+    document.getElementById('epill').textContent='診断スコア：'+totalScore+' 点';
     document.getElementById('rdesc').textContent=r.desc;
     document.getElementById('rwarn').textContent=r.warn;
     document.getElementById('rescape').textContent=r.escape;
@@ -808,13 +838,15 @@ function showRes(){
 }
 
 function reset(){
-  cq=0;score=0;sel=null;started=false;cr=null;
+  cq=0;selectedScoresHistory=[];started=false;cr=null;
   var at=document.getElementById('ad-top'); if(at) at.style.display='';
   document.getElementById('quiz').style.display='block';
   document.getElementById('res').classList.remove('on');
   document.getElementById('intro').classList.remove('hidden');
   document.getElementById('prog').classList.add('hidden');
   document.getElementById('qcard').classList.add('hidden');
+  document.getElementById('back-btn').classList.add('hidden');
+  
   document.getElementById('mbtn').textContent='診断スタート ▶';
   document.getElementById('mbtn').disabled=false;
   document.getElementById('pfill').style.width='0%';
@@ -825,15 +857,19 @@ function stxt(){
   if(!cr)return'';
   return '【社畜タイプ診断】\n私のタイプは「'+cr.name+'」\n'+cr.level+'\n\n'+cr.quote+'\n\n社畜診断・仕事 辛い 診断・適職テスト 気になる人はやってみて💼';
 }
+/* 修正了底下的 X 分享 Hashtag 與 LINE 的斷行問題 */
 function sx(){window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(stxt())+'&url='+encodeURIComponent(location.href)+'&hashtags='+encodeURIComponent('社畜診断,心理テスト,診断テスト,仕事辛い,適職診断'),'_blank')}
-function sl(){var t=location.href+'
-
-'+stxt();window.location.href='line://msg/text/'+encodeURIComponent(t);setTimeout(function(){window.open('https://line.me/R/msg/text/'+encodeURIComponent(t),'_blank')},500)}
+function sl(){
+  var t=location.href+'\n\n'+stxt();
+  window.location.href='line://msg/text/'+encodeURIComponent(t);
+  setTimeout(function(){window.open('https://line.me/R/msg/text/'+encodeURIComponent(t),'_blank')},500);
+}
 function sc(){
   var t=stxt()+'\n'+location.href;
   if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){toast('コピーしました！')})}
   else{var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');document.body.removeChild(a);toast('コピーしました！')}
 }
+/* 修復完成 */
 function toast(m){
   var t=document.getElementById('toast');
   t.textContent=m;t.classList.add('on');
