@@ -270,6 +270,33 @@
 
   .option-btn.selected .option-letter { background: var(--pink-deep); }
 
+  /* ─── CONTROL BUTTONS ─── */
+  .quiz-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .back-btn {
+    flex: 1;
+    background: var(--white);
+    color: var(--text-mid);
+    border: 1.5px solid rgba(90,64,96,0.2);
+    border-radius: var(--radius-pill);
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .back-btn:hover {
+    border-color: var(--pink-mid);
+    color: var(--pink-deep);
+    background: var(--pink-pale);
+  }
+
   /* ─── CTA BUTTON ─── */
   .cta-btn {
     display: block;
@@ -588,7 +615,6 @@
     </div>
   </header>
 
-  <!-- QUIZ SECTION -->
   <div id="quiz-section">
 
     <div class="intro-card" id="intro-card">
@@ -614,13 +640,14 @@
     </div>
 
     <div class="ad-slot" id="ad-top">【スポンサーリンク / 広告】</div>
-    <button class="cta-btn" id="main-btn">
-      診断スタート ✦
-    </button>
+    
+    <div class="quiz-controls">
+      <button class="back-btn hidden" id="back-btn">← 戻る</button>
+      <button class="cta-btn" id="main-btn">診断スタート ✦</button>
+    </div>
 
   </div>
 
-  <!-- RESULT SECTION -->
   <div class="result-section" id="result-section">
     <div class="ad-slot" id="ad-result">【スポンサーリンク / 広告】</div>
 
@@ -751,7 +778,7 @@ const questions = [
     text: "「あなたって本当に繊細だよね」と言われたら？",
     options: [
       { text: "「そうかな？」と思いながらもあっさり流す", score: 0 },
-      { text: "少し複雑な気持ちになるが素真面目に受け取る", score: 1 },
+      { text: "少し複雑な気持ちになるが素直に受け取る", score: 1 },
       { text: "心の中で「これは褒め言葉？それとも……」と30分考える", score: 2 },
       { text: "「繊細じゃなくて、あなたが鈍感なんだけど？」と思う", score: 3 }
     ]
@@ -794,14 +821,13 @@ const results = [
 ];
 
 let currentQ = 0;
-let totalScore = 0;
-let selectedScore = null;
+let scoreHistory = []; // 用於紀錄每題選的分數，以便返回上一題
 let quizStarted = false;
 let currentResult = null;
 
-// 使用標準事件監聽器取代 HTML 的 onclick
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('main-btn').addEventListener('click', handleMainBtn);
+  document.getElementById('back-btn').addEventListener('click', handleBackBtn);
   document.getElementById('retry-btn').addEventListener('click', resetQuiz);
   document.getElementById('share-x-btn').addEventListener('click', shareToX);
   document.getElementById('share-line-btn').addEventListener('click', shareToLine);
@@ -813,12 +839,16 @@ function handleMainBtn() {
     startQuiz();
     return;
   }
-  if (selectedScore === null) {
+  
+  const selectedBtn = document.querySelector('.option-btn.selected');
+  if (!selectedBtn) {
     showToast("選択肢を選んでください🩷");
     return;
   }
-  totalScore += selectedScore;
-  selectedScore = null;
+  
+  const score = parseInt(selectedBtn.getAttribute('data-score'), 10);
+  scoreHistory.push(score);
+  
   currentQ++;
   if (currentQ < questions.length) {
     renderQuestion();
@@ -827,13 +857,23 @@ function handleMainBtn() {
   }
 }
 
+function handleBackBtn() {
+  if (currentQ > 0) {
+    currentQ--;
+    scoreHistory.pop(); // 移除最後一題的分數紀錄
+    renderQuestion();
+  }
+}
+
 function startQuiz() {
   quizStarted = true;
+  scoreHistory = [];
   const at = document.getElementById('ad-top'); 
   if (at) at.style.display = 'none';
   document.getElementById('intro-card').classList.add('hidden');
   document.getElementById('progress-wrap').classList.remove('hidden');
   document.getElementById('question-card').classList.remove('hidden');
+  document.getElementById('back-btn').classList.remove('hidden');
   document.getElementById('main-btn').textContent = "次へ →";
   document.getElementById('main-btn').disabled = true;
   renderQuestion();
@@ -857,15 +897,23 @@ function renderQuestion() {
   }
   mainBtn.disabled = true;
 
+  // 第一題時隱藏返回按鈕
+  if (currentQ === 0) {
+    document.getElementById('back-btn').classList.add('hidden');
+  } else {
+    document.getElementById('back-btn').classList.remove('hidden');
+  }
+
   const letters = ['A', 'B', 'C', 'D'];
   const list = document.getElementById('options-list');
   list.innerHTML = '';
-  
-  q.options.forEach((opt, i) => {
+
+  q.options.forEach(function(opt, i) {
     const btn = document.createElement('button');
     btn.className = 'option-btn';
+    btn.setAttribute('data-score', opt.score);
     btn.innerHTML = `<span class="option-letter">${letters[i]}</span>${opt.text}`;
-    btn.onclick = () => selectOption(btn, opt.score);
+    btn.onclick = function() { selectOption(btn); };
     list.appendChild(btn);
   });
 
@@ -875,21 +923,24 @@ function renderQuestion() {
   qCard.style.animation = 'slideIn 0.3s ease';
 }
 
-function selectOption(btn, score) {
-  document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+function selectOption(btn) {
+  document.querySelectorAll('.option-btn').forEach(function(b) { b.classList.remove('selected'); });
   btn.classList.add('selected');
-  selectedScore = score;
   document.getElementById('main-btn').disabled = false;
 }
 
 function showResult() {
   document.getElementById('progress-bar').style.width = '100%';
-  setTimeout(() => {
+  
+  // 計算總分
+  const totalScore = scoreHistory.reduce((a, b) => a + b, 0);
+
+  setTimeout(function() {
     document.getElementById('quiz-section').style.display = 'none';
     const rs = document.getElementById('result-section');
     rs.classList.add('visible');
 
-    const r = results.find(res => totalScore >= res.min && totalScore <= res.max) || results[results.length - 1];
+    const r = results.find(function(res) { return totalScore >= res.min && totalScore <= res.max; }) || results[results.length - 1];
     currentResult = r;
 
     document.getElementById('res-emoji').textContent = r.emoji;
@@ -899,8 +950,8 @@ function showResult() {
     document.getElementById('res-highlight').textContent = r.highlight;
     document.getElementById('res-meter-pct').textContent = `${r.pct}%`;
 
-    requestAnimationFrame(() => {
-      setTimeout(() => {
+    requestAnimationFrame(function() {
+      setTimeout(function() {
         document.getElementById('res-meter-fill').style.width = `${r.pct}%`;
       }, 100);
     });
@@ -913,8 +964,7 @@ function resetQuiz() {
   const at = document.getElementById('ad-top'); 
   if (at) at.style.display = '';
   currentQ = 0;
-  totalScore = 0;
-  selectedScore = null;
+  scoreHistory = [];
   quizStarted = false;
   currentResult = null;
 
@@ -923,6 +973,7 @@ function resetQuiz() {
   document.getElementById('intro-card').classList.remove('hidden');
   document.getElementById('progress-wrap').classList.add('hidden');
   document.getElementById('question-card').classList.add('hidden');
+  document.getElementById('back-btn').classList.add('hidden');
   document.getElementById('main-btn').textContent = "診断スタート ✦";
   document.getElementById('main-btn').disabled = false;
   document.getElementById('progress-bar').style.width = '0%';
@@ -942,7 +993,7 @@ function shareToX() {
 function shareToLine() {
   const t = window.location.href + '\n\n' + getShareText();
   window.location.href = 'line://msg/text/' + encodeURIComponent(t);
-  setTimeout(() => {
+  setTimeout(function() {
     window.open('https://line.me/R/msg/text/' + encodeURIComponent(t), '_blank');
   }, 500);
 }
@@ -950,7 +1001,7 @@ function shareToLine() {
 function copyResult() {
   const text = getShareText() + `\n${window.location.href}`;
   if (navigator.clipboard) {
-    navigator.clipboard.writeText(text).then(() => showToast("コピーしました！"));
+    navigator.clipboard.writeText(text).then(function() { showToast("コピーしました！"); });
   } else {
     const ta = document.createElement('textarea');
     ta.value = text;
@@ -966,7 +1017,7 @@ function showToast(msg) {
   const t = document.getElementById('toast');
   t.textContent = msg;
   t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 2200);
+  setTimeout(function() { t.classList.remove('show'); }, 2200);
 }
 </script>
 </body>
