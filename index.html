@@ -925,14 +925,6 @@ function getShareText() {
   return `【推し活タイプ診断】\n私は「${r.name}」でした！\n✦ ${r.shortComment}\n\nあなたも診断してみて👇\n${url}`;
 }
 
-/* X用：本文テキスト（URLは含めない。URLは別パラメータで渡すと
-   X側がOGカード=サムネイルを自動展開してくれる） */
-function getXShareBody() {
-  const score = calcScore();
-  const r = getResult(score);
-  return `【推し活タイプ診断】私は「${r.name}」でした！\n✦ ${r.shortComment}`;
-}
-
 /* 端末ネイティブの共有シート（X・LINE・Instagram などをユーザーが選択）
    モバイルで最も確実にアプリを開ける方法。非対応端末ではボタンを隠す。 */
 function nativeShare() {
@@ -951,57 +943,55 @@ function nativeShare() {
 }
 
 /* X（Twitter）でシェア
-   ・text=本文＋ハッシュタグ、url=診断ページURL を分けて渡すことで
-     Xがサムネイル（OGカード）を自動展開する
-   ・モバイルではまずアプリ起動を試み、開かなければWebにフォールバック */
+   モバイルではまず twitter:// スキームでアプリ直起動を試みる。
+   ページがバックグラウンドに切り替われば成功、切り替わらなければ
+   Web版（x.com/intent）にフォールバックする。 */
 function shareX() {
-  const body = encodeURIComponent(getXShareBody());
+  const r = getResult(calcScore());
+  const body = `【推し活タイプ診断】私は「${r.name}」でした！\n✦ ${r.shortComment}`;
+  const pageUrl = window.location.href;
   const hashtags = '推し活,オタク診断,心理テスト';
-  const pageUrl = encodeURIComponent(window.location.href);
-  const intent = `text=${body}&url=${pageUrl}&hashtags=${encodeURIComponent(hashtags)}`;
 
-  const webUrl = `https://x.com/intent/tweet?${intent}`;
-  const appUrl = `twitter://post?message=${body}%0A${pageUrl}`;
+  const webUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(body)}&url=${encodeURIComponent(pageUrl)}&hashtags=${encodeURIComponent(hashtags)}`;
+  const appUrl = `twitter://post?message=${encodeURIComponent(body + '\n' + pageUrl)}`;
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-  if (isMobile) {
-    // アプリ起動を試行
-    const now = Date.now();
-    const timer = setTimeout(() => {
-      // 1.2秒経ってもページが生きている＝アプリ未起動 → Webへ
-      if (Date.now() - now < 1600) {
-        window.open(webUrl, '_blank');
-      }
-    }, 1200);
-
-    // ページが隠れたら（＝アプリが開いたら）フォールバックをキャンセル
-    const onHide = () => {
-      if (document.hidden) {
-        clearTimeout(timer);
-        document.removeEventListener('visibilitychange', onHide);
-      }
-    };
-    document.addEventListener('visibilitychange', onHide);
-
-    window.location.href = appUrl;
-  } else {
+  if (!isMobile) {
     window.open(webUrl, '_blank');
+    return;
   }
+
+  // アプリ起動を試行 → 成否を visibilitychange で判定
+  let switched = false;
+  const onHide = () => { switched = true; };
+  document.addEventListener('visibilitychange', onHide, { once: true });
+
+  // アプリ直起動を試みる
+  window.location.href = appUrl;
+
+  // 一定時間内に画面が切り替わらなければ Web にフォールバック
+  setTimeout(() => {
+    document.removeEventListener('visibilitychange', onHide);
+    if (!switched && !document.hidden) {
+      window.location.href = webUrl;
+    }
+  }, 1000);
 }
 
-/* LINE: deep link on mobile → fallback to web */
+/* LINE でシェア
+   モバイルは OS 共有シート優先（LINE アプリを確実に開ける）。
+   非対応環境では LINE の Web 共有 URL を開く。 */
 function shareLine() {
-  const text = encodeURIComponent(getShareText());
+  const r = getResult(calcScore());
   const url = encodeURIComponent(window.location.href);
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  const text = encodeURIComponent(getShareText());
 
-  if (isMobile) {
-    const lineAppUrl = `line://msg/text/${text}`;
-    const lineWebUrl = `https://social-plugins.line.me/lineit/share?url=${url}&text=${text}`;
-    window.location.href = lineAppUrl;
-    setTimeout(() => {
-      window.open(lineWebUrl, '_blank');
-    }, 1200);
+  if (navigator.share) {
+    navigator.share({
+      title: '推し活タイプ診断',
+      text: `私は「${r.name}」でした！\n✦ ${r.shortComment}\nあなたも診断してみて👇`,
+      url: window.location.href
+    }).catch(() => { /* キャンセル時は何もしない */ });
   } else {
     window.open(
       `https://social-plugins.line.me/lineit/share?url=${url}&text=${text}`,
