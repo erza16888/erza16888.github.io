@@ -469,11 +469,11 @@ body::before{
     </div>
 
     <div class="scard">
-      <div class="s-ttl">社畜仲間に送りつけよう 💼</div>
+      <div class="社畜仲間に送りつけよう 💼"></div>
       <div class="sbtns">
         <button class="sbtn sbtn-x" id="share-x-btn">X でシェア</button>
         <button class="sbtn sbtn-line" id="share-line-btn">LINE</button>
-        <button class="sbtn sbtn-cp" id="share-copy-btn">コピー</button>
+        <button class="sbtn sbtn-copy" id="share-copy-btn">コピー</button>
       </div>
     </div>
 
@@ -622,7 +622,7 @@ var Rs=[
     warn:"「どうせ頑張っても変わらない」という諦観が根っこにある場合、社畜状態よりも静かに消耗していることがあります。仕事 辛い 診断としては「燃え尽き後期」に似た状態に近いかもしれません。",
     escape:"あなたはすでに脱出済みです。その距離感を維持しつつ、せっかくなら「何が楽しくて働くか」を言語化してみると、さらに豊かなキャリアになります。",
     kws:["セルフマネジメント","境界線上手","定時帰宅","有給消化率高め","自由人","燃え尽き警戒"],
-    quote:"正式「休むことを学んだ人は、働く理由を知っている。」",
+    quote:"「休むことを学んだ人は、働く理由を知っている。」",
     attr:"― 社畜診断 絶滅危惧度ゼロタイプの格言"
   },
   {
@@ -637,7 +637,7 @@ var Rs=[
     bars:[
       {l:"適応力",p:85},
       {l:"ON/OFF切替",p:72},
-      {l:"絶滅危惧度",p:22}
+      {l:"絶滅危劇度",p:22}
     ],
     desc:"社畜になりきれない、送も完全に割り切れてもいない、絶妙なバランス感覚の持ち主。状況を読んで動ける適職テスト的には「汎用性の高い人材」であり、チームの中で空気を読みながら機能できます。残業も有給も、状況に応じてうまくやっている。多くの人が「こうありたい」と思う姿に近いかもしれません。\n\nただし、「状況に応じて」が「周囲の空気に押されて」にすり替わっていないか、定期的に確認が必要です。気づかないうちにじわじわと社畜化が進むのがこのタイプの落とし穴。渡り鳥は方向感覚を失うと迷子になります。",
     warn:"「まあいいか」の積み重ねがいつの間にか習慣になります。半年に一度、「自分が本当に嫌なこと」リストを書き出しておくことをお勧めします。",
@@ -746,7 +746,7 @@ function handleBackBtn() {
 function boot(){
   started=true;
   selectedScoresHistory = [];
-  var at=document.getElementById('ad-top'); if(at) at.style.display='none';
+  var at = document.getElementById('ad-top'); if(at) at.style.display='none';
   document.getElementById('intro').classList.add('hidden');
   document.getElementById('prog').classList.remove('hidden');
   document.getElementById('qcard').classList.remove('hidden');
@@ -839,7 +839,7 @@ function showRes(){
 
 function reset(){
   cq=0;selectedScoresHistory=[];started=false;cr=null;
-  var at=document.getElementById('ad-top'); if(at) at.style.display='';
+  var at = document.getElementById('ad-top'); if(at) at.style.display='';
   document.getElementById('quiz').style.display='block';
   document.getElementById('res').classList.remove('on');
   document.getElementById('intro').classList.remove('hidden');
@@ -857,7 +857,6 @@ function stxt(){
   if(!cr)return'';
   return '【社畜タイプ診断】\n私のタイプは「'+cr.name+'」\n'+cr.level+'\n\n'+cr.quote+'\n\n社畜診断・仕事 辛い 診断・適職テスト 気になる人はやってみて💼';
 }
-/* 修正了底下的 X 分享 Hashtag 與 LINE 的斷行問題 */
 function sx(){window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(stxt())+'&url='+encodeURIComponent(location.href)+'&hashtags='+encodeURIComponent('社畜診断,心理テスト,診断テスト,仕事辛い,適職診断'),'_blank')}
 function sl(){
   var t=location.href+'\n\n'+stxt();
@@ -869,7 +868,6 @@ function sc(){
   if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){toast('コピーしました！')})}
   else{var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');document.body.removeChild(a);toast('コピーしました！')}
 }
-/* 修復完成 */
 function toast(m){
   var t=document.getElementById('toast');
   t.textContent=m;t.classList.add('on');
