@@ -660,80 +660,80 @@ const questions = [
   {
     text: "推しに新しいグッズが発売された！あなたが最初にすること？",
     options: [
-      { text: "公式サイトを秒で開いてコンプ買い。迷う時間が無駄。", score: 4 },
-      { text: "全種類チェックして、本当に欲しいものだけ厳選する。", score: 2 },
-      { text: "SNSで友達の反応を見てから判断する。", score: 1 },
-      { text: "グッズより生で見たいので、ライブのチケットに予算を使う。", score: 3 },
+      { text: "公式サイトを秒で開いてコンプ買い。迷う時間が無駄。", type: "col" },
+      { text: "全種類チェックして、本当に欲しいものだけ厳選する。", type: "kan" },
+      { text: "SNSで友達の反応を見てから、みんなで買う相談をする。", type: "soc" },
+      { text: "グッズより生で見たい。遠征費に全予算をつぎ込む。", type: "dev" },
     ]
   },
   {
-    text: "推しのライブ当日。テンションを表すと？",
+    text: "推しのライブ当日。あなたのテンションは？",
     options: [
-      { text: "前日から眠れない。当日は開場の3時間前に並ぶ。", score: 4 },
-      { text: "テンション上がるけど、適度にリラックスして楽しむ。", score: 2 },
-      { text: "自分より推しを愛している人を見て「すごいなぁ」と思う観察者。", score: 1 },
-      { text: "本番より物販の時間の方が真剣かもしれない。", score: 3 },
+      { text: "前日から眠れない。開場3時間前から並ぶのは当然。", type: "dev" },
+      { text: "テンション上がるけど、適度にリラックスして楽しむ。", type: "kan" },
+      { text: "同担の友達と現地集合。終わったら朝まで感想戦。", type: "soc" },
+      { text: "本番より物販列が本番。グッズ確保が最優先。", type: "col" },
     ]
   },
   {
     text: "推しがSNSを更新した！内容は超普通の日常投稿。あなたは？",
     options: [
-      { text: "秒でスクショ。背景から自宅の場所を特定しようとする（しない）。", score: 4 },
-      { text: "何度も読んで、行間の感情を読み解こうとする。", score: 3 },
-      { text: "「かわいい」と思いながらいいねして終わり。", score: 1 },
-      { text: "同担の友達にすぐ転送して感想を言い合う。", score: 2 },
+      { text: "秒でスクショして保存フォルダへ。資料は永久保存。", type: "col" },
+      { text: "「かわいい」と思いながら、いいねして静かに見守る。", type: "kan" },
+      { text: "同担グループにすぐ転送して、感想を言い合う。", type: "soc" },
+      { text: "他の推しの投稿もあるから、全員ぶんチェックで忙しい。", type: "omn" },
     ]
   },
   {
     text: "推し活にかける月の予算は？",
     options: [
-      { text: "上限？　そんなものは存在しない。来月の自分がどうにかする。", score: 4 },
-      { text: "3〜5万円。計画的に使っているつもりではある。", score: 3 },
-      { text: "1万円以内。節度のある推し活を心がけている。", score: 2 },
-      { text: "お金より時間を使う派。コンテンツ消費に全力。", score: 1 },
+      { text: "上限？　そんなものは存在しない。来月の自分がどうにかする。", type: "dev" },
+      { text: "グッズ代がほとんど。気づけば部屋がモノで埋まる。", type: "col" },
+      { text: "1万円以内。節度のある推し活を心がけている。", type: "kan" },
+      { text: "複数ジャンルに分散投資。トータルだと結構いってる。", type: "omn" },
     ]
   },
   {
-    text: "推しに関係ないコンテンツをすすめられたとき、どうする？",
+    text: "推しに関係ないコンテンツをすすめられたら？",
     options: [
-      { text: "推し以外に時間を使う余裕がない。丁重に断る。", score: 4 },
-      { text: "「推し成分」が少しでもあれば試す。意外と沼る。", score: 2 },
-      { text: "なんでも見る。最終的に全部推しに結びつけて語る。", score: 1 },
-      { text: "複数の推しがいるので、そっちを優先するだけ。", score: 3 },
+      { text: "推し以外に時間を使う余裕はない。丁重にお断り。", type: "dev" },
+      { text: "面白そうなら何でも見る。新しい沼はいつでも歓迎。", type: "omn" },
+      { text: "友達のおすすめなら付き合う。一緒に楽しむのが好き。", type: "soc" },
+      { text: "良ければグッズも集めたくなる。まず公式ショップを見る。", type: "col" },
     ]
   },
   {
-    text: "推しが「卒業」「解散」「引退」を発表した。あなたの反応は？",
+    text: "推しが「卒業」「引退」を発表した。あなたの反応は？",
     options: [
-      { text: "発表後30分は何も手につかない。しばらく放心。", score: 4 },
-      { text: "悲しいけど、最後まで全力応援に切り替える。", score: 3 },
-      { text: "「いつかはこうなると思ってた」と達観した気持ちになる。", score: 1 },
-      { text: "次の推しをもう探し始めている（でも悲しい）。", score: 2 },
+      { text: "30分は放心状態。しばらく何も手につかない。", type: "dev" },
+      { text: "悲しいけど、冷静に受け止めて最後まで見届ける。", type: "kan" },
+      { text: "同担と通話して、みんなで気持ちを分かち合う。", type: "soc" },
+      { text: "悲しい。でも他にも推しがいるから前を向ける。", type: "omn" },
     ]
   },
   {
     text: "推しについて語るとき、あなたは？",
     options: [
-      { text: "気づいたら1時間しゃべっている。聞いた側が先に疲れる。", score: 4 },
-      { text: "語りたいけど、引かれるのが怖くてSNSだけで発散する。", score: 3 },
-      { text: "同担にしか本当のことが言えない。一般人には隠している。", score: 2 },
-      { text: "推しトークで仲良くなった友達が人生の財産。", score: 1 },
+      { text: "気づいたら1時間しゃべってる。聞き手が先に疲れる。", type: "dev" },
+      { text: "語りたいけど引かれるのが怖い。心の中で完結させる。", type: "kan" },
+      { text: "推しトークで仲良くなった友達が人生の財産。", type: "soc" },
+      { text: "推しの年表・記録ならいくらでも語れる生き字引。", type: "col" },
     ]
   },
   {
     text: "推しのいない休日。あなたは何をしている？",
     options: [
-      { text: "過去のライブ映像を見返す。推し成分を補給しないと生きられない。", score: 4 },
-      { text: "推しのいない世界を楽しもうとするが、なんか物足りない。", score: 3 },
-      { text: "別ジャンルのコンテンツを全力消費。オタク切り替えが早い。", score: 2 },
-      { text: "充電期間として過ごす。次のライブに向けて節約もする。", score: 1 },
+      { text: "過去のライブ映像を延々と見返す。供給がないと無理。", type: "dev" },
+      { text: "コレクションの整理と撮影。眺めるだけで幸せ。", type: "col" },
+      { text: "別ジャンルを全力消費。オタクの切り替えが早い。", type: "omn" },
+      { text: "推し抜きの趣味も普通に楽しむ。バランス重視。", type: "kan" },
     ]
   },
 ];
 
-const results = [
-  {
-    minScore: 8, maxScore: 13,
+const results = {
+  kan: {
+    key: "kan",
     emoji: "🌸",
     name: "エモ観察者タイプ",
     sub: "推しは好き。でも距離感は大切に。",
@@ -742,8 +742,8 @@ const results = [
     roast: "……ただ、たまに「そこまで好きじゃないの？」って誤解されてるよね？本人は全力なのに、テンションが低く見えちゃう不思議な人。ライブ会場で「この人大丈夫かな」って隣の人に心配されたことないですか。",
     traits: ["冷静系オタク", "観察者気質", "生活も推しも両立", "周りへのダメージ少なめ"]
   },
-  {
-    minScore: 14, maxScore: 19,
+  soc: {
+    key: "soc",
     emoji: "🎭",
     name: "ソーシャル沼人タイプ",
     sub: "推し活は孤独じゃない、一緒に語れる人がいれば最高。",
@@ -752,8 +752,8 @@ const results = [
     roast: "ただ、一人の時間が少なくて、気づいたら推し活グループの調整役になってませんか？「今日はどこに並ぶ？」「チケット取れた？」「誰が物販行く？」……幹事仕事、お疲れ様です。",
     traits: ["コミュニティ型オタク", "共感力高め", "場のムードメーカー", "グループ幹事になりがち"]
   },
-  {
-    minScore: 20, maxScore: 24,
+  col: {
+    key: "col",
     emoji: "📦",
     name: "コレクター廃人タイプ",
     sub: "部屋が聖地。物が増えることで愛が可視化される。",
@@ -762,8 +762,8 @@ const results = [
     roast: "しかし収納、大丈夫ですか？段ボールの山の中で生活してますよね？「もったいなくて開けられない」グッズが、あなたの部屋に何個ありますか。引っ越しのたびに運送屋さんが絶望する量の荷物、一度棚卸しをすすめます。",
     traits: ["グッズ収集特化", "コンプ欲強め", "管理能力が高い（高すぎる）", "部屋が第二の聖地"]
   },
-  {
-    minScore: 25, maxScore: 27,
+  omn: {
+    key: "omn",
     emoji: "🎪",
     name: "雑食オタクタイプ",
     sub: "推しは多ければ多いほどいい。ジャンルは関係ない。",
@@ -772,8 +772,8 @@ const results = [
     roast: "ただ、「一番は誰ですか？」って聞かれたとき、答えるのに3分かかりますよね。課金も分散されるから安全かと思いきや、ジャンル数が多すぎてトータルはかなりの出費になっている説があります。",
     traits: ["マルチジャンル対応", "切り替えが早い", "話題の引き出しが多い", "最推しが5人いる"]
   },
-  {
-    minScore: 28, maxScore: 30,
+  dev: {
+    key: "dev",
     emoji: "🔥",
     name: "熱量過多の一途タイプ",
     sub: "推しへの愛は、もはや信仰に近い。",
@@ -782,8 +782,8 @@ const results = [
     roast: "ただ、最後に「推し以外のこと」について話したのはいつですか？来月の貯金残高、ちゃんと確認しましたか？財布のレシートが全部ライブとグッズ代、もはや家計簿として機能してません。睡眠取れてますか。",
     traits: ["一途系最上位", "推しが人生の軸", "情熱の純度MAX", "財布と睡眠が常に瀕死"]
   },
-  {
-    minScore: 31, maxScore: 32,
+  lord: {
+    key: "lord",
     emoji: "🌊",
     name: "深淵の沼主タイプ",
     sub: "もはや「オタク」じゃない。「崇拝者」だ。",
@@ -792,7 +792,10 @@ const results = [
     roast: "でも正直に聞きます。最後に推しのいない話題で盛り上がったのはいつですか？友達に「ちょっと推しの話やめて」と言われた回数、両手で足りてますよね？推しが引退した後の人生プランは一応ありますか。",
     traits: ["推し活マスター", "全通・コンプ当たり前", "推しの生き字引", "でも睡眠と貯金は要相談"]
   }
-];
+};
+
+// 結果の表示順（同点時のタイブレーク優先順位にも使用）
+const resultOrder = ["kan", "soc", "col", "omn", "dev", "lord"];
 
 // ═══════════════════════════════════════════
 //  STATE
@@ -869,20 +872,45 @@ document.getElementById('btn-prev').addEventListener('click', () => {
 // ═══════════════════════════════════════════
 //  CALCULATE + SHOW RESULT
 // ═══════════════════════════════════════════
+/* 各タイプの投票数を集計して返す（例: {dev:3, soc:2, col:2, kan:1}） */
 function calcScore() {
-  return answers.reduce((sum, ansIdx, qIdx) => {
-    if (ansIdx === null) return sum;
-    return sum + questions[qIdx].options[ansIdx].score;
-  }, 0);
+  const tally = {};
+  answers.forEach((ansIdx, qIdx) => {
+    if (ansIdx === null) return;
+    const type = questions[qIdx].options[ansIdx].type;
+    tally[type] = (tally[type] || 0) + 1;
+  });
+  return tally;
 }
 
-function getResult(score) {
-  return results.find(r => score >= r.minScore && score <= r.maxScore) || results[0];
+/* 最多得票のタイプを判定。
+   ・dev（熱量過多）が5票以上 → 最終形態 lord（深淵の沼主）に昇格
+   ・同点の場合は回答内容から決定的に1つ選ぶ
+     （同じ回答なら必ず同じ結果になり、かつタイプは均等に分散する） */
+function getResult(tally) {
+  if ((tally.dev || 0) >= 5) {
+    return results.lord;
+  }
+
+  const pool = resultOrder.filter(k => k !== "lord");
+  let maxCount = -1;
+  pool.forEach(k => {
+    const c = tally[k] || 0;
+    if (c > maxCount) maxCount = c;
+  });
+
+  const tied = pool.filter(k => (tally[k] || 0) === maxCount);
+  if (tied.length === 1) return results[tied[0]];
+
+  // 同点：回答番号の合計をシード代わりにして決定的に選ぶ
+  // （回答が同じなら必ず同じ結果。リロードしても変わらない）
+  const seed = answers.reduce((a, v, i) => a + (v + 1) * (i + 1), 0);
+  return results[tied[seed % tied.length]];
 }
 
 function showResult() {
-  const score = calcScore();
-  const r = getResult(score);
+  const tally = calcScore();
+  const r = getResult(tally);
 
   document.getElementById('res-emoji').textContent = r.emoji;
   document.getElementById('res-name').textContent = r.name;
@@ -909,8 +937,7 @@ function showResult() {
  * window.location.href で動的にURLを取得
  */
 function getShareText() {
-  const score = calcScore();
-  const r = getResult(score);
+  const r = getResult(calcScore());
   const url = window.location.href;
   return `【推し活タイプ診断】\n私は「${r.name}」でした！\n✦ ${r.shortComment}\n\nあなたも診断してみて👇\n${url}`;
 }
