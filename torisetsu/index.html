@@ -512,6 +512,10 @@ body {
 }
 
 /* — compatibility meter — */
+.spec-section {
+  margin-bottom: 20px;
+}
+
 .compat-row {
   display: flex;
   flex-direction: column;
@@ -562,7 +566,7 @@ body {
   border-radius: var(--radius-md);
   padding: 14px 16px;
   font-size: 13px;
-  font-family: 'Hiragino Mincho ProN', 'Noto Serif JP', Georgia, serif;
+  font-family: 'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif JP', Georgia, serif;
   color: var(--ink);
   line-height: 1.8;
   font-style: italic;
@@ -570,256 +574,8 @@ body {
   margin-top: 16px;
 }
 
-/* ─── SHARE ─── */
-.share-card {
-  background: var(--white);
-  border: 1px solid var(--cream-border);
-  border-radius: var(--radius-lg);
-  padding: 20px 18px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.share-title {
-  font-size: 13px;
-  font-weight: 700;
-  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
-  color: var(--ink-mid);
-  margin-bottom: 14px;
-  letter-spacing: 0.04em;
-}
-
-.share-buttons {
-  display: flex;
-  gap: 9px;
-}
-
-.share-btn {
-  flex: 1;
-  padding: 13px 8px;
-  border-radius: var(--radius-md);
-  border: none;
-  font-size: 13px;
-  font-weight: 700;
-  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  letter-spacing: 0.02em;
-}
-
-.share-btn:hover { transform: translateY(-2px); }
-.share-btn:active { transform: scale(0.97); }
-
-.share-btn-x { background: #0F1419; color: #FFF; border-radius: var(--radius-md); }
-.share-btn-line { background: #06C755; color: #FFF; }
-.share-btn-copy { background: var(--cream-mid); color: var(--ink-mid); border: 1px solid var(--cream-border); }
-
-/* ─── RETRY ─── */
-.retry-btn {
-  display: block;
-  width: 100%;
-  background: transparent;
-  color: var(--ink-muted);
-  border: 1.5px solid var(--cream-border);
-  border-radius: var(--radius-pill);
-  padding: 14px;
-  font-size: 13px;
-  font-weight: 700;
-  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  margin-bottom: 40px;
-  letter-spacing: 0.05em;
-}
-
-.retry-btn:hover {
-  border-color: var(--amber-mid);
-  color: var(--amber);
-  background: var(--amber-light);
-}
-
-/* ─── FOOTER ─── */
-.site-footer {
-  text-align: center;
-  font-size: 11px;
-  color: var(--ink-muted);
-  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
-  padding-bottom: 16px;
-  letter-spacing: 0.04em;
-}
-
-/* ─── TOAST ─── */
-.toast {
-  position: fixed;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%) translateY(70px);
-  background: var(--ink);
-  color: var(--white);
-  padding: 11px 22px;
-  border-radius: var(--radius-pill);
-  font-size: 13px;
-  font-weight: 700;
-  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
-  opacity: 0;
-  transition: all 0.28s ease;
-  pointer-events: none;
-  z-index: 999;
-  white-space: nowrap;
-}
-
-.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-
-.hidden { display: none !important; }
-
-@media (max-width: 400px) {
-  .main-title { font-size: 23px; }
-  .q-text { font-size: 16px; }
-  .share-buttons { flex-direction: column; }
-  .spec-key { width: 60px; }
-}
-
-/* ── AD SLOT ── */
-.ad-slot{min-height:250px;background:#f0f0f0;margin:20px 0;text-align:center;line-height:250px;color:#aaa;font-size:12px;border-radius:12px;overflow:hidden;font-family:'Hiragino Kaku Gothic ProN',sans-serif;letter-spacing:.05em}
-/* ── SEO FAQ ── */
-.seo-faq{max-width:520px;margin:28px auto 0;padding:0 16px 40px;font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Noto Sans JP',sans-serif}
-.seo-faq h2{font-size:16px;font-weight:900;margin-bottom:16px;text-align:center;opacity:.55;letter-spacing:.03em}
-.seo-faq details{background:rgba(127,127,127,0.06);border:1px solid rgba(127,127,127,0.16);border-radius:12px;padding:14px 16px;margin-bottom:10px}
-.seo-faq summary{font-size:14px;font-weight:700;cursor:pointer;list-style:none;opacity:.85;line-height:1.6}
-.seo-faq summary::-webkit-details-marker{display:none}
-.seo-faq summary::before{content:'Q. ';color:#C0392B;font-weight:900}
-.seo-faq .faq-a{font-size:13px;line-height:1.85;opacity:.7;margin-top:10px;padding-top:10px;border-top:1px solid rgba(127,127,127,0.16)}
-.seo-faq .faq-a::before{content:'A. ';color:#2E7D5E;font-weight:900}
-</style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "取扱説明書メーカーとは何ですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "全8問の相性診断から、あなただけの「取扱説明書（トリセツ）」を自動生成する無料の性格診断です。地雷・推奨される接し方・相性のよいタイプまで分かります。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "結果は友達や恋人に送れますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "はい。結果ページのシェアボタンからX・LINE・コピーで送れます。自分のトリセツを共有して相性チェックに使う人が多いです。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "相性診断はどのように判定されますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "8問 of 回答を点数化し、コミュニケーションや感情表現の傾向から4タイプに分類します。各タイプに相性インジケーターが付いており、どんな相手と合うかが一目で分かります。"
-      }
-    }
-  ]
-}
-</script>
-</head>
-<body>
-
-<div class="container">
-
-  <header class="site-header">
-    <div class="header-rule">
-      <span></span>
-      <em>FREE PERSONALITY MAKER</em>
-      <span></span>
-    </div>
-    <h1 class="main-title">
-      あなたの<span class="accent">「取扱説明書」</span><br>自動生成メーカー
-    </h1>
-    <p class="subtitle">全8問の相性診断 ― あなたの本当の扱い方、暴きます。</p>
-    <div class="stamp-row">
-      <span class="stamp">無料</span>
-      <span class="stamp">即時結果</span>
-      <span class="stamp">シェア可能</span>
-    </div>
-  </header>
-
-  <!-- QUIZ SECTION -->
-  <div id="quiz-section">
-
-    <div class="intro-card" id="intro-card">
-      <p>「私って扱いにくいのかな？」と思ったこと、一度くらいはあるはず。<br>
-      この診断では、あなたの<strong>本当の取扱説明書</strong>を8問で生成します。</p>
-      <p>地雷・推奨される接し方・相性のいいタイプまで全部わかる。<br>
-      友達や恋人に<strong>送りつけてみよう。</strong></p>
-    </div>
-
-    <div class="progress-wrap hidden" id="progress-wrap">
-      <div class="progress-meta">
-        <span class="progress-label">PROGRESS</span>
-        <span class="progress-count" id="progress-count">1 / 8</span>
-      </div>
-      <div class="progress-bar-bg">
-        <div class="progress-bar-fill" id="progress-bar" style="width:0%"></div>
-      </div>
-    </div>
-
-    <div class="question-card hidden" id="question-card">
-      <div class="q-eyebrow">
-        <span class="q-num-box" id="q-num-box">Q1</span>
-        <span class="q-topic" id="q-topic"></span>
-      </div>
-      <div class="q-text" id="q-text"></div>
-      <div class="options-list" id="options-list"></div>
-    </div>
-
-    <div class="ad-slot" id="ad-top">【スポンサーリンク / 広告】</div>
-    <button class="cta-btn" id="main-btn">
-      診断スタート ▶
-    </button>
-
-  </div>
-
-  <!-- RESULT SECTION -->
-  <div class="result-section" id="result-section">
-    <div class="ad-slot" id="ad-result">【スポンサーリンク / 広告】</div>
-
-    <div class="torisetsu-doc" id="torisetsu-doc">
-      <div class="doc-header">
-        <div class="doc-type-label">PERSONAL INSTRUCTION MANUAL ／ 取扱説明書</div>
-        <div class="doc-model-num" id="doc-model-num">MODEL: ----</div>
-        <span class="doc-emoji" id="doc-emoji">📋</span>
-        <div class="doc-type-name" id="doc-type-name">――</div>
-        <div class="doc-score-tag" id="doc-score-tag">診断スコア：― 点</div>
-      </div>
-
-      <div class="doc-body">
-
-        <div class="spec-section">
-          <div class="spec-heading">■ 基本スペック</div>
-          <div id="spec-rows"></div>
-        </div>
-
-        <div class="desc-section">
-          <div class="spec-heading">■ 製品説明</div>
-          <p class="desc-text" id="desc-text"></p>
-        </div>
-
-        <div class="warning-box">
-          <div class="warning-title">⚠ 取扱注意事項</div>
-          <div class="warning-text" id="warning-text"></div>
-        </div>
-
-        <div class="spec-section">
-          <div class="spec-heading">■ 相性インジケーター</div>
-          <div class="compat-row" id="compat-row"></div>
-        </div>
-
-        <div class="doc-quote" id="doc-quote"></div>
-
-      </div>
-    </div>
+</div>
+</div>
 
     <div class="share-card">
       <div class="share-title">自分のトリセツを友達・恋人に送ろう 📄</div>
@@ -1032,7 +788,7 @@ let selectedScore = null;
 let quizStarted = false;
 let currentResult = null;
 
-// 使用標準監聽器取代內聯事件
+// 使用現代標準的事件監聽器綁定按鈕，防止因 JS 解析順序導致按鈕失效
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('main-btn').addEventListener('click', handleMainBtn);
   document.getElementById('retry-btn').addEventListener('click', resetQuiz);
