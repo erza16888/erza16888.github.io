@@ -49,14 +49,12 @@ body{
   min-height:100vh;color:var(--text);line-height:1.7;
   -webkit-font-smoothing:antialiased;
 }
-/* scanline overlay */
 body::before{
   content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
   background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.04) 2px,rgba(0,0,0,0.04) 4px);
 }
 .wrap{max-width:520px;margin:0 auto;padding:0 16px 80px;position:relative;z-index:1}
 
-/* ── HEADER ── */
 .hdr{text-align:center;padding:48px 0 28px}
 .hdr-mono{
   font-size:10px;font-weight:700;letter-spacing:.22em;color:var(--cyan);
@@ -78,7 +76,6 @@ body::before{
   padding:3px 12px;border-radius:var(--r-pill);letter-spacing:.08em;
 }
 
-/* ── TERMINAL INTRO ── */
 .terminal{
   background:var(--card);border:1px solid var(--border2);
   border-radius:var(--r-lg);padding:0;margin-bottom:20px;overflow:hidden;
@@ -104,7 +101,6 @@ body::before{
 }
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
 
-/* ── PROGRESS ── */
 .prog{margin-bottom:18px}
 .prog-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px}
 .prog-lbl{font-size:10px;color:var(--text3);font-weight:700;letter-spacing:.15em}
@@ -115,7 +111,6 @@ body::before{
   border-radius:var(--r-pill);transition:width .45s cubic-bezier(.4,0,.2,1);
 }
 
-/* ── QUESTION ── */
 .qcard{
   background:var(--card);border:1px solid var(--border2);
   border-radius:var(--r-lg);padding:24px 20px 20px;margin-bottom:14px;
@@ -151,7 +146,6 @@ body::before{
 .opt.sel{background:var(--cyan-dim);border-color:rgba(0,212,255,.45);color:var(--text)}
 .opt.sel .opt-ltr{background:var(--cyan);border-color:var(--cyan);color:var(--bg)}
 
-/* 控制按鈕群組 */
 .btn-group {
   display: flex;
   gap: 12px;
@@ -166,10 +160,9 @@ body::before{
   transition:all .22s ease;letter-spacing:.05em;
 }
 .cta:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,212,255,.28)}
-.cta:active{transform:scale(.98) translateY(0)}
+.cta:active { transform: scale(0.98) translateY(0); }
 .cta:disabled{opacity:.22;cursor:not-allowed;transform:none;box-shadow:none}
 
-/* 返回上一題按鈕樣式 */
 .back-btn {
   flex: 1;
   background: transparent;
@@ -194,11 +187,9 @@ body::before{
   cursor: not-allowed;
 }
 
-/* ── RESULT ── */
 .res{display:none;animation:up .45s ease}
 .res.on{display:block}
 
-/* extinction level banner */
 .ext-banner{
   border-radius:var(--r-lg) var(--r-lg) 0 0;
   padding:28px 20px 22px;text-align:center;
@@ -224,7 +215,6 @@ body::before{
   color:rgba(255,255,255,.88);
 }
 
-/* survival meter */
 .sv-bar-wrap{
   background:rgba(0,0,0,.25);border-top:1px solid rgba(255,255,255,.08);
   padding:16px 20px;
@@ -236,7 +226,6 @@ body::before{
 .sv-fill{height:100%;border-radius:var(--r-pill);transition:width .85s cubic-bezier(.4,0,.2,1) .2s}
 .sv-pct{font-size:12px;font-weight:700;width:34px;text-align:right;opacity:.75}
 
-/* cards */
 .dcard{
   background:var(--card);border:1px solid var(--border2);
   border-radius:var(--r-lg);padding:22px 20px;margin-bottom:14px;
@@ -267,7 +256,6 @@ body::before{
   color:var(--text2);font-size:12px;padding:4px 12px;border-radius:var(--r-pill);
 }
 
-/* quote */
 .qcard2{
   background:var(--card);border:1px solid var(--border2);
   border-radius:var(--r-lg);padding:22px 20px;margin-bottom:14px;text-align:center;
@@ -275,7 +263,6 @@ body::before{
 .q2-txt{font-size:15px;color:var(--text);line-height:1.8;font-style:italic;letter-spacing:.02em}
 .q2-attr{font-size:11px;color:var(--text3);margin-top:8px;letter-spacing:.08em}
 
-/* share */
 .scard{
   background:var(--card);border:1px solid var(--border2);
   border-radius:var(--r-lg);padding:20px 18px;margin-bottom:14px;text-align:center;
@@ -293,7 +280,6 @@ body::before{
 .sbtn-line{background:#06C755;color:#FFF}
 .sbtn-cp{background:var(--bg3);color:var(--text2);border:1px solid var(--border2)}
 
-/* retry */
 .retry{
   display:block;width:100%;background:transparent;color:var(--text3);
   border:1px solid var(--border2);border-radius:var(--r-pill);padding:14px;
@@ -322,18 +308,15 @@ body::before{
   .sbtns{flex-direction:column}
 }
 
-/* ── AD SLOT ── */
 .ad-slot{min-height:250px;background:#f0f0f0;margin:20px 0;text-align:center;line-height:250px;color:#aaa;font-size:12px;border-radius:12px;overflow:hidden;font-family:'Hiragino Kaku Gothic ProN',sans-serif;letter-spacing:.05em}
-/* ── SEO FAQ ── */
 .seo-faq{max-width:520px;margin:28px auto 0;padding:0 16px 40px;font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Noto Sans JP',sans-serif}
 .seo-faq h2{font-size:16px;font-weight:900;margin-bottom:16px;text-align:center;opacity:.55;letter-spacing:.03em}
 .seo-faq details{background:rgba(127,127,127,0.06);border:1px solid rgba(127,127,127,0.16);border-radius:12px;padding:14px 16px;margin-bottom:10px}
 .seo-faq summary{font-size:14px;font-weight:700;cursor:pointer;list-style:none;opacity:.85;line-height:1.6}
 .seo-faq summary::-webkit-details-marker{display:none}
 .seo-faq summary::before{content:'Q. ';color:#C0392B;font-weight:900}
-.seo-faq .faq-a{font-size:13px;line-height:1.85;opacity:.75;margin-top:10px;padding-top:10px;border-top:1px solid rgba(127,127,127,0.16)}
+.seo-faq .faq-a{font-size:13px;line-height:1.85;opacity:.7;margin-top:10px;padding-top:10px;border-top:1px solid rgba(127,127,127,0.16)}
 .seo-faq .faq-a::before{content:'A. ';color:#2E7D5E;font-weight:900}
-
 </style>
 <script type="application/ld+json">
 {
@@ -424,7 +407,6 @@ body::before{
 
     <div class="ad-slot" id="ad-top">【スポンサーリンク / 広告】</div>
     
-    <!-- 按鈕控制群組 -->
     <div class="btn-group">
       <button class="back-btn hidden" id="back-btn" disabled>戻る</button>
       <button class="cta" id="mbtn">診断スタート ▶</button>
@@ -666,7 +648,7 @@ var Rs=[
     escape:"まず今週、一つだけ「断る」練習をしてみてください。断ることで何も崩れないことを、体験として積み上げていくことが最初の脱出ルートです。",
     kws:["責任感強め","慣れの恐怖","感覚麻痺","ドードー","仕事 辛い","疲労蓄積中"],
     quote:"「気づいたときには、もう翼が使えなくなっていた。」",
-    attr:"― 定職 辛い 診断 ドードータイプの記録"
+    attr:"― 仕事 辛い 診断 ドードータイプの記録"
   },
   {
     min:24,max:30,
@@ -708,7 +690,7 @@ var Rs=[
     escape:"今すぐ有給申請フォームを開いてください。理由は「疲れたから」で十分です。それが最初の一歩です。行動しなければ化石のまま展示され続けます。",
     kws:["化石認定","社畜MAX","絶滅確定","有給消化率0%","献身の限界","仕事 辛い"],
     quote:"「化石は美しい。でも、もう動かない。」",
-    attr:"― 工作 辛い 診断 化石タイプへの追悼"
+    attr:"― 仕事 辛い 診断 化石タイプへの追悼"
   }
 ];
 
@@ -865,6 +847,7 @@ function sl(){
   window.location.href='line://msg/text/'+encodeURIComponent(t);
   setTimeout(function(){window.open('https://line.me/R/msg/text/'+encodeURIComponent(t),'_blank')},500);
 }
+// 補完被截斷的複製與提示邏輯
 function sc(){
   var t=stxt()+'\n'+location.href;
   if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){toast('コピーしました！')})}
