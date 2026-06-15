@@ -922,7 +922,7 @@ function getShareText() {
   return `【隠れメンヘラ診断】\n私のタイプは「${currentResult.name}」でした！\nポックリ病レベル：${currentResult.pct}%\n\n${currentResult.highlight}\n\nあなたも診断してみて👇`;
 }
 
-function shareToX(){window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(getShareText())+'&url='+encodeURIComponent(window.location.href),'_blank');}
+function shareToX(){window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(getShareText())+'&url='+encodeURIComponent(window.location.href)+'&hashtags='+encodeURIComponent('隠れメンヘラ診断,メンヘラ診断,心理テスト,診断テスト,性格診断'),'_blank');}
 
 function shareToLine(){var t=window.location.href+'
 
