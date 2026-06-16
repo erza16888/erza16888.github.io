@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ SEO 基本タグ（Google日本検索向け） ============ -->
+<title>【夜型人間の生態】真夜中テンションタイプ診断｜不眠症 チェック・夜型人間 性格・面白い診断テスト</title>
+<meta name="description" content="無料の心理テスト。8つの質問に答えるだけで、あなたの夜型度と「真夜中テンション」タイプが分かる面白い 診断テスト。夜型人間 性格の傾向を、やさしく辛口に診断します。">
+<meta name="keywords" content="不眠症 チェック,夜型人間 性格,面白い 診断テスト,真夜中テンション,夜更かし,心理テスト">
+<meta name="robots" content="index, follow">
+
+<!-- ============ Open Graph（X / Threads / LINE 用カード） ============ -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="【夜型人間の生態】あなたの「真夜中テンション」タイプ">
+<meta property="og:description" content="深夜になぜか冴えてくるあなた、夜更かし度は何％？ 8問で分かる無料の面白い 診断テスト。あなたは『健全すぎる朝型さん』？それとも『真夜中の住人』？">
+<meta property="og:image" content="og-image.png">
+<meta property="og:url" content="">
+<meta property="og:site_name" content="真夜中テンションタイプ診断">
+
+<!-- ============ Twitter Card ============ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="【夜型人間の生態】あなたの「真夜中テンション」タイプ">
+<meta name="twitter:description" content="深夜に冴えるあなたの夜更かし度は何％？ 8問で分かる無料の面白い 診断テスト・夜型人間 性格診断。">
+<meta name="twitter:image" content="og-image.png">
+
+<!-- ============ FAQ 構造化データ（JSON-LD / Schema Markup） ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "この「真夜中テンションタイプ」診断はどんなテストですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "8つの質問に答えるだけで、あなたの夜型度や夜のテンションのクセが分かる、無料で面白い 診断テストです。あくまで娯楽目的の心理テストであり、医学的な不眠症 チェックや診断ではありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "夜型人間 性格には特徴がありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "一般に夜型の人は、夜の静かな時間に集中力や創造性が高まりやすいと言われることがあります。ただし個人差が大きいので、本診断は夜型人間 性格の傾向を楽しく知るきっかけとしてご利用ください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "夜なかなか眠れない状態が続くときはどうすればいいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "毎晩眠れない、日中の生活に支障が出るなど不眠が続く場合は、自己判断せず医療機関や専門家に相談することをおすすめします。本診断は娯楽目的であり、不眠症 チェックの代わりにはなりません。"
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#f1eefb;
+    --muted:#a79fce;
+    --line:rgba(255,255,255,.10);
+    --card:#221f40;
+    --surface:#2b2750;
+    --brand:#a78bfa;
+    --brand-2:#67e8f9;
+    --brand-soft:rgba(167,139,250,.16);
+    --shadow:0 22px 50px -24px rgba(0,0,0,.7);
+    --radius:22px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Zen Kaku Gothic New",-apple-system,"Hiragino Kaku Gothic ProN",sans-serif;
+    color:var(--ink);
+    line-height:1.7;
+    background:
+      radial-gradient(2px 2px at 18% 26%, rgba(255,255,255,.55), transparent),
+      radial-gradient(1px 1px at 68% 16%, rgba(255,255,255,.45), transparent),
+      radial-gradient(1.5px 1.5px at 42% 64%, rgba(255,255,255,.35), transparent),
+      radial-gradient(1px 1px at 84% 54%, rgba(255,255,255,.4), transparent),
+      radial-gradient(1.5px 1.5px at 30% 84%, rgba(255,255,255,.3), transparent),
+      radial-gradient(1100px 600px at 92% -12%, rgba(103,232,249,.16), transparent),
+      radial-gradient(900px 560px at 6% 8%, rgba(167,139,250,.18), transparent),
+      linear-gradient(180deg,#171331 0%, #211a3c 100%);
+    background-attachment:fixed;
+    min-height:100vh;
+    padding:18px;
+    display:flex;
+    justify-content:center;
+  }
+  .wrap{width:100%;max-width:480px;margin:10px auto 40px}
+
+  .card{
+    background:var(--card);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:28px 22px;
+    border:1px solid var(--line);
+  }
+  .screen{display:none;animation:rise .5s cubic-bezier(.2,.8,.2,1)}
+  .screen.active{display:block}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  /* ===== 広告枠 ===== */
+  .ad-slot{min-height:250px;background:rgba(255,255,255,.05);border:1px dashed rgba(255,255,255,.14);margin:20px 0;text-align:center;line-height:250px;color:#8983ab;border-radius:14px;font-size:13px;letter-spacing:.04em}
+
+  /* ===== スタート画面 ===== */
+  .eyebrow{
+    display:inline-block;font-size:12px;font-weight:700;letter-spacing:.1em;
+    color:#d7c9ff;background:var(--brand-soft);
+    padding:6px 13px;border-radius:999px;margin-bottom:16px;
+  }
+  .title{
+    font-family:"Zen Maru Gothic",sans-serif;font-weight:900;
+    font-size:28px;line-height:1.35;letter-spacing:-.01em;margin-bottom:6px;
+  }
+  .title .sub{display:block;font-size:15px;color:var(--muted);font-weight:700;margin-top:10px}
+  .hero{display:flex;justify-content:center;margin:24px 0 8px}
+  .lead{color:var(--muted);font-size:14.5px;margin:14px 2px 0}
+  .lead b{color:#e7deff}
+  .meta-row{display:flex;gap:12px;justify-content:center;margin:18px 0 4px;flex-wrap:wrap}
+  .chip{font-size:12px;color:var(--muted);background:rgba(255,255,255,.05);border:1px solid var(--line);padding:6px 12px;border-radius:999px}
+
+  /* ===== ボタン ===== */
+  .btn{
+    display:block;width:100%;border:none;cursor:pointer;
+    font-family:"Zen Maru Gothic",sans-serif;font-weight:700;font-size:17px;
+    color:#fff;background:linear-gradient(135deg,#a78bfa,#7c3aed);
+    padding:16px;border-radius:16px;
+    box-shadow:0 14px 26px -12px rgba(124,58,237,.9);
+    transition:transform .12s ease, box-shadow .12s ease, opacity .2s;
+  }
+  .btn:active{transform:translateY(2px) scale(.99)}
+  .btn:disabled{opacity:.4;cursor:not-allowed;box-shadow:none;filter:grayscale(.3)}
+  .btn.ghost{background:transparent;color:var(--ink);border:1.6px solid var(--line);box-shadow:none}
+  .btn.x{background:#0c0c14;border:1px solid rgba(255,255,255,.2);box-shadow:0 12px 22px -12px rgba(0,0,0,.7)}
+  .btn.line{background:#06c755;box-shadow:0 12px 22px -10px rgba(6,199,85,.55)}
+  .btn-row{display:flex;gap:10px;margin-top:10px}
+  .btn-row .btn{font-size:15px;padding:14px}
+
+  /* ===== 進捗 ===== */
+  .progress-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+  .q-count{font-family:"Zen Maru Gothic";font-weight:700;font-size:14px;color:var(--muted)}
+  .q-count b{color:#cbb8ff;font-size:20px}
+  .bar{height:8px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden}
+  .bar > i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#fbbf6b,#a78bfa,#67e8f9);transition:width .45s cubic-bezier(.2,.8,.2,1)}
+
+  /* ===== 設問 ===== */
+  .q-text{
+    font-family:"Zen Maru Gothic",sans-serif;font-weight:700;
+    font-size:20px;line-height:1.5;margin:18px 0 18px;
+  }
+  .options{display:flex;flex-direction:column;gap:11px}
+  .opt{
+    text-align:left;width:100%;cursor:pointer;
+    background:var(--surface);border:1.8px solid var(--line);
+    border-radius:15px;padding:15px 16px;font-size:15px;color:var(--ink);
+    display:flex;align-items:center;gap:12px;line-height:1.55;
+    transition:border-color .15s, background .15s, transform .1s, box-shadow .15s;
+    font-family:inherit;
+  }
+  .opt:active{transform:scale(.99)}
+  .opt .dot{
+    flex:0 0 22px;height:22px;border-radius:50%;border:2px solid #5b5482;
+    transition:all .15s;position:relative;margin-top:1px;
+  }
+  .opt.sel{border-color:var(--brand);background:var(--brand-soft);box-shadow:0 0 0 3px rgba(167,139,250,.12)}
+  .opt.sel .dot{border-color:var(--brand);background:var(--brand)}
+  .opt.sel .dot::after{content:"";position:absolute;inset:0;margin:auto;width:7px;height:7px;background:#fff;border-radius:50%}
+  .quiz-foot{margin-top:22px}
+
+  /* ===== 夜更かし度メーター ===== */
+  .gauge{--pct:0%;--col:var(--brand);position:relative;width:100%;max-width:330px;margin:18px auto 2px;padding:14px 0}
+  .gauge .track{height:26px;border-radius:999px;background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.12);box-shadow:inset 0 2px 6px rgba(0,0,0,.4);overflow:hidden}
+  .gauge .fill{height:100%;width:var(--pct);border-radius:999px;background:linear-gradient(90deg,var(--col),color-mix(in srgb,var(--col) 55%,#ffffff));box-shadow:0 0 16px -1px var(--col);transition:width 1.3s cubic-bezier(.16,.84,.3,1)}
+  .gauge .coin{position:absolute;top:50%;left:var(--pct);transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:#1d1a38;border:3px solid var(--col);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--col);box-shadow:0 0 18px -2px var(--col);transition:left 1.3s cubic-bezier(.16,.84,.3,1)}
+  .gauge .scale{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:8px;padding:0 2px}
+
+  /* ===== 結果 ===== */
+  .result-head{text-align:center;margin-bottom:4px}
+  .r-eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--muted)}
+  .pct-num{font-family:"Zen Maru Gothic";font-weight:900;font-size:44px;line-height:1;margin-top:10px;text-align:center}
+  .pct-num small{font-size:17px;color:var(--muted);font-weight:700;letter-spacing:.06em;display:block;margin-bottom:2px}
+  .pct-num span{font-size:22px;margin-left:2px}
+  .r-title{font-family:"Zen Maru Gothic";font-weight:900;font-size:25px;text-align:center;margin:8px 0 2px}
+  .r-catch{text-align:center;color:var(--muted);font-size:14px;margin-bottom:18px}
+  .r-body{font-size:15px;line-height:1.85;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:16px;padding:18px 17px}
+  .r-body .roast{display:block;margin-top:12px;padding-top:12px;border-top:1px dashed rgba(255,255,255,.16)}
+  .r-body .roast b{color:#f9a8d4}
+  .share-label{text-align:center;font-size:13px;color:var(--muted);margin:22px 0 10px;font-weight:700}
+
+  /* ===== トースト ===== */
+  .toast{
+    position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);
+    background:#0c0c16;border:1px solid rgba(255,255,255,.15);color:#fff;padding:12px 20px;border-radius:999px;font-size:14px;
+    font-weight:700;opacity:0;pointer-events:none;transition:all .3s;z-index:99;box-shadow:0 10px 30px -8px rgba(0,0,0,.7)
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  /* ===== FAQ（SEO） ===== */
+  .seo-faq{max-width:480px;margin:26px auto 0;padding:24px 22px;background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:var(--radius)}
+  .seo-faq h2{font-family:"Zen Maru Gothic";font-size:18px;margin-bottom:14px}
+  .seo-faq details{border-bottom:1px solid var(--line);padding:12px 0}
+  .seo-faq summary{font-weight:700;font-size:14.5px;cursor:pointer;list-style:none;color:var(--ink)}
+  .seo-faq summary::-webkit-details-marker{display:none}
+  .seo-faq summary::before{content:"Q. ";color:var(--brand);font-family:"Zen Maru Gothic"}
+  .seo-faq p{font-size:13.5px;color:var(--muted);margin-top:8px;padding-left:2px}
+  .disclaimer{max-width:480px;margin:16px auto 0;text-align:center;font-size:11.5px;color:#7d77a0;line-height:1.7}
+
+  @media(max-width:380px){ .title{font-size:24px} .q-text{font-size:18px} }
+  @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <!-- ====================== スタート画面 ====================== -->
+  <section id="start" class="screen card active">
+    <span class="eyebrow">🌙 無料・8問・30秒</span>
+    <h1 class="title">【夜型人間の生態】
+      <span class="sub">あなたの「真夜中テンション」タイプ</span>
+    </h1>
+
+    <div class="hero">
+      <div class="gauge" style="--pct:62%;--col:#a78bfa;max-width:300px">
+        <div class="track"><div class="fill"></div></div>
+        <div class="coin">☾</div>
+        <div class="scale"><span>朝型</span><span>夜型</span></div>
+      </div>
+    </div>
+
+    <p class="lead">世界が寝静まる頃、なぜか目が冴えてくる…。<br>そんなあなたの<b>夜更かし度と真夜中テンション</b>は？<br>直感で答えて、夜の生態をチェック。</p>
+
+    <div class="meta-row">
+      <span class="chip">#不眠症チェック</span>
+      <span class="chip">#夜型人間性格</span>
+      <span class="chip">#面白い診断テスト</span>
+    </div>
+
+    <!-- 黄金広告枠①：開始ボタンの上 -->
+    <div class="ad-slot">【スポンサーリンク / 広告】</div>
+
+    <button class="btn" onclick="startQuiz()">診断スタート →</button>
+  </section>
+
+  <!-- ====================== クイズ画面 ====================== -->
+  <section id="quiz" class="screen card">
+    <div class="progress-head">
+      <span class="q-count">Q<b id="qNow">1</b> <span style="font-size:12px">/ 8</span></span>
+      <span class="q-count" id="qPctTxt" style="font-size:12px">12%</span>
+    </div>
+    <div class="bar"><i id="bar"></i></div>
+
+    <p class="q-text" id="qText"></p>
+    <div class="options" id="opts"></div>
+
+    <div class="quiz-foot">
+      <button class="btn" id="nextBtn" disabled onclick="goNext()">次へ →</button>
+      <button class="btn ghost" id="backBtn" style="margin-top:10px;display:none" onclick="goBack()">← 前の質問へ</button>
+    </div>
+  </section>
+
+  <!-- ====================== 結果画面 ====================== -->
+  <section id="result" class="screen card">
+    <!-- 黄金広告枠②：結果ラベルの真上 -->
+    <div class="ad-slot">【スポンサーリンク / 広告】</div>
+
+    <div class="result-head">
+      <div class="r-eyebrow">あなたの夜更かし度は…</div>
+      <div class="gauge" id="rGauge">
+        <div class="track"><div class="fill"></div></div>
+        <div class="coin">☾</div>
+        <div class="scale"><span>朝型</span><span>夜型</span></div>
+      </div>
+      <div class="pct-num"><small>夜更かし度</small><span id="rPct">0</span><span>%</span></div>
+      <h2 class="r-title" id="rTitle"></h2>
+      <p class="r-catch" id="rCatch"></p>
+    </div>
+
+    <div class="r-body" id="rBody"></div>
+
+    <p class="share-label">あなたの友達は朝型？夜型？ シェアして当て合おう👇</p>
+    <button class="btn" onclick="copyShare()">📋 結果をシェアする（コピー）</button>
+    <div class="btn-row">
+      <button class="btn x" onclick="shareX()">𝕏 でポスト</button>
+      <button class="btn line" onclick="shareLine()">LINEで送る</button>
+    </div>
+    <button class="btn ghost" style="margin-top:10px" onclick="restart()">↺ もう一度診断する</button>
+  </section>
+
+  <!-- ====================== FAQ（SEO 置底ブロック） ====================== -->
+  <section class="seo-faq">
+    <h2>よくある質問（夜型人間 性格 FAQ）</h2>
+    <details open>
+      <summary>この「真夜中テンションタイプ」診断はどんなテストですか？</summary>
+      <p>8つの質問に答えるだけで、あなたの夜型度や夜のテンションのクセが分かる、無料で面白い 診断テストです。あくまで娯楽目的の心理テストであり、医学的な不眠症 チェックや診断ではありません。</p>
+    </details>
+    <details>
+      <summary>夜型人間 性格には特徴がありますか？</summary>
+      <p>一般に夜型の人は、夜の静かな時間に集中力や創造性が高まりやすいと言われることがあります。ただし個人差が大きいので、本診断は夜型人間 性格の傾向を楽しく知るきっかけとしてご利用ください。</p>
+    </details>
+    <details>
+      <summary>夜なかなか眠れない状態が続くときはどうすればいいですか？</summary>
+      <p>毎晩眠れない、日中の生活に支障が出るなど不眠が続く場合は、自己判断せず医療機関や専門家に相談することをおすすめします。本診断は娯楽目的であり、不眠症 チェックの代わりにはなりません。</p>
+    </details>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SEO Articles Section & Footer
+       ════════════════════════════════════════════ -->
+  <style>
+    /* 真夜中テンションタイプ診断專用的優雅隱蔽式頁尾樣式 */
+    .seo-articles-container {
+      max-width: 480px;
+      margin: 24px auto 0;
+      padding: 20px;
+      background: rgba(167, 139, 250, 0.03); /* 使用網頁內建的星空紫調進行極淡化半透明處理 */
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+    .seo-article {
+      margin-bottom: 24px;
+    }
+    .seo-article:last-child {
+      margin-bottom: 0;
+    }
+    .seo-article-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--muted);
+      opacity: 0.8;
+      margin-bottom: 10px;
+      letter-spacing: 0.04em;
+    }
+    .seo-article-p {
+      font-size: 12px;
+      color: rgba(167, 159, 206, 0.55); /* 降低對比度的煙燻灰紫字體，完美隱蔽不刺眼 */
+      line-height: 1.85;
+      text-align: justify;
+      margin-bottom: 8px;
+    }
+    .seo-article-p:last-child {
+      margin-bottom: 0;
+    }
+    .disclaimer-final {
+      max-width: 480px;
+      margin: 24px auto 0;
+      text-align: center;
+      font-size: 11.5px;
+      color: #7d77a0;
+      line-height: 1.7;
+    }
+    .site-footer-final {
+      text-align: center;
+      font-size: 11px;
+      color: var(--muted);
+      padding: 24px 0 16px;
+      letter-spacing: 0.04em;
+      opacity: 0.7;
+    }
+  </style>
+
+  <section class="seo-articles-container">
+    <!-- 1️⃣ 第一篇 SEO 文章：聚焦於夜型人間的生態與真夜中テンション的關係 -->
+    <article class="seo-article">
+      <h3 class="seo-article-title">コラム：なぜ深夜に冴える？「夜型人間 性格」の傾向と真夜中テンションの魅力</h3>
+      <p class="seo-article-p">
+        静まり返った真夜中、世界が眠りにつく時間帯に「なぜか頭が冴えてくる」「昼間よりも圧倒的に作業や考えごとが捗る」といった経験を持つ人は少なくありません。現代のライフスタイルにおいて、朝型と夜型の生活リズムは個人の好みの枠を超え、独自の行動特性やオタク生態、ひいてはクリエイティブな思考パターンと深く結びついていることが分かっています。2026年現在も、自分の夜の生態をユーモラスに暴き出す「真夜中テンションタイプ診断」のような面白い 診断テストが、多くのユーザーの共感を集めています。
+      </p>
+      <p class="seo-article-p">
+        心理学や時間生物学の観点から見ると、夜型人間 性格の持ち主は、静寂に包まれた時間帯にノイズから解放され、高い集中力や創造性を発揮しやすい傾向があります。しかし一方で、夜更かしが慢性化することによって「夜は天才、朝は廃人」という極端な二面性に悩まされることも少なくありません。心理テストを通じて自分の夜更かし度や夜のテンションのクセを客観的に可視化することは、単なる気まぐれではなく、自分の体内時計の現在地を知るための極めて有益な契機となります。
+      </p>
+      <p class="seo-article-p">
+        健康的な生活リズムを守る「健全すぎる朝型さん」への憧れを持ちつつも、真夜中の住人ならではの繊細な感性や、深夜に訪れる謎の万能感を自分自身のユニークな個性として受け入れること。それこそが、情報過多でストレスの多い現代社会を自分らしくしなやかに生き抜くための、新しい自己理解のスタイルと言えるでしょう。
+      </p>
+    </article>
+
+    <!-- 2️⃣ 第二篇 SEO 文章：聚焦於不眠症チェック、生活平衡與有趣心理測驗的社交價值 -->
+    <article class="seo-article">
+      <h3 class="seo-article-title">コラム：毎晩眠れない悩みと「面白い 診断テスト」をきっかけにする睡眠習慣の見直し</h3>
+      <p class="seo-article-p">
+        「早く寝なければいけない」と思えば思うほど目が冴えてしまい、気づけばスマホの画面をだらだらと眺めて深夜2時を過ぎている——このような夜の悪循環に心当たりがある人は多いはずです。医学的な観点からのアプローチが必要な場合もありますが、まずは自分の夜更かしの癖や情緒の波をエンターテインメントとして楽しくセルフチェックできる心理テストは、過度な不安を和らげ、ライフスタイルを見直すソフトなきっかけとして広く愛されています。
+      </p>
+      <p class="seo-article-p">
+        注意すべきなのは、本診断テストが提供する分析レポートやユーモラスな突っ込みは、本格的な「不眠症 チェック」や臨床的な診断の代わりにはならないという点です。たとえば、勢いでメッセージを送って黒歴史を量産しがちな「真夜中ハイの常習犯」タイプと、22時には眠くなる規則正しいタイプでは、深夜における財布や理性の緩みやすさが根本的に異なります。自分の生活リズムが一般的な基準からどれくらいズレているかを自覚しておくことは、心身のバランスを保つための大切な防衛線となります。
+      </p>
+      <p class="seo-article-p">
+        SNSを通じてお互いの「真夜中テンション」をシェアし、友達や恋人と結果を当て合うことは、孤独になりがちな深夜の時間に安心感のある繋がりを生み出す素晴らしいツールです。面白い 診断テストをきっかけに、朝日を見たときの「やってしまった」という罪悪感をユーモアに変えながら、自分にとって本当に快適な睡眠環境やデジタルデトックスのタイミングをチューニングしてみてはいかがでしょうか。
+      </p>
+    </article>
+  </section>
+
+  <p class="disclaimer-final">※本診断は娯楽・自己理解を目的とした面白い 診断テストです。医学的な不眠症 チェックではありません。<br>睡眠の悩みが続く場合は、専門機関への相談をおすすめします。</p>
+  
+  <div class="site-footer-final">© 2026 真夜中テンションタイプ診断 ｜ 夜は静かに休もう 🌙</div>
+</div>
+
+<div class="toast" id="toast">コピーしました！</div>
+
+
+<script>
+/* =========================================================================
+   設問データ
+   各選択肢は score:1〜4（高いほど「夜型寄り＝夜更かし度・真夜中テンションが高い」）。
+   ・打散（シャッフル）：各設問内のスコアの並びをわざとバラバラに定義し、
+     さらに renderQuestion() で表示順を毎回ランダム化するため、
+     「上から低→高で並んでいる」と一目で分からないようにしている。
+   ========================================================================= */
+const QUESTIONS = [
+  { q:"平日、自然に眠くなるのは何時ごろ？", a:[
+    {t:"22時には、もう眠くなる", s:1},
+    {t:"深夜2〜3時、むしろ冴えてくる", s:4},
+    {t:"1時くらいまでは余裕で起きてる", s:3},
+    {t:"24時前後には眠くなる", s:2},
+  ]},
+  { q:"夜中にいちばん捗る作業は？", a:[
+    {t:"特にない。夜はもう寝てる", s:1},
+    {t:"SNSや動画をだらだら見る", s:3},
+    {t:"創作・作業・考えごとが爆発的に進む", s:4},
+    {t:"軽く読書や音楽でまったり過ごす", s:2},
+  ]},
+  { q:"「もう寝なきゃ」と思ってからの行動は？", a:[
+    {t:"思ったら、すぐ寝られる", s:1},
+    {t:"スマホを少し見てから寝る", s:2},
+    {t:"気づいたら2時間が経っている", s:4},
+    {t:"なんだかんだ30分後には寝る", s:3},
+  ]},
+  { q:"真夜中のテンション、正直どう？", a:[
+    {t:"眠すぎて無。とにかく早く寝たい", s:1},
+    {t:"謎の万能感とハイが訪れる", s:4},
+    {t:"ちょっとセンチメンタルになる", s:3},
+    {t:"落ち着いて、穏やかになる", s:2},
+  ]},
+  { q:"休日の朝、あなたは？", a:[
+    {t:"いつも通り、早起きできる", s:1},
+    {t:"昼前には、なんとか起きる", s:2},
+    {t:"昼過ぎ〜夕方まで爆睡している", s:4},
+    {t:"二度寝しつつ、午前中には起きる", s:3},
+  ]},
+  { q:"夜食やカフェイン、夜の摂取は？", a:[
+    {t:"夜は基本、何も口にしない", s:1},
+    {t:"たまにお茶を飲むくらい", s:2},
+    {t:"深夜のラーメンやお菓子は正義", s:4},
+    {t:"小腹がすけば、軽く食べる", s:3},
+  ]},
+  { q:"夜中にメッセージを送りたくなったら？", a:[
+    {t:"送らない。朝になってからにする", s:1},
+    {t:"下書きだけして、寝る", s:2},
+    {t:"勢いのまま、送ってしまう", s:4},
+    {t:"相手を選んで、送る", s:3},
+  ]},
+  { q:"あなたにとって「夜」とは？", a:[
+    {t:"寝るための時間", s:1},
+    {t:"自分が解放される、本番の時間", s:4},
+    {t:"ほっと一息つける、自由時間", s:3},
+    {t:"一日を終える、休息の時間", s:2},
+  ]},
+];
+
+/* =========================================================================
+   結果データ ＆ スコア区間（機率平衡の核心）
+   ─────────────────────────────────────────────────────────────────────────
+   ■ 理論スコア：8問 × 各1〜4点  →  最低 8点 / 最高 32点
+   ■ なぜ「等分割」にしないか：
+     ランダム回答時の合計点は中心極限定理によりベル型に偏る。
+     区間を等幅で切ると中央の結果に40%以上が集中し「8割が同じ結果」になる。
+   ■ 対策：合計点の確率分布の「五分位点（quintile）」で区切る。
+     境界を 16 / 18 / 20 / 22 に設定すると、ランダム回答時の各結果の出現率は
+        8–16点 ≈ 13.6% / 17–18 ≈ 18.4% / 19–20 ≈ 24.1% /
+        21–22 ≈ 22.1% / 23–32 ≈ 21.8%
+     となり、各結果がほぼ均等（最大でも約24%）に分散する＝特定結果の独占を防止。
+     ※これは「ランダム回答時」の母集団分布。実際の回答は本人の生活リズムを
+       反映して偏るのが正常（＝当たる）で、これは設計上の不具合ではない。
+   ========================================================================= */
+const RESULTS = [
+  { min:8,  max:16, owl:15, col:"#fbbf6b",
+    title:"健全すぎる朝型さん", catch:"夜更かしとは無縁の優等生（夜更かし度15%）",
+    good:"あなたは規則正しい生活リズムの持ち主。早寝早起きで体内時計はほぼ完璧、心も体も整っている健康優良タイプです。安定感があり、朝から全力を出せるその姿は、夜型人間たちの密かな憧れの的。",
+    roast:"…ただ、その正しさゆえに<b>夜更かし勢の“あの謎の高揚感”を知らない</b>のは、ちょっともったいないかも。22時以降の世界にも、案外おもしろいものが転がってますよ（※ほどほどに）。",
+    line:"正しすぎて、深夜の楽しさを知らない" },
+
+  { min:17, max:18, owl:38, col:"#c0a3f0",
+    title:"たまに夜更かしする一般人", catch:"バランス型の世渡り上手（夜更かし度38%）",
+    good:"あなたは昼も夜もそこそこ楽しめる、バランス感覚の優れたタイプ。基本は健康的なのに、たまの夜更かしも楽しめる柔軟さがある。オンオフの切り替えが上手で、いちばん人生をうまく回している人です。",
+    roast:"ただし「今日は早く寝よう」と思った日に限って、<b>気づけば日付が変わってる</b>のはなぜ？ その“ちょっとだけ”が一番危ない。毎回、明日の自分に小さく謝ってますよね。",
+    line:"「今日は早く寝る」と言った日ほど夜更かし" },
+
+  { min:19, max:20, owl:58, col:"#9b7bf0",
+    title:"夜にエンジンがかかる人", catch:"静かな夜を愛する思索家（夜更かし度58%）",
+    good:"あなたは夜になると調子が出てくる、集中力タイプ。静まり返った夜の時間に、思考や創作がぐっと深まります。昼の喧騒に流されず、自分だけの世界をしっかり持っている、芯のある魅力的な人。",
+    roast:"でも、その“夜の集中”を言い訳に、<b>毎晩じわじわ就寝時間が後ろ倒し</b>になってませんか？ 夜のあなたは天才、朝のあなたは廃人。その両者が同一人物だということを、どうかお忘れなく。",
+    line:"夜は天才、朝は廃人。同一人物です" },
+
+  { min:21, max:22, owl:80, col:"#7c6cf5",
+    title:"真夜中ハイの常習犯", catch:"深夜のテンションお化け（夜更かし度80%）",
+    good:"あなたは夜が更けるほど元気になる、エネルギッシュな夜型人間。深夜の謎の万能感を味方につけ、勢いと行動力で物事を進められる。一緒に夜更かしすると最高に楽しい、唯一無二のムードメーカーです。",
+    roast:"……ただ、その深夜テンションで<b>送ったメッセージや勢いの買い物、翌朝に後悔</b>してませんか？ 真夜中の自分は、だいたい財布も口も緩い。名言が生まれる確率と、黒歴史が生まれる確率は、ほぼ同じです。",
+    line:"深夜テンションで黒歴史を量産しがち" },
+
+  { min:23, max:32, owl:100, col:"#67e8f9",
+    title:"完全夜行性・真夜中の住人", catch:"朝日を敵とする夜の王（夜更かし度100%）",
+    good:"あなたは完全に夜へ最適化された、生粋のナイトオウル。深夜こそが本番で、世界が眠る時間に最高のパフォーマンスを発揮します。独自のペースを貫く強さと、夜の静寂を愛する繊細な感性を持つ、特別な人。",
+    roast:"……が！ その生活、<b>もはや時差ボケが永住</b>してませんか？ 朝日を見ると「やってしまった」、太陽はもはや敵。体内時計はとっくに海外を旅行中です。たまには朝型の世界へ、パスポートを取りに行きましょう。",
+    line:"朝日を見ると「やってしまった」と思う" },
+];
+
+const QUIZ_NAME = "【夜型人間の生態】真夜中テンションタイプ診断";
+
+/* ===== 状態管理 ===== */
+let idx = 0;
+let answers = new Array(QUESTIONS.length).fill(null);
+let renderOrder = [];
+let currentResult = null;
+
+const $ = id => document.getElementById(id);
+function show(scr){ document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active')); $(scr).classList.add('active'); window.scrollTo({top:0,behavior:'smooth'}); }
+function shuffle(arr){ const a=arr.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
+
+function startQuiz(){ idx=0; answers.fill(null); show('quiz'); renderQuestion(); }
+
+function renderQuestion(){
+  const q = QUESTIONS[idx];
+  $('qText').textContent = q.q;
+  $('qNow').textContent = idx+1;
+  $('bar').style.width = Math.round((idx/QUESTIONS.length)*100) + '%';
+  $('qPctTxt').textContent = Math.round(((idx+1)/QUESTIONS.length)*100) + '%';
+
+  renderOrder = shuffle(q.a.map((_,i)=>i));
+  const box = $('opts'); box.innerHTML='';
+  renderOrder.forEach(optIndex=>{
+    const o = q.a[optIndex];
+    const el = document.createElement('button');
+    el.className='opt'; el.type='button';
+    el.innerHTML = `<span class="dot"></span><span>${o.t}</span>`;
+    el.onclick = ()=> selectOption(o.s, el);
+    box.appendChild(el);
+  });
+  if(answers[idx]!==null){
+    [...box.children].forEach((el,i)=>{ if(QUESTIONS[idx].a[renderOrder[i]].s===answers[idx]) el.classList.add('sel'); });
+  }
+
+  $('nextBtn').disabled = answers[idx]===null;
+  $('nextBtn').textContent = (idx===QUESTIONS.length-1) ? '診断結果を見る ✨' : '次へ →';
+  $('backBtn').style.display = idx>0 ? 'block' : 'none';
+}
+
+function selectOption(score, el){
+  answers[idx] = score;
+  [...$('opts').children].forEach(c=>c.classList.remove('sel'));
+  el.classList.add('sel');
+  $('nextBtn').disabled = false;
+}
+
+function goNext(){
+  if(answers[idx]===null) return;
+  if(idx < QUESTIONS.length-1){ idx++; renderQuestion(); }
+  else { showResult(); }
+}
+function goBack(){ if(idx>0){ idx--; renderQuestion(); } }
+
+/* ===== 採点 → 結果表示（ページ遷移せず滑らかに表示） ===== */
+function showResult(){
+  const total = answers.reduce((a,b)=>a+(b||0),0); // 8〜32点
+  // 明確なスコア区間で判定（上の確率平衡コメント参照／高いほど夜型寄り）
+  let r;
+  if      (total >= 8  && total <= 16) r = RESULTS[0]; // ≈13.6%
+  else if (total >= 17 && total <= 18) r = RESULTS[1]; // ≈18.4%
+  else if (total >= 19 && total <= 20) r = RESULTS[2]; // ≈24.1%
+  else if (total >= 21 && total <= 22) r = RESULTS[3]; // ≈22.1%
+  else                                 r = RESULTS[4]; // 23〜32 ≈21.8%
+  currentResult = r;
+
+  $('rTitle').textContent = r.title;
+  $('rCatch').textContent = r.catch;
+  $('rBody').innerHTML = `${r.good}<span class="roast">${r.roast}</span>`;
+
+  const g = $('rGauge');
+  g.style.setProperty('--col', r.col);
+  g.style.setProperty('--pct', '0%');
+
+  show('result');
+
+  requestAnimationFrame(()=>{ setTimeout(()=>g.style.setProperty('--pct', r.owl+'%'), 120); });
+  countUp($('rPct'), r.owl, 1200);
+}
+
+function countUp(elm, target, dur){
+  const start=performance.now();
+  function step(now){
+    const p=Math.min((now-start)/dur,1);
+    const eased=1-Math.pow(1-p,3);
+    elm.textContent=Math.round(eased*target);
+    if(p<1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+/* ===== シェア機能 ===== */
+function buildShareText(){
+  // 【測驗名】+【結果】+【幽默短評】+【本站連結】
+  const url = window.location.href; // 現在のURLを動的取得
+  return `${QUIZ_NAME}\n\n私の真夜中テンションは【夜更かし度${currentResult.owl}%／${currentResult.title}】でした🌙\n→「${currentResult.line}」\n\nあなたは朝型？夜型？診断はこちら👇\n${url}`;
+}
+function copyShare(){
+  const text = buildShareText();
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(()=>toast('コピーしました！'),()=>fallbackCopy(text));
+  } else { fallbackCopy(text); }
+}
+function fallbackCopy(text){
+  const ta=document.createElement('textarea');
+  ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.focus(); ta.select();
+  try{ document.execCommand('copy'); toast('コピーしました！'); }catch(e){ toast('コピーできませんでした'); }
+  document.body.removeChild(ta);
+}
+function shareX(){
+  const url = window.location.href;
+  const hashtags = "真夜中テンション診断,夜型人間,面白い診断テスト"; // X用ハッシュタグ3つ
+  const text = `${QUIZ_NAME}\n私は【夜更かし度${currentResult.owl}%／${currentResult.title}】でした🌙\n「${currentResult.line}」\nあなたは朝型？夜型？👇`;
+  const u = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}&hashtags=${encodeURIComponent(hashtags)}`;
+  window.open(u,'_blank','noopener');
+}
+function shareLine(){
+  const url = window.location.href;
+  const text = `${QUIZ_NAME}\n私は【夜更かし度${currentResult.owl}%／${currentResult.title}】でした🌙 あなたは朝型？夜型？`;
+  const u = `https://line.me/R/msg/text/?${encodeURIComponent(text+"\n"+url)}`;
+  window.open(u,'_blank','noopener');
+}
+
+function restart(){ idx=0; answers.fill(null); currentResult=null; show('start'); }
+
+/* ===== トースト ===== */
+let toastTimer;
+function toast(msg){
+  const t=$('toast'); t.textContent=msg; t.classList.add('show');
+  clearTimeout(toastTimer); toastTimer=setTimeout(()=>t.classList.remove('show'),1900);
+}
+</script>
+</body>
+</html>
