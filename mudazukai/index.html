@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ SEO 基本タグ（Google日本検索向け） ============ -->
+<title>【買い物の癖】無駄遣いモンスター診断｜金銭感覚 診断・浪費家 タイプ・お小遣い占い</title>
+<meta name="description" content="無料の心理テスト。8つの質問に答えるだけで、あなたがどんな時に無駄遣いしやすいかが分かる金銭感覚 診断。浪費家 タイプを楽しく辛口に診断するお小遣い占いです。">
+<meta name="keywords" content="金銭感覚 診断,浪費家 タイプ,お小遣い 占い,無駄遣い,心理テスト,買い物,無料診断">
+<meta name="robots" content="index, follow">
+
+<!-- ============ Open Graph（X / Threads / LINE 用カード） ============ -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="【買い物の癖】あなたの「無駄遣い」モンスター診断">
+<meta property="og:description" content="あなたが財布の紐をゆるめる瞬間は？ 8問で分かる無料の金銭感覚 診断。あなたは『鉄壁の倹約マスター』？それとも『財布溶かす伝説のモンスター』？">
+<meta property="og:image" content="og-image.png">
+<meta property="og:url" content="">
+<meta property="og:site_name" content="無駄遣いモンスター診断">
+
+<!-- ============ Twitter Card ============ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="【買い物の癖】あなたの「無駄遣い」モンスター診断">
+<meta name="twitter:description" content="あなたが財布の紐をゆるめる瞬間は？ 8問で分かる無料の金銭感覚 診断・浪費家 タイプ占い。">
+<meta name="twitter:image" content="og-image.png">
+
+<!-- ============ FAQ 構造化データ（JSON-LD / Schema Markup） ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "この「無駄遣いモンスター診断」はどんな診断ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "8つの質問に答えるだけで、あなたがどんな時に無駄遣いしやすいかを「モンスタータイプ」で楽しくチェックできる無料の金銭感覚 診断です。あくまで娯楽目的のお小遣い占いであり、専門的なファイナンシャルアドバイスではありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "浪費家 タイプと診断されたら、どうすればいいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "買う前に「24時間待つ」ルールを作ったり、毎月のお小遣い予算を先に決めておくのがおすすめです。診断結果はあくまで傾向なので、自分の買い物のクセを知るきっかけとして気軽にご利用ください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "この金銭感覚 診断は無料で何回でもできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、完全無料で会員登録も不要です。気分やお給料日のタイミングで結果が変わることもあるので、定期的なお小遣い占いとして楽しんでください。"
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#2b2b33;
+    --muted:#83838f;
+    --line:#ece7ef;
+    --card:#ffffff;
+    --brand:#16b67a;
+    --brand-soft:#e6f7ef;
+    --gold:#f5b301;
+    --shadow:0 18px 40px -22px rgba(55,60,50,.5);
+    --radius:22px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Zen Kaku Gothic New",-apple-system,"Hiragino Kaku Gothic ProN",sans-serif;
+    color:var(--ink);
+    line-height:1.7;
+    background:
+      radial-gradient(1100px 520px at 16% -8%, #e6f7ee 0%, rgba(230,247,238,0) 60%),
+      radial-gradient(900px 560px at 94% 6%, #fdeede 0%, rgba(253,238,222,0) 55%),
+      linear-gradient(180deg,#f6f5f0 0%, #f6f3f5 100%);
+    min-height:100vh;
+    padding:18px;
+    display:flex;
+    justify-content:center;
+  }
+  .wrap{width:100%;max-width:480px;margin:10px auto 40px}
+
+  .card{
+    background:var(--card);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:28px 22px;
+    border:1px solid rgba(255,255,255,.7);
+  }
+  .screen{display:none;animation:rise .5s cubic-bezier(.2,.8,.2,1)}
+  .screen.active{display:block}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  /* ===== 広告枠 ===== */
+  .ad-slot{min-height:250px;background:#f0f0f0;margin:20px 0;text-align:center;line-height:250px;color:#aaa;border-radius:14px;font-size:13px;letter-spacing:.04em}
+
+  /* ===== スタート画面 ===== */
+  .eyebrow{
+    display:inline-block;font-size:12px;font-weight:700;letter-spacing:.1em;
+    color:var(--brand);background:var(--brand-soft);
+    padding:6px 13px;border-radius:999px;margin-bottom:16px;
+  }
+  .title{
+    font-family:"Zen Maru Gothic",sans-serif;font-weight:900;
+    font-size:28px;line-height:1.35;letter-spacing:-.01em;margin-bottom:6px;
+  }
+  .title .sub{display:block;font-size:15px;color:var(--muted);font-weight:700;margin-top:10px}
+  .hero{display:flex;justify-content:center;margin:24px 0 8px}
+  .lead{color:var(--muted);font-size:14.5px;margin:14px 2px 0}
+  .meta-row{display:flex;gap:12px;justify-content:center;margin:18px 0 4px;flex-wrap:wrap}
+  .chip{font-size:12px;color:var(--muted);background:#f5f3f7;border:1px solid var(--line);padding:6px 12px;border-radius:999px}
+
+  /* ===== ボタン ===== */
+  .btn{
+    display:block;width:100%;border:none;cursor:pointer;
+    font-family:"Zen Maru Gothic",sans-serif;font-weight:700;font-size:17px;
+    color:#fff;background:linear-gradient(135deg,#1ec488,#13a86f);
+    padding:16px;border-radius:16px;
+    box-shadow:0 12px 22px -10px rgba(22,182,122,.85);
+    transition:transform .12s ease, box-shadow .12s ease, opacity .2s;
+  }
+  .btn:active{transform:translateY(2px) scale(.99)}
+  .btn:disabled{opacity:.4;cursor:not-allowed;box-shadow:none;filter:grayscale(.3)}
+  .btn.ghost{background:#fff;color:var(--ink);border:1.6px solid var(--line);box-shadow:none}
+  .btn.x{background:#111;box-shadow:0 12px 22px -10px rgba(0,0,0,.55)}
+  .btn.line{background:#06c755;box-shadow:0 12px 22px -10px rgba(6,199,85,.6)}
+  .btn-row{display:flex;gap:10px;margin-top:10px}
+  .btn-row .btn{font-size:15px;padding:14px}
+
+  /* ===== 進捗 ===== */
+  .progress-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+  .q-count{font-family:"Zen Maru Gothic";font-weight:700;font-size:14px;color:var(--muted)}
+  .q-count b{color:var(--brand);font-size:20px}
+  .bar{height:8px;background:#eee9ef;border-radius:999px;overflow:hidden}
+  .bar > i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#1ec488,#f5b301);transition:width .45s cubic-bezier(.2,.8,.2,1)}
+
+  /* ===== 設問 ===== */
+  .q-text{
+    font-family:"Zen Maru Gothic",sans-serif;font-weight:700;
+    font-size:20px;line-height:1.5;margin:18px 0 18px;
+  }
+  .options{display:flex;flex-direction:column;gap:11px}
+  .opt{
+    text-align:left;width:100%;cursor:pointer;
+    background:#fbfafc;border:1.8px solid var(--line);
+    border-radius:15px;padding:15px 16px;font-size:15px;color:var(--ink);
+    display:flex;align-items:center;gap:12px;line-height:1.55;
+    transition:border-color .15s, background .15s, transform .1s;
+    font-family:inherit;
+  }
+  .opt:active{transform:scale(.99)}
+  .opt .dot{
+    flex:0 0 22px;height:22px;border-radius:50%;border:2px solid #d6d2dc;
+    transition:all .15s;position:relative;margin-top:1px;
+  }
+  .opt.sel{border-color:var(--brand);background:var(--brand-soft)}
+  .opt.sel .dot{border-color:var(--brand);background:var(--brand)}
+  .opt.sel .dot::after{content:"";position:absolute;inset:0;margin:auto;width:7px;height:7px;background:#fff;border-radius:50%}
+  .quiz-foot{margin-top:22px}
+
+  /* ===== 浪費危険度ゲージ ===== */
+  .gauge{--pct:0%;--col:var(--brand);position:relative;width:100%;max-width:330px;margin:18px auto 2px;padding:14px 0}
+  .gauge .track{height:26px;border-radius:999px;background:#eceaf0;border:2px solid #fff;box-shadow:inset 0 2px 5px rgba(0,0,0,.07);overflow:hidden}
+  .gauge .fill{height:100%;width:var(--pct);border-radius:999px;background:linear-gradient(90deg,var(--col),color-mix(in srgb,var(--col) 60%,#fff));transition:width 1.3s cubic-bezier(.16,.84,.3,1)}
+  .gauge .coin{position:absolute;top:50%;left:var(--pct);transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:#fff;border:3px solid var(--col);display:flex;align-items:center;justify-content:center;font-family:"Zen Maru Gothic";font-weight:900;color:var(--col);font-size:22px;box-shadow:0 6px 14px -4px rgba(0,0,0,.28);transition:left 1.3s cubic-bezier(.16,.84,.3,1)}
+  .gauge .scale{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:8px;padding:0 2px}
+
+  /* ===== 結果 ===== */
+  .result-head{text-align:center;margin-bottom:4px}
+  .r-eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--muted)}
+  .pct-num{font-family:"Zen Maru Gothic";font-weight:900;font-size:44px;line-height:1;margin-top:10px;text-align:center}
+  .pct-num small{font-size:18px;color:var(--muted);font-weight:700;letter-spacing:.08em;display:block;margin-bottom:2px}
+  .pct-num span{font-size:22px;margin-left:2px}
+  .r-title{font-family:"Zen Maru Gothic";font-weight:900;font-size:25px;text-align:center;margin:8px 0 2px}
+  .r-catch{text-align:center;color:var(--muted);font-size:14px;margin-bottom:18px}
+  .r-body{font-size:15px;line-height:1.85;background:#fbfafc;border:1px solid var(--line);border-radius:16px;padding:18px 17px}
+  .r-body .roast{display:block;margin-top:12px;padding-top:12px;border-top:1px dashed #ded9e2}
+  .r-body .roast b{color:#e0556a}
+  .share-label{text-align:center;font-size:13px;color:var(--muted);margin:22px 0 10px;font-weight:700}
+
+  /* ===== トースト ===== */
+  .toast{
+    position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);
+    background:var(--ink);color:#fff;padding:12px 20px;border-radius:999px;font-size:14px;
+    font-weight:700;opacity:0;pointer-events:none;transition:all .3s;z-index:99;box-shadow:0 10px 30px -8px rgba(0,0,0,.5)
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  /* ===== FAQ（SEO） ===== */
+  .seo-faq{max-width:480px;margin:26px auto 0;padding:24px 22px;background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:var(--radius)}
+  .seo-faq h2{font-family:"Zen Maru Gothic";font-size:18px;margin-bottom:14px}
+  .seo-faq details{border-bottom:1px solid var(--line);padding:12px 0}
+  .seo-faq summary{font-weight:700;font-size:14.5px;cursor:pointer;list-style:none}
+  .seo-faq summary::-webkit-details-marker{display:none}
+  .seo-faq summary::before{content:"Q. ";color:var(--brand);font-family:"Zen Maru Gothic"}
+  .seo-faq p{font-size:13.5px;color:var(--muted);margin-top:8px;padding-left:2px}
+  .disclaimer{max-width:480px;margin:16px auto 0;text-align:center;font-size:11.5px;color:#a5a3ad;line-height:1.7}
+
+  @media(max-width:380px){ .title{font-size:24px} .q-text{font-size:18px} }
+  @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <!-- ====================== スタート画面 ====================== -->
+  <section id="start" class="screen card active">
+    <span class="eyebrow">🪙 無料・8問・30秒</span>
+    <h1 class="title">【買い物の癖】
+      <span class="sub">あなたの「無駄遣い」モンスター診断</span>
+    </h1>
+
+    <div class="hero">
+      <div class="gauge" style="--pct:52%;--col:#f5b301;max-width:300px">
+        <div class="track"><div class="fill"></div></div>
+        <div class="coin">¥</div>
+        <div class="scale"><span>安全</span><span>あぶない</span></div>
+      </div>
+    </div>
+
+    <p class="lead">気づいたら今月もお金が消えてる…。<br>あなたが<b>財布の紐をゆるめる瞬間</b>はどこ？<br>サクッと答えて、自分の浪費モンスターをチェック。</p>
+
+    <div class="meta-row">
+      <span class="chip">#金銭感覚診断</span>
+      <span class="chip">#浪費家タイプ</span>
+      <span class="chip">#お小遣い占い</span>
+    </div>
+
+    <!-- 黄金広告枠①：開始ボタンの上 -->
+    <div class="ad-slot">【スポンサーリンク / 広告】</div>
+
+    <button class="btn" onclick="startQuiz()">診断スタート →</button>
+  </section>
+
+  <!-- ====================== クイズ画面 ====================== -->
+  <section id="quiz" class="screen card">
+    <div class="progress-head">
+      <span class="q-count">Q<b id="qNow">1</b> <span style="font-size:12px">/ 8</span></span>
+      <span class="q-count" id="qPctTxt" style="font-size:12px">12%</span>
+    </div>
+    <div class="bar"><i id="bar"></i></div>
+
+    <p class="q-text" id="qText"></p>
+    <div class="options" id="opts"></div>
+
+    <div class="quiz-foot">
+      <button class="btn" id="nextBtn" disabled onclick="goNext()">次へ →</button>
+      <button class="btn ghost" id="backBtn" style="margin-top:10px;display:none" onclick="goBack()">← 前の質問へ</button>
+    </div>
+  </section>
+
+  <!-- ====================== 結果画面 ====================== -->
+  <section id="result" class="screen card">
+    <!-- 黄金広告枠②：結果ラベルの真上 -->
+    <div class="ad-slot">【スポンサーリンク / 広告】</div>
+
+    <div class="result-head">
+      <div class="r-eyebrow">あなたの浪費危険度は…</div>
+      <div class="gauge" id="rGauge">
+        <div class="track"><div class="fill"></div></div>
+        <div class="coin">¥</div>
+        <div class="scale"><span>倹約</span><span>爆買い</span></div>
+      </div>
+      <div class="pct-num"><small>浪費危険度</small><span id="rPct">0</span><span>%</span></div>
+      <h2 class="r-title" id="rTitle"></h2>
+      <p class="r-catch" id="rCatch"></p>
+    </div>
+
+    <div class="r-body" id="rBody"></div>
+
+    <p class="share-label">あなたの友達はどのモンスター？ シェアして当て合おう👇</p>
+    <button class="btn" onclick="copyShare()">📋 結果をシェアする（コピー）</button>
+    <div class="btn-row">
+      <button class="btn x" onclick="shareX()">𝕏 でポスト</button>
+      <button class="btn line" onclick="shareLine()">LINEで送る</button>
+    </div>
+    <button class="btn ghost" style="margin-top:10px" onclick="restart()">↺ もう一度診断する</button>
+  </section>
+
+  <!-- ====================== FAQ（SEO 置底ブロック） ====================== -->
+  <section class="seo-faq">
+    <h2>よくある質問（金銭感覚 診断 FAQ）</h2>
+    <details open>
+      <summary>この「無駄遣いモンスター診断」はどんな診断ですか？</summary>
+      <p>8つの質問に答えるだけで、あなたがどんな時に無駄遣いしやすいかを「モンスタータイプ」で楽しくチェックできる無料の金銭感覚 診断です。あくまで娯楽目的のお小遣い占いであり、専門的なファイナンシャルアドバイスではありません。</p>
+    </details>
+    <details>
+      <summary>浪費家 タイプと診断されたら、どうすればいいですか？</summary>
+      <p>買う前に「24時間待つ」ルールを作ったり、毎月のお小遣い予算を先に決めておくのがおすすめです。診断結果はあくまで傾向なので、自分の買い物のクセを知るきっかけとして気軽にご利用ください。</p>
+    </details>
+    <details>
+      <summary>この金銭感覚 診断は無料で何回でもできますか？</summary>
+      <p>はい、完全無料で会員登録も不要です。気分やお給料日のタイミングで結果が変わることもあるので、定期的なお小遣い占いとして楽しんでください。</p>
+    </details>
+  </section>
+
+  <p class="disclaimer">※本診断は娯楽・自己理解を目的としたお小遣い占いです。専門的な家計・投資のアドバイスではありません。<br>お金の悩みが深い場合は、専門家への相談をおすすめします。</p>
+</div>
+
+<div class="toast" id="toast">コピーしました！</div>
+
+<script>
+/* =========================================================================
+   設問データ
+   各選択肢は score:1〜4（高いほど「無駄遣いしやすい＝浪費危険度が高い」）。
+   ・打散（シャッフル）：各設問内のスコアの並びをわざとバラバラに定義し、
+     さらに renderQuestion() で表示順を毎回ランダム化するため、
+     「上から低→高で並んでいる」と一目で分からないようにしている。
+   ========================================================================= */
+const QUESTIONS = [
+  { q:"コンビニにふらっと寄ったとき、あなたは？", a:[
+    {t:"必要なものだけ買って、すぐ出る", s:1},
+    {t:"「ついで買い」で結局500円以上使う", s:4},
+    {t:"買わないけど、ちょっと見て回る", s:2},
+    {t:"つい新商品やスイーツをカゴに追加", s:3},
+  ]},
+  { q:"ネットショッピングのカート、今どうなってる？", a:[
+    {t:"「あとで買う」が大量に積まれてる", s:2},
+    {t:"気づいたら、何個かポチってる", s:4},
+    {t:"空っぽ。買う時だけ開く", s:1},
+    {t:"セールが来たら一気に購入予定", s:3},
+  ]},
+  { q:"給料日（お小遣い日）の直後のあなたは？", a:[
+    {t:"「今月もお疲れ自分」とご褒美を一つ", s:2},
+    {t:"まず一定額を貯金、残りで生活", s:1},
+    {t:"ほしい物リストを上から順に買う", s:4},
+    {t:"財布の紐がゆるみ、気が大きくなる", s:3},
+  ]},
+  { q:"「期間限定」「数量限定」の文字を見ると？", a:[
+    {t:"「限定」に弱すぎる。ほぼ確保する", s:4},
+    {t:"特に何も感じない、スルーする", s:1},
+    {t:"必要か少し悩んで、半分は買う", s:3},
+    {t:"気になるけど、いったん保留にする", s:2},
+  ]},
+  { q:"ストレスが溜まったときの発散方法は？", a:[
+    {t:"ちょっといいご飯やカフェで回復", s:3},
+    {t:"寝る・運動など、お金を使わない方法", s:1},
+    {t:"「買い物セラピー」で爆買いして発散", s:4},
+    {t:"友達と通話やゲームで発散する", s:2},
+  ]},
+  { q:"お財布やキャッシュレスの残高、把握してる？", a:[
+    {t:"月末に「あれ、もうない」となる", s:4},
+    {t:"1円単位ではないが、ほぼ完璧に把握", s:1},
+    {t:"だいたいの残高は分かっている", s:2},
+    {t:"気が向いたときだけチェックする", s:3},
+  ]},
+  { q:"買い物中、友達が「これ可愛い！」と言ったら？", a:[
+    {t:"影響されて、自分も欲しくなる", s:3},
+    {t:"自分に必要なければ、買わない", s:1},
+    {t:"つられて、一緒に買っちゃう", s:4},
+    {t:"可愛いと思うけど、冷静に見送る", s:2},
+  ]},
+  { q:"家にある「結局あまり使ってない物」、思い浮かぶ？", a:[
+    {t:"1〜2個くらいは、あるかな", s:2},
+    {t:"ほぼない。物は厳選している", s:1},
+    {t:"部屋を見渡すと、けっこうある…", s:4},
+    {t:"いくつか心当たりがある", s:3},
+  ]},
+];
+
+/* =========================================================================
+   結果データ ＆ スコア区間（機率平衡の核心）
+   ─────────────────────────────────────────────────────────────────────────
+   ■ 理論スコア：8問 × 各1〜4点  →  最低 8点 / 最高 32点
+   ■ なぜ「等分割」にしないか：
+     ランダム回答時の合計点は中心極限定理によりベル型に偏る。
+     区間を等幅で切ると中央の結果に40%以上が集中し「8割が同じ結果」になる。
+   ■ 対策：合計点の確率分布の「五分位点（quintile）」で区切る。
+     境界を 16 / 18 / 20 / 22 に設定すると、ランダム回答時の各結果の出現率は
+        8–16点 ≈ 13.6% / 17–18 ≈ 18.4% / 19–20 ≈ 24.1% /
+        21–22 ≈ 22.1% / 23–32 ≈ 21.8%
+     となり、各結果がほぼ均等（最大でも約24%）に分散する＝特定結果の独占を防止。
+   ========================================================================= */
+const RESULTS = [
+  { min:8,  max:16, danger:15,  col:"#16b67a",
+    title:"鉄壁の倹約マスター", catch:"財布を守る守護神。でも…",
+    good:"あなたの金銭感覚はピカイチ。衝動買いの誘惑に流されず、本当に必要な物を見極められる自制心の持ち主です。お金は着実に貯まり、将来の安心を自分の手で作れる、心から頼れるタイプ。",
+    roast:"…ただ、その鉄壁ぶり、たまに<b>「ケチ」と紙一重</b>では？ 欲しい物を我慢しすぎて、人生の楽しみまで節約してませんか。お金は墓場に持っていけません。たまには自分にも“課金”を。",
+    line:"倹約しすぎて、人生まで節約しがち" },
+
+  { min:17, max:18, danger:40,  col:"#7cc242",
+    title:"ご褒美チャージ・モンスター（見習い）", catch:"健全消費の優等生",
+    good:"あなたは“メリハリ消費”の達人。普段は堅実なのに、頑張った自分にはちゃんとご褒美をあげられる。お金との付き合い方がいちばん健全で、人生の満足度も高い、バランス感覚の優れたタイプです。",
+    roast:"ただし、<b>「これは自分へのご褒美だから」の発動回数</b>、ちょっと多くないですか？ ご褒美が“週3”になった時点で、それはもうご褒美ではなく、ただの日常です。",
+    line:"ご褒美の大義名分、ちょっと使いすぎ説" },
+
+  { min:19, max:20, danger:60,  col:"#f5b301",
+    title:"セール誘惑の常連モンスター", catch:"お得に弱い、たのしい浪費家",
+    good:"あなたは情報感度が高く、お得を逃さないアンテナの持ち主。本当に欲しい物のためにお金を動かせる、自分の“好き”に正直な魅力的なタイプ。一緒に買い物すると、すごく楽しい人です。",
+    roast:"でも「セール」「ポイント◯倍」の文字に、<b>理性が3秒で溶けて</b>ませんか？ “安く買えた”の正体、だいたい“買わなくてよかった物”です。割引率より、使用頻度を見てあげて。",
+    line:"「安く買えた」＝買わなくてよかった物" },
+
+  { min:21, max:22, danger:82,  col:"#fb8c3b",
+    title:"ストレス爆買いモンスター", catch:"衝動と情熱のかたまり",
+    good:"あなたは感情に正直で、人生を全力で楽しむパワフルなタイプ。欲しい物を手に入れる行動力と、自分を機嫌よく保つ術を知っている。一緒にいると場が華やぐ、みんなに愛されるキャラです。",
+    roast:"……ただ、その“買い物セラピー”、<b>効くのは一瞬</b>で、請求書という名の現実が後からやってきますよね？ 発散したはずが、明細を見て新たなストレス。そろそろ無限ループから抜け出しましょう。",
+    line:"買い物で発散→明細を見て、再びストレス" },
+
+  { min:23, max:32, danger:100, col:"#ef4444",
+    title:"財布溶かす伝説のモンスター", catch:"経済を回す、ラスボス級",
+    good:"あなたは圧倒的な行動力と決断力の持ち主。欲しいと思った瞬間に動ける瞬発力は、もはや才能です。経済を回す立役者であり、周りを巻き込む熱量とカリスマ性まで備えた、唯一無二の存在。",
+    roast:"……が！ その財布、<b>底に穴が空いてません</b>か？ 「欲しい＝買う」が秒で直結し、貯金通帳は万年ダイエット中。今月の明細、まだ正視できてないでしょう。まずは“24時間ルール”から一緒に始めましょう。",
+    line:"「欲しい＝即購入」で通帳は万年ダイエット中" },
+];
+
+const QUIZ_NAME = "【買い物の癖】無駄遣いモンスター診断";
+
+/* ===== 状態管理 ===== */
+let idx = 0;
+let answers = new Array(QUESTIONS.length).fill(null);
+let renderOrder = [];
+let currentResult = null;
+
+const $ = id => document.getElementById(id);
+function show(scr){ document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active')); $(scr).classList.add('active'); window.scrollTo({top:0,behavior:'smooth'}); }
+function shuffle(arr){ const a=arr.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
+
+function startQuiz(){ idx=0; answers.fill(null); show('quiz'); renderQuestion(); }
+
+function renderQuestion(){
+  const q = QUESTIONS[idx];
+  $('qText').textContent = q.q;
+  $('qNow').textContent = idx+1;
+  $('bar').style.width = Math.round((idx/QUESTIONS.length)*100) + '%';
+  $('qPctTxt').textContent = Math.round(((idx+1)/QUESTIONS.length)*100) + '%';
+
+  renderOrder = shuffle(q.a.map((_,i)=>i));
+  const box = $('opts'); box.innerHTML='';
+  renderOrder.forEach(optIndex=>{
+    const o = q.a[optIndex];
+    const el = document.createElement('button');
+    el.className='opt'; el.type='button';
+    el.innerHTML = `<span class="dot"></span><span>${o.t}</span>`;
+    el.onclick = ()=> selectOption(o.s, el);
+    box.appendChild(el);
+  });
+  if(answers[idx]!==null){
+    [...box.children].forEach((el,i)=>{ if(QUESTIONS[idx].a[renderOrder[i]].s===answers[idx]) el.classList.add('sel'); });
+  }
+
+  $('nextBtn').disabled = answers[idx]===null;
+  $('nextBtn').textContent = (idx===QUESTIONS.length-1) ? '診断結果を見る ✨' : '次へ →';
+  $('backBtn').style.display = idx>0 ? 'block' : 'none';
+}
+
+function selectOption(score, el){
+  answers[idx] = score;
+  [...$('opts').children].forEach(c=>c.classList.remove('sel'));
+  el.classList.add('sel');
+  $('nextBtn').disabled = false;
+}
+
+function goNext(){
+  if(answers[idx]===null) return;
+  if(idx < QUESTIONS.length-1){ idx++; renderQuestion(); }
+  else { showResult(); }
+}
+function goBack(){ if(idx>0){ idx--; renderQuestion(); } }
+
+/* ===== 採点 → 結果表示（ページ遷移せず滑らかに表示） ===== */
+function showResult(){
+  const total = answers.reduce((a,b)=>a+(b||0),0); // 8〜32点
+  // 明確なスコア区間で判定（上の確率平衡コメント参照／高いほど浪費危険度が高い）
+  let r;
+  if      (total >= 8  && total <= 16) r = RESULTS[0]; // ≈13.6%
+  else if (total >= 17 && total <= 18) r = RESULTS[1]; // ≈18.4%
+  else if (total >= 19 && total <= 20) r = RESULTS[2]; // ≈24.1%
+  else if (total >= 21 && total <= 22) r = RESULTS[3]; // ≈22.1%
+  else                                 r = RESULTS[4]; // 23〜32 ≈21.8%
+  currentResult = r;
+
+  $('rTitle').textContent = r.title;
+  $('rCatch').textContent = r.catch;
+  $('rBody').innerHTML = `${r.good}<span class="roast">${r.roast}</span>`;
+
+  const g = $('rGauge');
+  g.style.setProperty('--col', r.col);
+  g.style.setProperty('--pct', '0%');
+
+  show('result');
+
+  requestAnimationFrame(()=>{ setTimeout(()=>g.style.setProperty('--pct', r.danger+'%'), 120); });
+  countUp($('rPct'), r.danger, 1200);
+}
+
+function countUp(elm, target, dur){
+  const start=performance.now();
+  function step(now){
+    const p=Math.min((now-start)/dur,1);
+    const eased=1-Math.pow(1-p,3);
+    elm.textContent=Math.round(eased*target);
+    if(p<1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+/* ===== シェア機能 ===== */
+function buildShareText(){
+  // 【測驗名】+【結果】+【幽默短評】+【本站連結】
+  const url = window.location.href; // 現在のURLを動的取得
+  return `${QUIZ_NAME}\n\n私の無駄遣いモンスターは【浪費危険度${currentResult.danger}%／${currentResult.title}】でした💸\n→「${currentResult.line}」\n\nあなたは何タイプ？診断はこちら👇\n${url}`;
+}
+function copyShare(){
+  const text = buildShareText();
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(()=>toast('コピーしました！'),()=>fallbackCopy(text));
+  } else { fallbackCopy(text); }
+}
+function fallbackCopy(text){
+  const ta=document.createElement('textarea');
+  ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.focus(); ta.select();
+  try{ document.execCommand('copy'); toast('コピーしました！'); }catch(e){ toast('コピーできませんでした'); }
+  document.body.removeChild(ta);
+}
+function shareX(){
+  const url = window.location.href;
+  const hashtags = "無駄遣いモンスター診断,金銭感覚診断,浪費家タイプ"; // X用ハッシュタグ3つ
+  const text = `${QUIZ_NAME}\n私の浪費危険度は【${currentResult.danger}%／${currentResult.title}】でした💸\n「${currentResult.line}」\nあなたは何タイプ？👇`;
+  const u = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}&hashtags=${encodeURIComponent(hashtags)}`;
+  window.open(u,'_blank','noopener');
+}
+function shareLine(){
+  const url = window.location.href;
+  const text = `${QUIZ_NAME}\n私は【浪費危険度${currentResult.danger}%／${currentResult.title}】でした💸 あなたは何タイプ？`;
+  const u = `https://line.me/R/msg/text/?${encodeURIComponent(text+"\n"+url)}`;
+  window.open(u,'_blank','noopener');
+}
+
+function restart(){ idx=0; answers.fill(null); currentResult=null; show('start'); }
+
+/* ===== トースト ===== */
+let toastTimer;
+function toast(msg){
+  const t=$('toast'); t.textContent=msg; t.classList.add('show');
+  clearTimeout(toastTimer); toastTimer=setTimeout(()=>t.classList.remove('show'),1900);
+}
+</script>
+</body>
+</html>
