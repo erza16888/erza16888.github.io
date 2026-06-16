@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ SEO 基本タグ（Google日本検索向け） ============ -->
+<title>【限界人間チェック】心の充電残量診断｜ストレス診断・疲労度チェック・メンタルヘルス占い</title>
+<meta name="description" content="無料の心理テスト。8つの質問に答えるだけで、今のあなたの心の充電残量がわかるストレス診断。疲労度チェック・メンタルヘルス占いとして、限界手前のあなたをやさしく辛口に診断します。">
+<meta name="keywords" content="ストレス診断,疲労度チェック,メンタルヘルス 占い,心理テスト,限界人間,心の充電残量,無料診断">
+<meta name="robots" content="index, follow">
+
+<!-- ============ Open Graph（X / Threads / LINE 用カード） ============ -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="【限界人間チェック】あなたの「心の充電残量」診断">
+<meta property="og:description" content="今のあなたの心の充電は何％？ 8問で分かる無料ストレス診断・疲労度チェック。あなたは『限界突破ガチ勢』？それとも『フル充電お化け』？">
+<meta property="og:image" content="og-image.png">
+<meta property="og:url" content="">
+<meta property="og:site_name" content="心の充電残量診断">
+
+<!-- ============ Twitter Card ============ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="【限界人間チェック】あなたの「心の充電残量」診断">
+<meta name="twitter:description" content="今のあなたの心の充電は何％？ 8問で分かる無料ストレス診断・疲労度チェック。">
+<meta name="twitter:image" content="og-image.png">
+
+<!-- ============ FAQ 構造化データ（JSON-LD / Schema Markup） ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "この「心の充電残量」診断はどんなストレス診断ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "8つの簡単な質問に答えるだけで、今のあなたの心の疲労度やストレス状態を「スマホの充電残量」に例えてチェックできる無料の診断です。あくまで娯楽目的のメンタルヘルス占いであり、医学的な診断ではありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "疲労度チェックの結果が悪かったらどうすればいいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "充電残量が少ない結果が出た場合は、睡眠や休息を意識的に増やすサインかもしれません。気分の落ち込みやだるさが長く続く場合は、無理をせず専門家や医療機関に相談することをおすすめします。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "この心理テストは無料で何回でもできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、完全無料で会員登録も不要です。その日の体調や気分によって結果は変わるので、定期的なストレス診断・疲労度チェックとして気軽にご利用ください。"
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#2b2b38;
+    --muted:#83838f;
+    --line:#ece9f1;
+    --card:#ffffff;
+    --brand:#2dd4a7;
+    --brand-soft:#e7faf4;
+    --shadow:0 18px 40px -22px rgba(60,55,90,.55);
+    --radius:22px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Zen Kaku Gothic New",-apple-system,"Hiragino Kaku Gothic ProN",sans-serif;
+    color:var(--ink);
+    line-height:1.7;
+    background:
+      radial-gradient(1100px 520px at 18% -8%, #e9ecfb 0%, rgba(233,236,251,0) 60%),
+      radial-gradient(900px 560px at 92% 8%, #fbeef4 0%, rgba(251,238,244,0) 55%),
+      linear-gradient(180deg,#f4f3fa 0%, #f7f4f6 100%);
+    min-height:100vh;
+    padding:18px;
+    display:flex;
+    justify-content:center;
+  }
+  .wrap{width:100%;max-width:480px;margin:10px auto 40px}
+
+  /* ===== カード共通 ===== */
+  .card{
+    background:var(--card);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:28px 22px;
+    border:1px solid rgba(255,255,255,.7);
+  }
+  .screen{display:none;animation:rise .5s cubic-bezier(.2,.8,.2,1)}
+  .screen.active{display:block}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  /* ===== 広告枠 ===== */
+  .ad-slot{min-height:250px;background:#f0f0f0;margin:20px 0;text-align:center;line-height:250px;color:#aaa;border-radius:14px;font-size:13px;letter-spacing:.04em}
+
+  /* ===== スタート画面 ===== */
+  .eyebrow{
+    display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;
+    color:var(--brand);background:var(--brand-soft);
+    padding:6px 13px;border-radius:999px;margin-bottom:16px;
+  }
+  .title{
+    font-family:"Zen Maru Gothic",sans-serif;font-weight:900;
+    font-size:29px;line-height:1.35;letter-spacing:-.01em;margin-bottom:6px;
+  }
+  .title .sub{display:block;font-size:15px;color:var(--muted);font-weight:700;margin-top:10px}
+  .battery-hero{display:flex;justify-content:center;margin:22px 0 6px}
+  .lead{color:var(--muted);font-size:14.5px;margin:14px 2px 0}
+  .meta-row{display:flex;gap:14px;justify-content:center;margin:18px 0 4px;flex-wrap:wrap}
+  .chip{font-size:12px;color:var(--muted);background:#f5f4f9;border:1px solid var(--line);padding:6px 12px;border-radius:999px}
+
+  /* ===== ボタン ===== */
+  .btn{
+    display:block;width:100%;border:none;cursor:pointer;
+    font-family:"Zen Maru Gothic",sans-serif;font-weight:700;font-size:17px;
+    color:#fff;background:linear-gradient(135deg,#2dd4a7,#22b88f);
+    padding:16px;border-radius:16px;
+    box-shadow:0 12px 22px -10px rgba(45,212,167,.8);
+    transition:transform .12s ease, box-shadow .12s ease, opacity .2s;
+  }
+  .btn:active{transform:translateY(2px) scale(.99)}
+  .btn:disabled{opacity:.4;cursor:not-allowed;box-shadow:none;filter:grayscale(.3)}
+  .btn.ghost{background:#fff;color:var(--ink);border:1.6px solid var(--line);box-shadow:none}
+  .btn.x{background:#111;box-shadow:0 12px 22px -10px rgba(0,0,0,.55)}
+  .btn.line{background:#06c755;box-shadow:0 12px 22px -10px rgba(6,199,85,.6)}
+  .btn-row{display:flex;gap:10px;margin-top:10px}
+  .btn-row .btn{font-size:15px;padding:14px}
+
+  /* ===== 進捗 ===== */
+  .progress-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+  .q-count{font-family:"Zen Maru Gothic";font-weight:700;font-size:14px;color:var(--muted)}
+  .q-count b{color:var(--brand);font-size:20px}
+  .bar{height:8px;background:#eeecf6;background:#efedf5;border-radius:999px;overflow:hidden}
+  .bar > i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#2dd4a7,#5ad7ff);transition:width .45s cubic-bezier(.2,.8,.2,1)}
+
+  /* ===== 設問 ===== */
+  .q-text{
+    font-family:"Zen Maru Gothic",sans-serif;font-weight:700;
+    font-size:20px;line-height:1.5;margin:18px 0 18px;
+  }
+  .options{display:flex;flex-direction:column;gap:11px}
+  .opt{
+    text-align:left;width:100%;cursor:pointer;
+    background:#fbfafd;border:1.8px solid var(--line);
+    border-radius:15px;padding:15px 16px;font-size:15px;color:var(--ink);
+    display:flex;align-items:center;gap:12px;line-height:1.55;
+    transition:border-color .15s, background .15s, transform .1s;
+    font-family:inherit;
+  }
+  .opt:active{transform:scale(.99)}
+  .opt .dot{
+    flex:0 0 22px;height:22px;border-radius:50%;border:2px solid #d6d2e2;
+    transition:all .15s;position:relative;margin-top:1px;
+  }
+  .opt.sel{border-color:var(--brand);background:var(--brand-soft)}
+  .opt.sel .dot{border-color:var(--brand);background:var(--brand)}
+  .opt.sel .dot::after{content:"";position:absolute;inset:0;margin:auto;width:7px;height:7px;background:#fff;border-radius:50%}
+  .quiz-foot{margin-top:22px}
+
+  /* ===== 結果 ===== */
+  .result-head{text-align:center;margin-bottom:4px}
+  .r-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--muted)}
+  .battery{
+    --pct:0%; --col:#2dd4a7;
+    position:relative;width:200px;height:96px;margin:14px auto 6px;
+    border:5px solid var(--ink);border-radius:18px;padding:7px;background:#fff;
+  }
+  .battery::after{content:"";position:absolute;right:-13px;top:50%;transform:translateY(-50%);width:9px;height:34px;background:var(--ink);border-radius:0 5px 5px 0}
+  .battery .fill{
+    height:100%;width:var(--pct);border-radius:9px;
+    background:linear-gradient(90deg,var(--col),color-mix(in srgb,var(--col) 60%,#fff));
+    transition:width 1.3s cubic-bezier(.16,.84,.3,1);
+    box-shadow:0 0 18px -2px var(--col) inset;
+  }
+  .battery .bolt{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:34px;filter:drop-shadow(0 2px 4px rgba(0,0,0,.18))}
+  .pct-num{font-family:"Zen Maru Gothic";font-weight:900;font-size:46px;line-height:1;margin-top:6px;text-align:center}
+  .pct-num span{font-size:22px;margin-left:2px}
+  .r-title{font-family:"Zen Maru Gothic";font-weight:900;font-size:25px;text-align:center;margin:6px 0 2px}
+  .r-catch{text-align:center;color:var(--muted);font-size:14px;margin-bottom:18px}
+  .r-body{font-size:15px;line-height:1.85;background:#fbfafd;border:1px solid var(--line);border-radius:16px;padding:18px 17px}
+  .r-body .roast{display:block;margin-top:12px;padding-top:12px;border-top:1px dashed #ded9e8}
+  .r-body .roast b{color:#e0556a}
+  .share-label{text-align:center;font-size:13px;color:var(--muted);margin:22px 0 10px;font-weight:700}
+
+  /* ===== トースト ===== */
+  .toast{
+    position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);
+    background:var(--ink);color:#fff;padding:12px 20px;border-radius:999px;font-size:14px;
+    font-weight:700;opacity:0;pointer-events:none;transition:all .3s;z-index:99;box-shadow:0 10px 30px -8px rgba(0,0,0,.5)
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  /* ===== FAQ（SEO） ===== */
+  .seo-faq{max-width:480px;margin:26px auto 0;padding:24px 22px;background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:var(--radius)}
+  .seo-faq h2{font-family:"Zen Maru Gothic";font-size:18px;margin-bottom:14px}
+  .seo-faq details{border-bottom:1px solid var(--line);padding:12px 0}
+  .seo-faq summary{font-weight:700;font-size:14.5px;cursor:pointer;list-style:none}
+  .seo-faq summary::-webkit-details-marker{display:none}
+  .seo-faq summary::before{content:"Q. ";color:var(--brand);font-family:"Zen Maru Gothic"}
+  .seo-faq p{font-size:13.5px;color:var(--muted);margin-top:8px;padding-left:2px}
+  .disclaimer{max-width:480px;margin:16px auto 0;text-align:center;font-size:11.5px;color:#a5a3b0;line-height:1.7}
+
+  @media(max-width:380px){ .title{font-size:25px} .q-text{font-size:18px} .battery{width:170px} }
+  @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <!-- ====================== スタート画面 ====================== -->
+  <section id="start" class="screen card active">
+    <span class="eyebrow">⚡ 無料・8問・30秒</span>
+    <h1 class="title">【限界人間チェック】
+      <span class="sub">あなたの「心の充電残量」診断</span>
+    </h1>
+
+    <div class="battery-hero">
+      <div class="battery" style="--pct:42%;--col:#f2c94c;width:170px;height:82px">
+        <div class="fill"></div>
+      </div>
+    </div>
+
+    <p class="lead">毎日なんとなくしんどい、でも自分が「どれくらい限界なのか」分からない。<br>そんなあなたの<b>心の充電は今、何％？</b><br>サクッと答えて疲労度をチェック。</p>
+
+    <div class="meta-row">
+      <span class="chip">#ストレス診断</span>
+      <span class="chip">#疲労度チェック</span>
+      <span class="chip">#メンタル占い</span>
+    </div>
+
+    <!-- 黄金広告枠①：開始ボタンの上 -->
+    <div class="ad-slot">【スポンサーリンク / 広告】</div>
+
+    <button class="btn" onclick="startQuiz()">診断スタート →</button>
+  </section>
+
+  <!-- ====================== クイズ画面 ====================== -->
+  <section id="quiz" class="screen card">
+    <div class="progress-head">
+      <span class="q-count">Q<b id="qNow">1</b> <span style="font-size:12px">/ 8</span></span>
+      <span class="q-count" id="qPctTxt" style="font-size:12px">12%</span>
+    </div>
+    <div class="bar"><i id="bar"></i></div>
+
+    <p class="q-text" id="qText"></p>
+    <div class="options" id="opts"></div>
+
+    <div class="quiz-foot">
+      <button class="btn" id="nextBtn" disabled onclick="goNext()">次へ →</button>
+      <button class="btn ghost" id="backBtn" style="margin-top:10px;display:none" onclick="goBack()">← 前の質問へ</button>
+    </div>
+  </section>
+
+  <!-- ====================== 結果画面 ====================== -->
+  <section id="result" class="screen card">
+    <!-- 黄金広告枠②：結果ラベルの真上 -->
+    <div class="ad-slot">【スポンサーリンク / 広告】</div>
+
+    <div class="result-head">
+      <div class="r-eyebrow">あなたの心の充電残量は…</div>
+      <div class="battery" id="rBattery">
+        <div class="fill"></div>
+      </div>
+      <div class="pct-num"><span id="rPct">0</span><span>%</span></div>
+      <h2 class="r-title" id="rTitle"></h2>
+      <p class="r-catch" id="rCatch"></p>
+    </div>
+
+    <div class="r-body" id="rBody"></div>
+
+    <p class="share-label">この結果、友達はどのタイプ？ シェアして当て合おう👇</p>
+    <button class="btn" onclick="copyShare()">📋 結果をシェアする（コピー）</button>
+    <div class="btn-row">
+      <button class="btn x" onclick="shareX()">𝕏 でポスト</button>
+      <button class="btn line" onclick="shareLine()">LINEで送る</button>
+    </div>
+    <button class="btn ghost" style="margin-top:10px" onclick="restart()">↺ もう一度診断する</button>
+  </section>
+
+  <!-- ====================== FAQ（SEO 置底ブロック） ====================== -->
+  <section class="seo-faq">
+    <h2>よくある質問（ストレス診断 FAQ）</h2>
+    <details open>
+      <summary>この「心の充電残量」診断はどんなストレス診断ですか？</summary>
+      <p>8つの簡単な質問に答えるだけで、今のあなたの心の疲労度やストレス状態を「スマホの充電残量」に例えてチェックできる無料の診断です。あくまで娯楽目的のメンタルヘルス占いであり、医学的な診断ではありません。</p>
+    </details>
+    <details>
+      <summary>疲労度チェックの結果が悪かったらどうすればいいですか？</summary>
+      <p>充電残量が少ない結果が出た場合は、睡眠や休息を意識的に増やすサインかもしれません。気分の落ち込みやだるさが長く続く場合は、無理をせず専門家や医療機関に相談することをおすすめします。</p>
+    </details>
+    <details>
+      <summary>この心理テストは無料で何回でもできますか？</summary>
+      <p>はい、完全無料で会員登録も不要です。その日の体調や気分によって結果は変わるので、定期的なストレス診断・疲労度チェックとして気軽にご利用ください。</p>
+    </details>
+  </section>
+
+  <p class="disclaimer">※本診断は娯楽・自己理解を目的としたメンタルヘルス占いです。医学的な診断ではありません。<br>つらい状態が続く場合は、専門機関へのご相談をおすすめします。</p>
+</div>
+
+<div class="toast" id="toast">コピーしました！</div>
+
+<script>
+/* =========================================================================
+   設問データ
+   各選択肢は score:1〜4（高いほど「充電残量が多い＝元気」）。
+   ・打散（シャッフル）：各設問内のスコアの並びをわざとバラバラに定義し、
+     さらに renderQuestion() で表示順を毎回ランダム化するため、
+     「上から低→高で並んでいる」と一目で分からないようにしている。
+   ========================================================================= */
+const QUESTIONS = [
+  { q:"朝、目覚まし時計が鳴った瞬間のあなたは？", a:[
+    {t:"二度寝・三度寝…気づけば遅刻ギリギリ", s:1},
+    {t:"鳴る前に、なぜか自然と目が覚めている", s:3},
+    {t:"パッと飛び起きて「よし！」と気合が入る", s:4},
+    {t:"止めて「あと5分」と布団でスマホを開く", s:2},
+  ]},
+  { q:"友達から急に「今夜飲みに行こう！」と誘われたら？", a:[
+    {t:"気分次第。行けたら行く、くらいのテンション", s:3},
+    {t:"「行く行く！」即レスで予定を空ける", s:4},
+    {t:"「無理、もう動けない…」ときっぱり断る", s:1},
+    {t:"正直しんどい…でも断れずに結局行く", s:2},
+  ]},
+  { q:"スマホの通知やLINEの返信、今のあなたは？", a:[
+    {t:"ほぼリアルタイムで即レスできている", s:4},
+    {t:"通知を見るだけで疲れる。開く気力もない", s:1},
+    {t:"後で返そうと思って、だいたい忘れる", s:2},
+    {t:"大事なものだけ選んで、マイペースに返す", s:3},
+  ]},
+  { q:"最近、鏡に映る自分の顔を見て思うことは？", a:[
+    {t:"目の下のクマと無表情に、ちょっとゾッとする", s:1},
+    {t:"疲れてるけど、まあ悪くはないかな", s:3},
+    {t:"「我ながら血色いいな」と機嫌が良い", s:4},
+    {t:"「まあ、こんなもんか」と特に何も思わない", s:2},
+  ]},
+  { q:"休日の過ごし方として、いちばんしっくりくるのは？", a:[
+    {t:"やりたいことはあるのに、体が動かない", s:2},
+    {t:"予定を詰め込んでアクティブに動き回る", s:4},
+    {t:"適度に出かけて、適度にダラダラする", s:3},
+    {t:"一日中ベッドから出られず、気づけば夜", s:1},
+  ]},
+  { q:"仕事や勉強で小さなミスをしたとき、頭の中は？", a:[
+    {t:"一日中引きずって、夜まで反芻してしまう", s:1},
+    {t:"落ち込むけど、ひと晩寝たら忘れてる", s:3},
+    {t:"「あ、またか」と、もう感情が動かない", s:2},
+    {t:"「ドンマイ」と切り替えて、すぐ次へ進める", s:4},
+  ]},
+  { q:"「最近いつ笑った？」と聞かれたら？", a:[
+    {t:"愛想笑いはしてる。心から…は、うーん", s:2},
+    {t:"え、いつだっけ…正直、思い出せない", s:1},
+    {t:"面白い動画とか見れば、普通に笑える", s:3},
+    {t:"昨日も今日も、ちゃんと声を出して笑った", s:4},
+  ]},
+  { q:"もし今日一日、自由にしていいと言われたら？", a:[
+    {t:"「何もしたくない」が、いちばんの願い", s:1},
+    {t:"のんびり、好きなことをして過ごしたい", s:3},
+    {t:"やりたいことが次々浮かんでワクワクする", s:4},
+    {t:"とにかく寝たい。回復を最優先したい", s:2},
+  ]},
+];
+
+/* =========================================================================
+   結果データ ＆ スコア区間（機率平衡の核心）
+   ─────────────────────────────────────────────────────────────────────────
+   ■ 理論スコア：8問 × 各1〜4点  →  最低 8点 / 最高 32点
+   ■ なぜ「等分割」にしないか：
+     ランダム回答時の合計点は中心極限定理によりベル型に偏る。
+     区間を等幅で切ると中央の結果に40%以上が集中し「8割が同じ結果」になる。
+   ■ 対策：合計点の確率分布の「五分位点（quintile）」で区切る。
+     境界を 16 / 18 / 20 / 22 に設定すると、ランダム回答時の各結果の出現率は
+        8–16点 ≈ 13.6% / 17–18 ≈ 18.4% / 19–20 ≈ 24.1% /
+        21–22 ≈ 22.1% / 23–32 ≈ 21.8%
+     となり、各結果がほぼ均等（最大でも約24%）に分散する＝特定結果の独占を防止。
+   ========================================================================= */
+const RESULTS = [
+  { min:8,  max:16, pct:5,   col:"#f2545b", bolt:"🪫",
+    title:"限界突破ガチ勢", catch:"ケーブル挿しっぱでも回復しないレベル",
+    good:"あなたは誰よりも頑張り屋さん。周りが気づかない隅っこまで気を回し、頼まれごとを断れない優しさと責任感の塊です。その我慢強さ、本来なら表彰モノ。",
+    roast:"…でも心の電池は、とっくに<b>赤ゲージで点滅中</b>。口癖、「私は大丈夫」になってませんか？ そのセリフ、だいたい大丈夫じゃない人が言うやつです。今日くらいスマホ放り投げて、堂々と何もしないでください。",
+    line:"「私は大丈夫」←大丈夫じゃない人" },
+
+  { min:17, max:18, pct:30,  col:"#f2994a", bolt:"🔋",
+    title:"省エネ生活マスター", catch:"無駄な消耗をしない達人。だが…",
+    good:"あなたは力の入れどころ・抜きどころを心得た達人。勝てないゲームには参加しない賢さと、自分を守るブレーキを持っています。これ、立派な才能です。",
+    roast:"とはいえ最近、<b>「省エネ」と「ただのやる気ゼロ」の境界線</b>がかなり曖昧になってません？ ソファと一体化し、立ち上がる理由を探す日々。たまには充電器（＝好きなこと）に、自分から近づいてあげて。",
+    line:"省エネモードか、ただ省きたいだけか" },
+
+  { min:19, max:20, pct:55,  col:"#f2c94c", bolt:"🔋",
+    title:"だましだまし運転タイプ", catch:"潰れないギリギリを攻める安定感",
+    good:"あなたは絶妙なバランサー。完全に元気でもないけど、決して潰れない。ギリギリのところで自分をうまく操縦できる、地味にすごい安定感の持ち主。社会、実はこのタイプが回してます。",
+    roast:"ただ、その「まあ大丈夫」で乗り切るクセ──<b>燃料ランプ点いてるのに「まだイケる」で高速に乗る</b>タイプですよね？ 突然プツッといく前に、たまには“本気で休む”練習も入れときましょう。",
+    line:"燃料ランプ無視して高速乗るタイプ" },
+
+  { min:21, max:22, pct:80,  col:"#5cc98e", bolt:"⚡",
+    title:"ほどよく充電タイプ", catch:"オンオフ切替の優等生",
+    good:"あなたは心のバランス優等生。頑張る時は頑張り、休む時はしっかり休む。切り替え上手で、一緒にいると安心するタイプ。周りから「メンタル強いね」と羨ましがられているはず。",
+    roast:"……ただ、その余裕が時々「この人に相談しても響かなそう」と思われがちなのが玉に瑕。<b>完璧すぎて隙がない</b>んです。残り20%は、人にちょっと弱音を見せる“余白”に使うと、もっと愛されますよ。",
+    line:"余裕ありすぎて逆に心配される人" },
+
+  { min:23, max:32, pct:100, col:"#2dd4a7", bolt:"⚡",
+    title:"フル充電お化け", catch:"歩く充電スポット",
+    good:"あなたは生命力の塊。どこからそのエネルギーが湧くのか、周りが二度見するレベルでいつも元気。前向きで行動力があって、一緒にいるだけで充電してもらえる“歩く充電スポット”。最高か。",
+    roast:"…ただし！ その元気、まれに周りの<b>「省エネ勢」をそっと殺しにいってます</b>。朝イチからテンションMAXで話しかけ、相手の魂が抜けてること、ありませんか？ あなたの100%は、誰かの200%。優しさ込みで誰かを充電させてあげて。",
+    line:"元気すぎて省エネ勢を殺しにくる人" },
+];
+
+const QUIZ_NAME = "【限界人間チェック】心の充電残量診断";
+
+/* ===== 状態管理 ===== */
+let idx = 0;
+let answers = new Array(QUESTIONS.length).fill(null); // 各設問で選んだスコア
+let renderOrder = [];                                 // 各設問の表示順（毎回シャッフル）
+let currentResult = null;
+
+const $ = id => document.getElementById(id);
+function show(scr){ document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active')); $(scr).classList.add('active'); window.scrollTo({top:0,behavior:'smooth'}); }
+function shuffle(arr){ const a=arr.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
+
+function startQuiz(){ idx=0; answers.fill(null); show('quiz'); renderQuestion(); }
+
+function renderQuestion(){
+  const q = QUESTIONS[idx];
+  $('qText').textContent = q.q;
+  $('qNow').textContent = idx+1;
+  const pct = Math.round(((idx)/QUESTIONS.length)*100);
+  $('bar').style.width = pct + '%';
+  $('qPctTxt').textContent = Math.round(((idx+1)/QUESTIONS.length)*100) + '%';
+
+  // 表示順をシャッフル（記録して選択状態を復元できるように）
+  renderOrder = shuffle(q.a.map((_,i)=>i));
+  const box = $('opts'); box.innerHTML='';
+  renderOrder.forEach(optIndex=>{
+    const o = q.a[optIndex];
+    const el = document.createElement('button');
+    el.className='opt'; el.type='button';
+    el.innerHTML = `<span class="dot"></span><span>${o.t}</span>`;
+    if(answers[idx] !== null && answers[idx] === o.s && isSelected(optIndex)) el.classList.add('sel');
+    el.onclick = ()=> selectOption(o.s, el);
+    box.appendChild(el);
+  });
+  // 既選択の復元（スコア一致で点灯）
+  if(answers[idx]!==null){
+    [...box.children].forEach((el,i)=>{ if(QUESTIONS[idx].a[renderOrder[i]].s===answers[idx]) el.classList.add('sel'); });
+  }
+
+  $('nextBtn').disabled = answers[idx]===null;
+  $('nextBtn').textContent = (idx===QUESTIONS.length-1) ? '診断結果を見る ✨' : '次へ →';
+  $('backBtn').style.display = idx>0 ? 'block' : 'none';
+}
+function isSelected(){ return true; }
+
+function selectOption(score, el){
+  answers[idx] = score;
+  [...$('opts').children].forEach(c=>c.classList.remove('sel'));
+  el.classList.add('sel');
+  $('nextBtn').disabled = false;
+}
+
+function goNext(){
+  if(answers[idx]===null) return;
+  if(idx < QUESTIONS.length-1){ idx++; renderQuestion(); }
+  else { showResult(); }
+}
+function goBack(){ if(idx>0){ idx--; renderQuestion(); } }
+
+/* ===== 採点 → 結果表示（ページ遷移せず滑らかに表示） ===== */
+function showResult(){
+  const total = answers.reduce((a,b)=>a+(b||0),0); // 8〜32点
+  // 明確なスコア区間で判定（上の確率平衡コメント参照）
+  let r;
+  if      (total >= 8  && total <= 16) r = RESULTS[0]; // ≈13.6%
+  else if (total >= 17 && total <= 18) r = RESULTS[1]; // ≈18.4%
+  else if (total >= 19 && total <= 20) r = RESULTS[2]; // ≈24.1%
+  else if (total >= 21 && total <= 22) r = RESULTS[3]; // ≈22.1%
+  else                                 r = RESULTS[4]; // 23〜32 ≈21.8%
+  currentResult = r;
+
+  $('rTitle').textContent = r.title;
+  $('rCatch').textContent = r.catch;
+  $('rBody').innerHTML = `${r.good}<span class="roast">${r.roast}</span>`;
+
+  const bat = $('rBattery');
+  bat.style.setProperty('--col', r.col);
+  bat.style.setProperty('--pct', '0%');
+
+  show('result');
+
+  // バッテリー充填＋数字カウントアップ
+  requestAnimationFrame(()=>{ setTimeout(()=>bat.style.setProperty('--pct', r.pct+'%'), 120); });
+  countUp($('rPct'), r.pct, 1200);
+}
+
+function countUp(elm, target, dur){
+  const start=performance.now();
+  function step(now){
+    const p=Math.min((now-start)/dur,1);
+    const eased=1-Math.pow(1-p,3);
+    elm.textContent=Math.round(eased*target);
+    if(p<1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+/* ===== シェア機能 ===== */
+function buildShareText(){
+  // 【測驗名】+【結果】+【幽默短評】+【本站連結】
+  const url = window.location.href; // 現在のURLを動的取得
+  return `${QUIZ_NAME}\n\n私の心の充電残量は【${currentResult.pct}%／${currentResult.title}】でした⚡\n→「${currentResult.line}」\n\nあなたは何％？診断はこちら👇\n${url}`;
+}
+function copyShare(){
+  const text = buildShareText();
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(()=>toast('コピーしました！'),()=>fallbackCopy(text));
+  } else { fallbackCopy(text); }
+}
+function fallbackCopy(text){
+  const ta=document.createElement('textarea');
+  ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.focus(); ta.select();
+  try{ document.execCommand('copy'); toast('コピーしました！'); }catch(e){ toast('コピーできませんでした'); }
+  document.body.removeChild(ta);
+}
+function shareX(){
+  const url = window.location.href;
+  const hashtags = "限界人間チェック,心の充電残量,ストレス診断"; // X用ハッシュタグ3つ
+  const text = `${QUIZ_NAME}\n私の心の充電残量は【${currentResult.pct}%／${currentResult.title}】⚡\n「${currentResult.line}」\nあなたは何％？👇`;
+  const u = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}&hashtags=${encodeURIComponent(hashtags)}`;
+  window.open(u,'_blank','noopener');
+}
+function shareLine(){
+  const url = window.location.href;
+  const text = `${QUIZ_NAME}\n私は【${currentResult.pct}%／${currentResult.title}】でした⚡ あなたは何％？`;
+  const u = `https://line.me/R/msg/text/?${encodeURIComponent(text+"\n"+url)}`;
+  window.open(u,'_blank','noopener');
+}
+
+function restart(){ idx=0; answers.fill(null); currentResult=null; show('start'); }
+
+/* ===== トースト ===== */
+let toastTimer;
+function toast(msg){
+  const t=$('toast'); t.textContent=msg; t.classList.add('show');
+  clearTimeout(toastTimer); toastTimer=setTimeout(()=>t.classList.remove('show'),1900);
+}
+</script>
+</body>
+</html>
