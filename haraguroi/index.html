@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ SEO 基本タグ（Google日本検索向け） ============ -->
+<title>【腹黒度チェック】天使と悪魔の比率テスト｜腹黒度 診断・性格の悪さ テスト・当たる心理テスト</title>
+<meta name="description" content="無料の心理テスト。8つの質問に答えるだけで、あなたの心に潜む「天使と悪魔の比率」が分かる腹黒度 診断。当たると評判の性格の悪さ テストを、やさしく辛口に診断します。">
+<meta name="keywords" content="腹黒度 診断,性格の悪さ テスト,心理テスト 当たる,天使と悪魔,腹黒,無料診断">
+<meta name="robots" content="index, follow">
+
+<!-- ============ Open Graph（X / Threads / LINE 用カード） ============ -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="【腹黒度チェック】あなたの「天使と悪魔」比率テスト">
+<meta property="og:description" content="ニコニコ笑顔のあなた、心の中の天使と悪魔の比率は何対何？ 8問で分かる無料の腹黒度 診断。あなたは『純度高めの天使』？それとも『ラスボス級の大悪魔』？">
+<meta property="og:image" content="og-image.png">
+<meta property="og:url" content="">
+<meta property="og:site_name" content="腹黒度チェック">
+
+<!-- ============ Twitter Card ============ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="【腹黒度チェック】あなたの「天使と悪魔」比率テスト">
+<meta name="twitter:description" content="心の中の天使と悪魔の比率は何対何？ 8問で分かる無料の腹黒度 診断・当たる心理テスト。">
+<meta name="twitter:image" content="og-image.png">
+
+<!-- ============ FAQ 構造化データ（JSON-LD / Schema Markup） ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "この「腹黒度チェック」はどんな心理テストですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "8つの質問に答えるだけで、あなたの心に潜む「天使と悪魔の比率」が分かる無料の腹黒度 診断です。あくまで娯楽目的の心理テストで、性格の良し悪しを決めつけるものではありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "性格の悪さ テストの結果が悪魔寄りでも大丈夫ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "もちろんです。悪魔比率が高い＝賢くて戦略的、という見方もできます。腹黒さは人間味の一つ。結果は自分の意外な一面を楽しむきっかけとして受け取ってください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "この心理テストは本当に当たると評判ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "直感で答えるほど、普段は隠している本音が出やすい設計です。完全無料・登録不要なので、友達ともシェアして「当たってる！」を一緒に盛り上がってお楽しみください。"
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#2a2730;
+    --muted:#857f8d;
+    --line:#ebe6f0;
+    --card:#ffffff;
+    --brand:#8a3ffc;
+    --brand-soft:#f1eafe;
+    --angel:#f0a500;
+    --devil:#7c2bb0;
+    --shadow:0 18px 40px -22px rgba(60,45,80,.5);
+    --radius:22px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Zen Kaku Gothic New",-apple-system,"Hiragino Kaku Gothic ProN",sans-serif;
+    color:var(--ink);
+    line-height:1.7;
+    background:
+      radial-gradient(1100px 520px at 16% -8%, #fdf1d8 0%, rgba(253,241,216,0) 58%),
+      radial-gradient(900px 560px at 94% 4%, #efe2fb 0%, rgba(239,226,251,0) 56%),
+      linear-gradient(180deg,#f7f4fa 0%, #f6f3f7 100%);
+    min-height:100vh;
+    padding:18px;
+    display:flex;
+    justify-content:center;
+  }
+  .wrap{width:100%;max-width:480px;margin:10px auto 40px}
+
+  .card{
+    background:var(--card);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:28px 22px;
+    border:1px solid rgba(255,255,255,.7);
+  }
+  .screen{display:none;animation:rise .5s cubic-bezier(.2,.8,.2,1)}
+  .screen.active{display:block}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  /* ===== 広告枠 ===== */
+  .ad-slot{min-height:250px;background:#f0f0f0;margin:20px 0;text-align:center;line-height:250px;color:#aaa;border-radius:14px;font-size:13px;letter-spacing:.04em}
+
+  /* ===== スタート画面 ===== */
+  .eyebrow{
+    display:inline-block;font-size:12px;font-weight:700;letter-spacing:.1em;
+    color:var(--brand);background:var(--brand-soft);
+    padding:6px 13px;border-radius:999px;margin-bottom:16px;
+  }
+  .title{
+    font-family:"Zen Maru Gothic",sans-serif;font-weight:900;
+    font-size:28px;line-height:1.35;letter-spacing:-.01em;margin-bottom:6px;
+  }
+  .title .sub{display:block;font-size:15px;color:var(--muted);font-weight:700;margin-top:10px}
+  .hero{display:flex;justify-content:center;margin:24px 0 8px}
+  .lead{color:var(--muted);font-size:14.5px;margin:14px 2px 0}
+  .meta-row{display:flex;gap:12px;justify-content:center;margin:18px 0 4px;flex-wrap:wrap}
+  .chip{font-size:12px;color:var(--muted);background:#f5f3f7;border:1px solid var(--line);padding:6px 12px;border-radius:999px}
+
+  /* ===== ボタン ===== */
+  .btn{
+    display:block;width:100%;border:none;cursor:pointer;
+    font-family:"Zen Maru Gothic",sans-serif;font-weight:700;font-size:17px;
+    color:#fff;background:linear-gradient(135deg,#9d4edd,#7b2cbf);
+    padding:16px;border-radius:16px;
+    box-shadow:0 12px 22px -10px rgba(138,63,252,.8);
+    transition:transform .12s ease, box-shadow .12s ease, opacity .2s;
+  }
+  .btn:active{transform:translateY(2px) scale(.99)}
+  .btn:disabled{opacity:.4;cursor:not-allowed;box-shadow:none;filter:grayscale(.3)}
+  .btn.ghost{background:#fff;color:var(--ink);border:1.6px solid var(--line);box-shadow:none}
+  .btn.x{background:#111;box-shadow:0 12px 22px -10px rgba(0,0,0,.55)}
+  .btn.line{background:#06c755;box-shadow:0 12px 22px -10px rgba(6,199,85,.6)}
+  .btn-row{display:flex;gap:10px;margin-top:10px}
+  .btn-row .btn{font-size:15px;padding:14px}
+
+  /* ===== 進捗 ===== */
+  .progress-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+  .q-count{font-family:"Zen Maru Gothic";font-weight:700;font-size:14px;color:var(--muted)}
+  .q-count b{color:var(--brand);font-size:20px}
+  .bar{height:8px;background:#eee9f2;border-radius:999px;overflow:hidden}
+  .bar > i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#f0a500,#8a3ffc);transition:width .45s cubic-bezier(.2,.8,.2,1)}
+
+  /* ===== 設問 ===== */
+  .q-text{
+    font-family:"Zen Maru Gothic",sans-serif;font-weight:700;
+    font-size:20px;line-height:1.5;margin:18px 0 18px;
+  }
+  .options{display:flex;flex-direction:column;gap:11px}
+  .opt{
+    text-align:left;width:100%;cursor:pointer;
+    background:#fbfafc;border:1.8px solid var(--line);
+    border-radius:15px;padding:15px 16px;font-size:15px;color:var(--ink);
+    display:flex;align-items:center;gap:12px;line-height:1.55;
+    transition:border-color .15s, background .15s, transform .1s;
+    font-family:inherit;
+  }
+  .opt:active{transform:scale(.99)}
+  .opt .dot{
+    flex:0 0 22px;height:22px;border-radius:50%;border:2px solid #d6cfe0;
+    transition:all .15s;position:relative;margin-top:1px;
+  }
+  .opt.sel{border-color:var(--brand);background:var(--brand-soft)}
+  .opt.sel .dot{border-color:var(--brand);background:var(--brand)}
+  .opt.sel .dot::after{content:"";position:absolute;inset:0;margin:auto;width:7px;height:7px;background:#fff;border-radius:50%}
+  .quiz-foot{margin-top:22px}
+
+  /* ===== 天使と悪魔 比率バー ===== */
+  .ratio{--devil:50%;width:100%;max-width:340px;margin:18px auto 2px}
+  .ratio .bar2{height:34px;border-radius:999px;overflow:hidden;display:flex;border:2px solid #fff;box-shadow:0 6px 16px -8px rgba(80,40,110,.4)}
+  .ratio .angel{height:100%;width:calc(100% - var(--devil));background:linear-gradient(90deg,#ffd86b,#ffe6a8);transition:width 1.3s cubic-bezier(.16,.84,.3,1)}
+  .ratio .devil{height:100%;width:var(--devil);background:linear-gradient(90deg,#9d4edd,#6a0572);transition:width 1.3s cubic-bezier(.16,.84,.3,1)}
+  .ratio .labels{display:flex;justify-content:space-between;margin-top:9px;font-family:"Zen Maru Gothic";font-weight:700;font-size:14px}
+  .ratio .labels .a{color:#d98a00}
+  .ratio .labels .d{color:#7c2bb0}
+
+  /* ===== 結果 ===== */
+  .result-head{text-align:center;margin-bottom:4px}
+  .r-eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--muted)}
+  .r-title{font-family:"Zen Maru Gothic";font-weight:900;font-size:25px;text-align:center;margin:14px 0 2px}
+  .r-catch{text-align:center;color:var(--muted);font-size:14px;margin-bottom:6px}
+  .r-body{font-size:15px;line-height:1.85;background:#fbfafc;border:1px solid var(--line);border-radius:16px;padding:18px 17px}
+  .r-body .roast{display:block;margin-top:12px;padding-top:12px;border-top:1px dashed #ddd6e2}
+  .r-body .roast b{color:#c2317a}
+  .share-label{text-align:center;font-size:13px;color:var(--muted);margin:22px 0 10px;font-weight:700}
+
+  /* ===== トースト ===== */
+  .toast{
+    position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);
+    background:var(--ink);color:#fff;padding:12px 20px;border-radius:999px;font-size:14px;
+    font-weight:700;opacity:0;pointer-events:none;transition:all .3s;z-index:99;box-shadow:0 10px 30px -8px rgba(0,0,0,.5)
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  /* ===== FAQ（SEO） ===== */
+  .seo-faq{max-width:480px;margin:26px auto 0;padding:24px 22px;background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:var(--radius)}
+  .seo-faq h2{font-family:"Zen Maru Gothic";font-size:18px;margin-bottom:14px}
+  .seo-faq details{border-bottom:1px solid var(--line);padding:12px 0}
+  .seo-faq summary{font-weight:700;font-size:14.5px;cursor:pointer;list-style:none}
+  .seo-faq summary::-webkit-details-marker{display:none}
+  .seo-faq summary::before{content:"Q. ";color:var(--brand);font-family:"Zen Maru Gothic"}
+  .seo-faq p{font-size:13.5px;color:var(--muted);margin-top:8px;padding-left:2px}
+  .disclaimer{max-width:480px;margin:16px auto 0;text-align:center;font-size:11.5px;color:#a5a1ad;line-height:1.7}
+
+  @media(max-width:380px){ .title{font-size:24px} .q-text{font-size:18px} }
+  @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <!-- ====================== スタート画面 ====================== -->
+  <section id="start" class="screen card active">
+    <span class="eyebrow">😇 無料・8問・30秒 😈</span>
+    <h1 class="title">【腹黒度チェック】
+      <span class="sub">あなたの「天使と悪魔」比率テスト</span>
+    </h1>
+
+    <div class="hero">
+      <div class="ratio" style="--devil:50%;max-width:300px">
+        <div class="bar2"><div class="angel"></div><div class="devil"></div></div>
+        <div class="labels"><span class="a">天使</span><span class="d">悪魔</span></div>
+      </div>
+    </div>
+
+    <p class="lead">ニコニコ笑顔のその下で、本当は何を考えてる？<br>あなたの心の<b>天使と悪魔の比率</b>は、何対何？<br>直感で答えて、隠れた本性をチェック。</p>
+
+    <div class="meta-row">
+      <span class="chip">#腹黒度診断</span>
+      <span class="chip">#性格の悪さテスト</span>
+      <span class="chip">#当たる心理テスト</span>
+    </div>
+
+    <!-- 黄金広告枠①：開始ボタンの上 -->
+    <div class="ad-slot">【スポンサーリンク / 広告】</div>
+
+    <button class="btn" onclick="startQuiz()">診断スタート →</button>
+  </section>
+
+  <!-- ====================== クイズ画面 ====================== -->
+  <section id="quiz" class="screen card">
+    <div class="progress-head">
+      <span class="q-count">Q<b id="qNow">1</b> <span style="font-size:12px">/ 8</span></span>
+      <span class="q-count" id="qPctTxt" style="font-size:12px">12%</span>
+    </div>
+    <div class="bar"><i id="bar"></i></div>
+
+    <p class="q-text" id="qText"></p>
+    <div class="options" id="opts"></div>
+
+    <div class="quiz-foot">
+      <button class="btn" id="nextBtn" disabled onclick="goNext()">次へ →</button>
+      <button class="btn ghost" id="backBtn" style="margin-top:10px;display:none" onclick="goBack()">← 前の質問へ</button>
+    </div>
+  </section>
+
+  <!-- ====================== 結果画面 ====================== -->
+  <section id="result" class="screen card">
+    <!-- 黄金広告枠②：結果ラベルの真上 -->
+    <div class="ad-slot">【スポンサーリンク / 広告】</div>
+
+    <div class="result-head">
+      <div class="r-eyebrow">あなたの天使と悪魔の比率は…</div>
+      <div class="ratio" id="rRatio" style="--devil:0%">
+        <div class="bar2"><div class="angel"></div><div class="devil"></div></div>
+        <div class="labels"><span class="a">天使 <span id="rAngel">100</span>%</span><span class="d">悪魔 <span id="rDevil">0</span>%</span></div>
+      </div>
+      <h2 class="r-title" id="rTitle"></h2>
+      <p class="r-catch" id="rCatch"></p>
+    </div>
+
+    <div class="r-body" id="rBody"></div>
+
+    <p class="share-label">あなたの友達は天使？悪魔？ シェアして当て合おう👇</p>
+    <button class="btn" onclick="copyShare()">📋 結果をシェアする（コピー）</button>
+    <div class="btn-row">
+      <button class="btn x" onclick="shareX()">𝕏 でポスト</button>
+      <button class="btn line" onclick="shareLine()">LINEで送る</button>
+    </div>
+    <button class="btn ghost" style="margin-top:10px" onclick="restart()">↺ もう一度診断する</button>
+  </section>
+
+  <!-- ====================== FAQ（SEO 置底ブロック） ====================== -->
+  <section class="seo-faq">
+    <h2>よくある質問（腹黒度 診断 FAQ）</h2>
+    <details open>
+      <summary>この「腹黒度チェック」はどんな心理テストですか？</summary>
+      <p>8つの質問に答えるだけで、あなたの心に潜む「天使と悪魔の比率」が分かる無料の腹黒度 診断です。あくまで娯楽目的の心理テストで、性格の良し悪しを決めつけるものではありません。</p>
+    </details>
+    <details>
+      <summary>性格の悪さ テストの結果が悪魔寄りでも大丈夫ですか？</summary>
+      <p>もちろんです。悪魔比率が高い＝賢くて戦略的、という見方もできます。腹黒さは人間味の一つ。結果は自分の意外な一面を楽しむきっかけとして受け取ってください。</p>
+    </details>
+    <details>
+      <summary>この心理テストは本当に当たると評判ですか？</summary>
+      <p>直感で答えるほど、普段は隠している本音が出やすい設計です。完全無料・登録不要なので、友達ともシェアして「当たってる！」を一緒に盛り上がってお楽しみください。</p>
+    </details>
+    </section>
+
+  <!-- ═══════════════════════════════════════════
+       SEO Articles Section & Footer
+       ════════════════════════════════════════════ -->
+  <style>
+    /* 腹黒度チェック專用的優雅隱蔽式頁尾樣式 */
+    .seo-articles-container {
+      max-width: 480px;
+      margin: 24px auto 0;
+      padding: 20px;
+      background: rgba(138, 63, 252, 0.03); /* 使用網頁內建的優雅紫色調進行極淡化半透明處理 */
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+    .seo-article {
+      margin-bottom: 24px;
+    }
+    .seo-article:last-child {
+      margin-bottom: 0;
+    }
+    .seo-article-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink);
+      opacity: 0.7;
+      margin-bottom: 10px;
+      letter-spacing: 0.04em;
+    }
+    .seo-article-p {
+      font-size: 12px;
+      color: var(--muted); /* 降低對比度的煙燻灰紫字體，完美隱蔽不刺眼 */
+      line-height: 1.85;
+      text-align: justify;
+      margin-bottom: 8px;
+    }
+    .seo-article-p:last-child {
+      margin-bottom: 0;
+    }
+    .disclaimer-final {
+      max-width: 480px;
+      margin: 24px auto 0;
+      text-align: center;
+      font-size: 11.5px;
+      color: #a5a1ad;
+      line-height: 1.7;
+    }
+    .site-footer-final {
+      text-align: center;
+      font-size: 11px;
+      color: var(--muted);
+      padding: 24px 0 16px;
+      letter-spacing: 0.04em;
+      opacity: 0.7;
+    }
+  </style>
+
+  <section class="seo-articles-container">
+    <!-- 1️⃣ 第一篇 SEO 文章：聚焦於腹黑度的心理機制與本音建前的關係 -->
+    <article class="seo-article">
+      <h3 class="seo-article-title">コラム：笑顔の裏に潜む本音とは？「腹黒度 診断」で探る天使と悪魔の心理学</h3>
+      <p class="seo-article-p">
+        日常生活において、私たちは常に他者との調和を保つために「建前」を使い分けています。特に社会生活やデリケートな人間関係の中では、笑顔の裏で冷静に状況を分析したり、内心のめんどくささを隠して完璧な対応を求められる場面が少なくありません。こうした「本音と建前」のギャップは、誰の心の中にも少なからず存在する普遍的な心理であり、2026年現在も自分に秘められた二面性を楽しく客観視できる「腹黒度 診断」がバズコンテンツとして多くの人気を集めています。
+      </p>
+      <p class="seo-article-p">
+        心理学的な観点から見ると、いわゆる「腹黒さ」とは、決して単純な悪意や性格の悪さを意味するものではありません。むしろ、場の空気を一瞬で見抜く鋭い観察眼や、トラブルを回避して合理的に損得を判断できる「高い社会的知性（戦略性）」の裏返しであると言えます。当たると評判の心理テストや性格テストを通じて、自分の心の中に潜む天使と悪魔の比率を可視化することは、自分の対人防衛反応や思考の癖を早期に知るための極めて有益な契機となります。
+      </p>
+      <p class="seo-article-p">
+        純粋すぎて悪い人にコロッと騙されてしまう「純度高めの天使」の状態よりも、適度な警戒心やしたたかさを備えた「世渡り上手」な側面を自覚すること。それこそが、ストレスの多い現代社会を賢く生き抜き、健全なメンタルヘルスを維持するための大人の処世術と言えるでしょう。
+      </p>
+    </article>
+
+    <!-- 2️⃣ 第二篇 SEO 文章：聚焦於性格惡劣測試、社交價值與自我幽默調適 -->
+    <article class="seo-article">
+      <h3 class="seo-article-title">コラム：「性格の悪さ テスト」をエンタメに！心理テスト当たる仕組みと自己開示の繋がり</h3>
+      <p class="seo-article-p">
+        自分の性格の長所や弱点を深く探求することは少し勇気が必要ですが、ユーモラスなキャラクターや比率として提示されると、人間味のある魅力的な個性として受け入れやすくなります。深刻に受け止められがちな人格の歪みや執着心を、エンターテインメントの形に昇華した「性格の悪さ テスト」や「お小遣い占い」ならぬ「本性占い」が、SNSを中心に友人同士のコミュニケーションツールとして広く愛されている理由はここにあります。
+      </p>
+      <p class="seo-article-p">
+        直感で答える設問設計の心理テストが「当たる！」と評判になりやすいのは、日常の理性が一瞬緩み、脳内で計算される三手先の損得勘定や、粗探しをしてしまうような無意識の本音が反映されやすいためです。たとえば、顔は笑顔でも脳内は議事録状態の「ほぼ悪魔」タイプと、裏表なしの「純粋天使」タイプでは、秘密を打ち明けられた際の情報の扱い方や、苦手な人とのソーシャルディスタンスの取り方が根本的に異なります。
+      </p>
+      <p class="seo-article-p">
+        自分の「可愛い黒さ」や「漆黒の腹の中」を自覚した上で、それを友達や恋人とシェアして当て合うことは、普段は見せない鎧を脱いだ素の自分をソフトに自己開示する絶好のきっかけになります。定期的な性格診断をライフスタイルの一部として楽しみながら、他者との相互理解を深め、しなやかで心地よい対人関係を築いてみてはいかがでしょうか。
+      </p>
+    </article>
+  </section>
+
+  <p class="disclaimer-final">※本診断は娯楽・自己理解を目的とした心理テストです。性格や人格を決めつけるものではありません。<br>結果は軽い気持ちでお楽しみください。</p>
+  
+  <div class="site-footer-final">© 2026 天使と悪魔の比率テスト ｜ 賢く自分らしく生きよう 😇😈</div>
+</div>
+
+<div class="toast" id="toast">コピーしました！</div>
+
+<script>
+/* =========================================================================
+   設問データ
+   各選択肢は score:1〜4（高いほど「悪魔寄り＝腹黒度が高い」）。
+   ・打散（シャッフル）：各設問内のスコアの並びをわざとバラバラに定義し、
+     さらに renderQuestion() で表示順を毎回ランダム化するため、
+     「上から低→高で並んでいる」と一目で分からないようにしている。
+   ========================================================================= */
+const QUESTIONS = [
+  { q:"苦手な人に話しかけられたときのあなたは？", a:[
+    {t:"顔には出さず、完璧な笑顔で対応する", s:4},
+    {t:"そっけない態度が、つい出てしまう", s:2},
+    {t:"普通に、自然体で接する", s:1},
+    {t:"一応合わせるけど、内心はめんどくさい", s:3},
+  ]},
+  { q:"友達が自慢話をしてきたとき、心の中では？", a:[
+    {t:"素直に「すごい！」と感心できる", s:1},
+    {t:"「はいはい」と、若干うんざりしている", s:3},
+    {t:"笑顔で聞きつつ、早く終わらせる方法を考える", s:4},
+    {t:"「よかったね」と思うけど、少し複雑", s:2},
+  ]},
+  { q:"SNSで苦手な人の投稿を見たら？", a:[
+    {t:"特に気にせず、そのままスルー", s:1},
+    {t:"ミュートやフォロー外しを、そっと実行", s:3},
+    {t:"見なかったことにして、心を無にする", s:2},
+    {t:"一応チェック。ついでに粗探しもする", s:4},
+  ]},
+  { q:"グループで意見が割れたとき、あなたは？", a:[
+    {t:"自分の意見を、はっきり主張する", s:2},
+    {t:"空気を読んで、強そうな方につく", s:4},
+    {t:"本心は隠し、当たり障りなくまとめる", s:3},
+    {t:"正直に「どっちでもいい」と言う", s:1},
+  ]},
+  { q:"嫌いな人が失敗したのを見たとき、本音は？", a:[
+    {t:"普通に「大丈夫かな」と心配する", s:1},
+    {t:"顔は心配そう、でも内心ちょっとスカッと", s:4},
+    {t:"特に何も感じない", s:2},
+    {t:"少しだけ「ざまぁ」と思ってしまう", s:3},
+  ]},
+  { q:"褒められたときの、あなたの反応は？", a:[
+    {t:"素直に喜んで「ありがとう！」", s:1},
+    {t:"謙遜しつつ、内心は「でしょ？」", s:3},
+    {t:"「お世辞かな」と、つい裏を読む", s:2},
+    {t:"ニコニコしながら、相手の意図を分析", s:4},
+  ]},
+  { q:"秘密を打ち明けられたら、あなたは？", a:[
+    {t:"墓場まで持っていく。絶対に話さない", s:1},
+    {t:"基本は守るが、つい仲のいい子には…", s:3},
+    {t:"内容によっては“使える情報”として記憶", s:4},
+    {t:"守るけど、うっかり忘れることもある", s:2},
+  ]},
+  { q:"どうしても欲しいものを手に入れるためなら？", a:[
+    {t:"正攻法で、まっすぐ頑張る", s:1},
+    {t:"ちょっとした演出や見せ方は工夫する", s:3},
+    {t:"多少の駆け引きや根回しは厭わない", s:4},
+    {t:"縁がなければ、潔く諦める", s:2},
+  ]},
+];
+
+/* =========================================================================
+   結果データ ＆ スコア区間（機率平衡の核心）
+   ─────────────────────────────────────────────────────────────────────────
+   ■ 理論スコア：8問 × 各1〜4点  →  最低 8点 / 最高 32点
+   ■ なぜ「等分割」にしないか：
+     ランダム回答時の合計点は中心極限定理によりベル型に偏る。
+     区間を等幅で切ると中央の結果に40%以上が集中し「8割が同じ結果」になる。
+   ■ 対策：合計点の確率分布の「五分位点（quintile）」で区切る。
+     境界を 16 / 18 / 20 / 22 に設定すると、ランダム回答時の各結果の出現率は
+        8–16点 ≈ 13.6% / 17–18 ≈ 18.4% / 19–20 ≈ 24.1% /
+        21–22 ≈ 22.1% / 23–32 ≈ 21.8%
+     となり、各結果がほぼ均等（最大でも約24%）に分散する＝特定結果の独占を防止。
+     ※これは「ランダム回答時」の母集団分布。実際の回答は本人の性格を反映して
+       偏るのが正常（＝当たる）で、これは設計上の不具合ではない。
+   ========================================================================= */
+const RESULTS = [
+  { min:8,  max:16, devil:12, col:"#f0a500",
+    title:"純度高めの天使", catch:"裏表なしの癒し系（天使88% : 悪魔12%）",
+    good:"あなたは裏表のない、素直な心の持ち主。人を疑うよりまず信じる方を選び、一緒にいると安心できる癒し系です。その純粋さは、ギスギスした世の中で本当に貴重な存在。みんなに好かれます。",
+    roast:"…ただ、その素直さ、<b>たまに無防備すぎ</b>ません？ 悪い人にコロッと騙されたり、損な役回りを押し付けられがち。天使にも、ちょっとは“警戒心”という名の翼が必要かも。",
+    line:"純粋すぎて、ときどき良いように使われがち" },
+
+  { min:17, max:18, devil:33, col:"#e6913f",
+    title:"ほぼ天使、たまにイタズラ", catch:"善良ベースの愛されキャラ（天使67% : 悪魔33%）",
+    good:"あなたは基本的に善良で思いやりがあるのに、ちょっとした茶目っ気も持つ愛されキャラ。優しさが軸にありつつ、人間味のある“可愛い黒さ”が、あなたを魅力的に見せるスパイスになっています。",
+    roast:"ただ、心の中で時々飛び出す<b>「小さな本音のツッコミ」</b>、わりと顔に出てますよ。ニコニコしてるのに目が笑ってない瞬間、周りは意外と気づいています。",
+    line:"ニコニコしてるのに、目が笑ってない時がある" },
+
+  { min:19, max:20, devil:50, col:"#b15fd6",
+    title:"天使と悪魔のハーフ", catch:"賢く立ち回る世渡り上手（天使50% : 悪魔50%）",
+    good:"あなたは天使の優しさと悪魔の賢さを併せ持つ、バランス型の人格者。場面に応じて上手に使い分けられる柔軟さがあり、敵を作らず立ち回れる世渡り上手。一緒にいて頼りになるタイプです。",
+    roast:"でもその使い分け、<b>本心がどこにあるか自分でも分からなく</b>なってませんか？ 「いい人」と「したたか」の二刀流。たまには鎧を脱いで、素のあなたを見せてあげてください。",
+    line:"本心の置き場所、自分でも見失いがち" },
+
+  { min:21, max:22, devil:70, col:"#9333c4",
+    title:"ほぼ悪魔、心に天使一匹", catch:"観察眼と戦略性のかたまり（天使30% : 悪魔70%）",
+    good:"あなたは人の本音や力関係を一瞬で見抜く、鋭い観察眼と戦略性の持ち主。感情だけで動かず、賢く損得を判断できるその冷静さは、頼れるブレーンとして重宝される立派な才能です。",
+    roast:"……ただ、その分析力、<b>つい人の粗探しや裏読み</b>に使ってませんか？ 顔は笑顔、脳内は議事録。たまには損得を抜きにして、ただ純粋に笑う日もあっていいんですよ。",
+    line:"顔は笑顔、脳内では議事録をとっている" },
+
+  { min:23, max:32, devil:90, col:"#6a0572",
+    title:"ラスボス級の大悪魔", catch:"人心掌握のカリスマ（天使10% : 悪魔90%）",
+    good:"あなたは圧倒的な頭の回転と人心掌握術の持ち主。場の空気も人の感情も自在に読み、欲しい結果へ導ける稀有な存在。敵に回すと最強、味方にすると最高に頼れる、カリスマ性あふれる人物です。",
+    roast:"……が！ その腹の中、<b>黒さがもはや漆黒</b>では？ 笑顔の下で三手先まで計算し、貸し借りを完璧に記憶。たまには損得勘定をオフにしないと、いつか自分の策に溺れてしまいますよ。",
+    line:"笑顔の下で、常に三手先を計算している" },
+];
+
+const QUIZ_NAME = "【腹黒度チェック】天使と悪魔の比率テスト";
+
+/* ===== 状態管理 ===== */
+let idx = 0;
+let answers = new Array(QUESTIONS.length).fill(null);
+let renderOrder = [];
+let currentResult = null;
+
+const $ = id => document.getElementById(id);
+function show(scr){ document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active')); $(scr).classList.add('active'); window.scrollTo({top:0,behavior:'smooth'}); }
+function shuffle(arr){ const a=arr.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
+
+function startQuiz(){ idx=0; answers.fill(null); show('quiz'); renderQuestion(); }
+
+function renderQuestion(){
+  const q = QUESTIONS[idx];
+  $('qText').textContent = q.q;
+  $('qNow').textContent = idx+1;
+  $('bar').style.width = Math.round((idx/QUESTIONS.length)*100) + '%';
+  $('qPctTxt').textContent = Math.round(((idx+1)/QUESTIONS.length)*100) + '%';
+
+  renderOrder = shuffle(q.a.map((_,i)=>i));
+  const box = $('opts'); box.innerHTML='';
+  renderOrder.forEach(optIndex=>{
+    const o = q.a[optIndex];
+    const el = document.createElement('button');
+    el.className='opt'; el.type='button';
+    el.innerHTML = `<span class="dot"></span><span>${o.t}</span>`;
+    el.onclick = ()=> selectOption(o.s, el);
+    box.appendChild(el);
+  });
+  if(answers[idx]!==null){
+    [...box.children].forEach((el,i)=>{ if(QUESTIONS[idx].a[renderOrder[i]].s===answers[idx]) el.classList.add('sel'); });
+  }
+
+  $('nextBtn').disabled = answers[idx]===null;
+  $('nextBtn').textContent = (idx===QUESTIONS.length-1) ? '診断結果を見る ✨' : '次へ →';
+  $('backBtn').style.display = idx>0 ? 'block' : 'none';
+}
+
+function selectOption(score, el){
+  answers[idx] = score;
+  [...$('opts').children].forEach(c=>c.classList.remove('sel'));
+  el.classList.add('sel');
+  $('nextBtn').disabled = false;
+}
+
+function goNext(){
+  if(answers[idx]===null) return;
+  if(idx < QUESTIONS.length-1){ idx++; renderQuestion(); }
+  else { showResult(); }
+}
+function goBack(){ if(idx>0){ idx--; renderQuestion(); } }
+
+/* ===== 採点 → 結果表示（ページ遷移せず滑らかに表示） ===== */
+function showResult(){
+  const total = answers.reduce((a,b)=>a+(b||0),0); // 8〜32点
+  // 明確なスコア区間で判定（上の確率平衡コメント参照／高いほど悪魔寄り）
+  let r;
+  if      (total >= 8  && total <= 16) r = RESULTS[0]; // ≈13.6%
+  else if (total >= 17 && total <= 18) r = RESULTS[1]; // ≈18.4%
+  else if (total >= 19 && total <= 20) r = RESULTS[2]; // ≈24.1%
+  else if (total >= 21 && total <= 22) r = RESULTS[3]; // ≈22.1%
+  else                                 r = RESULTS[4]; // 23〜32 ≈21.8%
+  currentResult = r;
+
+  $('rTitle').textContent = r.title;
+  $('rCatch').textContent = r.catch;
+  $('rBody').innerHTML = `${r.good}<span class="roast">${r.roast}</span>`;
+
+  const rt = $('rRatio');
+  rt.style.setProperty('--devil', '0%');
+  show('result');
+
+  requestAnimationFrame(()=>{ setTimeout(()=>rt.style.setProperty('--devil', r.devil+'%'), 120); });
+  countUp($('rDevil'), r.devil, 1200);
+  countUp($('rAngel'), 100 - r.devil, 1200, 100);
+}
+
+function countUp(elm, target, dur, from){
+  const start=performance.now(); const f = (from===undefined?0:from);
+  function step(now){
+    const p=Math.min((now-start)/dur,1);
+    const eased=1-Math.pow(1-p,3);
+    elm.textContent=Math.round(f + (target-f)*eased);
+    if(p<1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+/* ===== シェア機能 ===== */
+function buildShareText(){
+  // 【測驗名】+【結果】+【幽默短評】+【本站連結】
+  const url = window.location.href; // 現在のURLを動的取得
+  return `${QUIZ_NAME}\n\n私の腹黒度は【天使${100-currentResult.devil}% : 悪魔${currentResult.devil}%／${currentResult.title}】でした😇😈\n→「${currentResult.line}」\n\nあなたの本性は何対何？診断はこちら👇\n${url}`;
+}
+function copyShare(){
+  const text = buildShareText();
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(()=>toast('コピーしました！'),()=>fallbackCopy(text));
+  } else { fallbackCopy(text); }
+}
+function fallbackCopy(text){
+  const ta=document.createElement('textarea');
+  ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.focus(); ta.select();
+  try{ document.execCommand('copy'); toast('コピーしました！'); }catch(e){ toast('コピーできませんでした'); }
+  document.body.removeChild(ta);
+}
+function shareX(){
+  const url = window.location.href;
+  const hashtags = "腹黒度診断,天使と悪魔診断,当たる心理テスト"; // X用ハッシュタグ3つ
+  const text = `${QUIZ_NAME}\n私の本性は【天使${100-currentResult.devil}% : 悪魔${currentResult.devil}%／${currentResult.title}】😇😈\n「${currentResult.line}」\nあなたは何対何？👇`;
+  const u = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}&hashtags=${encodeURIComponent(hashtags)}`;
+  window.open(u,'_blank','noopener');
+}
+function shareLine(){
+  const url = window.location.href;
+  const text = `${QUIZ_NAME}\n私は【天使${100-currentResult.devil}% : 悪魔${currentResult.devil}%／${currentResult.title}】でした😇😈 あなたは何対何？`;
+  const u = `https://line.me/R/msg/text/?${encodeURIComponent(text+"\n"+url)}`;
+  window.open(u,'_blank','noopener');
+}
+
+function restart(){ idx=0; answers.fill(null); currentResult=null; show('start'); }
+
+/* ===== トースト ===== */
+let toastTimer;
+function toast(msg){
+  const t=$('toast'); t.textContent=msg; t.classList.add('show');
+  clearTimeout(toastTimer); toastTimer=setTimeout(()=>t.classList.remove('show'),1900);
+}
+</script>
+</body>
+</html>
