@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ SEO 基本タグ（Google日本検索向け） ============ -->
+<title>【蛙化現象チェック】恋が冷める瞬間 診断｜蛙化現象 診断・恋が冷める 理由・恋愛心理テスト</title>
+<meta name="description" content="無料の恋愛心理テスト。8つの質問に答えるだけで、あなたの蛙化度＝恋が冷めやすさが分かる蛙化現象 診断。あなたが恋に冷める 理由と瞬間を、やさしく辛口に診断します。">
+<meta name="keywords" content="蛙化現象 診断,恋が冷める 理由,恋愛心理テスト,蛙化度,恋が冷める瞬間,無料診断">
+<meta name="robots" content="index, follow">
+
+<!-- ============ Open Graph（X / Threads / LINE 用カード） ============ -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="【蛙化現象チェック】あなたの「恋が冷める瞬間」診断">
+<meta property="og:description" content="好きだったのに、なぜか急に冷める…。あなたの蛙化度は何％？ 8問で分かる無料の恋愛心理テスト。あなたは『一途な愛され体質』？それとも『カエル量産型』？">
+<meta property="og:image" content="og-image.png">
+<meta property="og:url" content="">
+<meta property="og:site_name" content="蛙化現象チェック">
+
+<!-- ============ Twitter Card ============ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="【蛙化現象チェック】あなたの「恋が冷める瞬間」診断">
+<meta name="twitter:description" content="あなたの蛙化度＝恋の冷めやすさは何％？ 8問で分かる無料の蛙化現象 診断・恋愛心理テスト。">
+<meta name="twitter:image" content="og-image.png">
+
+<!-- ============ FAQ 構造化データ（JSON-LD / Schema Markup） ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "「蛙化現象」とは何ですか？ この診断で何が分かりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "蛙化現象とは、好きだった相手が自分に好意を持った途端などに、急に気持ちが冷めてしまう現象のことです。この無料の蛙化現象 診断では、8つの質問であなたがどれくらい恋が冷めやすいタイプか（蛙化度）が分かります。あくまで娯楽目的の恋愛心理テストです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "恋が冷める 理由には、どんなものがありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ささいな違和感、理想とのギャップ、相手の好意を重く感じる、付き合ってドキドキが落ち着くなど、理由は人それぞれです。この診断は、あなたがどんな瞬間に冷めやすいのか、その傾向を楽しく知るきっかけになります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "この恋愛心理テストは無料で何回でもできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、完全無料で会員登録も不要です。気分や恋愛の状況によって結果が変わることもあるので、友達ともシェアして気軽にお楽しみください。"
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#33262c;
+    --muted:#8c7e85;
+    --line:#f3e2ea;
+    --card:#ffffff;
+    --brand:#ff5c8a;
+    --brand-soft:#ffe9f0;
+    --frog:#3ec96a;
+    --shadow:0 18px 40px -22px rgba(120,50,80,.45);
+    --radius:22px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Zen Kaku Gothic New",-apple-system,"Hiragino Kaku Gothic ProN",sans-serif;
+    color:var(--ink);
+    line-height:1.7;
+    background:
+      radial-gradient(1100px 520px at 16% -8%, #ffe2ee 0%, rgba(255,226,238,0) 58%),
+      radial-gradient(900px 560px at 94% 4%, #ece4fb 0%, rgba(236,228,251,0) 56%),
+      linear-gradient(180deg,#fbf3f7 0%, #f7f3f8 100%);
+    min-height:100vh;
+    padding:18px;
+    display:flex;
+    justify-content:center;
+  }
+  .wrap{width:100%;max-width:480px;margin:10px auto 40px}
+
+  .card{
+    background:var(--card);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:28px 22px;
+    border:1px solid rgba(255,255,255,.7);
+  }
+  .screen{display:none;animation:rise .5s cubic-bezier(.2,.8,.2,1)}
+  .screen.active{display:block}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  /* ===== 広告枠 ===== */
+  .ad-slot{min-height:250px;background:#f0f0f0;margin:20px 0;text-align:center;line-height:250px;color:#aaa;border-radius:14px;font-size:13px;letter-spacing:.04em}
+
+  /* ===== スタート画面 ===== */
+  .eyebrow{
+    display:inline-block;font-size:12px;font-weight:700;letter-spacing:.1em;
+    color:var(--brand);background:var(--brand-soft);
+    padding:6px 13px;border-radius:999px;margin-bottom:16px;
+  }
+  .title{
+    font-family:"Zen Maru Gothic",sans-serif;font-weight:900;
+    font-size:28px;line-height:1.35;letter-spacing:-.01em;margin-bottom:6px;
+  }
+  .title .sub{display:block;font-size:15px;color:var(--muted);font-weight:700;margin-top:10px}
+  .hero{display:flex;justify-content:center;margin:24px 0 8px}
+  .lead{color:var(--muted);font-size:14.5px;margin:14px 2px 0}
+  .meta-row{display:flex;gap:12px;justify-content:center;margin:18px 0 4px;flex-wrap:wrap}
+  .chip{font-size:12px;color:var(--muted);background:#f7f3f6;border:1px solid var(--line);padding:6px 12px;border-radius:999px}
+
+  /* ===== ボタン ===== */
+  .btn{
+    display:block;width:100%;border:none;cursor:pointer;
+    font-family:"Zen Maru Gothic",sans-serif;font-weight:700;font-size:17px;
+    color:#fff;background:linear-gradient(135deg,#ff6f91,#ff4d7d);
+    padding:16px;border-radius:16px;
+    box-shadow:0 12px 22px -10px rgba(255,77,125,.85);
+    transition:transform .12s ease, box-shadow .12s ease, opacity .2s;
+  }
+  .btn:active{transform:translateY(2px) scale(.99)}
+  .btn:disabled{opacity:.4;cursor:not-allowed;box-shadow:none;filter:grayscale(.3)}
+  .btn.ghost{background:#fff;color:var(--ink);border:1.6px solid var(--line);box-shadow:none}
+  .btn.x{background:#111;box-shadow:0 12px 22px -10px rgba(0,0,0,.55)}
+  .btn.line{background:#06c755;box-shadow:0 12px 22px -10px rgba(6,199,85,.6)}
+  .btn-row{display:flex;gap:10px;margin-top:10px}
+  .btn-row .btn{font-size:15px;padding:14px}
+
+  /* ===== 進捗 ===== */
+  .progress-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+  .q-count{font-family:"Zen Maru Gothic";font-weight:700;font-size:14px;color:var(--muted)}
+  .q-count b{color:var(--brand);font-size:20px}
+  .bar{height:8px;background:#f3e7ee;border-radius:999px;overflow:hidden}
+  .bar > i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#ff5c8a,#3ec96a);transition:width .45s cubic-bezier(.2,.8,.2,1)}
+
+  /* ===== 設問 ===== */
+  .q-text{
+    font-family:"Zen Maru Gothic",sans-serif;font-weight:700;
+    font-size:20px;line-height:1.5;margin:18px 0 18px;
+  }
+  .options{display:flex;flex-direction:column;gap:11px}
+  .opt{
+    text-align:left;width:100%;cursor:pointer;
+    background:#fdfafb;border:1.8px solid var(--line);
+    border-radius:15px;padding:15px 16px;font-size:15px;color:var(--ink);
+    display:flex;align-items:center;gap:12px;line-height:1.55;
+    transition:border-color .15s, background .15s, transform .1s;
+    font-family:inherit;
+  }
+  .opt:active{transform:scale(.99)}
+  .opt .dot{
+    flex:0 0 22px;height:22px;border-radius:50%;border:2px solid #ddc9d3;
+    transition:all .15s;position:relative;margin-top:1px;
+  }
+  .opt.sel{border-color:var(--brand);background:var(--brand-soft)}
+  .opt.sel .dot{border-color:var(--brand);background:var(--brand)}
+  .opt.sel .dot::after{content:"";position:absolute;inset:0;margin:auto;width:7px;height:7px;background:#fff;border-radius:50%}
+  .quiz-foot{margin-top:22px}
+
+  /* ===== 蛙化度メーター ===== */
+  .gauge{--pct:0%;--col:var(--brand);position:relative;width:100%;max-width:330px;margin:18px auto 2px;padding:14px 0}
+  .gauge .track{height:26px;border-radius:999px;background:#f0e7ec;border:2px solid #fff;box-shadow:inset 0 2px 5px rgba(120,60,90,.12);overflow:hidden}
+  .gauge .fill{height:100%;width:var(--pct);border-radius:999px;background:linear-gradient(90deg,var(--col),color-mix(in srgb,var(--col) 60%,#fff));transition:width 1.3s cubic-bezier(.16,.84,.3,1)}
+  .gauge .coin{position:absolute;top:50%;left:var(--pct);transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:#fff;border:3px solid var(--col);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--col);box-shadow:0 6px 14px -4px rgba(120,40,80,.3);transition:left 1.3s cubic-bezier(.16,.84,.3,1)}
+  .gauge .scale{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:8px;padding:0 2px}
+
+  /* ===== 結果 ===== */
+  .result-head{text-align:center;margin-bottom:4px}
+  .r-eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--muted)}
+  .pct-num{font-family:"Zen Maru Gothic";font-weight:900;font-size:44px;line-height:1;margin-top:10px;text-align:center}
+  .pct-num small{font-size:17px;color:var(--muted);font-weight:700;letter-spacing:.06em;display:block;margin-bottom:2px}
+  .pct-num span{font-size:22px;margin-left:2px}
+  .r-title{font-family:"Zen Maru Gothic";font-weight:900;font-size:25px;text-align:center;margin:8px 0 2px}
+  .r-catch{text-align:center;color:var(--muted);font-size:14px;margin-bottom:18px}
+  .r-body{font-size:15px;line-height:1.85;background:#fdfafb;border:1px solid var(--line);border-radius:16px;padding:18px 17px}
+  .r-body .roast{display:block;margin-top:12px;padding-top:12px;border-top:1px dashed #ecdce4}
+  .r-body .roast b{color:#e0436f}
+  .share-label{text-align:center;font-size:13px;color:var(--muted);margin:22px 0 10px;font-weight:700}
+
+  /* ===== トースト ===== */
+  .toast{
+    position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);
+    background:var(--ink);color:#fff;padding:12px 20px;border-radius:999px;font-size:14px;
+    font-weight:700;opacity:0;pointer-events:none;transition:all .3s;z-index:99;box-shadow:0 10px 30px -8px rgba(0,0,0,.5)
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  /* ===== FAQ（SEO） ===== */
+  .seo-faq{max-width:480px;margin:26px auto 0;padding:24px 22px;background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:var(--radius)}
+  .seo-faq h2{font-family:"Zen Maru Gothic";font-size:18px;margin-bottom:14px}
+  .seo-faq details{border-bottom:1px solid var(--line);padding:12px 0}
+  .seo-faq summary{font-weight:700;font-size:14.5px;cursor:pointer;list-style:none}
+  .seo-faq summary::-webkit-details-marker{display:none}
+  .seo-faq summary::before{content:"Q. ";color:var(--brand);font-family:"Zen Maru Gothic"}
+  .seo-faq p{font-size:13.5px;color:var(--muted);margin-top:8px;padding-left:2px}
+  .disclaimer{max-width:480px;margin:16px auto 0;text-align:center;font-size:11.5px;color:#ad9aa3;line-height:1.7}
+
+  @media(max-width:380px){ .title{font-size:24px} .q-text{font-size:18px} }
+  @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <!-- ====================== スタート画面 ====================== -->
+  <section id="start" class="screen card active">
+    <span class="eyebrow">🐸 無料・8問・30秒</span>
+    <h1 class="title">【蛙化現象チェック】
+      <span class="sub">あなたの「恋が冷める瞬間」診断</span>
+    </h1>
+
+    <div class="hero">
+      <div class="gauge" style="--pct:50%;--col:#c98fbf;max-width:300px">
+        <div class="track"><div class="fill"></div></div>
+        <div class="coin">♡</div>
+        <div class="scale"><span>一途</span><span>蛙化</span></div>
+      </div>
+    </div>
+
+    <p class="lead">あんなに好きだったのに、ある瞬間スッと冷める…。<br>あなたの<b>「蛙化度」＝恋の冷めやすさ</b>は何％？<br>直感で答えて、冷める瞬間をチェック。</p>
+
+    <div class="meta-row">
+      <span class="chip">#蛙化現象診断</span>
+      <span class="chip">#恋が冷める理由</span>
+      <span class="chip">#恋愛心理テスト</span>
+    </div>
+
+    <!-- 黄金広告枠①：開始ボタンの上 -->
+    <div class="ad-slot">【スポンサーリンク / 広告】</div>
+
+    <button class="btn" onclick="startQuiz()">診断スタート →</button>
+  </section>
+
+  <!-- ====================== クイズ画面 ====================== -->
+  <section id="quiz" class="screen card">
+    <div class="progress-head">
+      <span class="q-count">Q<b id="qNow">1</b> <span style="font-size:12px">/ 8</span></span>
+      <span class="q-count" id="qPctTxt" style="font-size:12px">12%</span>
+    </div>
+    <div class="bar"><i id="bar"></i></div>
+
+    <p class="q-text" id="qText"></p>
+    <div class="options" id="opts"></div>
+
+    <div class="quiz-foot">
+      <button class="btn" id="nextBtn" disabled onclick="goNext()">次へ →</button>
+      <button class="btn ghost" id="backBtn" style="margin-top:10px;display:none" onclick="goBack()">← 前の質問へ</button>
+    </div>
+  </section>
+
+  <!-- ====================== 結果画面 ====================== -->
+  <section id="result" class="screen card">
+    <!-- 黄金広告枠②：結果ラベルの真上 -->
+    <div class="ad-slot">【スポンサーリンク / 広告】</div>
+
+    <div class="result-head">
+      <div class="r-eyebrow">あなたの蛙化度は…</div>
+      <div class="gauge" id="rGauge">
+        <div class="track"><div class="fill"></div></div>
+        <div class="coin">♡</div>
+        <div class="scale"><span>一途</span><span>蛙化</span></div>
+      </div>
+      <div class="pct-num"><small>蛙化度</small><span id="rPct">0</span><span>%</span></div>
+      <h2 class="r-title" id="rTitle"></h2>
+      <p class="r-catch" id="rCatch"></p>
+    </div>
+
+    <div class="r-body" id="rBody"></div>
+
+    <p class="share-label">あなたの友達は一途？それとも蛙化体質？ シェアして当て合おう👇</p>
+    <button class="btn" onclick="copyShare()">📋 結果をシェアする（コピー）</button>
+    <div class="btn-row">
+      <button class="btn x" onclick="shareX()">𝕏 でポスト</button>
+      <button class="btn line" onclick="shareLine()">LINEで送る</button>
+    </div>
+    <button class="btn ghost" style="margin-top:10px" onclick="restart()">↺ もう一度診断する</button>
+  </section>
+
+  <!-- ====================== FAQ（SEO 置底ブロック） ====================== -->
+  <section class="seo-faq">
+    <h2>よくある質問（蛙化現象 診断 FAQ）</h2>
+    <details open>
+      <summary>「蛙化現象」とは何ですか？ この診断で何が分かりますか？</summary>
+      <p>蛙化現象とは、好きだった相手が自分に好意を持った途端などに、急に気持ちが冷めてしまう現象のことです。この無料の蛙化現象 診断では、8つの質問であなたがどれくらい恋が冷めやすいタイプか（蛙化度）が分かります。あくまで娯楽目的の恋愛心理テストです。</p>
+    </details>
+    <details>
+      <summary>恋が冷める 理由には、どんなものがありますか？</summary>
+      <p>ささいな違和感、理想とのギャップ、相手の好意を重く感じる、付き合ってドキドキが落ち着くなど、理由は人それぞれです。この診断は、あなたがどんな瞬間に冷めやすいのか、その傾向を楽しく知るきっかけになります。</p>
+    </details>
+    <details>
+      <summary>この恋愛心理テストは無料で何回でもできますか？</summary>
+      <p>はい、完全無料で会員登録も不要です。気分や恋愛の状況によって結果が変わることもあるので、友達ともシェアして気軽にお楽しみください。</p>
+    </details>
+   </section>
+
+  <!-- ═══════════════════════════════════════════
+       SEO Articles Section & Footer
+       ════════════════════════════════════════════ -->
+  <style>
+    /* 蛙化現象チェック專用的優雅隱蔽式頁尾樣式 */
+    .seo-articles-container {
+      max-width: 480px;
+      margin: 24px auto 0;
+      padding: 20px;
+      background: rgba(255, 92, 138, 0.03); /* 使用網頁內建的莓果粉色調進行極淡化半透明處理 */
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+    .seo-article {
+      margin-bottom: 24px;
+    }
+    .seo-article:last-child {
+      margin-bottom: 0;
+    }
+    .seo-article-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink);
+      opacity: 0.7;
+      margin-bottom: 10px;
+      letter-spacing: 0.04em;
+    }
+    .seo-article-p {
+      font-size: 12px;
+      color: var(--muted); /* 降低對比度與飽和度的煙燻灰粉字體，優雅隱蔽不刺眼 */
+      line-height: 1.85;
+      text-align: justify;
+      margin-bottom: 8px;
+    }
+    .seo-article-p:last-child {
+      margin-bottom: 0;
+    }
+    .disclaimer-final {
+      max-width: 480px;
+      margin: 24px auto 0;
+      text-align: center;
+      font-size: 11.5px;
+      color: #ad9aa3;
+      line-height: 1.7;
+    }
+    .site-footer-final {
+      text-align: center;
+      font-size: 11px;
+      color: var(--muted);
+      padding: 24px 0 16px;
+      letter-spacing: 0.04em;
+      opacity: 0.7;
+    }
+  </style>
+
+  <section class="seo-articles-container">
+    <!-- 1️⃣ 第一篇 SEO 文章：聚焦於蛙化現象的心理機制與戀愛冷掉的理由 -->
+    <article class="seo-article">
+      <h3 class="seo-article-title">コラム：なぜ急に気持ちが覚める？「蛙化現象 診断」から紐解く複雑な恋愛心理</h3>
+      <p class="seo-article-p">
+        片思いのときはあんなに燃え上がっていたのに、いざ両思いになった途端、あるいは相手の些細な行動を目撃した瞬間に、スッと恋心が冷めてしまう——このような経験に戸惑ったことのある人は少なくありません。近年のZ世代を中心に広く使われるようになった「蛙化現象」という言葉は、現代人の繊細な価値観や理想と現実のギャップ、そして傷つくことを恐れる自己防衛反応と深く結びついています。2026年現在も、自分の恋の冷めやすさを客観的に分析できる「蛙化現象 診断」や無料の恋愛心理テストが、多くのユーザーの共感を集めています。
+      </p>
+      <p class="seo-article-p">
+        心理学的な観点から見ると、恋が冷める 理由には「理想の過剰な神格化」や「追う恋愛への依存」が関係していると言われています。相手を王子様や王女様のように完璧だと思い込んでいるほど、デート中のがっかりした仕草やダサい一面といったリアルな人間に触れた際、ときめきセンサーが急降下して幻滅してしまうのです。また、相手から尽くされたり好意のスタンプを重く感じたりして逃げ出したくなるのは、親密な関係になることへの無意識の拒絶（回避依存）がスイッチを押している可能性もあります。
+      </p>
+      <p class="seo-article-p">
+        自分の蛙化度を知ることは、決して自分の人格を責めたり「カエル量産型」だと落ち込んだりするためのものではありません。自分がどんな瞬間に冷めやすいのかという買い物の癖ならぬ“恋の癖”を自覚しておくことは、感情の波に振り回されず、心地よい安心感ベースの持続可能なパートナーシップを築くための大切な一歩となるでしょう。
+      </p>
+    </article>
+
+    <!-- 2️⃣ 第二篇 SEO 文章：聚焦於心理測驗的社交價值與一途體質的對比 -->
+    <article class="seo-article">
+      <h3 class="seo-article-title">コラム：恋が冷める瞬間と「恋愛心理テスト」をきっかけにする自己開示と相互理解</h3>
+      <p class="seo-article-p">
+        「蛙化病かも」と一人で悩むとネガティブなループに陥りがちですが、ユーモラスな突っ込みやスコアとして可視化されると、人間味のある個性として受け入れやすくなります。深刻になりがちな対人関係のトラウマや繊細すぎる気質を、エンターテインメントの形に昇華した「恋が冷める瞬間 診断」や面白い無料テストが、SNSを通じて友人や恋人同士のコミュニケーションツールとして広く愛されている理由はここにあります。
+      </p>
+      <p class="seo-article-p">
+        直感で答える設問設計の心理テストが「当たる！」と評判になりやすいのは、日常の建前が緩み、食事中の食べ方への違和感や「両思いになる前までが一番楽しい」という隠れた本音が反映されやすいためです。たとえば、相手の欠点も包容力で受け止める「一途な愛され体質」の人と、瞬間冷却のスイッチを持つ「瞬間蛙化体質」の人では、付き合ってドキドキが落ち着いた後の安心感の捉え方が根本的に異なります。
+      </p>
+      <p class="seo-article-p">
+        自分のときめき探知機の特徴をあらかじめ自覚し、それを友達とシェアして当て合うことは、普段は見せない恋愛観や鎧を脱いだ素の自分をソフトに自己開示する絶好の機会です。無料の性格診断をライフスタイルの一部として楽しみながら、他者との相互理解を深め、しなやかで心地よい距離感の恋愛を楽しんでみてはいかがでしょうか。
+      </p>
+    </article>
+  </section>
+
+  <p class="disclaimer-final">※本診断は娯楽・自己理解を目的とした恋愛心理テストです。相性や人格を決めつけるものではありません。<br>結果は軽い気持ちでお楽しみください。</p>
+  
+  <div class="site-footer-final">© 2026 蛙化現象チェック ｜ 自分のペースで恋を楽しもう 🐸💔</div>
+</div>
+
+<div class="toast" id="toast">コピーしました！</div>
+
+<script>
+/* =========================================================================
+   設問データ
+   各選択肢は score:1〜4（高いほど「蛙化しやすい＝恋が冷めやすい」）。
+   ・打散（シャッフル）：各設問内のスコアの並びをわざとバラバラに定義し、
+     さらに renderQuestion() で表示順を毎回ランダム化するため、
+     「上から低→高で並んでいる」と一目で分からないようにしている。
+   ========================================================================= */
+const QUESTIONS = [
+  { q:"片思いしてた相手が、実は自分を好きだと分かった瞬間…", a:[
+    {t:"嬉しくて、ますます好きになる", s:1},
+    {t:"あれ、ちょっと興味が薄れるかも", s:3},
+    {t:"普通に嬉しい", s:2},
+    {t:"急に「無理」になって、冷める", s:4},
+  ]},
+  { q:"デート中、相手が道に迷ってアタフタしている。", a:[
+    {t:"一気に冷める。リードしてほしかった", s:4},
+    {t:"可愛いと思える。さりげなく助ける", s:1},
+    {t:"ちょっと頼りないな…と感じる", s:3},
+    {t:"特に気にならない", s:2},
+  ]},
+  { q:"相手から絵文字たっぷりの「おはよう☀️」が来たら？", a:[
+    {t:"普通に「おはよう」と返す", s:2},
+    {t:"うわ…と引いて、塩対応になる", s:4},
+    {t:"嬉しい。自分も絵文字で返す", s:1},
+    {t:"テンションに、少しついていけない", s:3},
+  ]},
+  { q:"相手が自分に夢中で、とことん尽くしてくれると…", a:[
+    {t:"愛されてる感じが、素直に嬉しい", s:1},
+    {t:"追われると冷める。逃げたくなる", s:4},
+    {t:"ありがたいな、と思う", s:2},
+    {t:"だんだん「重い」と感じてしまう", s:3},
+  ]},
+  { q:"食事中、相手の食べ方や仕草が想像と違った。", a:[
+    {t:"地味に気になってしまう", s:3},
+    {t:"全く気にならない", s:1},
+    {t:"それだけで一気に冷めることがある", s:4},
+    {t:"少し気になるが、すぐ忘れる", s:2},
+  ]},
+  { q:"相手が緊張して、デートの段取りをミスった。", a:[
+    {t:"流せる。仕方ないよね、と思う", s:2},
+    {t:"ちょっとガッカリしてしまう", s:3},
+    {t:"ほほえましい。フォローしたくなる", s:1},
+    {t:"完璧じゃないと、萎えてしまう", s:4},
+  ]},
+  { q:"付き合う前のドキドキが好き。付き合った後は？", a:[
+    {t:"ドキドキが消えると、一気に冷める", s:4},
+    {t:"安心感に変わって、心地よい", s:2},
+    {t:"少し、気持ちが落ち着きすぎる", s:3},
+    {t:"ずっとドキドキが続いている", s:1},
+  ]},
+  { q:"相手の「天然な一面」や「ダサい一面」を見たとき…", a:[
+    {t:"ギャップ萌え。もっと好きになる", s:1},
+    {t:"理想と違って、少しモヤッとする", s:3},
+    {t:"幻滅して、恋心がしぼんでいく", s:4},
+    {t:"親近感がわいてくる", s:2},
+  ]},
+];
+
+/* =========================================================================
+   結果データ ＆ スコア区間（機率平衡の核心）
+   ─────────────────────────────────────────────────────────────────────────
+   ■ 理論スコア：8問 × 各1〜4点  →  最低 8点 / 最高 32点
+   ■ なぜ「等分割」にしないか：
+     ランダム回答時の合計点は中心極限定理によりベル型に偏る。
+     区間を等幅で切ると中央の結果に40%以上が集中し「8割が同じ結果」になる。
+   ■ 対策：合計点の確率分布の「五分位点（quintile）」で区切る。
+     境界を 16 / 18 / 20 / 22 に設定すると、ランダム回答時の各結果の出現率は
+        8–16点 ≈ 13.6% / 17–18 ≈ 18.4% / 19–20 ≈ 24.1% /
+        21–22 ≈ 22.1% / 23–32 ≈ 21.8%
+     となり、各結果がほぼ均等（最大でも約24%）に分散する＝特定結果の独占を防止。
+     ※これは「ランダム回答時」の母集団分布。実際の回答は本人の恋愛傾向を
+       反映して偏るのが正常（＝当たる）で、これは設計上の不具合ではない。
+   ========================================================================= */
+const RESULTS = [
+  { min:8,  max:16, frog:12, col:"#ff5c8a",
+    title:"一途な愛され体質", catch:"冷めない、本物の一途さ（蛙化度12%）",
+    good:"あなたは一度好きになったら、まっすぐ愛を注げる一途なタイプ。相手の欠点も「それも含めて好き」と受け止められる包容力があり、安定した深い関係を築ける、恋人にしたら最高の人です。",
+    roast:"…ただ、その一途さ、<b>たまに“好き”が暴走して相手が見えなくなって</b>ません？ ダメな相手にも尽くしすぎて、周りがハラハラすることも。たまには冷静なあなたの目も、信じてあげて。",
+    line:"一途すぎて、ダメ男(女)製造機になりがち" },
+
+  { min:17, max:18, frog:35, col:"#f48fb1",
+    title:"ほぼ一途、たまにヒヤッと", catch:"情と冷静さのバランス型（蛙化度35%）",
+    good:"あなたは基本的に愛情深く、相手をちゃんと大切にできるバランス型。それでいて「これは無理かも」という自分の感覚もきちんと持っている。情と冷静さを両立した、恋愛偏差値の高いタイプです。",
+    roast:"ただ、ふとした瞬間に<b>「あれ、今ちょっと冷めた…？」</b>が顔を出しますよね。99%好きでも、残り1%の違和感を見逃さない探知機付き。相手のクセに気づくの、ちょっと早すぎです。",
+    line:"99%好きでも、1%の違和感を見逃さない" },
+
+  { min:19, max:20, frog:55, col:"#b39ddb",
+    title:"標準装備の蛙化体質", catch:"ときめき重視のロマンチスト（蛙化度55%）",
+    good:"あなたは恋のドキドキやときめきを大切にする、感性豊かなロマンチスト。理想があるからこそ、本気で好きになれる相手には全力。その真剣さは、恋を丁寧に育てられる素敵な才能でもあります。",
+    roast:"でも、その理想の高さゆえに<b>ちょっとした“幻滅ポイント”で恋心が急降下</b>しがち。相手は同じ人なのに、昨日まで王子様、今日からただの人。冷める速度、自分でも止められないでしょう。",
+    line:"昨日まで王子様、今日からただの人" },
+
+  { min:21, max:22, frog:78, col:"#4dc7a8",
+    title:"瞬間冷却・蛙化しやすいタイプ", catch:"直感に正直な恋の自由人（蛙化度78%）",
+    good:"あなたは自分の気持ちにとても正直で、ときめきへの感度が抜群。違和感をごまかさず、合わない相手と無理に続けない潔さがあります。その素直さは、自分をちゃんと大事にできている証拠でもあります。",
+    roast:"……ただ、その蛙化スイッチ、<b>あまりに些細なことで発動</b>してませんか？ 好意を見せられた瞬間に「無理」、追われた瞬間に逃走。気づけば、好きなのは“両思いになる前まで”説、濃厚です。",
+    line:"好きなのは「両思いになる前まで」説" },
+
+  { min:23, max:32, frog:100, col:"#3ec96a",
+    title:"超・瞬間蛙化体質（カエル量産型）", catch:"恋の賞味期限が世界最速（蛙化度100%）",
+    good:"あなたは恋のときめきセンサーが超高性能。ほんの小さな違和感も見抜く鋭い感受性と、自分の心に嘘をつかない正直さを持っています。本気でハマれる相手に出会えたなら、その愛はきっと特別なものに。",
+    roast:"……が！ その蛙化スピード、<b>もはや光の速さ</b>では？ 告白された瞬間、相手がくしゃみした瞬間、「おはよ」のスタンプ一つで即・冷却。恋の前に、カエルの大群が積み上がっています。まずは“3秒待つ”ところから。",
+    line:"告白された瞬間に、相手をカエルへ変身させる達人" },
+];
+
+const QUIZ_NAME = "【蛙化現象チェック】恋が冷める瞬間 診断";
+
+/* ===== 状態管理 ===== */
+let idx = 0;
+let answers = new Array(QUESTIONS.length).fill(null);
+let renderOrder = [];
+let currentResult = null;
+
+const $ = id => document.getElementById(id);
+function show(scr){ document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active')); $(scr).classList.add('active'); window.scrollTo({top:0,behavior:'smooth'}); }
+function shuffle(arr){ const a=arr.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
+
+function startQuiz(){ idx=0; answers.fill(null); show('quiz'); renderQuestion(); }
+
+function renderQuestion(){
+  const q = QUESTIONS[idx];
+  $('qText').textContent = q.q;
+  $('qNow').textContent = idx+1;
+  $('bar').style.width = Math.round((idx/QUESTIONS.length)*100) + '%';
+  $('qPctTxt').textContent = Math.round(((idx+1)/QUESTIONS.length)*100) + '%';
+
+  renderOrder = shuffle(q.a.map((_,i)=>i));
+  const box = $('opts'); box.innerHTML='';
+  renderOrder.forEach(optIndex=>{
+    const o = q.a[optIndex];
+    const el = document.createElement('button');
+    el.className='opt'; el.type='button';
+    el.innerHTML = `<span class="dot"></span><span>${o.t}</span>`;
+    el.onclick = ()=> selectOption(o.s, el);
+    box.appendChild(el);
+  });
+  if(answers[idx]!==null){
+    [...box.children].forEach((el,i)=>{ if(QUESTIONS[idx].a[renderOrder[i]].s===answers[idx]) el.classList.add('sel'); });
+  }
+
+  $('nextBtn').disabled = answers[idx]===null;
+  $('nextBtn').textContent = (idx===QUESTIONS.length-1) ? '診断結果を見る ✨' : '次へ →';
+  $('backBtn').style.display = idx>0 ? 'block' : 'none';
+}
+
+function selectOption(score, el){
+  answers[idx] = score;
+  [...$('opts').children].forEach(c=>c.classList.remove('sel'));
+  el.classList.add('sel');
+  $('nextBtn').disabled = false;
+}
+
+function goNext(){
+  if(answers[idx]===null) return;
+  if(idx < QUESTIONS.length-1){ idx++; renderQuestion(); }
+  else { showResult(); }
+}
+function goBack(){ if(idx>0){ idx--; renderQuestion(); } }
+
+/* ===== 採点 → 結果表示（ページ遷移せず滑らかに表示） ===== */
+function showResult(){
+  const total = answers.reduce((a,b)=>a+(b||0),0); // 8〜32点
+  // 明確なスコア区間で判定（上の確率平衡コメント参照／高いほど蛙化しやすい）
+  let r;
+  if      (total >= 8  && total <= 16) r = RESULTS[0]; // ≈13.6%
+  else if (total >= 17 && total <= 18) r = RESULTS[1]; // ≈18.4%
+  else if (total >= 19 && total <= 20) r = RESULTS[2]; // ≈24.1%
+  else if (total >= 21 && total <= 22) r = RESULTS[3]; // ≈22.1%
+  else                                 r = RESULTS[4]; // 23〜32 ≈21.8%
+  currentResult = r;
+
+  $('rTitle').textContent = r.title;
+  $('rCatch').textContent = r.catch;
+  $('rBody').innerHTML = `${r.good}<span class="roast">${r.roast}</span>`;
+
+  const g = $('rGauge');
+  g.style.setProperty('--col', r.col);
+  g.style.setProperty('--pct', '0%');
+
+  show('result');
+
+  requestAnimationFrame(()=>{ setTimeout(()=>g.style.setProperty('--pct', r.frog+'%'), 120); });
+  countUp($('rPct'), r.frog, 1200);
+}
+
+function countUp(elm, target, dur){
+  const start=performance.now();
+  function step(now){
+    const p=Math.min((now-start)/dur,1);
+    const eased=1-Math.pow(1-p,3);
+    elm.textContent=Math.round(eased*target);
+    if(p<1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+/* ===== シェア機能 ===== */
+function buildShareText(){
+  // 【測驗名】+【結果】+【幽默短評】+【本站連結】
+  const url = window.location.href; // 現在のURLを動的取得
+  return `${QUIZ_NAME}\n\n私の蛙化度は【${currentResult.frog}%／${currentResult.title}】でした🐸💔\n→「${currentResult.line}」\n\nあなたの恋が冷める瞬間は？診断はこちら👇\n${url}`;
+}
+function copyShare(){
+  const text = buildShareText();
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(()=>toast('コピーしました！'),()=>fallbackCopy(text));
+  } else { fallbackCopy(text); }
+}
+function fallbackCopy(text){
+  const ta=document.createElement('textarea');
+  ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.focus(); ta.select();
+  try{ document.execCommand('copy'); toast('コピーしました！'); }catch(e){ toast('コピーできませんでした'); }
+  document.body.removeChild(ta);
+}
+function shareX(){
+  const url = window.location.href;
+  const hashtags = "蛙化現象診断,恋が冷める理由,恋愛心理テスト"; // X用ハッシュタグ3つ
+  const text = `${QUIZ_NAME}\n私の蛙化度は【${currentResult.frog}%／${currentResult.title}】でした🐸💔\n「${currentResult.line}」\nあなたの冷める瞬間は？👇`;
+  const u = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}&hashtags=${encodeURIComponent(hashtags)}`;
+  window.open(u,'_blank','noopener');
+}
+function shareLine(){
+  const url = window.location.href;
+  const text = `${QUIZ_NAME}\n私の蛙化度は【${currentResult.frog}%／${currentResult.title}】でした🐸💔 あなたは？`;
+  const u = `https://line.me/R/msg/text/?${encodeURIComponent(text+"\n"+url)}`;
+  window.open(u,'_blank','noopener');
+}
+
+function restart(){ idx=0; answers.fill(null); currentResult=null; show('start'); }
+
+/* ===== トースト ===== */
+let toastTimer;
+function toast(msg){
+  const t=$('toast'); t.textContent=msg; t.classList.add('show');
+  clearTimeout(toastTimer); toastTimer=setTimeout(()=>t.classList.remove('show'),1900);
+}
+</script>
+</body>
+</html>
