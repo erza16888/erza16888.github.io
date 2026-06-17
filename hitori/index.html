@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ===== SEO ===== -->
+<title>おひとり様適性診断｜一生独身でも平気？あなたの孤独耐性をチェック【結婚適性】</title>
+<meta name="description" content="一生独身でも幸せにやっていける？それとも寂しさで限界？8つの質問であなたの“孤独耐性”を診断。結婚適性診断・独身主義の性格診断にも。あなたのおひとり様レベルは？無料で今すぐチェック！" />
+<meta name="keywords" content="結婚適性 診断, 独身主義 性格, 一生独身 占い, 孤独耐性 診断, おひとり様 適性, 一人好き 心理テスト" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://kokoro-shindan.com/ohitorisama-tekisei/" />
+
+<!-- ===== Open Graph (X / Threads / LINE 用大カード) ===== -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="おひとり様適性診断｜一生独身でも平気？孤独耐性チェック" />
+<meta property="og:description" content="一生独身でもやっていける？8問であなたの孤独耐性＝おひとり様適性を診断。結婚適性・独身主義の性格診断にも。あなたのレベルは？" />
+<meta property="og:image" content="og-image.png" />
+<meta property="og:url" content="https://kokoro-shindan.com/ohitorisama-tekisei/" />
+<meta property="og:site_name" content="ココロ診断" />
+<meta property="og:locale" content="ja_JP" />
+
+<!-- ===== Twitter Card ===== -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="おひとり様適性診断｜一生独身でも平気？孤独耐性チェック" />
+<meta name="twitter:description" content="一生独身でもやっていける？8問で“孤独耐性”を診断。結婚適性・独身主義診断にも。" />
+<meta name="twitter:image" content="og-image.png" />
+
+<!-- ===== 構造化データ：FAQ（Google 精選摘要対策） ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "この孤独耐性診断・おひとり様適性診断は無料ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、完全無料です。8つの質問に答えるだけで、一生独身でもやっていける“おひとり様適性（孤独耐性）”を診断できます。登録やインストールは一切不要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "結婚適性や独身主義かどうかも分かりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "分かります。孤独耐性が高いほど独身でも快適に過ごせる独身主義寄りのタイプ、低いほどパートナーがいると安定するタイプです。結婚適性を考えるヒントとして活用できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "診断結果は友達にシェアできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。結果画面のシェアボタンから、あなたの孤独耐性とおひとり様タイプをX（旧Twitter）やLINEで共有できます。コピー機能で他のSNSへの貼り付けも簡単です。"
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@600;800&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet" />
+
+<style>
+/* ===== Design tokens : "深夜の一人時間 / lone lamp" =====
+   深夜のプラム×炭色に、暖かいランプの琥珀。
+   一人の夜の“静かな心地よさ”を表現。
+   結果には円形の孤独耐性リングを採用。
+   前作（黄昏／金庫）とは別系統の配色。 */
+:root{
+  --ink:#2A2333;        /* 深夜のプラム墨：本文 */
+  --ink-soft:#5B5168;
+  --muted:#998FA6;
+  --paper:#F3EFEA;      /* 暖かい生成り */
+  --card:#FFFFFF;
+  --line:#E6DFD7;
+  --amber:#E0954A;      /* ランプの琥珀：アクセント */
+  --amber-deep:#C2762E;
+  --amber-soft:#F0C18A;
+  --rose:#B96E78;       /* 人恋しさ側 */
+  --night-1:#221B33;    /* heroグラデ */
+  --night-2:#3C2E4C;
+  --night-3:#6B4A5E;
+  --radius:20px;
+  --shadow:0 18px 40px -22px rgba(42,35,51,.55);
+  --shadow-sm:0 6px 18px -10px rgba(42,35,51,.4);
+}
+
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;font-family:"Noto Sans JP",system-ui,sans-serif;background:var(--paper);
+  color:var(--ink);line-height:1.75;letter-spacing:.01em;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:560px;margin:0 auto;padding:24px 18px 56px;}
+
+/* ===== 広告枠（AdSense Ready） ===== */
+.ad-slot{min-height:250px;background:#f0f0f0;margin:20px 0;text-align:center;line-height:250px;color:#aaa;font-size:13px;border-radius:12px;}
+
+/* ===== Hero / Intro ===== */
+.hero{
+  position:relative;border-radius:var(--radius);padding:34px 24px 30px;color:#fff;
+  background:linear-gradient(160deg,var(--night-1) 0%,var(--night-2) 60%,var(--night-3) 115%);
+  box-shadow:var(--shadow);overflow:hidden;
+}
+.hero::before{ /* ランプの灯り */
+  content:"";position:absolute;right:-10%;top:-30%;width:230px;height:230px;border-radius:50%;
+  background:radial-gradient(circle,rgba(240,193,138,.5),transparent 62%);
+}
+.lamp{position:absolute;right:18px;top:14px;font-size:30px;opacity:.85;z-index:1;filter:drop-shadow(0 0 14px rgba(240,193,138,.8));}
+.eyebrow{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:12px;letter-spacing:.2em;color:var(--amber-soft);margin:0 0 14px;position:relative;z-index:1;}
+.hero h1{font-family:"Shippori Mincho",serif;font-weight:800;font-size:clamp(25px,7.2vw,34px);line-height:1.42;margin:0 0 14px;position:relative;z-index:1;}
+.hero h1 .a{color:var(--amber-soft);}
+.hero p{margin:0;font-size:14.5px;color:rgba(255,255,255,.9);position:relative;z-index:1;}
+.meta-row{display:flex;gap:14px;margin-top:18px;font-size:12px;color:rgba(255,255,255,.82);position:relative;z-index:1;}
+.meta-row span{display:flex;align-items:center;gap:5px;}
+
+/* ===== Buttons ===== */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;border:none;cursor:pointer;
+  font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:17px;padding:18px 22px;border-radius:14px;
+  color:#fff;background:linear-gradient(135deg,var(--amber),var(--amber-deep));
+  box-shadow:0 12px 24px -12px rgba(194,118,46,.85);transition:transform .12s,box-shadow .2s,filter .2s;
+}
+.btn:hover{filter:brightness(1.05);transform:translateY(-1px);}
+.btn:active{transform:translateY(1px);}
+.btn:disabled{background:#d6d0c8;color:#9a948c;box-shadow:none;cursor:not-allowed;}
+.btn-ghost{background:transparent;color:var(--ink-soft);box-shadow:none;border:1.5px solid var(--line);font-size:15px;padding:14px 18px;}
+.btn-ghost:hover{background:#fff;color:var(--ink);filter:none;}
+.btn-line{background:#06C755;box-shadow:0 12px 24px -12px rgba(6,199,85,.7);}
+.btn-x{background:#111;box-shadow:0 12px 24px -12px rgba(0,0,0,.6);}
+.btn-copy{background:linear-gradient(135deg,var(--rose),#9e525d);box-shadow:0 12px 24px -12px rgba(185,110,120,.7);}
+
+.start-cta{margin-top:8px;}
+.note{font-size:12px;color:var(--muted);text-align:center;margin:12px 0 0;}
+
+/* ===== Screens ===== */
+.screen{display:none;animation:fade .45s ease both;}
+.screen.active{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+
+.progress{display:flex;align-items:center;gap:12px;margin:6px 2px 22px;}
+.progress .bar{flex:1;height:8px;background:#e7e0d8;border-radius:99px;overflow:hidden;}
+.progress .fill{height:100%;width:0%;background:linear-gradient(90deg,var(--amber-soft),var(--amber));border-radius:99px;transition:width .4s cubic-bezier(.4,0,.2,1);}
+.progress .count{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:13px;color:var(--ink-soft);white-space:nowrap;}
+.progress .count b{color:var(--amber-deep);font-size:18px;}
+
+.qcard{background:var(--card);border-radius:var(--radius);padding:26px 22px 22px;box-shadow:var(--shadow-sm);}
+.qnum{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:13px;letter-spacing:.18em;color:var(--amber-deep);margin:0 0 8px;}
+.qtext{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:19px;line-height:1.55;margin:0 0 20px;}
+.options{display:flex;flex-direction:column;gap:11px;}
+.option{
+  position:relative;text-align:left;width:100%;border:1.5px solid var(--line);background:#faf8f4;border-radius:13px;
+  padding:15px 48px 15px 16px;font-size:15px;font-weight:500;color:var(--ink);cursor:pointer;font-family:inherit;line-height:1.55;
+  transition:border-color .18s,background .18s,transform .1s;
+}
+.option:hover{border-color:var(--amber);background:#fff;}
+.option:active{transform:scale(.99);}
+.option.selected{border-color:var(--amber-deep);background:#fbf3e9;}
+.option .tick{position:absolute;right:14px;top:50%;transform:translateY(-50%) scale(.4);width:24px;height:24px;border-radius:50%;background:var(--amber-deep);opacity:0;transition:opacity .18s,transform .18s;display:flex;align-items:center;justify-content:center;}
+.option .tick::after{content:"";width:6px;height:11px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg) translate(-1px,-1px);}
+.option.selected .tick{opacity:1;transform:translateY(-50%) scale(1);}
+.q-actions{margin-top:20px;}
+
+/* ===== Result ===== */
+.result-card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;}
+.result-top{padding:30px 24px 28px;text-align:center;color:#fff;background:linear-gradient(160deg,var(--night-1),var(--night-2) 60%,var(--night-3));position:relative;}
+.result-rare{display:inline-block;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:11px;letter-spacing:.12em;background:var(--amber-soft);color:#3a2600;padding:4px 12px;border-radius:99px;margin-bottom:14px;}
+
+/* ===== 孤独耐性リング（signature） ===== */
+.ring-wrap{display:flex;flex-direction:column;align-items:center;gap:4px;margin-bottom:14px;}
+.ring{
+  width:146px;height:146px;border-radius:50%;position:relative;
+  background:conic-gradient(var(--amber) 0deg, rgba(255,255,255,.16) 0deg);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 0 30px -6px rgba(224,149,74,.4);
+}
+.ring .inner{
+  width:116px;height:116px;border-radius:50%;background:rgba(15,11,22,.45);
+  backdrop-filter:blur(2px);display:flex;flex-direction:column;align-items:center;justify-content:center;
+}
+.ring .inner .num{font-family:"Shippori Mincho",serif;font-weight:800;font-size:34px;line-height:1;color:#fff;}
+.ring .inner .cap{font-size:10px;letter-spacing:.14em;color:var(--amber-soft);margin-top:5px;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;}
+.result-type{font-size:13px;color:var(--amber-soft);font-weight:700;letter-spacing:.1em;font-family:"Zen Kaku Gothic New",sans-serif;}
+.result-label{font-family:"Shippori Mincho",serif;font-weight:800;font-size:clamp(24px,7.6vw,33px);line-height:1.32;margin:6px 0 4px;}
+.result-level{font-size:12px;color:rgba(255,255,255,.78);font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;letter-spacing:.08em;}
+
+.result-body{padding:22px 22px 26px;}
+.reason{background:#fbf3e9;border-left:4px solid var(--amber);border-radius:10px;padding:14px 16px;margin:0 0 18px;}
+.reason .l{font-size:12px;color:var(--amber-deep);font-weight:700;letter-spacing:.08em;margin:0 0 4px;font-family:"Zen Kaku Gothic New",sans-serif;}
+.reason .t{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:19px;margin:0;line-height:1.45;}
+.result-body p.desc{margin:0 0 16px;font-size:15px;}
+.result-body .roast{background:#f7f3ee;border-radius:10px;padding:14px 16px;font-size:14.5px;margin:0 0 18px;}
+.result-body .roast b{color:var(--rose);}
+.fit{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink-soft);border-top:1px dashed var(--line);padding-top:16px;}
+.fit .k{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;color:var(--ink);white-space:nowrap;}
+
+.share-zone{margin-top:24px;}
+.share-zone h3{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:15px;text-align:center;margin:0 0 4px;}
+.share-zone .sub{font-size:12.5px;color:var(--muted);text-align:center;margin:0 0 16px;}
+.share-grid{display:flex;flex-direction:column;gap:10px;}
+.copied-toast{text-align:center;font-size:13px;color:#9e525d;font-weight:700;height:18px;margin-top:10px;opacity:0;transition:opacity .25s;}
+.copied-toast.show{opacity:1;}
+
+/* ===== SEO FAQ ===== */
+.seo-faq{margin-top:40px;border-top:1px solid var(--line);padding-top:28px;}
+.seo-faq h2{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:17px;margin:0 0 16px;}
+.faq-item{margin-bottom:16px;}
+.faq-item .q{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:14.5px;margin:0 0 5px;color:var(--ink);}
+.faq-item .a{font-size:13.5px;color:var(--ink-soft);margin:0;}
+
+.footer{text-align:center;font-size:11.5px;color:var(--muted);margin-top:34px;}
+
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px;border-radius:8px;}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}}
+@media (max-width:380px){.wrap{padding:18px 14px 48px;}.hero{padding:28px 18px;}}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section id="screen-intro" class="screen active">
+    <div class="hero">
+      <div class="lamp">🪔</div>
+      <p class="eyebrow">おひとり様適性診断</p>
+      <h1>一生<span class="a">独身</span>でも、<br>あなたは平気？<br>孤独耐性チェック</h1>
+      <p>深夜のひとり時間は、最高の贅沢？それとも、ちょっと寂しい？<br>8つの質問で、あなたの“孤独耐性＝おひとり様適性”を診断します。結婚適性診断にも。</p>
+      <div class="meta-row">
+        <span>📝 全8問</span>
+        <span>⏱ 約1分</span>
+        <span>🆓 無料・登録不要</span>
+      </div>
+    </div>
+
+    <!-- 広告枠：開始ボタンの上（滞在時間が長い場所） -->
+    <div class="ad-slot">【スポンサーリンク / 広告】</div>
+
+    <button class="btn start-cta" id="startBtn">孤独耐性を診断する →</button>
+    <p class="note">※結果はエンタメです。一人を肯定するのも、誰かを求めるのも、どちらも正解。</p>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section id="screen-quiz" class="screen">
+    <div class="progress">
+      <div class="bar"><div class="fill" id="progressFill"></div></div>
+      <div class="count"><b id="qCurrent">1</b> / <span id="qTotal">8</span></div>
+    </div>
+    <div class="qcard">
+      <p class="qnum" id="qNum">QUESTION 1</p>
+      <h2 class="qtext" id="qText">―</h2>
+      <div class="options" id="optionsBox"></div>
+      <div class="q-actions">
+        <button class="btn" id="nextBtn" disabled>次へ →</button>
+        <button class="btn btn-ghost" id="backBtn" style="margin-top:10px;display:none;">← 前の質問</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESULT ============ -->
+  <section id="screen-result" class="screen">
+
+    <!-- 広告枠：結果ラベルの真上（滞在時間が長い場所） -->
+    <div class="ad-slot">【スポンサーリンク / 広告】</div>
+
+    <div class="result-card">
+      <div class="result-top">
+        <span class="result-rare" id="rareTag" style="display:none;"></span>
+        <div class="ring-wrap">
+          <div class="ring" id="ring">
+            <div class="inner">
+              <span class="num" id="ringPct">0%</span>
+              <span class="cap">孤独耐性</span>
+            </div>
+          </div>
+        </div>
+        <div class="result-type">あなたのタイプは</div>
+        <div class="result-label" id="rLabel">―</div>
+        <div class="result-level" id="rLevel">―</div>
+      </div>
+
+      <div class="result-body">
+        <div class="reason">
+          <p class="l">あなたと“ひとり時間”の関係</p>
+          <p class="t" id="rReason">―</p>
+        </div>
+        <p class="desc" id="rDesc">―</p>
+        <div class="roast" id="rRoast">―</div>
+        <div class="fit">
+          <span class="k">心地よく生きるコツ ▶</span>
+          <span id="rFit">―</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="share-zone">
+      <h3>友達の孤独耐性、気になりませんか？</h3>
+      <p class="sub">シェアして“おひとり様レベル”を比べよう 👀</p>
+      <div class="share-grid">
+        <button class="btn btn-x" id="shareX">𝕏 でシェアする</button>
+        <button class="btn btn-line" id="shareLine">LINE で送る</button>
+        <button class="btn btn-copy" id="shareCopy">結果をコピーする 📋</button>
+      </div>
+      <div class="copied-toast" id="copiedToast">結果をコピーしました！好きな場所に貼り付けてね</div>
+      <button class="btn btn-ghost" id="retryBtn" style="margin-top:18px;">もう一度診断する 🔄</button>
+    </div>
+  </section>
+
+  <!-- ============ SEO FAQ ============ -->
+  <section class="seo-faq">
+    <h2>よくある質問（おひとり様適性・孤独耐性診断）</h2>
+    <div class="faq-item">
+      <p class="q">Q. この孤独耐性診断・おひとり様適性診断は無料ですか？</p>
+      <p class="a">A. はい、完全無料です。8つの質問に答えるだけで、一生独身でもやっていける“おひとり様適性（孤独耐性）”を診断できます。登録やインストールは一切不要です。</p>
+    </div>
+    <div class="faq-item">
+      <p class="q">Q. 結婚適性や独身主義かどうかも分かりますか？</p>
+      <p class="a">A. 分かります。孤独耐性が高いほど独身でも快適に過ごせる独身主義寄りのタイプ、低いほどパートナーがいると安定するタイプです。結婚適性を考えるヒントとして活用できます。</p>
+    </div>
+    <div class="faq-item">
+      <p class="q">Q. 診断結果は友達にシェアできますか？</p>
+      <p class="a">A. はい。結果画面のシェアボタンから、あなたの孤独耐性とおひとり様タイプをX（旧Twitter）やLINEで共有できます。コピー機能で他のSNSへの貼り付けも簡単です。</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SEO Articles Section & Footer
+       ════════════════════════════════════════════ -->
+  <style>
+    /* おひとり様適性診断專用的優雅隠蔽式頁尾樣式 */
+    .seo-articles-container {
+      max-width: 560px;
+      margin: 32px auto 0;
+      padding: 22px;
+      background: rgba(91, 81, 104, 0.04); /* 使用網頁內建的 ink-soft 深夜紫梅調進行極淡化半透明處理 */
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+    .seo-article {
+      margin-bottom: 26px;
+    }
+    .seo-article:last-child {
+      margin-bottom: 0;
+    }
+    .seo-article-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink-soft);
+      opacity: 0.8;
+      margin-bottom: 10px;
+      letter-spacing: 0.04em;
+      font-family: "Zen Kaku Gothic New", sans-serif;
+    }
+    .seo-article-p {
+      font-size: 12px;
+      color: rgba(153, 143, 166, 0.65); /* 降低對比度的煙燻灰紫字體，完美隱蔽不刺眼 */
+      line-height: 1.85;
+      text-align: justify;
+      margin-bottom: 8px;
+      font-family: "Noto Sans JP", sans-serif;
+    }
+    .seo-article-p:last-child {
+      margin-bottom: 0;
+    }
+    .site-footer-final {
+      text-align: center;
+      font-size: 11.5px;
+      color: var(--muted);
+      margin-top: 34px;
+      font-family: "Noto Sans JP", sans-serif;
+    }
+  </style>
+
+  <section class="seo-articles-container">
+    <!-- 1️⃣ 第一篇 SEO 文章：聚焦於單身適性、孤獨耐性與現代人心理 -->
+    <article class="seo-article">
+      <h3 class="seo-article-title">コラム：一生独身でも平気？「おひとり様 適性」から考える孤独耐性の心理学</h3>
+      <p class="seo-article-p">
+        「このまま生涯を一人で過ごすのだろうか」「結婚して家庭を持つべきか」という問いは、人生の選択肢が多様化した現代社会において、多くの人が直面する普遍的なテーマです。かつては独身であることにネガティブなイメージが伴うこともありましたが、2026年現在のライフスタイルにおいては、一人の時間を豊かな贅沢として謳歌する生き方が広く肯定されるようになりました。こうした変化に伴い、自分の内面に眠る本当の「おひとり様 適性」や孤独耐性を客観的に測定できる無料の心理テストが、SNSを中心に大きな話題を集めています。
+      </p>
+      <p class="seo-article-p">
+        心理学的な観点から見ると、孤独耐性とは単に寂しさに耐える力ではなく、「自己完結的に幸福を生み出せる能力」であると言えます。他人の楽しそうなSNS投稿や周囲の結婚の波に流されず、「自分は自分」と割り切れる独身主義 性格の持ち主は、一人の時間を趣味や自己投資にフル活用できる強さを持っています。当たると評判の結婚適性 診断や一人好き 心理テストを体験することは、自分がパートナーといることで安定するタイプなのか、それともソロ活動でこそ輝くタイプなのかを正しく知るための優れた指標となります。
+      </p>
+      <p class="seo-article-p">
+        誰かのぬくもりを素直に求める「かまってほしい甘えん坊型」から、自己完結力が極限に達した「おひとり様、極めし者型」まで、孤独との向き合い方は人それぞれです。無料の孤独耐性 診断を通じて、自分の精神的な現在地や心地よく生きるコツを知ることは、独身・結婚という形式に縛られず、持続可能で幸福度の高い人生設計を築くための有益なステップとなるでしょう。
+      </p>
+    </article>
+
+    <!-- 2️⃣ 第二篇 SEO 文章：聚焦於獨身主義、人際距離與心理測驗的社交調適 -->
+    <article class="seo-article">
+      <h3 class="seo-article-title">コラム：「独身主義 性格」をエンタメに！無料の結婚適性 診断をきっかけにする対人距離のチューニング</h3>
+      <p class="seo-article-p">
+        自分自身の寂しがり屋な一面や、人に頼るのが苦手な頑固さといった「性格の盲点」を直視するのは少し勇気が必要ですが、ユーモラスな「おひとり様レベル」やリング状のインジケーターとして可視化されると、人間味のある魅力的な個性として受け入れやすくなります。深刻になりがちな一生独身 占いや少子化の議論、あるいは人付き合いの疲弊というデリケートな問題を、エンターテインメントの形に昇華した恋愛心理テストや面白い無料診断が、自己開示のツールとして広く愛されている理由はここにあります。
+      </p>
+      <p class="seo-article-p">
+        直感で答える設問設計の一人好き 心理テストが「当たる！」と評判になりやすいのは、休日の過ごし方や将来への本音の不安など、日常の建前が緩んだリアルな感情が反映されやすいためです。たとえば、べったりとした依存を避けて絶妙な距離感を保つ「ちょうどいい距離感の達人型」の人と、自立しすぎて助けを求めるのが苦手な「自立した孤高の旅人型」の人では、一人の夜に感じる快適さと人恋しさの比率が根本的に異なります。
+      </p>
+      <p class="seo-article-p">
+        自分の「ソロ活動の適性」を自覚し、それを友達や恋人とシェアして「おひとり様レベル」を比べ合うことは、普段は見せない本音の人生観や鎧を脱いだ素の自分をソフトに自己開示する絶好の機会です。無料の孤独耐性 診断をライフスタイルの一部として楽しみながら、他者との相互理解を深め、しなやかで心地よい距離感の人間関係を築いてみてはいかがでしょうか。
+      </p>
+    </article>
+  </section>
+
+  <p class="site-footer-final">© ココロ診断 / kokoro-shindan.com｜本診断はエンターテインメントです。</p>
+
+</main>
+
+
+<script>
+/* =========================================================
+   データ：全8問 × 各4択（1〜4点）
+   ・選択肢は点数順に並べず、毎問シャッフル配置。
+   ・点数が高いほど「孤独耐性（おひとり様適性）」が高い。
+   ========================================================= */
+const QUESTIONS = [
+  { q:"休日、丸一日「誰とも会わず・連絡もなし」。あなたは？", opts:[
+    { t:"普通に楽しめる。たまにはいい", s:3 },
+    { t:"無理。途中で誰かに連絡してしまう", s:1 },
+    { t:"最高。ひとり時間こそ至福だ", s:4 },
+    { t:"夕方くらいに、ちょっと寂しくなる", s:2 },
+  ]},
+  { q:"「ひとりで外食」、どこまでいける？", opts:[
+    { t:"ファストフードなら…まあ、なんとか", s:2 },
+    { t:"高級焼肉も寿司も、ひとりで余裕", s:4 },
+    { t:"ひとりで店に入るの、正直ちょっと無理", s:1 },
+    { t:"カフェやラーメンくらいは平気", s:3 },
+  ]},
+  { q:"夜ふと「この先ずっと一人かも」と思ったら？", opts:[
+    { t:"まあ、なんとかなるでしょと思う", s:3 },
+    { t:"怖くて、あまり考えたくない", s:1 },
+    { t:"それはそれで自由でいいな、と思う", s:4 },
+    { t:"少し、不安になる", s:2 },
+  ]},
+  { q:"旅行のスタイルは？", opts:[
+    { t:"できれば誰かと一緒に行きたい", s:2 },
+    { t:"ひとり旅が一番好き", s:4 },
+    { t:"絶対に誰かと。ひとりは寂しい", s:1 },
+    { t:"ひとりでも友達とでも、どっちでも", s:3 },
+  ]},
+  { q:"SNSで友達の楽しそうな投稿を見たとき？", opts:[
+    { t:"「へぇ楽しそう」で、終わる", s:3 },
+    { t:"自分だけ取り残された気がする", s:1 },
+    { t:"特に何も感じない。自分は自分", s:4 },
+    { t:"ちょっとだけ、羨ましくなる", s:2 },
+  ]},
+  { q:"困ったことが起きた。まず、どうする？", opts:[
+    { t:"とりあえず誰かに話を聞いてもらう", s:2 },
+    { t:"自分で調べて、自分で解決する", s:4 },
+    { t:"すぐ誰かに頼る。ひとりは不安", s:1 },
+    { t:"基本は自分で、無理なら相談する", s:3 },
+  ]},
+  { q:"「一生のパートナー」について、本音は？", opts:[
+    { t:"いたら嬉しいけど、焦ってはいない", s:3 },
+    { t:"いないと、人生が不安すぎる", s:1 },
+    { t:"いてもいいけど、いなくても全然OK", s:4 },
+    { t:"できれば、早めにほしい", s:2 },
+  ]},
+  { q:"ひとりの時間に、あなたがしているのは？", opts:[
+    { t:"なんとなく、ずっとスマホを触っている", s:2 },
+    { t:"趣味に没頭。最高に充実している", s:4 },
+    { t:"誰かを誘えないか、ずっと考えている", s:1 },
+    { t:"映画やゲームで、まったり過ごす", s:3 },
+  ]},
+];
+
+/* =========================================================
+   結果データ＆スコア区間（機率平衡の自査ここに明記）
+   ---------------------------------------------------------
+   ・理論最小点 = 8（全問1点）、最大点 = 32（全問4点）、平均 = 20。
+   ・8問×4択(各1〜4点)の合計点は「正規分布に近い釣鐘型」になる。
+     → 点数幅を均等に5分割すると中央(18〜22)に約56%が集中する（失敗パターン）。
+   ・そこで“点数幅”ではなく実際の確率分布の分位点で区切り、出現率を平均化。
+     全65,536通りを総当たり検証した実出現率：
+        T1(≤17) ≈ 21.8% / T2(18-19) ≈ 22.1% / T3(20-21) ≈ 24.1%
+        T4(22-23) ≈ 18.4% / T5(≥24)  ≈ 13.6%
+     最大16%差・最頻24%に収まり、80%集中は発生しない。
+   ・点数が高い＝孤独耐性が高い。最高得点 T5 は意図的にレア(上位13.6%)。
+   ・kodoku＝孤独耐性リングの表示％（演出用、判定とは独立）。
+   ========================================================= */
+const RESULTS = {
+  T1:{
+    label:"かまってほしい甘えん坊型", type:"出現率 約21.8%", rare:null, kodoku:18, level:"おひとり様レベル：見習い",
+    reason:"誰かのぬくもりが、やっぱり恋しい",
+    desc:"人の温かさを素直に求められる、愛されキャラ。人を大切にし、感情を分かち合える豊かな心の持ち主です。あなたの周りにはいつも人が集まり、「一緒にいると安心する」と言われるはず。孤独より、つながりで輝くタイプです。",
+    roast:"……ただ、ひとりの夜は<b>秒でLINEとSNSを開く</b>。既読がつかないだけで世界が終わりかけ、未読の友達リストを上から眺めがち。一生独身は、正直ちょっとハードモードかも。",
+    fit:"無理に一人を頑張らなくてOK。ゆるくつながれるコミュニティや習い事が、あなたの安定剤に。"
+  },
+  T2:{
+    label:"ときどき寂しがりの社交派型", type:"出現率 約22.1%", rare:null, kodoku:38, level:"おひとり様レベル：初級",
+    reason:"基本は平気。でも、ふとした瞬間に人恋しい",
+    desc:"人との時間も、ひとりの時間も、どちらも味わえるバランス感覚の持ち主。社交性がありながら自分の世界も持っている、一緒にいて心地よいタイプです。場の空気を読む優しさもあり、どんな関係も上手に育てられます。",
+    roast:"とはいえ、<b>3日に1回は「誰か飲みに行かない？」を送りがち</b>。一人の予定を入れた当日に限って、急に誰かと会いたくなる気まぐれさも。寂しさのスイッチ、たまに突然入りますよね。",
+    fit:"“ひとりも楽しい予定”を意識的に作るのが吉。人と一人の比率を自分で設計できると最強。"
+  },
+  T3:{
+    label:"ちょうどいい距離感の達人型", type:"出現率 約24.1%", rare:null, kodoku:58, level:"おひとり様レベル：中級",
+    reason:"一人も、誰かといるのも、どっちも心地いい",
+    desc:"人との距離の取り方が絶妙な、人間関係の達人。べったりも孤立もせず、自分のペースを保ちながら人とつながれる成熟した感性の持ち主です。独身でも結婚でも、どちらの人生も自分らしく楽しめる稀有なバランス型。",
+    roast:"ただ、その器用さゆえに<b>「あの人は一人でも平気だから」と誘われ忘れがち</b>。本当はちょっと混ざりたい日もあるのに、強がって「大丈夫」と言ってしまうクセ、ありませんか？",
+    fit:"たまには甘えるのも作戦。「実は寂しい」と言える相手を一人持つと、無敵の距離感に。"
+  },
+  T4:{
+    label:"自立した孤高の旅人型", type:"出現率 約18.4%", rare:null, kodoku:78, level:"おひとり様レベル：上級",
+    reason:"自分の時間が、何よりも大切",
+    desc:"自分の軸がしっかりあり、一人の時間を豊かに使える自立した人。人に流されず、自分の「好き」を深く味わえる強さは、多くの人が憧れるもの。一生独身でも、充実した人生を自分の力で築いていける頼もしいタイプです。",
+    roast:"でも自立しすぎて、<b>人に頼るのが地球上で一番苦手</b>。「手伝おうか？」に反射で「大丈夫です」、誘いも「今日はちょっと…」が口グセ。気づけば孤高というより、ただの誘いにくい人に。",
+    fit:"頼る＝弱さではない。月イチで“あえて人を頼る日”を作ると、孤高に温かみが加わる。"
+  },
+  T5:{
+    label:"おひとり様、極めし者型", type:"出現率 約13.6%（レア）", rare:"RARE｜上位13.6%", kodoku:98, level:"おひとり様レベル：仙人",
+    reason:"ひとり＝最高。むしろ誰かといる方が疲れる",
+    desc:"圧倒的な自己完結力を誇る、孤独耐性の頂点。ひとりの時間を最高の贅沢に変える達人で、誰にも縛られない自由そのものを生きています。一生独身？むしろ望むところ。自分一人で幸せを完成させられる、選ばれし精神の持ち主です。",
+    roast:"……が、極めすぎて<b>その日交わした会話が「いらっしゃいませ」だけの日もある</b>。結婚どうこう以前に、もはや人と予定を合わせる気がない。たまには自分から「おかえり」以外の言葉も使ってあげて。",
+    fit:"一人力は完成済み。あえて“ゆるい外部接続”を一つ残しておくと、自由が孤立に変わらない。"
+  }
+};
+
+/* === スコア → 結果キー（区間は上のコメント通り） === */
+function judge(score){
+  if (score <= 17) return "T1";        // ≈21.8%
+  else if (score <= 19) return "T2";   // ≈22.1%
+  else if (score <= 21) return "T3";   // ≈24.1%
+  else if (score <= 23) return "T4";   // ≈18.4%
+  else return "T5";                    // ≈13.6%（24〜32）
+}
+
+/* ========================= ロジック ========================= */
+const state = { idx:0, answers:new Array(QUESTIONS.length).fill(null) };
+const elIntro=document.getElementById("screen-intro");
+const elQuiz=document.getElementById("screen-quiz");
+const elResult=document.getElementById("screen-result");
+const qNum=document.getElementById("qNum"), qText=document.getElementById("qText");
+const optionsBox=document.getElementById("optionsBox"), nextBtn=document.getElementById("nextBtn");
+const backBtn=document.getElementById("backBtn"), fill=document.getElementById("progressFill");
+const qCurrent=document.getElementById("qCurrent");
+document.getElementById("qTotal").textContent=QUESTIONS.length;
+
+function show(screen){
+  [elIntro,elQuiz,elResult].forEach(s=>s.classList.remove("active"));
+  screen.classList.add("active");
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+function renderQuestion(){
+  const q=QUESTIONS[state.idx];
+  qNum.textContent="QUESTION "+(state.idx+1);
+  qText.textContent=q.q;
+  optionsBox.innerHTML="";
+  q.opts.forEach((opt,i)=>{
+    const b=document.createElement("button");
+    b.className="option"+(state.answers[state.idx]===i?" selected":"");
+    b.innerHTML=`<span>${opt.t}</span><span class="tick"></span>`;
+    b.addEventListener("click",()=>{
+      state.answers[state.idx]=i;
+      [...optionsBox.children].forEach(c=>c.classList.remove("selected"));
+      b.classList.add("selected");
+      nextBtn.disabled=false;
+    });
+    optionsBox.appendChild(b);
+  });
+  qCurrent.textContent=state.idx+1;
+  fill.style.width=((state.idx)/QUESTIONS.length*100)+"%";
+  nextBtn.disabled=state.answers[state.idx]===null;
+  nextBtn.textContent=(state.idx===QUESTIONS.length-1)?"診断結果を見る ✨":"次へ →";
+  backBtn.style.display=state.idx>0?"block":"none";
+}
+
+document.getElementById("startBtn").addEventListener("click",()=>{state.idx=0;show(elQuiz);renderQuestion();});
+nextBtn.addEventListener("click",()=>{
+  if(state.answers[state.idx]===null)return;
+  if(state.idx<QUESTIONS.length-1){state.idx++;renderQuestion();}
+  else{fill.style.width="100%";showResult();}
+});
+backBtn.addEventListener("click",()=>{if(state.idx>0){state.idx--;renderQuestion();}});
+
+let CURRENT_RESULT=null;
+
+function showResult(){
+  let score=0;
+  state.answers.forEach((ai,qi)=>{score+=QUESTIONS[qi].opts[ai].s;});
+  const r=RESULTS[judge(score)];
+  CURRENT_RESULT=r;
+
+  document.getElementById("rLabel").textContent=r.label;
+  document.getElementById("rLevel").textContent=r.level;
+  document.getElementById("rReason").textContent=r.reason;
+  document.getElementById("rDesc").textContent=r.desc;
+  document.getElementById("rRoast").innerHTML=r.roast;
+  document.getElementById("rFit").textContent=r.fit;
+
+  const rareTag=document.getElementById("rareTag");
+  if(r.rare){rareTag.style.display="inline-block";rareTag.textContent="★ "+r.rare;}
+  else{rareTag.style.display="none";}
+
+  // 孤独耐性リングを0からアニメーション
+  const ring=document.getElementById("ring");
+  const num=document.getElementById("ringPct");
+  ring.style.background="conic-gradient(var(--amber) 0deg, rgba(255,255,255,.16) 0deg)";
+  num.textContent="0%";
+  show(elResult);
+  setTimeout(()=>{
+    let cur=0; const step=Math.max(1,Math.round(r.kodoku/30));
+    const iv=setInterval(()=>{
+      cur+=step;
+      if(cur>=r.kodoku){cur=r.kodoku;clearInterval(iv);}
+      ring.style.background=`conic-gradient(var(--amber) ${cur*3.6}deg, rgba(255,255,255,.16) 0deg)`;
+      num.textContent=cur+"%";
+    },28);
+  },280);
+}
+
+document.getElementById("retryBtn").addEventListener("click",()=>{
+  state.idx=0;state.answers=new Array(QUESTIONS.length).fill(null);
+  fill.style.width="0%";show(elIntro);
+});
+
+/* ====================== シェア機能 ======================
+   window.location.href で現在URLを動的取得。
+   共有文＝【診断名】＋【結果タイプ＋孤独耐性】＋【短評】＋【URL】＋【ハッシュタグ】
+   ========================================================= */
+const SITE_TITLE="おひとり様適性診断";
+
+function buildShareText(){
+  const r=CURRENT_RESULT, url=window.location.href;
+  return `【${SITE_TITLE}】\n私の孤独耐性は「${r.kodoku}%・${r.label}」でした！\n（${r.reason}）\n\n一生独身でも平気？あなたの孤独耐性は👇\n${url}`;
+}
+
+/* X（Twitter）：本文＋ハッシュタグ3つ */
+document.getElementById("shareX").addEventListener("click",()=>{
+  const r=CURRENT_RESULT, url=window.location.href;
+  const text=`【${SITE_TITLE}】私の孤独耐性は ${r.kodoku}%「${r.label}」でした🪔\n一生独身でも平気？あなたの孤独耐性は👇`;
+  const hashtags="孤独耐性診断,おひとり様,独身主義"; // 適切なハッシュタグ3つ
+  const xUrl="https://twitter.com/intent/tweet"
+    +"?text="+encodeURIComponent(text)
+    +"&url="+encodeURIComponent(url)
+    +"&hashtags="+encodeURIComponent(hashtags);
+  window.open(xUrl,"_blank","noopener");
+});
+/* LINE */
+document.getElementById("shareLine").addEventListener("click",()=>{
+  const url=window.location.href;
+  window.open("https://social-plugins.line.me/lineit/share?url="+encodeURIComponent(url),"_blank","noopener");
+});
+/* コピー（クリップボード） */
+document.getElementById("shareCopy").addEventListener("click",async()=>{
+  const text=buildShareText(), toast=document.getElementById("copiedToast");
+  try{ await navigator.clipboard.writeText(text); }
+  catch(e){
+    const ta=document.createElement("textarea");
+    ta.value=text;ta.style.position="fixed";ta.style.opacity="0";
+    document.body.appendChild(ta);ta.select();
+    try{document.execCommand("copy");}catch(_){}
+    document.body.removeChild(ta);
+  }
+  toast.classList.add("show");
+  setTimeout(()=>toast.classList.remove("show"),2600);
+});
+</script>
+</body>
+</html>
