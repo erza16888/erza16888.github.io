@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ===== SEO ===== -->
+<title>転職の言い訳診断｜あなたが会社を辞める本当の理由テスト【本音がバレる】</title>
+<meta name="description" content="会社辞めたいのは本当？8つの質問で、あなたの転職理由の本音を診断。適職テストとしても使えます。あなたは“魂はもう退職済み”型？今すぐ無料で診断！" />
+<meta name="keywords" content="転職理由 本音, 会社辞めたい 診断, 適職テスト, 転職 診断, 仕事辞めたい, 退職 心理テスト" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://kokoro-shindan.com/tenshoku-iiwake/" />
+
+<!-- ===== Open Graph (X / Threads / LINE 用大カード) ===== -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="転職の言い訳診断｜会社を辞める本当の理由テスト" />
+<meta property="og:description" content="会社辞めたいは本音？建前？8つの質問であなたの“本当の退職理由”を診断。適職テストにも。あなたのタイプは？" />
+<meta property="og:image" content="og-image.png" />
+<meta property="og:url" content="https://kokoro-shindan.com/tenshoku-iiwake/" />
+<meta property="og:site_name" content="ココロ診断" />
+<meta property="og:locale" content="ja_JP" />
+
+<!-- ===== Twitter Card ===== -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="転職の言い訳診断｜会社を辞める本当の理由テスト" />
+<meta name="twitter:description" content="あなたが会社を辞める“本当の理由”を8問で診断。適職テストにも。" />
+<meta name="twitter:image" content="og-image.png" />
+
+<!-- ===== 構造化データ：FAQ（Google 精選摘要対策） ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "この転職診断は無料で使えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、完全無料です。8つの質問に答えるだけで、あなたが会社を辞めたい本当の理由（本音）を診断できます。登録やインストールは一切不要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "適職テストとしても活用できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "この診断はあなたの転職理由の傾向を知るためのものです。結果ページでは各タイプに向いた働き方のヒントも紹介しているため、自分に合った適職を考えるきっかけとして活用できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "診断結果は友達にシェアできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。結果画面の「結果をシェアする」ボタンから、あなたのタイプと短評をX（旧Twitter）やLINEで共有できます。コピー機能で他のSNSへの貼り付けも簡単です。"
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet" />
+
+<style>
+/* ===== Design tokens : "Twilight clock-out" =====
+   退勤の瞬間（黄昏→自由）をテーマにした配色。
+   AI生成にありがちな cream+serif+terracotta は避け、
+   トワイライトの藍 × 夕焼けコーラルで構成。 */
+:root{
+  --ink:#1E2138;        /* 黄昏の藍墨：本文・濃いUI */
+  --ink-soft:#4A4E6B;
+  --muted:#8B8FA6;
+  --paper:#F5F3EE;      /* 暖かい紙の地色 */
+  --card:#FFFFFF;
+  --line:#E7E3DA;
+  --coral:#FF6B4A;      /* アクセント：行動・進捗・主要ボタン */
+  --coral-dark:#E8512F;
+  --gold:#FFC24B;       /* ゴールデンアワー：ハイライト・シェア */
+  --dusk-1:#34376F;     /* heroグラデ：夕暮れの空 */
+  --dusk-2:#7D5C9E;
+  --dusk-3:#F2A07E;
+  --radius:20px;
+  --shadow:0 18px 40px -22px rgba(30,33,56,.45);
+  --shadow-sm:0 6px 18px -10px rgba(30,33,56,.35);
+}
+
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  font-family:"Noto Sans JP",system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  letter-spacing:.01em;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{
+  max-width:560px;
+  margin:0 auto;
+  padding:24px 18px 56px;
+}
+
+/* ===== 広告枠（AdSense Ready） ===== */
+.ad-slot{
+  min-height:250px;
+  background:#f0f0f0;
+  margin:20px 0;
+  text-align:center;
+  line-height:250px;
+  color:#aaa;
+  font-size:13px;
+  border-radius:12px;
+}
+
+/* ===== Hero / Intro ===== */
+.hero{
+  position:relative;
+  border-radius:var(--radius);
+  padding:34px 24px 30px;
+  color:#fff;
+  background:linear-gradient(150deg,var(--dusk-1) 0%,var(--dusk-2) 55%,var(--dusk-3) 110%);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.hero::after{ /* 退勤を思わせる細い光のライン */
+  content:"";
+  position:absolute;
+  inset:auto -40% -60% -40%;
+  height:160px;
+  background:radial-gradient(60% 100% at 50% 0%,rgba(255,194,75,.55),transparent 70%);
+  opacity:.6;
+}
+.eyebrow{
+  font-family:"Zen Kaku Gothic New",sans-serif;
+  font-weight:700;
+  font-size:12px;
+  letter-spacing:.22em;
+  color:var(--gold);
+  margin:0 0 14px;
+}
+.hero h1{
+  font-family:"Zen Kaku Gothic New",sans-serif;
+  font-weight:900;
+  font-size:clamp(25px,7vw,34px);
+  line-height:1.32;
+  margin:0 0 14px;
+  letter-spacing:.01em;
+}
+.hero h1 .mark{
+  background:linear-gradient(transparent 62%,rgba(255,107,74,.85) 62%);
+  padding:0 .1em;
+}
+.hero p{
+  margin:0;
+  font-size:14.5px;
+  color:rgba(255,255,255,.9);
+  position:relative;
+  z-index:1;
+}
+.meta-row{
+  display:flex;
+  gap:14px;
+  margin-top:18px;
+  font-size:12px;
+  color:rgba(255,255,255,.82);
+  position:relative;
+  z-index:1;
+}
+.meta-row span{display:flex;align-items:center;gap:5px;}
+
+/* ===== Buttons ===== */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  width:100%;
+  border:none;
+  cursor:pointer;
+  font-family:"Zen Kaku Gothic New",sans-serif;
+  font-weight:700;
+  font-size:17px;
+  padding:18px 22px;
+  border-radius:14px;
+  color:#fff;
+  background:var(--coral);
+  box-shadow:0 12px 24px -12px rgba(255,107,74,.85);
+  transition:transform .12s ease,box-shadow .2s ease,background .2s ease;
+}
+.btn:hover{background:var(--coral-dark);transform:translateY(-1px);}
+.btn:active{transform:translateY(1px);}
+.btn:disabled{background:#cfcdc6;box-shadow:none;cursor:not-allowed;}
+.btn-ghost{
+  background:transparent;
+  color:var(--ink-soft);
+  box-shadow:none;
+  border:1.5px solid var(--line);
+  font-size:15px;
+  padding:14px 18px;
+}
+.btn-ghost:hover{background:#fff;color:var(--ink);}
+.btn-gold{background:var(--gold);color:#3a2c00;box-shadow:0 12px 24px -12px rgba(255,194,75,.9);}
+.btn-gold:hover{background:#f2b231;}
+.btn-line{background:#06C755;box-shadow:0 12px 24px -12px rgba(6,199,85,.7);}
+.btn-line:hover{background:#05b14c;}
+.btn-x{background:#111;box-shadow:0 12px 24px -12px rgba(0,0,0,.6);}
+.btn-x:hover{background:#000;}
+
+.start-cta{margin-top:8px;}
+.note{font-size:12px;color:var(--muted);text-align:center;margin:12px 0 0;}
+
+/* ===== Quiz ===== */
+.screen{display:none;animation:fade .45s ease both;}
+.screen.active{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+
+.progress{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:6px 2px 22px;
+}
+.progress .bar{
+  flex:1;
+  height:8px;
+  background:#e9e5db;
+  border-radius:99px;
+  overflow:hidden;
+}
+.progress .fill{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,var(--gold),var(--coral));
+  border-radius:99px;
+  transition:width .4s cubic-bezier(.4,0,.2,1);
+}
+.progress .count{
+  font-family:"Zen Kaku Gothic New",sans-serif;
+  font-weight:700;
+  font-size:13px;
+  color:var(--ink-soft);
+  white-space:nowrap;
+}
+.progress .count b{color:var(--coral);font-size:18px;}
+
+.qcard{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:26px 22px 22px;
+  box-shadow:var(--shadow-sm);
+}
+.qnum{
+  font-family:"Zen Kaku Gothic New",sans-serif;
+  font-weight:900;
+  font-size:13px;
+  letter-spacing:.18em;
+  color:var(--coral);
+  margin:0 0 8px;
+}
+.qtext{
+  font-family:"Zen Kaku Gothic New",sans-serif;
+  font-weight:700;
+  font-size:19px;
+  line-height:1.55;
+  margin:0 0 20px;
+}
+.options{display:flex;flex-direction:column;gap:11px;}
+.option{
+  position:relative;
+  text-align:left;
+  width:100%;
+  border:1.5px solid var(--line);
+  background:#fafaf7;
+  border-radius:13px;
+  padding:15px 48px 15px 16px;
+  font-size:15px;
+  font-weight:500;
+  color:var(--ink);
+  cursor:pointer;
+  transition:border-color .18s,background .18s,transform .1s;
+  font-family:inherit;
+  line-height:1.55;
+}
+.option:hover{border-color:#c9b9d6;background:#fff;}
+.option:active{transform:scale(.99);}
+.option.selected{
+  border-color:var(--coral);
+  background:#fff4f0;
+}
+.option .tick{
+  position:absolute;
+  right:14px;top:50%;
+  transform:translateY(-50%) scale(.4);
+  width:24px;height:24px;border-radius:50%;
+  background:var(--coral);
+  opacity:0;
+  transition:opacity .18s,transform .18s;
+  display:flex;align-items:center;justify-content:center;
+}
+.option .tick::after{content:"";width:6px;height:11px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg) translate(-1px,-1px);}
+.option.selected .tick{opacity:1;transform:translateY(-50%) scale(1);}
+
+.q-actions{margin-top:20px;}
+
+/* ===== Result ===== */
+.result-card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.result-top{
+  padding:30px 24px 26px;
+  text-align:center;
+  color:#fff;
+  background:linear-gradient(150deg,var(--dusk-1),var(--dusk-2) 60%,var(--dusk-3));
+  position:relative;
+}
+.result-rare{
+  display:inline-block;
+  font-family:"Zen Kaku Gothic New",sans-serif;
+  font-weight:700;
+  font-size:11px;
+  letter-spacing:.12em;
+  background:var(--gold);
+  color:#3a2c00;
+  padding:4px 12px;
+  border-radius:99px;
+  margin-bottom:14px;
+}
+.result-label{
+  font-family:"Zen Kaku Gothic New",sans-serif;
+  font-weight:900;
+  font-size:clamp(24px,7.5vw,32px);
+  line-height:1.3;
+  margin:4px 0 6px;
+}
+.result-type{
+  font-size:13px;
+  color:var(--gold);
+  font-weight:700;
+  letter-spacing:.1em;
+  font-family:"Zen Kaku Gothic New",sans-serif;
+}
+.result-body{padding:24px 22px 26px;}
+.reason{
+  background:#fff4f0;
+  border-left:4px solid var(--coral);
+  border-radius:10px;
+  padding:14px 16px;
+  margin:0 0 18px;
+}
+.reason .l{
+  font-size:12px;color:var(--coral-dark);font-weight:700;
+  letter-spacing:.08em;margin:0 0 4px;
+  font-family:"Zen Kaku Gothic New",sans-serif;
+}
+.reason .t{
+  font-family:"Zen Kaku Gothic New",sans-serif;
+  font-weight:900;font-size:19px;margin:0;line-height:1.45;
+}
+.result-body p.desc{margin:0 0 16px;font-size:15px;}
+.result-body .roast{
+  background:#fbf8f0;
+  border-radius:10px;
+  padding:14px 16px;
+  font-size:14.5px;
+  margin:0 0 18px;
+}
+.result-body .roast b{color:var(--coral-dark);}
+.fit{
+  display:flex;gap:10px;align-items:flex-start;
+  font-size:14px;color:var(--ink-soft);
+  border-top:1px dashed var(--line);
+  padding-top:16px;
+}
+.fit .k{
+  font-family:"Zen Kaku Gothic New",sans-serif;
+  font-weight:700;color:var(--ink);white-space:nowrap;
+}
+
+.share-zone{margin-top:24px;}
+.share-zone h3{
+  font-family:"Zen Kaku Gothic New",sans-serif;
+  font-weight:700;font-size:15px;text-align:center;margin:0 0 4px;
+}
+.share-zone .sub{font-size:12.5px;color:var(--muted);text-align:center;margin:0 0 16px;}
+.share-grid{display:flex;flex-direction:column;gap:10px;}
+.copied-toast{
+  text-align:center;font-size:13px;color:#06A24A;font-weight:700;
+  height:18px;margin-top:10px;opacity:0;transition:opacity .25s;
+}
+.copied-toast.show{opacity:1;}
+
+/* ===== SEO FAQ ===== */
+.seo-faq{
+  margin-top:40px;
+  border-top:1px solid var(--line);
+  padding-top:28px;
+}
+.seo-faq h2{
+  font-family:"Zen Kaku Gothic New",sans-serif;
+  font-weight:700;font-size:17px;margin:0 0 16px;
+}
+.faq-item{margin-bottom:16px;}
+.faq-item .q{
+  font-family:"Zen Kaku Gothic New",sans-serif;
+  font-weight:700;font-size:14.5px;margin:0 0 5px;color:var(--ink);
+}
+.faq-item .a{font-size:13.5px;color:var(--ink-soft);margin:0;}
+
+.footer{
+  text-align:center;
+  font-size:11.5px;
+  color:var(--muted);
+  margin-top:34px;
+}
+
+/* ===== a11y ===== */
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:8px;}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;}
+}
+@media (max-width:380px){
+  .wrap{padding:18px 14px 48px;}
+  .hero{padding:28px 18px;}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section id="screen-intro" class="screen active">
+    <div class="hero">
+      <p class="eyebrow">転職の言い訳診断</p>
+      <h1>あなたが会社を辞める<br><span class="mark">本当の理由</span>、<br>暴きます。</h1>
+      <p>「会社辞めたい」――その口グセ、本気ですか？それとも建前？<br>8つの質問で、あなたの“本音の退職理由”を診断します。適職テストにも。</p>
+      <div class="meta-row">
+        <span>📝 全8問</span>
+        <span>⏱ 約1分</span>
+        <span>🆓 無料・登録不要</span>
+      </div>
+    </div>
+
+    <!-- 広告枠：開始ボタンの上（滞在時間が長い場所） -->
+    <div class="ad-slot">【スポンサーリンク / 広告】</div>
+
+    <button class="btn start-cta" id="startBtn">診断をはじめる →</button>
+    <p class="note">※結果はあくまでエンタメです。退職届の提出は計画的に。</p>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section id="screen-quiz" class="screen">
+    <div class="progress">
+      <div class="bar"><div class="fill" id="progressFill"></div></div>
+      <div class="count"><b id="qCurrent">1</b> / <span id="qTotal">8</span></div>
+    </div>
+
+    <div class="qcard">
+      <p class="qnum" id="qNum">QUESTION 1</p>
+      <h2 class="qtext" id="qText">―</h2>
+      <div class="options" id="optionsBox"></div>
+      <div class="q-actions">
+        <button class="btn" id="nextBtn" disabled>次へ →</button>
+        <button class="btn btn-ghost" id="backBtn" style="margin-top:10px;display:none;">← 前の質問</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESULT ============ -->
+  <section id="screen-result" class="screen">
+
+    <!-- 広告枠：結果ラベルの真上（滞在時間が長い場所） -->
+    <div class="ad-slot">【スポンサーリンク / 広告】</div>
+
+    <div class="result-card">
+      <div class="result-top">
+        <span class="result-rare" id="rareTag" style="display:none;"></span>
+        <div class="result-type" id="rType">あなたのタイプは</div>
+        <div class="result-label" id="rLabel">―</div>
+      </div>
+      <div class="result-body">
+        <div class="reason">
+          <p class="l">本当の理由</p>
+          <p class="t" id="rReason">―</p>
+        </div>
+        <p class="desc" id="rDesc">―</p>
+        <div class="roast" id="rRoast">―</div>
+        <div class="fit">
+          <span class="k">向いてる働き方 ▶</span>
+          <span id="rFit">―</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="share-zone">
+      <h3>この結果、友達はどのタイプ？</h3>
+      <p class="sub">シェアして「本音」を暴き合おう 👀</p>
+      <div class="share-grid">
+        <button class="btn btn-x" id="shareX">𝕏 でシェアする</button>
+        <button class="btn btn-line" id="shareLine">LINE で送る</button>
+        <button class="btn btn-gold" id="shareCopy">結果をコピーする 📋</button>
+      </div>
+      <div class="copied-toast" id="copiedToast">結果をコピーしました！好きな場所に貼り付けてね</div>
+      <button class="btn btn-ghost" id="retryBtn" style="margin-top:18px;">もう一度診断する 🔄</button>
+    </div>
+  </section>
+
+  <!-- ============ SEO FAQ（置底・JSON-LD と対応） ============ -->
+  <section class="seo-faq">
+    <h2>よくある質問（転職の言い訳診断）</h2>
+    <div class="faq-item">
+      <p class="q">Q. この転職診断は無料で使えますか？</p>
+      <p class="a">A. はい、完全無料です。8つの質問に答えるだけで、あなたが会社を辞めたい本当の理由（本音）を診断できます。登録やインストールは一切不要です。</p>
+    </div>
+    <div class="faq-item">
+      <p class="q">Q. 適職テストとしても活用できますか？</p>
+      <p class="a">A. この診断はあなたの転職理由の傾向を知るためのものです。結果ページでは各タイプに向いた働き方のヒントも紹介しているため、自分に合った適職を考えるきっかけとして活用できます。</p>
+    </div>
+    <div class="faq-item">
+      <p class="q">Q. 診断結果は友達にシェアできますか？</p>
+      <p class="a">A. はい。結果画面の「結果をシェアする」ボタンから、あなたのタイプと短評をX（旧Twitter）やLINEで共有できます。コピー機能で他のSNSへの貼り付けも簡単です。</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SEO Articles Section & Footer
+       ════════════════════════════════════════════ -->
+  <style>
+    /* 転職の言い訳診断專用的優雅隱蔽式頁尾樣式 */
+    .seo-articles-container {
+      max-width: 560px;
+      margin: 32px auto 0;
+      padding: 22px;
+      background: rgba(74, 78, 107, 0.03); /* 使用網頁內建的 ink-soft 暮色調進行極淡化半透明處理 */
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+    .seo-article {
+      margin-bottom: 26px;
+    }
+    .seo-article:last-child {
+      margin-bottom: 0;
+    }
+    .seo-article-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink-soft);
+      opacity: 0.8;
+      margin-bottom: 10px;
+      letter-spacing: 0.04em;
+      font-family: "Zen Kaku Gothic New", sans-serif;
+    }
+    .seo-article-p {
+      font-size: 12px;
+      color: var(--muted); /* 降低對比度的煙燻灰藍紫字體，優雅隱蔽不刺眼 */
+      line-height: 1.85;
+      text-align: justify;
+      margin-bottom: 8px;
+      font-family: "Noto Sans JP", sans-serif;
+    }
+    .seo-article-p:last-child {
+      margin-bottom: 0;
+    }
+    .site-footer-final {
+      text-align: center;
+      font-size: 11.5px;
+      color: var(--muted);
+      margin-top: 34px;
+      font-family: "Noto Sans JP", sans-serif;
+    }
+  </style>
+
+  <section class="seo-articles-container">
+    <!-- 1️⃣ 第一篇 SEO 文章：聚焦於轉職理由、內心本音與轉職診斷的關係 -->
+    <article class="seo-article">
+      <h3 class="seo-article-title">コラム：会社辞めたいのは本気？「転職理由 本音」を隠す建前と心の現在地</h3>
+      <p class="seo-article-p">
+        毎日のように「会社辞めたい」と口にしていながらも、実際に転職活動へ踏み出すべきか、それとも今の環境に留まるべきか思い悩むビジネスパーソンは少なくありません。多くの人が退職届や面接の場で語る「キャリアアップ」や「新しい挑戦」といった理由は、組織を円滑に去るための建前であることが多く、本当の退職理由は人間関係のストレス、評価への不満、あるいは労働時間と給著のミスマッチといった「本音」に隠されています。2026年現在の多様な働き方の中でも、自分の深層心理に潜む本当の退職理由を暴き出す「転職の言い訳診断」などの無料心理テストが、多くの共感を集めています。
+      </p>
+      <p class="seo-article-p">
+        心理学的な観点から見ると、自身の「転職理由 本音」を正しく自覚することは、次のステップで同じ失敗を繰り返さないための極めて重要なセルフマネジメントです。たとえば、給与や条件が改善されれば納得して働ける「仮面ロイヤリスト型」の人と、自分の裁量や自由な時間を何よりも求める「自由への逃走者型」の人では、選択すべき適職や相性の良い職場環境が根本的に異なります。当たる心理テストを通じて自分の深層心理を数値として可視化することは、ただ感情的に「仕事辞めたい」と消耗するのを防ぎ、冷静なキャリア設計を行うための優れた羅針盤となります。
+      </p>
+      <p class="seo-article-p">
+        出社しているのは身体だけで心はすでに次の場所へ向かっている「魂はもう退職済み型」のレベルに達しているのなら、それは変化を恐れず具体的な一歩を踏み出す黄金のタイミングかもしれません。まずは自分の心の引き出しにある本音の言い訳をエンターテインメントとして笑い飛ばしながらも、自分自身の適性や向いてる働き方を見つめ直す、有意義なキャリア診断として活用してみてはいかがでしょうか。
+      </p>
+    </article>
+
+    <!-- 2️⃣ 第二篇 SEO 文章：聚焦於適職測試、職涯重新規劃與有趣的心理測驗價值 -->
+    <article class="seo-article">
+      <h3 class="seo-article-title">コラム：不満を強みに変える！「適職テスト」を活かした自分らしい働き方の見つけ方</h3>
+      <p class="seo-article-p">
+        職場の環境や上司の理不尽な言動にストレスを感じたとき、それを単なる不満として溜め込んでしまうと、メンタルヘルスを損なう悪循環を生み出してしまいます。しかし、「この会社では自分の価値が活かされていない」「成長のチャンスが少ない」というモヤモヤは、裏を返せば「もっと認められたい」「自分の人生を主体的に生きたい」という強い成長意欲や理想を持っている証拠でもあります。だからこそ、自分の買い物の癖ならぬ“働き方の癖”を客観的にチェックできる「適職テスト」や面白い転職 診断が、現代の社会人に広く愛されています。
+      </p>
+      <p class="seo-article-p">
+        直感で答える設問設計の退職 心理テストが「当たる！」と評判になりやすいのは、月曜の朝の憂鬱さや給料日への複雑な感情といった、普段は隠しているリアルな本音が反映されやすいためです。たとえば、現実的なリスク管理に優れ副業との二刀流が向く「現実派サバイバー型」の人と、評価とフィードバックが明確な成果主義の環境でこそ化ける「健全な迷い人型」の人では、モチベーションが湧くトリガーが根本的に異なります。自分の特性を早期に自覚しておくことは、ミスマッチな環境を回避するための最大の防御策となります。
+      </p>
+      <p class="seo-article-p">
+        SNSを通じて仕事の愚痴を言い合う代わりに、お互いの「退職理由の正体」をシェアして当て合うことは、孤独になりがちな職場の悩みをユーモアに変え、鎧を脱いだ素の自分をソフトに自己開示する絶好の機会です。無料の心理テストや適性診断をライフスタイルの一部として楽しみながら、他者との相互理解を深め、しなやかで持続可能なキャリアを再設計してみてはいかがでしょうか。
+      </p>
+    </article>
+  </section>
+
+  <p class="site-footer-final">© ココロ診断 / kokoro-shindan.com｜本診断はエンターテインメントです。</p>
+
+</main>
+
+
+<script>
+/* =========================================================
+   データ：全8問 × 各4択（1〜4点）
+   ・選択肢は点数順（1→4）に並べず、毎問シャッフル配置。
+     一目で「上から低得点→高得点」と分からないようにしている。
+   ========================================================= */
+const QUESTIONS = [
+  { q:"月曜の朝、目覚ましが鳴った瞬間の“第一声”は？", opts:[
+    { t:"「あと5分…いや、15分…」", s:2 },
+    { t:"「よし、今週も頑張るか」", s:1 },
+    { t:"（無言でスマホの求人サイトを開く）", s:4 },
+    { t:"「行きたくない。でも、行く」", s:3 },
+  ]},
+  { q:"上司に理不尽なことで怒られた。心の中のあなたは？", opts:[
+    { t:"「この人の下では成長できないな」と冷静に分析", s:3 },
+    { t:"「自分にも悪いところがあったかも」と反省", s:1 },
+    { t:"「録音しておけばよかった」と証拠を考える", s:4 },
+    { t:"「はいはい、また始まった」と受け流す", s:2 },
+  ]},
+  { q:"給料日。口座を見たときの“本音”は？", opts:[
+    { t:"「まあ、こんなもんか」", s:2 },
+    { t:"「…これ、時給換算したら泣ける」", s:4 },
+    { t:"「ありがたい。今月も生きていける」", s:1 },
+    { t:"「この金額、私の価値に見合ってる？」", s:3 },
+  ]},
+  { q:"金曜の夜、同僚から飲みの誘い。あなたは？", opts:[
+    { t:"「正直、早く家で一人になりたい」", s:3 },
+    { t:"「行く！チームの絆は大事」", s:1 },
+    { t:"「その時間で副業の作業がしたい」", s:4 },
+    { t:"「気分次第かな…」", s:2 },
+  ]},
+  { q:"「5年後の自分」を想像してみて。", opts:[
+    { t:"たぶん同じ会社…にいる、はず", s:2 },
+    { t:"もう絶対、ここにはいない", s:4 },
+    { t:"同じ会社で昇進している", s:1 },
+    { t:"想像できない（し、したくない）", s:3 },
+  ]},
+  { q:"新しいプロジェクトを任された。最初に湧いた感情は？", opts:[
+    { t:"「面白そう。でも定時では帰りたい」", s:3 },
+    { t:"「成長のチャンスだ。燃えてきた」", s:1 },
+    { t:"「で、これ私のキャリアに何の意味が？」", s:4 },
+    { t:"「給料は同じなのに、仕事だけ増えた」", s:2 },
+  ]},
+  { q:"飲み会で「将来の夢は？」と聞かれた。本音の答えは？", opts:[
+    { t:"「えっと…まだ模索中で（愛想笑い）」", s:2 },
+    { t:"「この会社で、上を目指すこと」", s:1 },
+    { t:"「ハワイで、何もしないこと」", s:4 },
+    { t:"「内緒です」（心の中：転職）", s:3 },
+  ]},
+  { q:"ふと「会社辞めたい」と思う頻度は？", opts:[
+    { t:"週に1回くらい", s:2 },
+    { t:"今、まさに思ってる", s:4 },
+    { t:"月に1回くらい", s:1 },
+    { t:"ほぼ毎日", s:3 },
+  ]},
+];
+
+/* =========================================================
+   結果データ＆スコア区間（機率平衡の自査ここに明記）
+   ---------------------------------------------------------
+   ・理論最小点 = 8（全問1点）、最大点 = 32（全問4点）、平均 = 20。
+   ・8問×4択(各1〜4点)の合計点は「正規分布に近い釣鐘型」になる。
+     → もし点数幅を均等に5分割（8-12/13-17/18-22/23-27/28-32）すると、
+       中央の 18〜22 だけで約56%が集中してしまう（＝失敗パターン）。
+   ・そこで“点数幅”ではなく実際の確率分布の分位点で区切り、
+     各タイプの出現率を均等に近づけた。実出現率は以下：
+        T1(≤17) ≈ 21.8% / T2(18-19) ≈ 22.1% / T3(20-21) ≈ 24.1%
+        T4(22-23) ≈ 18.4% / T5(≥24)  ≈ 13.6%
+     最大16%差・最頻でも24%に収まり、特定結果への偏り（80%集中）は無し。
+   ・最高得点 T5 は意図的にレア(上位13.6%)。レアほど「特別感」で
+     シェアされやすいため、バランスを保ちつつ拡散を狙う設計。
+   ========================================================= */
+const RESULTS = {
+  T1:{
+    label:"仮面ロイヤリスト型",
+    type:"出現率 約21.8%",
+    rare:null,
+    reason:"「実はまだ、辞める気はゼロ」",
+    desc:"安定感バツグン、周囲からの信頼も厚い、組織の中で力を発揮できる稀有なバランス型。「辞めたい」と言いつつも、目の前の仕事をきちんとこなすあなたは、どんなチームでも“いてくれて助かる人”です。責任感も人一倍。",
+    roast:"……ただ、その本音は<b>「給料が上がれば、だいたい解決する」</b>。口では辞めると言いながら、たぶん一番辞めなさそうなのがあなたです。",
+    fit:"今の環境で“条件交渉”や“役割の見直し”を。転職より先に、まず昇給を狙う方が幸せかも。"
+  },
+  T2:{
+    label:"現実派サバイバー型",
+    type:"出現率 約22.1%",
+    rare:null,
+    reason:"「不満はある。でも、生活が第一」",
+    desc:"地に足のついた現実主義者。リスク管理が上手で、感情だけで動かない冷静さがあります。不満を抱えながらも生活を守りきる、その堅実さは立派な“大人の処世術”。実は一番たくましいタイプです。",
+    roast:"とはいえ本音は、<b>「転職サイトは“見るだけ”見て、そっと閉じる」</b>。保存した求人だけが静かに増えていくタイプ。行動より先に、ブックマークが増えていませんか？",
+    fit:"安定×副業の“二刀流”が好相性。本業は守りつつ、小さく外の選択肢を試すのが吉。"
+  },
+  T3:{
+    label:"健全な迷い人型",
+    type:"出現率 約24.1%",
+    rare:null,
+    reason:"「ちゃんと、評価されたい」",
+    desc:"自己分析がしっかりでき、成長意欲も高い誠実なタイプ。今の悩みは“ちゃんと前を向いている証拠”です。迷えるということは、自分の理想を持っているということ。伸びしろの塊で、これから一番化ける可能性を秘めています。",
+    roast:"でも「認められたい」気持ちが強すぎて、<b>上司のひと言で天国と地獄を往復しがち</b>。褒められたら3年戦えるけど、スルーされたら半日へこむ繊細さも持ち合わせています。",
+    fit:"評価とフィードバックが明確な職場が合う。実力が“見える化”される環境を選ぶと一気に伸びる。"
+  },
+  T4:{
+    label:"自由への逃走者型",
+    type:"出現率 約18.4%",
+    rare:null,
+    reason:"「自分の人生を、生きたい」",
+    desc:"明確な自分の価値観を持ち、未来志向で行動力もある魅力的なタイプ。「会社のため」より「自分のため」に時間を使いたいという感覚は、これからの時代にぴったり。一緒にいるとワクワクさせてくれる人です。",
+    roast:"ただし理想は高いのに、<b>副業フォルダの9割は「未着手」</b>。心はもうハワイのビーチにいるのに、身体は満員電車。夢と実行の間に、ちょっと距離がありませんか？",
+    fit:"裁量の大きい仕事・フリーランス・リモート向き。“やりたいこと”を1つだけ今週始めると人生が動く。"
+  },
+  T5:{
+    label:"魂はもう退職済み型",
+    type:"出現率 約13.6%（レア）",
+    rare:"RARE｜上位13.6%",
+    reason:"「もう、決めてる」",
+    desc:"自分軸が完全に確立された希少種。誰にも縛られない強さと、ブレない決断力を持っています。周りに流されず「自分はどうしたいか」で動けるあなたは、本来どこでも生きていける人。その覚悟、かっこいいです。",
+    roast:"……というか、<b>出社しているのは身体だけ</b>。あなたの退職届は、もう心の引き出しの中で完成しています。あとは出すタイミングを計っているだけ、ですよね？",
+    fit:"環境を“変える側”に回るべきタイプ。転職・独立・新天地、どれも向く。次の一歩を具体化する時。"
+  }
+};
+
+/* === スコア → 結果キー（区間は上のコメント通り） === */
+function judge(score){
+  if (score <= 17) return "T1";   // ≈21.8%
+  else if (score <= 19) return "T2";   // ≈22.1%
+  else if (score <= 21) return "T3";   // ≈24.1%
+  else if (score <= 23) return "T4";   // ≈18.4%
+  else return "T5";                     // ≈13.6%（24〜32）
+}
+
+/* ========================= ロジック ========================= */
+const state = { idx:0, answers:new Array(QUESTIONS.length).fill(null) };
+
+const elIntro = document.getElementById("screen-intro");
+const elQuiz  = document.getElementById("screen-quiz");
+const elResult= document.getElementById("screen-result");
+
+const qNum=document.getElementById("qNum");
+const qText=document.getElementById("qText");
+const optionsBox=document.getElementById("optionsBox");
+const nextBtn=document.getElementById("nextBtn");
+const backBtn=document.getElementById("backBtn");
+const fill=document.getElementById("progressFill");
+const qCurrent=document.getElementById("qCurrent");
+document.getElementById("qTotal").textContent=QUESTIONS.length;
+
+function show(screen){
+  [elIntro,elQuiz,elResult].forEach(s=>s.classList.remove("active"));
+  screen.classList.add("active");
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+function renderQuestion(){
+  const q=QUESTIONS[state.idx];
+  qNum.textContent="QUESTION "+(state.idx+1);
+  qText.textContent=q.q;
+  optionsBox.innerHTML="";
+  q.opts.forEach((opt,i)=>{
+    const b=document.createElement("button");
+    b.className="option"+(state.answers[state.idx]===i?" selected":"");
+    b.innerHTML=`<span>${opt.t}</span><span class="tick"></span>`;
+    b.addEventListener("click",()=>{
+      state.answers[state.idx]=i;
+      [...optionsBox.children].forEach(c=>c.classList.remove("selected"));
+      b.classList.add("selected");
+      nextBtn.disabled=false;
+    });
+    optionsBox.appendChild(b);
+  });
+
+  qCurrent.textContent=state.idx+1;
+  fill.style.width=((state.idx)/QUESTIONS.length*100)+"%";
+  nextBtn.disabled = state.answers[state.idx]===null;
+  nextBtn.textContent = (state.idx===QUESTIONS.length-1) ? "診断結果を見る ✨" : "次へ →";
+  backBtn.style.display = state.idx>0 ? "block" : "none";
+}
+
+document.getElementById("startBtn").addEventListener("click",()=>{
+  state.idx=0;
+  show(elQuiz);
+  renderQuestion();
+});
+
+nextBtn.addEventListener("click",()=>{
+  if(state.answers[state.idx]===null) return;
+  if(state.idx < QUESTIONS.length-1){
+    state.idx++;
+    renderQuestion();
+  } else {
+    fill.style.width="100%";
+    showResult();
+  }
+});
+backBtn.addEventListener("click",()=>{
+  if(state.idx>0){ state.idx--; renderQuestion(); }
+});
+
+let CURRENT_RESULT=null;
+
+function showResult(){
+  let score=0;
+  state.answers.forEach((ai,qi)=>{ score+=QUESTIONS[qi].opts[ai].s; });
+  const key=judge(score);
+  const r=RESULTS[key];
+  CURRENT_RESULT=r;
+
+  document.getElementById("rLabel").textContent=r.label;
+  document.getElementById("rType").textContent="あなたのタイプは";
+  document.getElementById("rReason").textContent=r.reason;
+  document.getElementById("rDesc").textContent=r.desc;
+  document.getElementById("rRoast").innerHTML=r.roast;
+  document.getElementById("rFit").textContent=r.fit;
+
+  const rareTag=document.getElementById("rareTag");
+  if(r.rare){ rareTag.style.display="inline-block"; rareTag.textContent="★ "+r.rare; }
+  else { rareTag.style.display="none"; }
+
+  show(elResult);
+}
+
+document.getElementById("retryBtn").addEventListener("click",()=>{
+  state.idx=0;
+  state.answers=new Array(QUESTIONS.length).fill(null);
+  fill.style.width="0%";
+  show(elIntro);
+});
+
+/* ====================== シェア機能 ======================
+   ・window.location.href で現在のURLを動的取得。
+   ・共有文＝【診断名】＋【結果タイプ】＋【本当の理由】＋【短評】＋【URL】＋【ハッシュタグ】
+   ========================================================= */
+const SITE_TITLE="転職の言い訳診断";
+
+function buildShareText(){
+  const r=CURRENT_RESULT;
+  const url=window.location.href;
+  return `【${SITE_TITLE}】\n私の本音は「${r.label}」でした！\n本当の理由：${r.reason}\n\nあなたが会社を辞める“本当の理由”は？診断はこちら👇\n${url}`;
+}
+
+/* X（Twitter）：本文＋ハッシュタグ3つ */
+document.getElementById("shareX").addEventListener("click",()=>{
+  const r=CURRENT_RESULT;
+  const url=window.location.href;
+  const text=`【${SITE_TITLE}】私の本音は「${r.label}」でした！\n本当の理由：${r.reason}\nあなたの“辞める本当の理由”は？👇`;
+  const hashtags="転職診断,会社辞めたい,適職テスト"; // 適切なハッシュタグ3つ
+  const xUrl="https://twitter.com/intent/tweet"
+    +"?text="+encodeURIComponent(text)
+    +"&url="+encodeURIComponent(url)
+    +"&hashtags="+encodeURIComponent(hashtags);
+  window.open(xUrl,"_blank","noopener");
+});
+
+/* LINE */
+document.getElementById("shareLine").addEventListener("click",()=>{
+  const url=window.location.href;
+  const lineUrl="https://social-plugins.line.me/lineit/share?url="+encodeURIComponent(url);
+  window.open(lineUrl,"_blank","noopener");
+});
+
+/* コピー（クリップボード） */
+document.getElementById("shareCopy").addEventListener("click",async()=>{
+  const text=buildShareText();
+  const toast=document.getElementById("copiedToast");
+  try{
+    await navigator.clipboard.writeText(text);
+  }catch(e){
+    // フォールバック
+    const ta=document.createElement("textarea");
+    ta.value=text; ta.style.position="fixed"; ta.style.opacity="0";
+    document.body.appendChild(ta); ta.select();
+    try{ document.execCommand("copy"); }catch(_){}
+    document.body.removeChild(ta);
+  }
+  toast.classList.add("show");
+  setTimeout(()=>toast.classList.remove("show"),2600);
+});
+</script>
+</body>
+</html>
