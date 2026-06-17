@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ===== SEO ===== -->
+<title>宝くじ高額当選 破滅度チェック｜億万長者になったらどうなる？【金運心理テスト】</title>
+<meta name="description" content="もし3億円が当たったら…あなたは資産家？それとも一発破産？8つの質問で“お金の破滅度”を診断する金運占い・浪費家診断。あなたは財産を守れるか、今すぐ無料チェック！" />
+<meta name="keywords" content="金運占い, 浪費家 診断, 心理テスト 財産, 宝くじ 当選 心理, お金 性格診断, 浪費癖 チェック" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://kokoro-shindan.com/takarakuji-hametsu/" />
+
+<!-- ===== Open Graph (X / Threads / LINE 用大カード) ===== -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="宝くじ高額当選 破滅度チェック｜億万長者になったらどうなる？" />
+<meta property="og:description" content="3億円当たったら、あなたは資産家？一発破産？8問で“お金の破滅度”を診断する金運心理テスト。あなたの破滅度は何％？" />
+<meta property="og:image" content="og-image.png" />
+<meta property="og:url" content="https://kokoro-shindan.com/takarakuji-hametsu/" />
+<meta property="og:site_name" content="ココロ診断" />
+<meta property="og:locale" content="ja_JP" />
+
+<!-- ===== Twitter Card ===== -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="宝くじ高額当選 破滅度チェック｜億万長者になったらどうなる？" />
+<meta name="twitter:description" content="3億円当たったら…あなたの“お金の破滅度”を8問で診断。金運占い・浪費家診断。" />
+<meta name="twitter:image" content="og-image.png" />
+
+<!-- ===== 構造化データ：FAQ（Google 精選摘要対策） ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "この金運診断・浪費家診断は無料ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、完全無料です。8つの質問に答えるだけで、もし宝くじで高額当選したときの“お金の破滅度”（浪費傾向）を診断できます。登録やインストールは一切不要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "自分が浪費家かどうかも分かりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "分かります。破滅度が高いほど浪費家タイプ、低いほど堅実な資産家タイプです。結果ページでは各タイプに合ったお金との付き合い方のヒントも紹介しているので、財産に関する心理テストとして活用できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "診断結果は友達にシェアできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。結果画面のシェアボタンから、あなたの破滅度とタイプをX（旧Twitter）やLINEで共有できます。コピー機能で他のSNSへの貼り付けも簡単です。"
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Zen+Old+Mincho:wght@700;900&display=swap" rel="stylesheet" />
+
+<style>
+/* ===== Design tokens : "Money vault / 金運" =====
+   紙幣の深緑 × 金（ゴールド）で“富”を表現。
+   結果には破滅度メーター（安全→破滅）を採用し、テーマを視覚化。
+   AI定番の cream+serif+terracotta は不採用。 */
+:root{
+  --ink:#143A2E;        /* 紙幣の深緑：本文 */
+  --ink-soft:#3F5A50;
+  --muted:#8A9A92;
+  --paper:#F3F1E8;      /* 温かいクリーム */
+  --card:#FFFFFF;
+  --line:#E2DECE;
+  --gold:#C29A2E;       /* ゴールド：アクセント */
+  --gold-dark:#A07F1E;
+  --gold-light:#E6C75A;
+  --green-1:#0F3A2D;    /* heroグラデ */
+  --green-2:#1C5C46;
+  --danger:#D9533A;     /* 破滅側 */
+  --safe:#2F9E6B;       /* 安全側 */
+  --radius:20px;
+  --shadow:0 18px 40px -22px rgba(20,58,46,.5);
+  --shadow-sm:0 6px 18px -10px rgba(20,58,46,.35);
+}
+
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  font-family:"Noto Sans JP",system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  letter-spacing:.01em;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:560px;margin:0 auto;padding:24px 18px 56px;}
+
+/* ===== 広告枠（AdSense Ready） ===== */
+.ad-slot{
+  min-height:250px;background:#f0f0f0;margin:20px 0;text-align:center;
+  line-height:250px;color:#aaa;font-size:13px;border-radius:12px;
+}
+
+/* ===== Hero / Intro ===== */
+.hero{
+  position:relative;border-radius:var(--radius);padding:34px 24px 30px;color:#fff;
+  background:linear-gradient(155deg,var(--green-1) 0%,var(--green-2) 70%,#2d7a5c 110%);
+  box-shadow:var(--shadow);overflow:hidden;
+}
+.hero::before{ /* 金貨の光沢 */
+  content:"";position:absolute;inset:-50% 40% auto -20%;height:200px;
+  background:radial-gradient(50% 100% at 50% 0%,rgba(230,199,90,.45),transparent 70%);
+  opacity:.7;
+}
+.coin{position:absolute;right:-10px;top:-12px;font-size:120px;opacity:.12;transform:rotate(-12deg);z-index:0;}
+.eyebrow{
+  font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:12px;
+  letter-spacing:.2em;color:var(--gold-light);margin:0 0 14px;position:relative;z-index:1;
+}
+.hero h1{
+  font-family:"Zen Old Mincho",serif;font-weight:900;
+  font-size:clamp(26px,7.4vw,36px);line-height:1.35;margin:0 0 14px;
+  position:relative;z-index:1;
+}
+.hero h1 .y{color:var(--gold-light);}
+.hero p{margin:0;font-size:14.5px;color:rgba(255,255,255,.9);position:relative;z-index:1;}
+.meta-row{
+  display:flex;gap:14px;margin-top:18px;font-size:12px;
+  color:rgba(255,255,255,.82);position:relative;z-index:1;
+}
+.meta-row span{display:flex;align-items:center;gap:5px;}
+
+/* ===== Buttons ===== */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;
+  border:none;cursor:pointer;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;
+  font-size:17px;padding:18px 22px;border-radius:14px;color:#3a2c00;
+  background:linear-gradient(135deg,var(--gold-light),var(--gold));
+  box-shadow:0 12px 24px -12px rgba(194,154,46,.9);
+  transition:transform .12s ease,box-shadow .2s ease,filter .2s ease;
+}
+.btn:hover{filter:brightness(1.04);transform:translateY(-1px);}
+.btn:active{transform:translateY(1px);}
+.btn:disabled{background:#d8d4c6;color:#9a968a;box-shadow:none;cursor:not-allowed;}
+.btn-ghost{
+  background:transparent;color:var(--ink-soft);box-shadow:none;
+  border:1.5px solid var(--line);font-size:15px;padding:14px 18px;
+}
+.btn-ghost:hover{background:#fff;color:var(--ink);filter:none;}
+.btn-line{background:#06C755;color:#fff;box-shadow:0 12px 24px -12px rgba(6,199,85,.7);}
+.btn-x{background:#111;color:#fff;box-shadow:0 12px 24px -12px rgba(0,0,0,.6);}
+.btn-copy{background:linear-gradient(135deg,#2f9e6b,#1c7a50);color:#fff;box-shadow:0 12px 24px -12px rgba(47,158,107,.7);}
+
+.start-cta{margin-top:8px;}
+.note{font-size:12px;color:var(--muted);text-align:center;margin:12px 0 0;}
+
+/* ===== Screens ===== */
+.screen{display:none;animation:fade .45s ease both;}
+.screen.active{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+
+.progress{display:flex;align-items:center;gap:12px;margin:6px 2px 22px;}
+.progress .bar{flex:1;height:8px;background:#e5e1d2;border-radius:99px;overflow:hidden;}
+.progress .fill{height:100%;width:0%;background:linear-gradient(90deg,var(--gold-light),var(--gold));border-radius:99px;transition:width .4s cubic-bezier(.4,0,.2,1);}
+.progress .count{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:13px;color:var(--ink-soft);white-space:nowrap;}
+.progress .count b{color:var(--gold-dark);font-size:18px;}
+
+.qcard{background:var(--card);border-radius:var(--radius);padding:26px 22px 22px;box-shadow:var(--shadow-sm);}
+.qnum{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:13px;letter-spacing:.18em;color:var(--gold-dark);margin:0 0 8px;}
+.qtext{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:19px;line-height:1.55;margin:0 0 20px;}
+.options{display:flex;flex-direction:column;gap:11px;}
+.option{
+  position:relative;text-align:left;width:100%;border:1.5px solid var(--line);
+  background:#faf9f2;border-radius:13px;padding:15px 48px 15px 16px;font-size:15px;
+  font-weight:500;color:var(--ink);cursor:pointer;font-family:inherit;line-height:1.55;
+  transition:border-color .18s,background .18s,transform .1s;
+}
+.option:hover{border-color:var(--gold);background:#fff;}
+.option:active{transform:scale(.99);}
+.option.selected{border-color:var(--gold-dark);background:#fbf6e6;}
+.option .tick{
+  position:absolute;right:14px;top:50%;transform:translateY(-50%) scale(.4);
+  width:24px;height:24px;border-radius:50%;background:var(--gold-dark);opacity:0;
+  transition:opacity .18s,transform .18s;display:flex;align-items:center;justify-content:center;
+}
+.option .tick::after{content:"";width:6px;height:11px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg) translate(-1px,-1px);}
+.option.selected .tick{opacity:1;transform:translateY(-50%) scale(1);}
+.q-actions{margin-top:20px;}
+
+/* ===== Result ===== */
+.result-card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;}
+.result-top{
+  padding:30px 24px 26px;text-align:center;color:#fff;
+  background:linear-gradient(155deg,var(--green-1),var(--green-2) 70%,#2d7a5c);position:relative;
+}
+.result-rare{
+  display:inline-block;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:11px;
+  letter-spacing:.12em;background:var(--gold-light);color:#3a2c00;padding:4px 12px;border-radius:99px;margin-bottom:12px;
+}
+.result-type{font-size:13px;color:var(--gold-light);font-weight:700;letter-spacing:.1em;font-family:"Zen Kaku Gothic New",sans-serif;}
+.result-label{font-family:"Zen Old Mincho",serif;font-weight:900;font-size:clamp(25px,7.8vw,34px);line-height:1.3;margin:6px 0 4px;}
+
+/* ===== 破滅度メーター（signature） ===== */
+.meter-wrap{padding:24px 22px 4px;}
+.meter-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;}
+.meter-head .lbl{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:14px;}
+.meter-head .pct{font-family:"Zen Old Mincho",serif;font-weight:900;font-size:34px;line-height:1;}
+.meter{position:relative;height:16px;border-radius:99px;background:linear-gradient(90deg,var(--safe),var(--gold) 52%,var(--danger));overflow:visible;}
+.meter .mask{position:absolute;top:0;right:0;height:100%;background:#ece9dd;border-radius:0 99px 99px 0;transition:width 1.1s cubic-bezier(.34,1.2,.4,1);}
+.meter .needle{
+  position:absolute;top:50%;width:4px;height:30px;background:var(--ink);border-radius:4px;
+  transform:translate(-50%,-50%);left:0%;transition:left 1.1s cubic-bezier(.34,1.2,.4,1);
+  box-shadow:0 0 0 4px rgba(255,255,255,.85);
+}
+.meter-scale{display:flex;justify-content:space-between;margin-top:8px;font-size:11px;color:var(--muted);font-family:"Zen Kaku Gothic New",sans-serif;}
+
+.result-body{padding:18px 22px 26px;}
+.reason{background:#fbf6e6;border-left:4px solid var(--gold);border-radius:10px;padding:14px 16px;margin:0 0 18px;}
+.reason .l{font-size:12px;color:var(--gold-dark);font-weight:700;letter-spacing:.08em;margin:0 0 4px;font-family:"Zen Kaku Gothic New",sans-serif;}
+.reason .t{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:19px;margin:0;line-height:1.45;}
+.result-body p.desc{margin:0 0 16px;font-size:15px;}
+.result-body .roast{background:#f7f4ea;border-radius:10px;padding:14px 16px;font-size:14.5px;margin:0 0 18px;}
+.result-body .roast b{color:var(--danger);}
+.fit{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink-soft);border-top:1px dashed var(--line);padding-top:16px;}
+.fit .k{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;color:var(--ink);white-space:nowrap;}
+
+.share-zone{margin-top:24px;}
+.share-zone h3{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:15px;text-align:center;margin:0 0 4px;}
+.share-zone .sub{font-size:12.5px;color:var(--muted);text-align:center;margin:0 0 16px;}
+.share-grid{display:flex;flex-direction:column;gap:10px;}
+.copied-toast{text-align:center;font-size:13px;color:#1c7a50;font-weight:700;height:18px;margin-top:10px;opacity:0;transition:opacity .25s;}
+.copied-toast.show{opacity:1;}
+
+/* ===== SEO FAQ ===== */
+.seo-faq{margin-top:40px;border-top:1px solid var(--line);padding-top:28px;}
+.seo-faq h2{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:17px;margin:0 0 16px;}
+.faq-item{margin-bottom:16px;}
+.faq-item .q{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:14.5px;margin:0 0 5px;color:var(--ink);}
+.faq-item .a{font-size:13.5px;color:var(--ink-soft);margin:0;}
+
+.footer{text-align:center;font-size:11.5px;color:var(--muted);margin-top:34px;}
+
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:8px;}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}}
+@media (max-width:380px){.wrap{padding:18px 14px 48px;}.hero{padding:28px 18px;}}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section id="screen-intro" class="screen active">
+    <div class="hero">
+      <div class="coin">💰</div>
+      <p class="eyebrow">宝くじ高額当選 破滅度チェック</p>
+      <h1>もし<span class="y">3億円</span>が<br>当たったら——<br>あなたは何年もつ？</h1>
+      <p>突然の億万長者。資産家として君臨するか、それとも一発で溶かすか。<br>8つの質問で、あなたの“お金の破滅度”を診断します。金運占い・浪費家診断にも。</p>
+      <div class="meta-row">
+        <span>📝 全8問</span>
+        <span>⏱ 約1分</span>
+        <span>🆓 無料・登録不要</span>
+      </div>
+    </div>
+
+    <!-- 広告枠：開始ボタンの上（滞在時間が長い場所） -->
+    <div class="ad-slot">【スポンサーリンク / 広告】</div>
+
+    <button class="btn start-cta" id="startBtn">破滅度を診断する →</button>
+    <p class="note">※結果はエンタメです。当選してないのにヒヤッとしても責任は負いかねます。</p>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section id="screen-quiz" class="screen">
+    <div class="progress">
+      <div class="bar"><div class="fill" id="progressFill"></div></div>
+      <div class="count"><b id="qCurrent">1</b> / <span id="qTotal">8</span></div>
+    </div>
+    <div class="qcard">
+      <p class="qnum" id="qNum">QUESTION 1</p>
+      <h2 class="qtext" id="qText">―</h2>
+      <div class="options" id="optionsBox"></div>
+      <div class="q-actions">
+        <button class="btn" id="nextBtn" disabled>次へ →</button>
+        <button class="btn btn-ghost" id="backBtn" style="margin-top:10px;display:none;">← 前の質問</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESULT ============ -->
+  <section id="screen-result" class="screen">
+
+    <!-- 広告枠：結果ラベルの真上（滞在時間が長い場所） -->
+    <div class="ad-slot">【スポンサーリンク / 広告】</div>
+
+    <div class="result-card">
+      <div class="result-top">
+        <span class="result-rare" id="rareTag" style="display:none;"></span>
+        <div class="result-type">あなたのタイプは</div>
+        <div class="result-label" id="rLabel">―</div>
+      </div>
+
+      <!-- 破滅度メーター -->
+      <div class="meter-wrap">
+        <div class="meter-head">
+          <span class="lbl">あなたの破滅度</span>
+          <span class="pct" id="rPct">0%</span>
+        </div>
+        <div class="meter">
+          <div class="mask" id="meterMask" style="width:100%;"></div>
+          <div class="needle" id="meterNeedle" style="left:0%;"></div>
+        </div>
+        <div class="meter-scale"><span>安全｜守れる</span><span>注意</span><span>破滅｜溶かす</span></div>
+      </div>
+
+      <div class="result-body">
+        <div class="reason">
+          <p class="l">あなたとお金の関係</p>
+          <p class="t" id="rReason">―</p>
+        </div>
+        <p class="desc" id="rDesc">―</p>
+        <div class="roast" id="rRoast">―</div>
+        <div class="fit">
+          <span class="k">お金との付き合い方 ▶</span>
+          <span id="rFit">―</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="share-zone">
+      <h3>友達の破滅度、気になりませんか？</h3>
+      <p class="sub">シェアして“溶かしそうな人”を見つけよう 👀</p>
+      <div class="share-grid">
+        <button class="btn btn-x" id="shareX">𝕏 でシェアする</button>
+        <button class="btn btn-line" id="shareLine">LINE で送る</button>
+        <button class="btn btn-copy" id="shareCopy">結果をコピーする 📋</button>
+      </div>
+      <div class="copied-toast" id="copiedToast">結果をコピーしました！好きな場所に貼り付けてね</div>
+      <button class="btn btn-ghost" id="retryBtn" style="margin-top:18px;">もう一度診断する 🔄</button>
+    </div>
+  </section>
+
+  <!-- ============ SEO FAQ ============ -->
+  <section class="seo-faq">
+    <h2>よくある質問（宝くじ破滅度チェック）</h2>
+    <div class="faq-item">
+      <p class="q">Q. この金運診断・浪費家診断は無料ですか？</p>
+      <p class="a">A. はい、完全無料です。8つの質問に答えるだけで、宝くじで高額当選したときの“お金の破滅度”（浪費傾向）を診断できます。登録やインストールは一切不要です。</p>
+    </div>
+    <div class="faq-item">
+      <p class="q">Q. 自分が浪費家かどうかも分かりますか？</p>
+      <p class="a">A. 分かります。破滅度が高いほど浪費家タイプ、低いほど堅実な資産家タイプです。結果ページでは各タイプに合ったお金との付き合い方も紹介しており、財産に関する心理テストとして活用できます。</p>
+    </div>
+    <div class="faq-item">
+      <p class="q">Q. 診断結果は友達にシェアできますか？</p>
+      <p class="a">A. はい。結果画面のシェアボタンから、あなたの破滅度とタイプをX（旧Twitter）やLINEで共有できます。コピー機能で他のSNSへの貼り付けも簡単です。</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SEO Articles Section & Footer
+       ════════════════════════════════════════════ -->
+  <style>
+    /* 宝くじ破滅度チェック專用的優雅隱蔽式頁尾樣式 */
+    .seo-articles-container {
+      max-width: 560px;
+      margin: 32px auto 0;
+      padding: 22px;
+      background: rgba(63, 90, 80, 0.03); /* 使用網頁內建的 ink-soft 墨綠色調進行極淡化半透明處理 */
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+    .seo-article {
+      margin-bottom: 26px;
+    }
+    .seo-article:last-child {
+      margin-bottom: 0;
+    }
+    .seo-article-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink-soft);
+      opacity: 0.8;
+      margin-bottom: 10px;
+      letter-spacing: 0.04em;
+      font-family: "Zen Kaku Gothic New", sans-serif;
+    }
+    .seo-article-p {
+      font-size: 12px;
+      color: var(--muted); /* 降低對比度的煙燻灰綠字體，優雅隱蔽不刺眼 */
+      line-height: 1.85;
+      text-align: justify;
+      margin-bottom: 8px;
+      font-family: "Noto Sans JP", sans-serif;
+    }
+    .seo-article-p:last-child {
+      margin-bottom: 0;
+    }
+    .site-footer-final {
+      text-align: center;
+      font-size: 11.5px;
+      color: var(--muted);
+      margin-top: 34px;
+      font-family: "Noto Sans JP", sans-serif;
+    }
+  </style>
+
+  <section class="seo-articles-container">
+    <!-- 1️⃣ 第一篇 SEO 文章：聚焦於高額中獎、金錢觀念與破滅心理學 -->
+    <article class="seo-article">
+      <h3 class="seo-article-title">コラム：もし3億円が当たったら？「金銭感覚 診断」から見る高額当選と破滅の心理学</h3>
+      <p class="seo-article-p">
+        「もし宝くじで3億円が当たったら、何を買い、どんな生活を送るか」という妄想は、誰しも一度は抱いたことがあるエンターテインメントです。しかし、巨万の富が突然手に入った現実のケースを紐解くと、資産家として不労所得を得ながら穏やかに暮らす人と、わずか数年で財産をすべて溶かして自己破産に追い込まれる人の二極化が進むことが知られています。2026年現在の不透明な経済環境においても、突然の億万長者という極限状態をシミュレーションし、自分のお金の扱い方を暴き出す「宝くじ高額当選 破滅度チェック」や無料の金運占いが、多くのユーザーの関心を集めています。
+      </p>
+      <p class="seo-article-p">
+        心理学や行動経済学の観点から見ると、突然の大金によって人生が崩壊する原因は、個人の「お金 性格診断」や潜在的な浪費癖にあります。普段は堅実に生活費やポイント還元を計算していても、財布の紐が完全に蒸發するような大金を前にすると、理性が一瞬で溶けてしまうのです。心理テストを通じて自分の浪費傾向や破滅度を数値として可視化することは、自分の対人関係における見栄や、ストレス発散としての買い物セラピーといった「買い物の癖」を客観視するための優れた契機となります。
+      </p>
+      <p class="seo-article-p">
+        お金を銀行口座に入れたまま楽しむ余裕を持てない「不動の鉄壁番人型」や、逆に3年後には当選前より困窮してしまう「秒で溶かす爆速破産型」など、財産に関する心理傾向は人それぞれです。まずは無料の浪費家 診断を通じて、もしもの時の自分の盲点を知ることが、健全な家計管理や将来の金運を引き寄せるための第一歩となるでしょう。
+      </p>
+    </article>
+
+    <!-- 2️⃣ 第二篇 SEO 文章：聚焦於浪費傾向檢查、財產心理與社群趣味互動 -->
+    <article class="seo-article">
+      <h3 class="seo-article-title">コラム：「浪費家 診断」を賢く活かす！心理テスト 財産と付き合うための防衛線</h3>
+      <p class="seo-article-p">
+        自分自身の金銭感覚や貯蓄能力、あるいは他者へのおごり癖といった「性格の裏の顔」を直視するのは少し耳が痛いものですが、ユーモラスな突っ込みやメーターの％表示として提示されると、愛すべき個性や面白い話として受け入れやすくなります。深刻になりがちな借金やローンの不安、あるいは給料泥棒ならぬ資産運用の課題を、エンターテインメントの形に昇華した「浪費癖 チェック」や動物占い風の心理テストが、SNSを中心に友人同士のコミュニケーションツールとして広く愛されている理由はここにあります。
+      </p>
+      <p class="seo-article-p">
+        直感で答える設問設計の金運心理テストが「当たる！」と評判になりやすいのは、高級ブランド品への衝動や、友人から「お金貸して」と言われた際の断れなさといった、日常の建前が緩んだリアルな本音が反映されやすいためです。たとえば、周囲に流されず墓場まで秘密を持っていく堅実タイプと、おごり癖が止まらなくなりシンデレラの魔法が切れがちな「危険なシンデレラ型」のタイプでは、富の賞味期限が根本的に異なります。
+      </p>
+      <p class="seo-article-p">
+        自分の「経済を回す発電機」としての特徴を自覚し、それを友達や同僚とシェアして「誰が一番先に溶かしそうか」を当て合うことは、普段は少し話しにくい「お金の価値観」というトピックをユーモラスに共有し、お互いの特性をリスペクトし合うための絶好の機会です。無料の面白い診断をライフスタイルの一部として楽しみながら、他者との相互理解を深め、しなやかで心地よい金銭感覚を磨いてみてはいかがでしょうか。
+      </p>
+    </article>
+  </section>
+
+  <p class="site-footer-final">© ココロ診断 / kokoro-shindan.com｜本診断はエンターテインメントです。</p>
+
+</main>
+
+
+<script>
+/* =========================================================
+   データ：全8問 × 各4択（1〜4点）
+   ・選択肢は点数順（1→4）に並べず、毎問シャッフル配置。
+   ・点数が高いほど「破滅度（浪費傾向）」が高い。
+   ========================================================= */
+const QUESTIONS = [
+  { q:"3億円が当たった瞬間。あなたの“最初の行動”は？", opts:[
+    { t:"高級寿司を予約。今夜は祝杯だ", s:3 },
+    { t:"まず通帳に入れて、しばらく冷静になる", s:1 },
+    { t:"その足でブランド店へ。財布ごと開放", s:4 },
+    { t:"スクショして、信頼できる人にだけ報告", s:2 },
+  ]},
+  { q:"高額当選、誰に伝える？", opts:[
+    { t:"パートナー（家族）だけにこっそり", s:2 },
+    { t:"SNSに「人生変わりました」と投稿", s:4 },
+    { t:"誰にも言わない。墓場まで持っていく", s:1 },
+    { t:"仲のいい友達数人には、つい言っちゃう", s:3 },
+  ]},
+  { q:"当選金、まず何に使う？", opts:[
+    { t:"ずっと欲しかったものを、1つだけ買う", s:3 },
+    { t:"全額そのまま、貯金・運用にまわす", s:1 },
+    { t:"家・車・旅行、ぜんぶ即決で揃える", s:4 },
+    { t:"借金返済とローン完済でスッキリ", s:2 },
+  ]},
+  { q:"仕事はどうする？", opts:[
+    { t:"様子を見て、無理になったら考える", s:2 },
+    { t:"明日、辞表を出す", s:4 },
+    { t:"当然続ける。むしろ何も変えない", s:1 },
+    { t:"少し減らして、好きなことの時間に", s:3 },
+  ]},
+  { q:"友人が「ちょっとお金貸して」と言ってきたら？", opts:[
+    { t:"仲がいいし、断れずに貸してしまう", s:3 },
+    { t:"きっぱり断る。お金の貸し借りはしない", s:1 },
+    { t:"いいよいいよ、あげる！と太っ腹に", s:4 },
+    { t:"事情を聞いて、本当に必要なら少しだけ", s:2 },
+  ]},
+  { q:"目の前に、300万円の高級腕時計。", opts:[
+    { t:"いい物だけど、もっと調べてから", s:2 },
+    { t:"「これください」即決。色違いも", s:4 },
+    { t:"300万…？その値段、3年は悩む", s:1 },
+    { t:"当選記念に、自分へのご褒美だ", s:3 },
+  ]},
+  { q:"当選から1ヶ月後のあなたは？", opts:[
+    { t:"旅行や外食が、明らかに増えた", s:3 },
+    { t:"生活は、当選前と完全に同じ", s:1 },
+    { t:"もう半分くらい使った気がする…", s:4 },
+    { t:"ちょっといい食材を買うようになった", s:2 },
+  ]},
+  { q:"ふと「このお金、なくなったら…」と考える頻度は？", opts:[
+    { t:"たまに、ふと不安になる", s:2 },
+    { t:"考えたことすらない。今が楽しい", s:4 },
+    { t:"毎日。リスク管理は欠かさない", s:1 },
+    { t:"あまり考えない。なんとかなる", s:3 },
+  ]},
+];
+
+/* =========================================================
+   結果データ＆スコア区間（機率平衡の自査ここに明記）
+   ---------------------------------------------------------
+   ・理論最小点 = 8（全問1点）、最大点 = 32（全問4点）、平均 = 20。
+   ・8問×4択(各1〜4点)の合計点は「正規分布に近い釣鐘型」になる。
+     → 点数幅を均等に5分割すると中央(18〜22)に約56%が集中する（失敗パターン）。
+   ・そこで“点数幅”ではなく実際の確率分布の分位点で区切り、出現率を平均化。
+     全65,536通りを総当たり検証した実出現率：
+        T1(≤17) ≈ 21.8% / T2(18-19) ≈ 22.1% / T3(20-21) ≈ 24.1%
+        T4(22-23) ≈ 18.4% / T5(≥24)  ≈ 13.6%
+     最大16%差・最頻24%に収まり、80%集中は発生しない。
+   ・最高得点 T5（破滅度MAX）は意図的にレア(上位13.6%)＝特別感で拡散を狙う設計。
+   ・hametsu＝破滅度メーターの表示％（演出用、判定ロジックとは独立）。
+   ========================================================= */
+const RESULTS = {
+  T1:{
+    label:"不動の鉄壁番人型", type:"出現率 約21.8%", rare:null, hametsu:5,
+    reason:"宝くじが当たっても、たぶん人生が変わらない",
+    desc:"当選しても1ミリもブレない、最強の金銭メンタルの持ち主。資産を守り、着実に増やすセンスは折り紙つきで、3億どころか一生お金に困らないタイプです。周囲が舞い上がる中、あなただけが冷静。これはもはや才能です。",
+    roast:"……ただ、当選金は<b>たぶん通帳で眠ったまま</b>。「いつか使う」と言い続けて10年後もそのまま、宝くじ当たったのに楽しみ方を知らない説。コンビニのバイト、辞めなさそう。",
+    fit:"運用・投資が最適解。守りが強すぎるので、年に一度くらいは“自分への贅沢”も解禁してみて。"
+  },
+  T2:{
+    label:"賢者のセレブ型", type:"出現率 約22.1%", rare:null, hametsu:28,
+    reason:"使うところは使い、締めるところは締める",
+    desc:"守りと使いのバランスが絶妙な、理想の小金持ちタイプ。感情に流されず、お金に“働いてもらう”発想ができる賢者です。当選しても堅実な判断ができるあなたなら、富を長く保てるでしょう。一緒にいると安心感があります。",
+    roast:"でも本音は、<b>お金持ちになってもポイント還元を計算しがち</b>。カートに入れた高級品は「セールまで待とう」で永遠に未購入。倹約が染みついて、たまにケチと紙一重に。",
+    fit:"資産の一部を“楽しむ予算”として先取りすると吉。賢さに少しの大胆さを足すと最強。"
+  },
+  T3:{
+    label:"夢見るプチ贅沢家型", type:"出現率 約24.1%", rare:null, hametsu:52,
+    reason:"せっかくの当選、ちゃんと楽しみたい",
+    desc:"当選を素直に喜び、人生を豊かに楽しめる健全な感性の持ち主。自分にも周りにもほどよく還元できる、一緒にいて楽しいタイプです。お金を“幸せに変える”才能があり、当選で生活の彩りがグッと増えるでしょう。",
+    roast:"ただし、当たった瞬間に<b>財布のヒモが蒸発</b>。「記念に…」が口グセになり、月末には記念品だらけ。気づけば“ちょっといいもの”の積み重ねが、しっかり効いてきます。",
+    fit:"月の上限を決める“予算ルール”が効く。楽しむ才能はあるので、枠だけ作れば無敵。"
+  },
+  T4:{
+    label:"危険なシンデレラ型", type:"出現率 約18.4%", rare:null, hametsu:78,
+    reason:"夢が叶うなら、今すぐ全部叶えたい",
+    desc:"圧倒的な行動力と、人を惹きつける気前の良さを持つカリスマ。当選した瞬間から人生のステージを一気に上げられる華やかさは、誰にも真似できません。気前よく周りを幸せにする、太陽みたいな存在です。",
+    roast:"でも当選後、<b>なぜか友達が急増し、おごり癖が止まらない</b>。タワマン契約までは秒速なのに、維持費の計算は…してない。シンデレラの魔法、12時で切れがちなのが心配。",
+    fit:"先に“使えないお金”として大半をロックするのが命綱。残りで思いきり楽しむのが正解。"
+  },
+  T5:{
+    label:"秒で溶かす爆速破産型", type:"出現率 約13.6%（レア）", rare:"RARE｜上位13.6%", hametsu:99,
+    reason:"細かいことは考えない。今を全力で生きる",
+    desc:"一度きりの人生を全力で味わう、唯一無二の豪快な魂。後悔しない潔さと、その場の幸福に全振りできる思い切りの良さは、ある意味、誰よりも人生を“濃く”生きています。一緒にいると最高に楽しい、生まれながらのエンターテイナー。",
+    roast:"……が、<b>3年後の所持金は、当選前より少ない説</b>が濃厚。「宝くじ？あぁ、そんな時期もあったね」と遠い目。お金は溶けても思い出は残る、と信じるしかない域に達しています。",
+    fit:"自分で管理しないのが最大の防御。信頼できる人やプロに“先に”任せる仕組みが必須。"
+  }
+};
+
+/* === スコア → 結果キー（区間は上のコメント通り） === */
+function judge(score){
+  if (score <= 17) return "T1";        // ≈21.8%
+  else if (score <= 19) return "T2";   // ≈22.1%
+  else if (score <= 21) return "T3";   // ≈24.1%
+  else if (score <= 23) return "T4";   // ≈18.4%
+  else return "T5";                    // ≈13.6%（24〜32）
+}
+
+/* ========================= ロジック ========================= */
+const state = { idx:0, answers:new Array(QUESTIONS.length).fill(null) };
+const elIntro=document.getElementById("screen-intro");
+const elQuiz=document.getElementById("screen-quiz");
+const elResult=document.getElementById("screen-result");
+const qNum=document.getElementById("qNum"), qText=document.getElementById("qText");
+const optionsBox=document.getElementById("optionsBox"), nextBtn=document.getElementById("nextBtn");
+const backBtn=document.getElementById("backBtn"), fill=document.getElementById("progressFill");
+const qCurrent=document.getElementById("qCurrent");
+document.getElementById("qTotal").textContent=QUESTIONS.length;
+
+function show(screen){
+  [elIntro,elQuiz,elResult].forEach(s=>s.classList.remove("active"));
+  screen.classList.add("active");
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+function renderQuestion(){
+  const q=QUESTIONS[state.idx];
+  qNum.textContent="QUESTION "+(state.idx+1);
+  qText.textContent=q.q;
+  optionsBox.innerHTML="";
+  q.opts.forEach((opt,i)=>{
+    const b=document.createElement("button");
+    b.className="option"+(state.answers[state.idx]===i?" selected":"");
+    b.innerHTML=`<span>${opt.t}</span><span class="tick"></span>`;
+    b.addEventListener("click",()=>{
+      state.answers[state.idx]=i;
+      [...optionsBox.children].forEach(c=>c.classList.remove("selected"));
+      b.classList.add("selected");
+      nextBtn.disabled=false;
+    });
+    optionsBox.appendChild(b);
+  });
+  qCurrent.textContent=state.idx+1;
+  fill.style.width=((state.idx)/QUESTIONS.length*100)+"%";
+  nextBtn.disabled=state.answers[state.idx]===null;
+  nextBtn.textContent=(state.idx===QUESTIONS.length-1)?"診断結果を見る ✨":"次へ →";
+  backBtn.style.display=state.idx>0?"block":"none";
+}
+
+document.getElementById("startBtn").addEventListener("click",()=>{state.idx=0;show(elQuiz);renderQuestion();});
+nextBtn.addEventListener("click",()=>{
+  if(state.answers[state.idx]===null)return;
+  if(state.idx<QUESTIONS.length-1){state.idx++;renderQuestion();}
+  else{fill.style.width="100%";showResult();}
+});
+backBtn.addEventListener("click",()=>{if(state.idx>0){state.idx--;renderQuestion();}});
+
+let CURRENT_RESULT=null;
+
+function showResult(){
+  let score=0;
+  state.answers.forEach((ai,qi)=>{score+=QUESTIONS[qi].opts[ai].s;});
+  const r=RESULTS[judge(score)];
+  CURRENT_RESULT=r;
+
+  document.getElementById("rLabel").textContent=r.label;
+  document.getElementById("rReason").textContent=r.reason;
+  document.getElementById("rDesc").textContent=r.desc;
+  document.getElementById("rRoast").innerHTML=r.roast;
+  document.getElementById("rFit").textContent=r.fit;
+
+  const rareTag=document.getElementById("rareTag");
+  if(r.rare){rareTag.style.display="inline-block";rareTag.textContent="★ "+r.rare;}
+  else{rareTag.style.display="none";}
+
+  // メーターを0からアニメーション
+  const pctEl=document.getElementById("rPct");
+  const mask=document.getElementById("meterMask");
+  const needle=document.getElementById("meterNeedle");
+  pctEl.textContent="0%"; mask.style.width="100%"; needle.style.left="0%";
+  show(elResult);
+  setTimeout(()=>{
+    mask.style.width=(100-r.hametsu)+"%";
+    needle.style.left=r.hametsu+"%";
+    // 数字カウントアップ
+    let cur=0; const step=Math.max(1,Math.round(r.hametsu/28));
+    const iv=setInterval(()=>{
+      cur+=step;
+      if(cur>=r.hametsu){cur=r.hametsu;clearInterval(iv);}
+      pctEl.textContent=cur+"%";
+    },34);
+  },250);
+}
+
+document.getElementById("retryBtn").addEventListener("click",()=>{
+  state.idx=0;state.answers=new Array(QUESTIONS.length).fill(null);
+  fill.style.width="0%";show(elIntro);
+});
+
+/* ====================== シェア機能 ======================
+   window.location.href で現在URLを動的取得。
+   共有文＝【診断名】＋【結果タイプ＋破滅度】＋【短評】＋【URL】＋【ハッシュタグ】
+   ========================================================= */
+const SITE_TITLE="宝くじ高額当選 破滅度チェック";
+
+function buildShareText(){
+  const r=CURRENT_RESULT, url=window.location.href;
+  return `【${SITE_TITLE}】\n私の破滅度は「${r.hametsu}%・${r.label}」でした！\n（${r.reason}）\n\n3億円当たったら、あなたは何年もつ？診断はこちら👇\n${url}`;
+}
+
+/* X（Twitter）：本文＋ハッシュタグ3つ */
+document.getElementById("shareX").addEventListener("click",()=>{
+  const r=CURRENT_RESULT, url=window.location.href;
+  const text=`【${SITE_TITLE}】私の破滅度は ${r.hametsu}%「${r.label}」でした💰\nあなたが3億円当たったら何年もつ？👇`;
+  const hashtags="金運占い,浪費家診断,宝くじ高額当選"; // 適切なハッシュタグ3つ
+  const xUrl="https://twitter.com/intent/tweet"
+    +"?text="+encodeURIComponent(text)
+    +"&url="+encodeURIComponent(url)
+    +"&hashtags="+encodeURIComponent(hashtags);
+  window.open(xUrl,"_blank","noopener");
+});
+/* LINE */
+document.getElementById("shareLine").addEventListener("click",()=>{
+  const url=window.location.href;
+  window.open("https://social-plugins.line.me/lineit/share?url="+encodeURIComponent(url),"_blank","noopener");
+});
+/* コピー（クリップボード） */
+document.getElementById("shareCopy").addEventListener("click",async()=>{
+  const text=buildShareText(), toast=document.getElementById("copiedToast");
+  try{ await navigator.clipboard.writeText(text); }
+  catch(e){
+    const ta=document.createElement("textarea");
+    ta.value=text;ta.style.position="fixed";ta.style.opacity="0";
+    document.body.appendChild(ta);ta.select();
+    try{document.execCommand("copy");}catch(_){}
+    document.body.removeChild(ta);
+  }
+  toast.classList.add("show");
+  setTimeout(()=>toast.classList.remove("show"),2600);
+});
+</script>
+</body>
+</html>
