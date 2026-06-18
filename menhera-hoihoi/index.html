@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ SEO 基本タグ（Google日本検索向け） ============ -->
+<title>【ダメ男・ダメ女製造機】メンヘラホイホイ度チェック｜恋愛心理テスト・ダメ男 好き 診断・相性占い 無料</title>
+<meta name="description" content="無料の恋愛心理テスト。8つの質問に答えるだけで、あなたがダメな相手を引き寄せる「ホイホイ度」が分かるダメ男 好き 診断。相性占い 無料感覚で、恋のクセをやさしく辛口に診断します。">
+<meta name="keywords" content="恋愛心理テスト,ダメ男 好き 診断,相性占い 無料,メンヘラホイホイ,ダメ男製造機,ダメ女製造機,無料診断">
+<meta name="robots" content="index, follow">
+
+<!-- ============ Open Graph（X / Threads / LINE 用カード） ============ -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="【ダメ男・ダメ女製造機】メンヘラホイホイ度チェック">
+<meta property="og:description" content="あなたは“ダメ男・ダメ女ホイホイ”体質？ なぜか手のかかる相手ばかり引き寄せるあなたのホイホイ度は何％？ 8問で分かる無料の恋愛心理テスト。">
+<meta property="og:image" content="og-image.png">
+<meta property="og:url" content="">
+<meta property="og:site_name" content="メンヘラホイホイ度チェック">
+
+<!-- ============ Twitter Card ============ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="【ダメ男・ダメ女製造機】メンヘラホイホイ度チェック">
+<meta name="twitter:description" content="あなたがダメな相手を引き寄せる「ホイホイ度」は何％？ 8問で分かる無料の恋愛心理テスト・ダメ男 好き 診断。">
+<meta name="twitter:image" content="og-image.png">
+
+<!-- ============ FAQ 構造化データ（JSON-LD / Schema Markup） ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "この「メンヘラホイホイ度チェック」はどんな診断ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "8つの質問に答えるだけで、あなたがダメな相手や手のかかる人を引き寄せやすいか（ホイホイ度）が分かる、無料の恋愛心理テストです。あくまで娯楽目的で、相性占い 無料コンテンツとしてお楽しみください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "「ダメ男 好き 診断」で結果が悪かったら、どうすればいいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "結果はあくまで傾向で、優しさや面倒見の良さの裏返しでもあります。大切なのは、相手だけでなく自分自身も同じくらい大事にすること。自分の恋愛のクセを楽しく知るきっかけにしてください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "この恋愛心理テストは無料で何回でもできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、完全無料で会員登録も不要です。気分や恋愛の状況によって結果が変わることもあるので、友達と相性占い 無料感覚でシェアしてお楽しみください。"
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#322630;
+    --muted:#8c7e87;
+    --line:#f2e3ea;
+    --card:#ffffff;
+    --brand:#e0457a;
+    --brand-soft:#fde7f0;
+    --teal:#34b3a0;
+    --shadow:0 18px 40px -22px rgba(120,45,80,.45);
+    --radius:22px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Zen Kaku Gothic New",-apple-system,"Hiragino Kaku Gothic ProN",sans-serif;
+    color:var(--ink);
+    line-height:1.7;
+    background:
+      radial-gradient(1100px 520px at 16% -8%, #ffe1ec 0%, rgba(255,225,236,0) 58%),
+      radial-gradient(900px 560px at 94% 4%, #fdeede 0%, rgba(253,238,222,0) 56%),
+      linear-gradient(180deg,#fbf4f7 0%, #f8f4f4 100%);
+    min-height:100vh;
+    padding:18px;
+    display:flex;
+    justify-content:center;
+  }
+  .wrap{width:100%;max-width:480px;margin:10px auto 40px}
+
+  .card{
+    background:var(--card);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:28px 22px;
+    border:1px solid rgba(255,255,255,.7);
+  }
+  .screen{display:none;animation:rise .5s cubic-bezier(.2,.8,.2,1)}
+  .screen.active{display:block}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  /* ===== 広告枠 ===== */
+  .ad-slot{min-height:250px;background:#f0f0f0;margin:20px 0;text-align:center;line-height:250px;color:#aaa;border-radius:14px;font-size:13px;letter-spacing:.04em}
+
+  /* ===== スタート画面 ===== */
+  .eyebrow{
+    display:inline-block;font-size:12px;font-weight:700;letter-spacing:.1em;
+    color:var(--brand);background:var(--brand-soft);
+    padding:6px 13px;border-radius:999px;margin-bottom:16px;
+  }
+  .title{
+    font-family:"Zen Maru Gothic",sans-serif;font-weight:900;
+    font-size:27px;line-height:1.35;letter-spacing:-.01em;margin-bottom:6px;
+  }
+  .title .sub{display:block;font-size:15px;color:var(--muted);font-weight:700;margin-top:10px}
+  .hero{display:flex;justify-content:center;margin:24px 0 8px}
+  .lead{color:var(--muted);font-size:14.5px;margin:14px 2px 0}
+  .meta-row{display:flex;gap:12px;justify-content:center;margin:18px 0 4px;flex-wrap:wrap}
+  .chip{font-size:12px;color:var(--muted);background:#f8f3f6;border:1px solid var(--line);padding:6px 12px;border-radius:999px}
+
+  /* ===== ボタン ===== */
+  .btn{
+    display:block;width:100%;border:none;cursor:pointer;
+    font-family:"Zen Maru Gothic",sans-serif;font-weight:700;font-size:17px;
+    color:#fff;background:linear-gradient(135deg,#ec5d8c,#d83a72);
+    padding:16px;border-radius:16px;
+    box-shadow:0 12px 22px -10px rgba(224,69,122,.85);
+    transition:transform .12s ease, box-shadow .12s ease, opacity .2s;
+  }
+  .btn:active{transform:translateY(2px) scale(.99)}
+  .btn:disabled{opacity:.4;cursor:not-allowed;box-shadow:none;filter:grayscale(.3)}
+  .btn.ghost{background:#fff;color:var(--ink);border:1.6px solid var(--line);box-shadow:none}
+  .btn.x{background:#111;box-shadow:0 12px 22px -10px rgba(0,0,0,.55)}
+  .btn.line{background:#06c755;box-shadow:0 12px 22px -10px rgba(6,199,85,.6)}
+  .btn-row{display:flex;gap:10px;margin-top:10px}
+  .btn-row .btn{font-size:15px;padding:14px}
+
+  /* ===== 進捗 ===== */
+  .progress-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+  .q-count{font-family:"Zen Maru Gothic";font-weight:700;font-size:14px;color:var(--muted)}
+  .q-count b{color:var(--brand);font-size:20px}
+  .bar{height:8px;background:#f3e7ee;border-radius:999px;overflow:hidden}
+  .bar > i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#34b3a0,#e0457a,#ef4444);transition:width .45s cubic-bezier(.2,.8,.2,1)}
+
+  /* ===== 設問 ===== */
+  .q-text{
+    font-family:"Zen Maru Gothic",sans-serif;font-weight:700;
+    font-size:20px;line-height:1.5;margin:18px 0 18px;
+  }
+  .options{display:flex;flex-direction:column;gap:11px}
+  .opt{
+    text-align:left;width:100%;cursor:pointer;
+    background:#fdfafb;border:1.8px solid var(--line);
+    border-radius:15px;padding:15px 16px;font-size:15px;color:var(--ink);
+    display:flex;align-items:center;gap:12px;line-height:1.55;
+    transition:border-color .15s, background .15s, transform .1s;
+    font-family:inherit;
+  }
+  .opt:active{transform:scale(.99)}
+  .opt .dot{
+    flex:0 0 22px;height:22px;border-radius:50%;border:2px solid #ddc9d3;
+    transition:all .15s;position:relative;margin-top:1px;
+  }
+  .opt.sel{border-color:var(--brand);background:var(--brand-soft)}
+  .opt.sel .dot{border-color:var(--brand);background:var(--brand)}
+  .opt.sel .dot::after{content:"";position:absolute;inset:0;margin:auto;width:7px;height:7px;background:#fff;border-radius:50%}
+  .quiz-foot{margin-top:22px}
+
+  /* ===== ホイホイ度メーター ===== */
+  .gauge{--pct:0%;--col:var(--brand);position:relative;width:100%;max-width:330px;margin:18px auto 2px;padding:14px 0}
+  .gauge .track{height:26px;border-radius:999px;background:#f0e7ec;border:2px solid #fff;box-shadow:inset 0 2px 5px rgba(120,60,90,.12);overflow:hidden}
+  .gauge .fill{height:100%;width:var(--pct);border-radius:999px;background:linear-gradient(90deg,var(--col),color-mix(in srgb,var(--col) 60%,#fff));transition:width 1.3s cubic-bezier(.16,.84,.3,1)}
+  .gauge .coin{position:absolute;top:50%;left:var(--pct);transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:#fff;border:3px solid var(--col);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--col);box-shadow:0 6px 14px -4px rgba(120,40,80,.3);transition:left 1.3s cubic-bezier(.16,.84,.3,1)}
+  .gauge .scale{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:8px;padding:0 2px}
+
+  /* ===== 結果 ===== */
+  .result-head{text-align:center;margin-bottom:4px}
+  .r-eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--muted)}
+  .pct-num{font-family:"Zen Maru Gothic";font-weight:900;font-size:44px;line-height:1;margin-top:10px;text-align:center}
+  .pct-num small{font-size:17px;color:var(--muted);font-weight:700;letter-spacing:.06em;display:block;margin-bottom:2px}
+  .pct-num span{font-size:22px;margin-left:2px}
+  .r-title{font-family:"Zen Maru Gothic";font-weight:900;font-size:24px;text-align:center;margin:8px 0 2px}
+  .r-catch{text-align:center;color:var(--muted);font-size:14px;margin-bottom:18px}
+  .r-body{font-size:15px;line-height:1.85;background:#fdfafb;border:1px solid var(--line);border-radius:16px;padding:18px 17px}
+  .r-body .roast{display:block;margin-top:12px;padding-top:12px;border-top:1px dashed #ecdce4}
+  .r-body .roast b{color:#d8366e}
+  .share-label{text-align:center;font-size:13px;color:var(--muted);margin:22px 0 10px;font-weight:700}
+
+  /* ===== トースト ===== */
+  .toast{
+    position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);
+    background:var(--ink);color:#fff;padding:12px 20px;border-radius:999px;font-size:14px;
+    font-weight:700;opacity:0;pointer-events:none;transition:all .3s;z-index:99;box-shadow:0 10px 30px -8px rgba(0,0,0,.5)
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  /* ===== FAQ（SEO） ===== */
+  .seo-faq{max-width:480px;margin:26px auto 0;padding:24px 22px;background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:var(--radius)}
+  .seo-faq h2{font-family:"Zen Maru Gothic";font-size:18px;margin-bottom:14px}
+  .seo-faq details{border-bottom:1px solid var(--line);padding:12px 0}
+  .seo-faq summary{font-weight:700;font-size:14.5px;cursor:pointer;list-style:none}
+  .seo-faq summary::-webkit-details-marker{display:none}
+  .seo-faq summary::before{content:"Q. ";color:var(--brand);font-family:"Zen Maru Gothic"}
+  .seo-faq p{font-size:13.5px;color:var(--muted);margin-top:8px;padding-left:2px}
+  .disclaimer{max-width:480px;margin:16px auto 0;text-align:center;font-size:11.5px;color:#ad9aa3;line-height:1.7}
+
+  @media(max-width:380px){ .title{font-size:23px} .q-text{font-size:18px} }
+  @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <!-- ====================== スタート画面 ====================== -->
+  <section id="start" class="screen card active">
+    <span class="eyebrow">🧲 無料・8問・30秒</span>
+    <h1 class="title">【ダメ男・ダメ女製造機】
+      <span class="sub">あなたの「メンヘラホイホイ」度チェック</span>
+    </h1>
+
+    <div class="hero">
+      <div class="gauge" style="--pct:50%;--col:#cf6f93;max-width:300px">
+        <div class="track"><div class="fill"></div></div>
+        <div class="coin">♥</div>
+        <div class="scale"><span>しっかり者</span><span>ホイホイ</span></div>
+      </div>
+    </div>
+
+    <p class="lead">なぜか毎回、手のかかる人ばかり好きになる…。<br>あなたが“ダメな相手”を引き寄せる<b>「ホイホイ度」</b>は何％？<br>直感で答えて、恋のクセをチェック。</p>
+
+    <div class="meta-row">
+      <span class="chip">#恋愛心理テスト</span>
+      <span class="chip">#ダメ男好き診断</span>
+      <span class="chip">#相性占い無料</span>
+    </div>
+
+    <!-- 黄金広告枠①：開始ボタンの上 -->
+    <div class="ad-slot">【スポンサーリンク / 広告】</div>
+
+    <button class="btn" onclick="startQuiz()">診断スタート →</button>
+  </section>
+
+  <!-- ====================== クイズ画面 ====================== -->
+  <section id="quiz" class="screen card">
+    <div class="progress-head">
+      <span class="q-count">Q<b id="qNow">1</b> <span style="font-size:12px">/ 8</span></span>
+      <span class="q-count" id="qPctTxt" style="font-size:12px">12%</span>
+    </div>
+    <div class="bar"><i id="bar"></i></div>
+
+    <p class="q-text" id="qText"></p>
+    <div class="options" id="opts"></div>
+
+    <div class="quiz-foot">
+      <button class="btn" id="nextBtn" disabled onclick="goNext()">次へ →</button>
+      <button class="btn ghost" id="backBtn" style="margin-top:10px;display:none" onclick="goBack()">← 前の質問へ</button>
+    </div>
+  </section>
+
+  <!-- ====================== 結果画面 ====================== -->
+  <section id="result" class="screen card">
+    <!-- 黄金広告枠②：結果ラベルの真上 -->
+    <div class="ad-slot">【スポンサーリンク / 広告】</div>
+
+    <div class="result-head">
+      <div class="r-eyebrow">あなたのホイホイ度は…</div>
+      <div class="gauge" id="rGauge">
+        <div class="track"><div class="fill"></div></div>
+        <div class="coin">♥</div>
+        <div class="scale"><span>しっかり者</span><span>ホイホイ</span></div>
+      </div>
+      <div class="pct-num"><small>ホイホイ度</small><span id="rPct">0</span><span>%</span></div>
+      <h2 class="r-title" id="rTitle"></h2>
+      <p class="r-catch" id="rCatch"></p>
+    </div>
+
+    <div class="r-body" id="rBody"></div>
+
+    <p class="share-label">あなたの友達は、しっかり者？それともホイホイ体質？ シェアして当て合おう👇</p>
+    <button class="btn" onclick="copyShare()">📋 結果をシェアする（コピー）</button>
+    <div class="btn-row">
+      <button class="btn x" onclick="shareX()">𝕏 でポスト</button>
+      <button class="btn line" onclick="shareLine()">LINEで送る</button>
+    </div>
+    <button class="btn ghost" style="margin-top:10px" onclick="restart()">↺ もう一度診断する</button>
+  </section>
+
+  <!-- ====================== FAQ（SEO 置底ブロック） ====================== -->
+  <section class="seo-faq">
+    <h2>よくある質問（恋愛心理テスト FAQ）</h2>
+    <details open>
+      <summary>この「メンヘラホイホイ度チェック」はどんな診断ですか？</summary>
+      <p>8つの質問に答えるだけで、あなたがダメな相手や手のかかる人を引き寄せやすいか（ホイホイ度）が分かる、無料の恋愛心理テストです。あくまで娯楽目的で、相性占い 無料コンテンツとしてお楽しみください。</p>
+    </details>
+    <details>
+      <summary>「ダメ男 好き 診断」で結果が悪かったら、どうすればいいですか？</summary>
+      <p>結果はあくまで傾向で、優しさや面倒見の良さの裏返しでもあります。大切なのは、相手だけでなく自分自身も同じくらい大事にすること。自分の恋愛のクセを楽しく知るきっかけにしてください。</p>
+    </details>
+    <details>
+      <summary>この恋愛心理テストは無料で何回でもできますか？</summary>
+      <p>はい、完全無料で会員登録も不要です。気分や恋愛の状況によって結果が変わることもあるので、友達と相性占い 無料感覚でシェアしてお楽しみください。</p>
+    </details>
+</section>
+
+  <!-- ═══════════════════════════════════════════
+       SEO Articles Section & Footer
+       ════════════════════════════════════════════ -->
+  <style>
+    /* メンヘラホイホイ度チェック專用的優雅隠蔽式頁尾樣式 */
+    .seo-articles-container {
+      max-width: 480px;
+      margin: 24px auto 0;
+      padding: 20px;
+      background: rgba(224, 69, 122, 0.03); /* 使用網頁內建的莓果粉色調進行極淡化半透明處理 */
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+    .seo-article {
+      margin-bottom: 24px;
+    }
+    .seo-article:last-child {
+      margin-bottom: 0;
+    }
+    .seo-article-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink);
+      opacity: 0.7;
+      margin-bottom: 10px;
+      letter-spacing: 0.04em;
+    }
+    .seo-article-p {
+      font-size: 12px;
+      color: var(--muted); /* 降低對比度的煙燻灰粉字體，完美隱蔽不刺眼 */
+      line-height: 1.85;
+      text-align: justify;
+      margin-bottom: 8px;
+    }
+    .seo-article-p:last-child {
+      margin-bottom: 0;
+    }
+    .disclaimer-final {
+      max-width: 480px;
+      margin: 24px auto 0;
+      text-align: center;
+      font-size: 11.5px;
+      color: #ad9aa3;
+      line-height: 1.7;
+    }
+    .site-footer-final {
+      text-align: center;
+      font-size: 11px;
+      color: var(--muted);
+      padding: 24px 0 16px;
+      letter-spacing: 0.04em;
+      opacity: 0.7;
+    }
+  </style>
+
+  <section class="seo-articles-container">
+    <!-- 1️⃣ 第一篇 SEO 文章：聚焦於手のかかる相手を引き寄せる心理機制 -->
+    <article class="seo-article">
+      <h3 class="seo-article-title">コラム：なぜ手のかかる相手ばかり？「ダメ男 好き 診断」から紐解くホイホイ体質の恋愛心理</h3>
+      <p class="seo-article-p">
+        「なぜか毎回、お世話が必要な人ばかり好きになってしまう」「自分がついていないとダメになる相手を引き寄せてしまう」といった恋愛の偏りに悩む人は少なくありません。表向きは「次こそ誠実で安定した人と付き合いたい」と願っていても、無意識のうちに危なっかしい魅力を持つ相手に惹かれ、共依存のような関係に陥ってしまうことがあります。2026年現在の多様な恋愛観の中でも、自分の潜在的な引き寄せ体質を客観的にチェックできる「メンヘラホイホイ度チェック」や無料の恋愛心理テストが、多くのユーザーの共感を集めています。
+      </p>
+      <p class="seo-article-p">
+        心理学や対人関係論の観点から見ると、いわゆる「ダメ男製造機」や「ダメ女製造機」と呼ばれる体質は、本人の底なしの優しさや面倒見の良さ、そして「他者に必要とされることで満たされる承認欲求」と深く結びついています。相手の弱さや不完全さを丸ごと受け止める包容力は本来素晴らしい美点ですが、境界線が曖昧になると、相手の自立を妨げ、自分が保護者ポジションを引き受ける歪んだバランスが定着してしまいます。相性占い 無料感覚のテストを体験することは、自分の献身性がボランティア活動になっていないかを見つめ直す優れた契機となります。
+      </p>
+      <p class="seo-article-p">
+        自分の恋愛のクセを自覚することは、決して自分の優しさを否定したり、ガードを固くして「鉄壁のしっかり者」として孤立するためのものではありません。自分がどんな瞬間に財布の紐ならぬ“情の紐”をゆるめてしまうかを知ることで、お互いに対等に支え合える健康的なパートナーシップを選択するための強力なセルフマネジメントへと繋がっていくのです。
+      </p>
+    </article>
+
+    <!-- 2️⃣ 第二篇 SEO 文章：聚焦於性格盲點與社群趣味互動、相性占卜價值 -->
+    <article class="seo-article">
+      <h3 class="seo-article-title">コラム：愛の再生プロジェクトを卒業！「相性占い 無料」の枠を超えた健全な自己開示</h3>
+      <p class="seo-article-p">
+        恋愛における自分の依存傾向や、ダメな相手を拥護してしまう「性格の裏の顔」を直視するのは少し耳が痛いものですが、ユーモラスな「ホイホイ度」やキャラクターの突っ込みとして可視化されると、人間味のある愛すべき個性として受け入れやすくなります。深刻になりがちなメンタルヘルスの課題や、共依存のトラウマというデリケートな問題を、エンターテインメントの形に昇華した「ダメ男・ダメ女製造機診断」や面白い無料テストが、SNSを中心に友人同士の自己開示ツールとして広く愛されている理由はここにあります。
+      </p>
+      <p class="seo-article-p">
+        直感で答える設問設計の恋愛心理テストが「当たる！」と評判になりやすいのは、深夜の「今すぐ会いたい」という理不尽な連絡への対応や、ドタキャンが続いた際の自己正当化など、日常の建前が緩んだリアルな本音が反映されやすいためです。たとえば、本能的に危険を察知して見切りをつけられるタイプと、全国のダメ人間を吸い寄せる磁石のような「伝説のダメ男・ダメ女製造機」タイプでは、満たされる瞬間や恋人と別れた後の切り替えスピードが根本的に異なります。
+      </p>
+      <p class="seo-article-p">
+        自分の「愛が深すぎる救済タイプ」としての特徴を自覚し、それを友達とシェアして「誰が一番ホイホイ体質か」を当て合うことは、普段は話しにくいディープな恋愛観をユーモラスに共有し、お互いの特性をリスペクトし合うための絶好の機会です。無料の心理テストをライフスタイルの一部として楽しみながら、他者との相互理解を深め、次は自分が一番幸せになれる心地よい距離感の恋愛を築いてみてはいかがでしょうか。
+      </p>
+    </article>
+  </section>
+
+  <p class="disclaimer-final">※本診断は娯楽・自己理解を目的とした恋愛心理テストです。相性や人格を決めつけるものではありません。<br>つらい恋愛で悩んでいる場合は、信頼できる人や専門の窓口に相談してくださいね。</p>
+  
+  <div class="site-footer-final">© 2026 メンヘラホイホイ度チェック ｜ 自分を一番に大切にしよう ♥</div>
+</div>
+
+<div class="toast" id="toast">コピーしました！</div>
+
+<script>
+/* =========================================================================
+   設問データ
+   各選択肢は score:1〜4（高いほど「ダメな相手を引き寄せやすい＝ホイホイ度が高い」）。
+   ・打散（シャッフル）：各設問内のスコアの並びをわざとバラバラに定義し、
+     さらに renderQuestion() で表示順を毎回ランダム化するため、
+     「上から低→高で並んでいる」と一目で分からないようにしている。
+   ========================================================================= */
+const QUESTIONS = [
+  { q:"気になる人ができたとき、惹かれるポイントは？", a:[
+    {t:"誠実で、安定感のある人", s:1},
+    {t:"ちょっとミステリアスで、危なげな人", s:4},
+    {t:"優しくて、思いやりのある人", s:2},
+    {t:"なぜか放っておけない、危なっかしい人", s:3},
+  ]},
+  { q:"相手から深夜に「今すぐ会いたい」と連絡が来たら？", a:[
+    {t:"何があっても、駆けつけてしまう", s:4},
+    {t:"「明日にしよ」と冷静に断る", s:1},
+    {t:"心配だし、つい行ってしまう", s:3},
+    {t:"内容によっては、考える", s:2},
+  ]},
+  { q:"相手に直してほしいクセがあったら？", a:[
+    {t:"はっきり伝えて、改善を求める", s:1},
+    {t:"「私が我慢すればいいか」と飲み込む", s:4},
+    {t:"やんわりと、伝えてみる", s:2},
+    {t:"気になるけど、しばらく様子を見る", s:3},
+  ]},
+  { q:"「俺(私)、ダメな人間なんだ」と打ち明けられたら？", a:[
+    {t:"「そっか」と受け止めるが、距離は保つ", s:1},
+    {t:"放っておけなくて、つい世話を焼く", s:3},
+    {t:"励ますけど、依存はさせない", s:2},
+    {t:"「私がなんとかしてあげたい」と燃える", s:4},
+  ]},
+  { q:"デートのドタキャンが、何度か続いたら？", a:[
+    {t:"早めに見切りをつける", s:1},
+    {t:"それでも健気に、次の約束を待つ", s:4},
+    {t:"一度はっきり、話し合う", s:2},
+    {t:"「忙しいんだな」と理由を探してあげる", s:3},
+  ]},
+  { q:"友達に「その人、やめときな」と言われたら？", a:[
+    {t:"客観的に聞いて、考え直す", s:1},
+    {t:"「でも本当はいい人なの」と擁護する", s:4},
+    {t:"一理あるな、と冷静になる", s:2},
+    {t:"分かってるけど、止められない", s:3},
+  ]},
+  { q:"恋愛で、あなたがいちばん満たされる瞬間は？", a:[
+    {t:"対等に、支え合えていると感じるとき", s:1},
+    {t:"相手に必要とされ、頼られるとき", s:4},
+    {t:"一緒にいて、安心できるとき", s:2},
+    {t:"相手の世話を、焼いているとき", s:3},
+  ]},
+  { q:"恋人と別れた後、あなたは？", a:[
+    {t:"早めに切り替えて、前を向く", s:1},
+    {t:"「私がもっと頑張れば」と自分を責める", s:4},
+    {t:"しばらく落ち込むが、ちゃんと立ち直る", s:2},
+    {t:"つい、連絡を取りたくなってしまう", s:3},
+  ]},
+];
+
+/* =========================================================================
+   結果データ ＆ スコア区間（機率平衡の核心）
+   ─────────────────────────────────────────────────────────────────────────
+   ■ 理論スコア：8問 × 各1〜4点  →  最低 8点 / 最高 32点
+   ■ なぜ「等分割」にしないか：
+     ランダム回答時の合計点は中心極限定理によりベル型に偏る。
+     区間を等幅で切ると中央の結果に40%以上が集中し「8割が同じ結果」になる。
+   ■ 対策：合計点の確率分布の「五分位点（quintile）」で区切る。
+     境界を 16 / 18 / 20 / 22 に設定すると、ランダム回答時の各結果の出現率は
+        8–16点 ≈ 13.6% / 17–18 ≈ 18.4% / 19–20 ≈ 24.1% /
+        21–22 ≈ 22.1% / 23–32 ≈ 21.8%
+     となり、各結果がほぼ均等（最大でも約24%）に分散する＝特定結果の独占を防止。
+     ※これは「ランダム回答時」の母集団分布。実際の回答は本人の恋愛傾向を
+       反映して偏るのが正常（＝当たる）で、これは設計上の不具合ではない。
+   ========================================================================= */
+const RESULTS = [
+  { min:8,  max:16, hoi:12, col:"#34b3a0",
+    title:"鉄壁のしっかり者", catch:"ダメな相手を寄せつけない自衛力（ホイホイ度12%）",
+    good:"あなたは自分の価値をちゃんと分かっている、芯の強いしっかり者。危ない相手やダメな相手を本能的に見抜き、無理な恋に深入りしない自衛力の持ち主です。対等で心地よい関係を築ける、理想のパートナータイプ。",
+    roast:"…ただ、その防御力の高さゆえに、<b>たまに“いい人”まで弾いて</b>ません？ ガードが固すぎて、相手が踏み込む隙はほぼゼロ。たまには少しだけ、隙を見せてあげても、バチは当たりませんよ。",
+    line:"ガードが固すぎて、いい人まで弾きがち" },
+
+  { min:17, max:18, hoi:35, col:"#9a9fd8",
+    title:"基本冷静、たまにグラッ", catch:"情と理性のバランス型（ホイホイ度35%）",
+    good:"あなたは普段はしっかり相手を見極められる、冷静で賢いタイプ。それでいて、困っている人を放っておけない優しさもちゃんと持っている。情に流されすぎない、恋愛偏差値の高いバランス型です。",
+    roast:"ただ、ふとした瞬間に<b>「この人、私がいないとダメかも」</b>のスイッチ、入りますよね？ その一瞬の隙が、危ない恋の入り口。あなたの優しさは、ちゃんと相手を見極めてから発動してください。",
+    line:"「私がいないとダメかも」のスイッチが弱点" },
+
+  { min:19, max:20, hoi:55, col:"#e0457a",
+    title:"ほどよくホイホイ体質", catch:"情の深い世話焼きさん（ホイホイ度55%）",
+    good:"あなたは愛情深く、相手のために尽くせる心優しい世話焼きタイプ。困っている人を支える包容力は本物で、あなたに救われた人はきっと多いはず。その献身性は、本来とても尊い才能です。",
+    roast:"でも、その優しさ、<b>なぜか“手のかかる人”ばかりが集まって</b>きません？ 気づけば恋人の保護者ポジション。あなたが選んでるんじゃなくて、向こうがあなたを“嗅ぎつけてくる”説、濃厚です。",
+    line:"気づけば、いつも恋人の保護者ポジション" },
+
+  { min:21, max:22, hoi:78, col:"#f0683f",
+    title:"ダメ男(女)ホイホイ常連", catch:"愛が深すぎる救済タイプ（ホイホイ度78%）",
+    good:"あなたは底なしの愛情と面倒見の良さを持つ、究極の尽くしタイプ。相手の弱さやダメさも丸ごと受け止められる懐の深さは、なかなか真似できない美点。本気で愛せる相手には、一生分の愛を注げる人です。",
+    roast:"……ただ、その愛、<b>つい“再生プロジェクト”に注ぎがち</b>では？ 普通の人だと物足りず、なぜかダメな相手ほど燃える。あなたの恋愛、半分くらいボランティア活動になってませんか。まずは自分を、いちばんに甘やかして。",
+    line:"恋愛の半分が、ダメ男(女)の再生ボランティア" },
+
+  { min:23, max:32, hoi:100, col:"#ef4444",
+    title:"伝説のダメ男・ダメ女製造機", catch:"全国のダメ人間を引き寄せる磁力（ホイホイ度100%）",
+    good:"あなたは無限の優しさと包容力を持つ、聖母（聖人）レベルの愛の持ち主。どんな相手も見捨てられないその器の大きさは、もはや才能を超えて“引力”の域。あなたに本気で愛された相手は、本当に幸運な人です。",
+    roast:"……が！ その引力、<b>全国のダメ人間を吸い寄せる磁石</b>になってませんか？ あなたが好きになると相手がダメになるのではなく、ダメな人があなたを見つけ出す天才。次こそ“あなたを大事にしてくれる人”を選んで。次は、あなたが幸せになる番です。",
+    line:"私が惚れた瞬間、相手がダメ人間に進化する" },
+];
+
+const QUIZ_NAME = "【ダメ男・ダメ女製造機】メンヘラホイホイ度チェック";
+
+/* ===== 状態管理 ===== */
+let idx = 0;
+let answers = new Array(QUESTIONS.length).fill(null);
+let renderOrder = [];
+let currentResult = null;
+
+const $ = id => document.getElementById(id);
+function show(scr){ document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active')); $(scr).classList.add('active'); window.scrollTo({top:0,behavior:'smooth'}); }
+function shuffle(arr){ const a=arr.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
+
+function startQuiz(){ idx=0; answers.fill(null); show('quiz'); renderQuestion(); }
+
+function renderQuestion(){
+  const q = QUESTIONS[idx];
+  $('qText').textContent = q.q;
+  $('qNow').textContent = idx+1;
+  $('bar').style.width = Math.round((idx/QUESTIONS.length)*100) + '%';
+  $('qPctTxt').textContent = Math.round(((idx+1)/QUESTIONS.length)*100) + '%';
+
+  renderOrder = shuffle(q.a.map((_,i)=>i));
+  const box = $('opts'); box.innerHTML='';
+  renderOrder.forEach(optIndex=>{
+    const o = q.a[optIndex];
+    const el = document.createElement('button');
+    el.className='opt'; el.type='button';
+    el.innerHTML = `<span class="dot"></span><span>${o.t}</span>`;
+    el.onclick = ()=> selectOption(o.s, el);
+    box.appendChild(el);
+  });
+  if(answers[idx]!==null){
+    [...box.children].forEach((el,i)=>{ if(QUESTIONS[idx].a[renderOrder[i]].s===answers[idx]) el.classList.add('sel'); });
+  }
+
+  $('nextBtn').disabled = answers[idx]===null;
+  $('nextBtn').textContent = (idx===QUESTIONS.length-1) ? '診断結果を見る ✨' : '次へ →';
+  $('backBtn').style.display = idx>0 ? 'block' : 'none';
+}
+
+function selectOption(score, el){
+  answers[idx] = score;
+  [...$('opts').children].forEach(c=>c.classList.remove('sel'));
+  el.classList.add('sel');
+  $('nextBtn').disabled = false;
+}
+
+function goNext(){
+  if(answers[idx]===null) return;
+  if(idx < QUESTIONS.length-1){ idx++; renderQuestion(); }
+  else { showResult(); }
+}
+function goBack(){ if(idx>0){ idx--; renderQuestion(); } }
+
+/* ===== 採点 → 結果表示（ページ遷移せず滑らかに表示） ===== */
+function showResult(){
+  const total = answers.reduce((a,b)=>a+(b||0),0); // 8〜32点
+  // 明確なスコア区間で判定（上の確率平衡コメント参照／高いほどホイホイ度が高い）
+  let r;
+  if      (total >= 8  && total <= 16) r = RESULTS[0]; // ≈13.6%
+  else if (total >= 17 && total <= 18) r = RESULTS[1]; // ≈18.4%
+  else if (total >= 19 && total <= 20) r = RESULTS[2]; // ≈24.1%
+  else if (total >= 21 && total <= 22) r = RESULTS[3]; // ≈22.1%
+  else                                 r = RESULTS[4]; // 23〜32 ≈21.8%
+  currentResult = r;
+
+  $('rTitle').textContent = r.title;
+  $('rCatch').textContent = r.catch;
+  $('rBody').innerHTML = `${r.good}<span class="roast">${r.roast}</span>`;
+
+  const g = $('rGauge');
+  g.style.setProperty('--col', r.col);
+  g.style.setProperty('--pct', '0%');
+
+  show('result');
+
+  requestAnimationFrame(()=>{ setTimeout(()=>g.style.setProperty('--pct', r.hoi+'%'), 120); });
+  countUp($('rPct'), r.hoi, 1200);
+}
+
+function countUp(elm, target, dur){
+  const start=performance.now();
+  function step(now){
+    const p=Math.min((now-start)/dur,1);
+    const eased=1-Math.pow(1-p,3);
+    elm.textContent=Math.round(eased*target);
+    if(p<1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+/* ===== シェア機能 ===== */
+function buildShareText(){
+  // 【測驗名】+【結果】+【幽默短評】+【本站連結】
+  const url = window.location.href; // 現在のURLを動的取得
+  return `${QUIZ_NAME}\n\n私のホイホイ度は【${currentResult.hoi}%／${currentResult.title}】でした🧲💔\n→「${currentResult.line}」\n\nあなたは大丈夫？診断はこちら👇\n${url}`;
+}
+function copyShare(){
+  const text = buildShareText();
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(()=>toast('コピーしました！'),()=>fallbackCopy(text));
+  } else { fallbackCopy(text); }
+}
+function fallbackCopy(text){
+  const ta=document.createElement('textarea');
+  ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.focus(); ta.select();
+  try{ document.execCommand('copy'); toast('コピーしました！'); }catch(e){ toast('コピーできませんでした'); }
+  document.body.removeChild(ta);
+}
+function shareX(){
+  const url = window.location.href;
+  const hashtags = "メンヘラホイホイ度チェック,恋愛心理テスト,ダメ男好き診断"; // X用ハッシュタグ3つ
+  const text = `${QUIZ_NAME}\n私のホイホイ度は【${currentResult.hoi}%／${currentResult.title}】でした🧲💔\n「${currentResult.line}」\nあなたは大丈夫？👇`;
+  const u = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}&hashtags=${encodeURIComponent(hashtags)}`;
+  window.open(u,'_blank','noopener');
+}
+function shareLine(){
+  const url = window.location.href;
+  const text = `${QUIZ_NAME}\n私のホイホイ度は【${currentResult.hoi}%／${currentResult.title}】でした🧲💔 あなたは？`;
+  const u = `https://line.me/R/msg/text/?${encodeURIComponent(text+"\n"+url)}`;
+  window.open(u,'_blank','noopener');
+}
+
+function restart(){ idx=0; answers.fill(null); currentResult=null; show('start'); }
+
+/* ===== トースト ===== */
+let toastTimer;
+function toast(msg){
+  const t=$('toast'); t.textContent=msg; t.classList.add('show');
+  clearTimeout(toastTimer); toastTimer=setTimeout(()=>t.classList.remove('show'),1900);
+}
+</script>
+</body>
+</html>
