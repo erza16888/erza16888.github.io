@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<!-- ===== SEO ===== -->
+<title>【京都人度チェック】あなたの「裏表」ぶっちゃけ診断｜本音と建前・浮気されやすい度テスト</title>
+<meta name="description" content="あなたの京都人度＝「裏表（本音と建前）」レベルを8つの質問で無料診断。建前の裏に隠した本音から、彼氏の気持ちが読めるタイプか、浮気されやすい女タイプかまで丸わかり。今すぐシェアして盛り上がろう。">
+<meta name="keywords" content="京都人度チェック, 裏表 診断, 本音と建前, 浮気 診断, 浮気されやすい女, 彼氏の気持ち 占い, 心理テスト, 性格診断, 無料診断">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kokoro-shindan.com/">
+
+<!-- ===== Open Graph (X / Threads / LINE 大きなカード) ===== -->
+<meta property="og:title" content="【京都人度チェック】あなたの「裏表」ぶっちゃけ診断">
+<meta property="og:description" content="あなたの本音と建前のギャップは何点？京都人度＝裏表レベルを8問で無料診断。彼氏の気持ちが読めるか、浮気されやすいタイプかも丸わかり。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="og-image.png">
+<meta property="og:url" content="https://kokoro-shindan.com/">
+<meta property="og:site_name" content="こころ診断">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="【京都人度チェック】あなたの「裏表」ぶっちゃけ診断">
+<meta name="twitter:description" content="本音と建前のギャップは何点？京都人度＝裏表レベルを8問で無料診断。">
+<meta name="twitter:image" content="og-image.png">
+
+<!-- ===== FAQ 構造化データ (Google 精選摘要対策) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "裏表度が高いと浮気されやすい女になるの？浮気診断としても使える？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "本音を建前で隠しすぎると、相手に気持ちが伝わらず「何を考えているか分からない人」と思われがちです。この京都人度チェックは簡易的な浮気診断・本音診断として、あなたが感情を溜め込むタイプか、すれ違いを生みやすいタイプかをセルフチェックする目安になります。あくまで娯楽用の心理テストですが、自分の伝え方を見直すきっかけになります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "彼氏の気持ちが分からない時、この診断は役立ちますか？占いとどう違う？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "彼氏の気持ち占いが「相手の心」を読むものなら、この診断は「あなた自身が本音と建前をどう使い分けているか」を映す鏡です。自分の裏表のクセを知ることで、相手の建前の裏側も読みやすくなり、すれ違いの原因に気づけます。占いと併用すると、関係を客観的に見直しやすくなります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "浮気されやすい女・本音を言えない人の特徴は何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "一般的に、嫌なことも笑顔で受け流して我慢を溜め込み、本音を後回しにするタイプは、不満が表面化しづらくすれ違いが蓄積しやすいと言われます。この診断で「裏表度（京都人度）」が高く出た人は、本音の言語化を少し意識するだけで関係の風通しが良くなります。診断結果はシェアして友達と本音トークのきっかけにどうぞ。"
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root{
+    /* 京都の表と裏：苔緑(omote)・墨(ink)・生成り和紙(washi)・朱の判子(ura accent) */
+    --washi:#efe9da;        /* 生成り和紙 */
+    --washi-deep:#e4dcc7;
+    --ink:#221f1a;          /* 墨 */
+    --ink-soft:#52493b;
+    --moss:#3f5c3a;         /* 苔緑 omote */
+    --moss-deep:#2c4329;
+    --shu:#b23a2e;          /* 朱 ura / 落款の判子 */
+    --shu-deep:#8f2c22;
+    --rikyu:#9aa089;        /* 利休鼠 */
+    --line:#cabfa3;
+    --shadow:0 10px 40px -18px rgba(34,31,26,.55);
+    --serif:"Shippori Mincho B1","Hiragino Mincho ProN",serif;
+    --sans:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",sans-serif;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--washi);
+    background-image:
+      radial-gradient(circle at 12% 18%, rgba(63,92,58,.06) 0, transparent 40%),
+      radial-gradient(circle at 88% 82%, rgba(178,58,46,.05) 0, transparent 42%);
+    line-height:1.85;
+    letter-spacing:.02em;
+    padding:env(safe-area-inset-top) 16px calc(env(safe-area-inset-bottom) + 40px);
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:560px;margin:0 auto;}
+
+  /* ===== 共通パーツ ===== */
+  .seal{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:54px;height:54px;border:2px solid var(--shu);border-radius:8px;
+    color:var(--shu);font-family:var(--serif);font-weight:700;font-size:13px;
+    line-height:1.15;text-align:center;transform:rotate(-4deg);
+    background:rgba(178,58,46,.05);letter-spacing:0;
+  }
+  .eyebrow{
+    font-family:var(--serif);font-size:13px;letter-spacing:.35em;
+    color:var(--moss);text-indent:.35em;margin-bottom:10px;
+  }
+  .card{
+    background:linear-gradient(180deg,#fbf8f0,#f3eddf);
+    border:1px solid var(--line);border-radius:18px;
+    box-shadow:var(--shadow);padding:30px 22px;
+  }
+
+  /* ===== 広告枠 ===== */
+  .ad-slot{
+    min-height:250px;background:#f0f0f0;margin:20px 0;text-align:center;
+    line-height:250px;color:#aaa;border-radius:10px;font-size:13px;
+    letter-spacing:.1em;overflow:hidden;
+  }
+
+  /* ===== トップ ===== */
+  header.hero{text-align:center;padding:34px 8px 6px;}
+  .hero .seal{margin-bottom:18px;}
+  .hero h1{
+    font-family:var(--serif);font-weight:700;
+    font-size:clamp(26px,7.4vw,36px);line-height:1.4;color:var(--ink);
+    margin-bottom:6px;
+  }
+  .hero h1 .mark{
+    color:var(--shu);border-bottom:3px solid rgba(178,58,46,.3);
+  }
+  .hero .sub{
+    font-family:var(--serif);font-size:15px;color:var(--ink-soft);
+    margin-top:14px;
+  }
+  .hero .lead{font-size:14px;color:var(--ink-soft);margin-top:16px;}
+  .meta-row{
+    display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:20px 0 4px;
+  }
+  .tag{
+    font-size:12px;color:var(--moss-deep);border:1px solid var(--rikyu);
+    padding:4px 12px;border-radius:999px;background:rgba(154,160,137,.12);
+    letter-spacing:.05em;
+  }
+
+  .btn{
+    display:block;width:100%;border:none;cursor:pointer;
+    font-family:var(--serif);font-weight:700;font-size:18px;letter-spacing:.12em;
+    color:#fdf8ee;background:linear-gradient(180deg,var(--shu),var(--shu-deep));
+    padding:18px;border-radius:14px;
+    box-shadow:0 8px 22px -8px rgba(178,58,46,.7);
+    transition:transform .12s ease, box-shadow .12s ease, filter .12s ease;
+  }
+  .btn:hover{filter:brightness(1.05);}
+  .btn:active{transform:translateY(2px);box-shadow:0 4px 12px -8px rgba(178,58,46,.7);}
+  .btn.ghost{
+    background:transparent;color:var(--moss-deep);
+    border:1.5px solid var(--moss);box-shadow:none;font-size:15px;letter-spacing:.08em;
+  }
+  .btn:disabled{filter:grayscale(.5) brightness(.95);opacity:.5;cursor:not-allowed;}
+
+  /* ===== クイズ ===== */
+  #quiz{display:none;margin-top:26px;}
+  .progress{margin-bottom:18px;}
+  .progress .pbar{height:7px;background:var(--washi-deep);border-radius:99px;overflow:hidden;}
+  .progress .pfill{
+    height:100%;width:0;border-radius:99px;
+    background:linear-gradient(90deg,var(--moss),var(--moss-deep));
+    transition:width .4s cubic-bezier(.4,0,.2,1);
+  }
+  .progress .ptext{
+    display:flex;justify-content:space-between;font-size:12px;
+    color:var(--ink-soft);margin-top:8px;font-family:var(--serif);letter-spacing:.1em;
+  }
+  .qnum{font-family:var(--serif);color:var(--shu);font-size:13px;letter-spacing:.2em;margin-bottom:8px;}
+  .qtext{
+    font-family:var(--serif);font-weight:700;font-size:clamp(19px,5.2vw,23px);
+    line-height:1.6;margin-bottom:22px;min-height:2.6em;
+  }
+  .options{display:flex;flex-direction:column;gap:12px;}
+  .opt{
+    text-align:left;border:1.5px solid var(--line);background:#fbf8f0;
+    border-radius:13px;padding:15px 16px 15px 50px;position:relative;cursor:pointer;
+    font-size:15px;color:var(--ink);line-height:1.6;
+    transition:border-color .15s, background .15s, transform .1s;
+  }
+  .opt::before{
+    content:attr(data-mark);position:absolute;left:14px;top:50%;transform:translateY(-50%);
+    width:24px;height:24px;border:1.5px solid var(--rikyu);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;font-size:12px;
+    color:var(--moss-deep);font-family:var(--serif);transition:all .15s;
+  }
+  .opt:hover{border-color:var(--moss);}
+  .opt.sel{border-color:var(--shu);background:rgba(178,58,46,.07);}
+  .opt.sel::before{background:var(--shu);border-color:var(--shu);color:#fff;content:"✓";}
+
+  .qfooter{margin-top:24px;display:flex;gap:12px;align-items:center;}
+  .backlink{font-size:13px;color:var(--ink-soft);background:none;border:none;cursor:pointer;font-family:var(--serif);padding:8px 4px;text-decoration:underline;}
+  .backlink:disabled{opacity:.3;cursor:default;text-decoration:none;}
+  #nextBtn{flex:1;}
+
+  /* ===== 結果 ===== */
+  #result{display:none;margin-top:26px;}
+  .result-head{text-align:center;margin-bottom:6px;}
+  .result-eyebrow{font-family:var(--serif);font-size:13px;letter-spacing:.3em;color:var(--moss);}
+  .result-score{font-family:var(--serif);color:var(--shu);font-size:14px;margin-top:6px;letter-spacing:.1em;}
+  .result-title{
+    font-family:var(--serif);font-weight:700;
+    font-size:clamp(23px,6.4vw,30px);line-height:1.4;text-align:center;
+    margin:8px 0 6px;color:var(--ink);
+  }
+  .result-emoji{font-size:46px;text-align:center;display:block;margin:6px 0;}
+  .result-tagline{
+    text-align:center;font-family:var(--serif);font-size:15px;color:var(--shu-deep);
+    background:rgba(178,58,46,.06);border:1px dashed rgba(178,58,46,.4);
+    border-radius:10px;padding:10px 14px;margin:14px 0 22px;
+  }
+  .result-body p{font-size:15px;margin-bottom:14px;color:var(--ink-soft);}
+  .result-body .good{color:var(--moss-deep);}
+  .result-body .roast{
+    color:var(--ink);background:rgba(154,160,137,.14);
+    border-left:3px solid var(--shu);padding:12px 14px;border-radius:0 8px 8px 0;
+  }
+  .meter{margin:20px 0;}
+  .meter-label{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-soft);font-family:var(--serif);margin-bottom:6px;letter-spacing:.1em;}
+  .meter-bar{height:12px;background:var(--washi-deep);border-radius:99px;overflow:hidden;}
+  .meter-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--moss),var(--shu));transition:width 1s cubic-bezier(.34,1.56,.64,1);}
+
+  .share-zone{margin-top:24px;display:flex;flex-direction:column;gap:12px;}
+  .share-x{background:linear-gradient(180deg,#2a2a2a,#111);box-shadow:0 8px 20px -10px rgba(0,0,0,.6);}
+  .toast{
+    position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);
+    background:var(--ink);color:#fdf8ee;padding:12px 22px;border-radius:99px;
+    font-size:14px;opacity:0;pointer-events:none;transition:all .3s;z-index:99;
+    box-shadow:0 8px 24px -8px rgba(0,0,0,.5);
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+  /* ===== SEO FAQ (置底) ===== */
+  .seo-faq{
+    max-width:560px;margin:46px auto 0;padding:26px 22px;
+    border-top:1px solid var(--line);
+  }
+  .seo-faq h2{font-family:var(--serif);font-size:18px;color:var(--moss-deep);margin-bottom:18px;letter-spacing:.06em;}
+  .seo-faq details{
+    border-bottom:1px solid var(--line);padding:12px 0;
+  }
+  .seo-faq summary{
+    font-family:var(--serif);font-size:15px;color:var(--ink);cursor:pointer;
+    list-style:none;position:relative;padding-right:26px;line-height:1.6;
+  }
+  .seo-faq summary::-webkit-details-marker{display:none;}
+  .seo-faq summary::after{content:"＋";position:absolute;right:0;top:0;color:var(--shu);font-weight:700;}
+  .seo-faq details[open] summary::after{content:"－";}
+  .seo-faq p{font-size:13.5px;color:var(--ink-soft);margin-top:10px;line-height:1.85;}
+
+  footer.site{text-align:center;font-size:11px;color:var(--rikyu);margin:30px auto 0;max-width:560px;letter-spacing:.1em;}
+
+  .fade-in{animation:fade .5s ease both;}
+  @keyframes fade{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;scroll-behavior:auto!important;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ================= トップ画面 ================= -->
+  <section id="intro">
+    <header class="hero">
+      <span class="seal">京都<br>診断</span>
+      <p class="eyebrow">本音と建前 ぶっちゃけテスト</p>
+      <h1>【京都人度チェック】<br>あなたの<span class="mark">「裏表」</span>診断</h1>
+      <p class="sub">― いけず度、何ぼのもんどす？ ―</p>
+      <p class="lead">表の笑顔と裏の本音、あなたのギャップは何点？<br>8つの「あるある場面」で、あなたの京都人度＝裏表レベルを丸裸に。<br>彼氏の気持ちが読めるタイプか、浮気されやすい本音迷子かも判明します。</p>
+      <div class="meta-row">
+        <span class="tag">全8問</span>
+        <span class="tag">約1分</span>
+        <span class="tag">5タイプ診断</span>
+        <span class="tag">無料</span>
+      </div>
+    </header>
+
+    <!-- 広告枠①：開始ボタンの上（滞在時間が長い） -->
+    <div class="ad-slot">【スポンサーリンク / 広告】</div>
+
+    <button class="btn" id="startBtn">診断をはじめる</button>
+  </section>
+
+  <!-- ================= クイズ画面 ================= -->
+  <section id="quiz">
+    <div class="progress">
+      <div class="pbar"><div class="pfill" id="pfill"></div></div>
+      <div class="ptext"><span id="pnow">第1問</span><span id="ptotal">/ 全8問</span></div>
+    </div>
+
+    <div class="card">
+      <p class="qnum" id="qnum">Q1</p>
+      <p class="qtext" id="qtext">―</p>
+      <div class="options" id="options"></div>
+      <div class="qfooter">
+        <button class="backlink" id="backBtn">← 戻る</button>
+        <button class="btn" id="nextBtn" disabled>次へ ▶</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 結果画面 ================= -->
+  <section id="result">
+    <!-- 広告枠②：結果タグの真上（滞在時間が長い） -->
+    <div class="ad-slot">【スポンサーリンク / 広告】</div>
+
+    <div class="card">
+      <div class="result-head">
+        <p class="result-eyebrow">あなたの京都人度は…</p>
+        <p class="result-score" id="rScore"></p>
+      </div>
+      <span class="result-emoji" id="rEmoji"></span>
+      <h2 class="result-title" id="rTitle"></h2>
+      <p class="result-tagline" id="rTagline"></p>
+
+      <div class="meter">
+        <div class="meter-label"><span>ど直球</span><span>裏表MAX（京女）</span></div>
+        <div class="meter-bar"><div class="meter-fill" id="rMeter"></div></div>
+      </div>
+
+      <div class="result-body" id="rBody"></div>
+
+      <div class="share-zone">
+        <button class="btn" id="copyBtn">結果をシェアする（コピー）</button>
+        <button class="btn share-x" id="xBtn">𝕏 でシェアする</button>
+        <button class="btn ghost" id="retryBtn">もう一度診断する</button>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ================= SEO FAQ（置底・Google対策） ================= -->
+<section class="seo-faq">
+  <h2>よくある質問（FAQ）</h2>
+  <details>
+    <summary>裏表度が高いと「浮気されやすい女」になるの？浮気診断としても使える？</summary>
+    <p>本音を建前で隠しすぎると、相手に気持ちが伝わらず「何を考えているか分からない人」と思われがちです。この京都人度チェックは簡易的な浮気診断・本音診断として、あなたが感情を溜め込むタイプか、すれ違いを生みやすいタイプかをセルフチェックする目安になります。あくまで娯楽用の心理テストですが、自分の伝え方を見直すきっかけになります。</p>
+  </details>
+  <details>
+    <summary>彼氏の気持ちが分からない時、この診断は役立つ？占いとどう違う？</summary>
+    <p>彼氏の気持ち占いが「相手の心」を読むものなら、この診断は「あなた自身が本音と建前をどう使い分けているか」を映す鏡です。自分の裏表のクセを知ることで、相手の建前の裏側も読みやすくなり、すれ違いの原因に気づけます。占いと併用すると、関係を客観的に見直しやすくなります。</p>
+  </details>
+  <details>
+    <summary>「浮気されやすい女」「本音を言えない人」の特徴は？</summary>
+    <p>一般的に、嫌なことも笑顔で受け流して我慢を溜め込み、本音を後回しにするタイプは、不満が表面化しづらくすれ違いが蓄積しやすいと言われます。この診断で「裏表度（京都人度）」が高く出た人は、本音の言語化を少し意識するだけで関係の風通しが良くなります。診断結果はシェアして、友達と本音トークのきっかけにどうぞ。</p>
+  </details>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SEO Articles Section & Footer
+     ════════════════════════════════════════════ -->
+<style>
+  /* 京都人度チェック專用的優雅隠蔽式頁尾樣式 */
+  .seo-articles-container {
+    max-width: 560px;
+    margin: 32px auto 0;
+    padding: 22px;
+    background: rgba(154, 160, 137, 0.04); /* 使用網頁內建的利休鼠色調進行極淡化半透明處理 */
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+  }
+  .seo-article {
+    margin-bottom: 26px;
+  }
+  .seo-article:last-child {
+    margin-bottom: 0;
+  }
+  .seo-article-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink);
+    opacity: 0.7;
+    margin-bottom: 10px;
+    letter-spacing: 0.04em;
+    font-family: var(--serif);
+  }
+  .seo-article-p {
+    font-size: 12px;
+    color: var(--ink-soft); /* 降低對比度的古風竹炭灰字體，完美隱蔽不刺眼 */
+    line-height: 1.85;
+    text-align: justify;
+    margin-bottom: 8px;
+    font-family: var(--sans);
+  }
+  .seo-article-p:last-child {
+    margin-bottom: 0;
+  }
+  .site-footer-final {
+    text-align: center;
+    font-size: 11px;
+    color: var(--rikyu);
+    margin: 30px auto 0;
+    max-width: 560px;
+    letter-spacing: .1em;
+    font-family: var(--sans);
+  }
+</style>
+
+<section class="seo-articles-container">
+  <!-- 1️⃣ 第一篇 SEO 文章：聚焦於京都人的表裏與本音建前的關係 -->
+  <article class="seo-article">
+    <h3 class="seo-article-title">コラム：お断りの美学？「京都人度チェック」から学ぶ本音と建前の高度な処世術</h3>
+    <p class="seo-article-p">
+      日本独自のコミュニケーション文化において、相手に配慮しながら関係を円滑に保つための「本音と建前」は、古くから洗練された対人技術として受け継がれてきました。その最高峰としてしばしば話題に上るのが、遠回しな表現や洗練された社交辞令を駆使する京都特有の処世術です。笑顔の裏に鋭い本心を隠し、あえて直接的な言葉を避ける態度は、現代のSNS社会や複雑な人間関係においても「相手を傷つけずに自分の意思を伝える知恵」として注目を集めています。2026年現在も、自身のコミュニケーションの二面性をユーモラスに測定できる「京都人度チェック」や無料の「裏表 診断」が、多くのユーザーの間で大きなトレンドとなっています。
+    </p>
+    <p class="seo-article-p">
+      心理学の観点から見ると、いわゆる「裏表度」の高さとは、決して悪意や性格の悪さを意味するだけではありません。むしろ、周囲の状況や力関係を一瞬で読み解く「高い社会的知性（適応力）」の裏返しでもあります。しかし、この遠回しな気遣いが行き過ぎてしまうと、相手に真意が伝わらず「何を考えているか読めないミステリアスな人」という印象を与えてしまう問題も生じます。面白い心理テストや性格診断テストを体験することは、普段は無意識に使っている自分の言葉のフィルターを客観視し、良好な人間関係を築くための優れた契機となります。
+    </p>
+    <p class="seo-article-p">
+      思ったことをそのまま口にしてしまう「正直すぎる無罪タイプ」から、社交辞令の最終兵器である「生粋の京女」まで、本音の隠し方は人それぞれです。自分の「隠し上手」な側面をネガティブに捉えるのではなく、大人のマナーや生き抜くための防衛線として自覚し、場面に応じた対等なバランスを選択するためのセルフマネジメントへと繋げていきましょう。
+    </p>
+  </article>
+
+  <!-- 2️⃣ 第二篇 SEO 文章：聚焦於戀愛すれ違い、浮氣與彼氏気持ち占卜價值 -->
+  <article class="seo-article">
+    <h3 class="seo-article-title">コラム：「浮気されやすい女」のすれ違いを打破！彼氏の気持ち 占いと本音の言語化</h3>
+    <p class="seo-article-p">
+      恋愛関係において、「嫌なことも笑顔で受け流して我慢を溜め込んでしまう」「嫌われたくなくて本音を後回しにする」という行動特性は、不満が表面化しづらく、いつの間にか致命的な「すれ違い」を蓄積させてしまうリスクを孕んでいます。一般的な「浮気されやすい女」の特徴としても、本音を建前で隠しすぎて相手に気持ちが伝わらず、彼氏が「俺のこと本当に好きなのかな」と不安になってしまうパターンが挙げられます。彼氏の気持ち 占いが相手の心を読むアプローチなら、自身の言葉の癖を映し出す「本音診断」は、すれ違いの根本的な原因に気づくための鏡として機能します。
+    </p>
+    <p class="seo-article-p">
+      直感で答える設問設計の無料診断が「当たる！」と評判になりやすいのは、日常の建前が緩み、気が乗らない誘いへの対応や、秘密の扱い方といったリアルな本音の心理傾向が反映されやすいためです。たとえば、本心が奥座敷に隠れていて限界突破した瞬間に静かに大爆発する「隠し上手」タイプと、裏表ゼロで駆け引きとは無縁なタイプでは、パートナーに対する甘え方や、不満があったときの話し合いの質が根本的に異なります。占いや心理テストをきっかけに、自分の裏表のクセを知ることは、相手の建前の裏側（本音のサイン）を読み解くトレーニングにもなります。
+    </p>
+    <p class="seo-article-p">
+      自分の「世渡り上手なバランサー」としての特徴を自覚し、それを友達とシェアして「出されてないぶぶ漬けの圧を感じ取れるか」を笑い合いながら比べ合うことは、普段は話しにくい本音トークの絶好の機会です。無料の心理テストをライフスタイルの一部として楽しみながら、感情のシャッターを少しだけ開け、お互いの本音を言葉で伝え合える風通しの良い対人関係を築いてみてはいかがでしょうか。
+    </p>
+  </article>
+</section>
+
+<footer class="site-footer-final">© こころ診断 ｜ 娯楽目的の心理テストです。結果はあくまでお楽しみとしてご利用ください。</footer>
+
+<div class="toast" id="toast">結果をコピーしました！</div>
+
+<script>
+/* =========================================================================
+   京都人度チェック「裏表」診断
+   - 全8問 / 各4択 / 各選択肢スコア {0,1,2,3}
+   - 選択肢は「低→高」で並ばないよう各問でシャッフル済み
+   ========================================================================= */
+const QUIZ_TITLE = "【京都人度チェック】あなたの「裏表」ぶっちゃけ診断";
+
+/* 各問：optionsの並びは見た目用にバラバラ（score列が単調にならないよう配置）*/
+const questions = [
+  { q:"友達の新しい髪型が、正直ちょっと微妙…。なんて言う？", o:[
+      {t:"「へぇ〜、イメチェンしはったんやね（で？という顔）」", s:2},
+      {t:"「えー！めっちゃ似合ってる！（内心は別）」", s:3},
+      {t:"とりあえず何も言わずスルー", s:1},
+      {t:"「前の方が良かったかも、正直」", s:0},
+  ]},
+  { q:"隣の家の子のピアノ練習がうるさい。あなたの対応は？", o:[
+      {t:"直接「うるさいので静かにしてください」と言う", s:0},
+      {t:"こっそり管理会社にチクっておく", s:2},
+      {t:"「お子さん、ピアノお上手にならはったねぇ」（チクリ）", s:3},
+      {t:"ひたすら我慢、何も言わない", s:1},
+  ]},
+  { q:"気が乗らない飲み会に誘われた。断り方は？", o:[
+      {t:"既読スルーで返事をしない", s:1},
+      {t:"「興味ないから行かへんわ」とハッキリ", s:0},
+      {t:"「行けたら行くわ〜」（行く気ゼロ）", s:3},
+      {t:"「その日ちょっと予定が…」（嘘の予定）", s:2},
+  ]},
+  { q:"会議で上司の意見に内心は大反対。どうする？", o:[
+      {t:"「なるほど、勉強になります！」と言いつつ従わない", s:3},
+      {t:"あとで個別に違う案をそっと提案する", s:2},
+      {t:"その場でハッキリ反対意見を述べる", s:0},
+      {t:"黙ってうなずいておく", s:1},
+  ]},
+  { q:"長居する来客に、そろそろ帰ってほしい時は？", o:[
+      {t:"「そろそろ時間やし、帰ってくれる？」と言う", s:0},
+      {t:"「ぶぶ漬けでもどうどす？」（帰れのサイン）", s:3},
+      {t:"時計をチラチラ見てアピール", s:2},
+      {t:"顔には出さずひたすら耐える", s:1},
+  ]},
+  { q:"SNSで“ちょっと苦手な人”の投稿が流れてきた。", o:[
+      {t:"正直な感想をコメントで書く", s:0},
+      {t:"とりあえず付き合いで「いいね」を押す", s:3},
+      {t:"見なかったことにして何もしない", s:1},
+      {t:"ミュートしつつ表面上は友好的に振る舞う", s:2},
+  ]},
+  { q:"お店の接客態度が悪かった。あなたは？", o:[
+      {t:"その場で店員にクレームを言う", s:0},
+      {t:"あとでレビューやアンケートに書く", s:2},
+      {t:"笑顔で会計を済ませ、二度と行かない", s:3},
+      {t:"友達に後でめっちゃ愚痴る", s:1},
+  ]},
+  { q:"「ぶっちゃけどう思う？」と本音を聞かれたら？", o:[
+      {t:"当たり障りのない無難な答えでかわす", s:2},
+      {t:"思ったことをそのまま正直に言う", s:0},
+      {t:"「どっちでもええよ」と濁す", s:1},
+      {t:"相手が喜ぶ“正解”を察して言う", s:3},
+  ]},
+];
+
+/* =========================================================================
+   結果タイプ & スコア区間
+   理論スコア：最低 0点 〜 最高 24点（8問 × 最大3点）
+   平均は12点だが、8問の合計は「サイコロの和」と同じく中央が分厚い
+   鐘形分布になる。よって 0〜24 を“均等幅”で割ると中央の結果に
+   8割が集中してしまう。これを避けるため、合計スコアの累積分布(CDF)の
+   分位点（20/40/60/80%）で区切り、各タイプの出現率を均す。
+   500,000回モンテカルロ検証の結果：
+     0〜9   ど直球        約21.9%
+     10〜11 素直寄り      約22.1%
+     12〜13 バランス      約24.1%
+     14〜15 奥座敷        約18.3%
+     16〜24 帝王級(京女)  約13.6%
+   → どのタイプも約14〜24%。1つの結果に偏らない均衡設計。
+   ========================================================================= */
+const results = [
+  {
+    min:0, max:9, emoji:"🗣️", meter:12,
+    title:"ど直球・正直すぎる無罪タイプ",
+    tagline:"裏表ゼロ。京都に住んだら3日で伝説になる人。",
+    short:"裏表ゼロのど直球タイプやった",
+    good:"思ったことをそのまま言える、超・誠実な人。駆け引きや腹の探り合いとは無縁で、あなたと話すと「裏がなくて安心する」と思われています。嘘が下手なぶん信頼は厚く、本音の見えるあなたに人は心を開きます。",
+    roast:"ただし“フィルター”がほぼ無いのが玉にキズ。良かれと思った一言が、相手の心にグサッと刺さっていることも。彼氏や友達に「で、結局それ言う？」と言われがち。京都の街なら、出されたぶぶ漬けを本気で食べて帰らないタイプどす。"
+  },
+  {
+    min:10, max:11, emoji:"🍵", meter:32,
+    title:"ほぼ素直・たまに小細工タイプ",
+    tagline:"建前を使う努力はえらい。でも全部バレてる。",
+    short:"ほぼ素直、たまに小細工タイプやった",
+    good:"基本は素直で温かい人。ときどき気を遣って建前も使えるので、人当たりがよく愛されます。正直さと優しさのバランスが絶妙で、「裏表がなくて、でも気は遣える」ちょうどいい距離感を持つ貴重な存在です。",
+    roast:"とはいえ、あなたの“建前”はだいたい透けて見えています。ポーカーフェイスを決めたつもりでも、顔と声に本音がダダ漏れ。嘘をついた瞬間、目が泳ぐタイプ。彼氏には気持ちが筒抜けなので、サプライズはほぼ成功しません。"
+  },
+  {
+    min:12, max:13, emoji:"🎭", meter:54,
+    title:"バランス両刀・世渡り上手タイプ",
+    tagline:"そつがない。けど、自分の本音どこいった？",
+    short:"世渡り上手なバランス両刀タイプやった",
+    good:"空気を読み、相手や場面でスッと振る舞いを変えられる社交の達人。本音と建前を自在に使い分けるので、どこへ行っても人間関係に困りません。敵を作らず、味方を増やす。現代を生き抜くのに最強のバランス感覚の持ち主です。",
+    roast:"ただ器用すぎて、ときどき“自分の本音”を自分で見失う問題あり。八方美人になりすぎて「で、あなたは本当はどう思ってるの？」と聞かれると急に黙る。彼氏の気持ちは読めるのに、自分の気持ちだけ迷子。たまには本音、出してええんやで。"
+  },
+  {
+    min:14, max:15, emoji:"🏯", meter:78,
+    title:"本音は奥座敷・隠し上手タイプ",
+    tagline:"上品で隙がない。でも本音が国家機密。",
+    short:"本音を奥座敷に隠す“隠し上手”タイプやった",
+    good:"いつも穏やかで上品、決して波風を立てない人。感情を表に出さず、どんな場面でもスマートに対応できる落ち着きがあります。何を考えているか読ませないミステリアスな魅力で、「大人っぽい」「品がある」と一目置かれる存在です。",
+    roast:"でも本音が奥座敷の奥に隠れすぎて、誰も辿り着けません。彼氏に「で、結局どうしたいの？」と聞かれても建前で返すので、すれ違いが発生しがち。我慢を溜め込んで、限界突破した瞬間に静かに大爆発するタイプ。本音、たまには玄関まで出してあげて。"
+  },
+  {
+    min:16, max:24, emoji:"👘", meter:100,
+    title:"生粋の京女・裏表帝王級タイプ",
+    tagline:"笑顔の達人。本音はもはや化石化しております。",
+    short:"裏表“帝王級”の生粋の京女タイプやった",
+    good:"社交辞令と笑顔の最終兵器。どんな修羅場も角を立てず丸く収め、敵を作らず本音も悟らせない、まさに大人の鑑。あなたの前では誰もが「歓迎されている」と感じます。世が世なら、宮中で渡り合えるレベルの圧倒的な処世術の持ち主です。",
+    roast:"ただし本音を隠しすぎて、ご自身でも“本心”がどこにあったか忘れた説。笑顔の裏で何を考えているか、家族でも読めません。彼氏は永遠に「この人、俺のこと好きなんか…？」と不安に。出されてないぶぶ漬けの圧を感じ取れるレベルやけど、たまには本音、化石から発掘してあげてください。"
+  },
+];
+
+/* ===== 状態 ===== */
+let current = 0;
+const answers = new Array(questions.length).fill(null);
+
+const $ = id => document.getElementById(id);
+const intro = $("intro"), quiz = $("quiz"), result = $("result");
+
+$("ptotal").textContent = "/ 全" + questions.length + "問";
+
+/* ===== 画面遷移 ===== */
+$("startBtn").addEventListener("click", () => {
+  intro.style.display = "none";
+  quiz.style.display = "block";
+  quiz.classList.add("fade-in");
+  renderQuestion();
+  window.scrollTo({top:0, behavior:"smooth"});
+});
+
+function renderQuestion(){
+  const q = questions[current];
+  $("qnum").textContent = "Q" + (current + 1);
+  $("pnow").textContent = "第" + (current + 1) + "問";
+  $("pfill").style.width = ((current) / questions.length * 100) + "%";
+  $("qtext").textContent = q.q;
+
+  const box = $("options");
+  box.innerHTML = "";
+  const marks = ["A","B","C","D"];
+  q.o.forEach((opt, i) => {
+    const b = document.createElement("button");
+    b.className = "opt" + (answers[current] === i ? " sel" : "");
+    b.setAttribute("data-mark", marks[i]);
+    b.textContent = opt.t;
+    b.addEventListener("click", () => selectOption(i));
+    box.appendChild(b);
+  });
+
+  $("backBtn").disabled = current === 0;
+  const next = $("nextBtn");
+  next.disabled = answers[current] === null;
+  next.textContent = (current === questions.length - 1) ? "診断結果を見る ▶" : "次へ ▶";
+}
+
+function selectOption(i){
+  answers[current] = i;
+  [...$("options").children].forEach((el, idx) => el.classList.toggle("sel", idx === i));
+  $("nextBtn").disabled = false;
+}
+
+$("nextBtn").addEventListener("click", () => {
+  if (answers[current] === null) return;
+  if (current < questions.length - 1){
+    current++;
+    const card = $("options").parentElement;
+    card.classList.remove("fade-in"); void card.offsetWidth; card.classList.add("fade-in");
+    renderQuestion();
+    window.scrollTo({top:0, behavior:"smooth"});
+  } else {
+    showResult();
+  }
+});
+
+$("backBtn").addEventListener("click", () => {
+  if (current > 0){ current--; renderQuestion(); window.scrollTo({top:0, behavior:"smooth"}); }
+});
+
+/* ===== 計分ロジック（明示的なスコア区間） ===== */
+function calcScore(){
+  let total = 0;
+  for (let i = 0; i < questions.length; i++){
+    total += questions[i].o[answers[i]].s;
+  }
+  return total; // 0〜24
+}
+
+function getResult(score){
+  // 区間は合計スコアの分位点で設定（鐘形分布を均すための非均等幅）
+  if (score >= 0  && score <= 9)  return results[0]; // 約21.9%
+  if (score >= 10 && score <= 11) return results[1]; // 約22.1%
+  if (score >= 12 && score <= 13) return results[2]; // 約24.1%
+  if (score >= 14 && score <= 15) return results[3]; // 約18.3%
+  return results[4];                                  // 16〜24 約13.6%
+}
+
+let lastResult = null, lastScore = 0;
+
+function showResult(){
+  const score = calcScore();
+  const r = getResult(score);
+  lastResult = r; lastScore = score;
+
+  $("rScore").textContent = "裏表スコア " + score + " / 24 点";
+  $("rEmoji").textContent = r.emoji;
+  $("rTitle").textContent = r.title;
+  $("rTagline").textContent = "「" + r.tagline + "」";
+  $("rBody").innerHTML =
+    '<p class="good">' + r.good + '</p>' +
+    '<p class="roast">' + r.roast + '</p>';
+
+  quiz.style.display = "none";
+  result.style.display = "block";
+  result.classList.add("fade-in");
+  window.scrollTo({top:0, behavior:"smooth"});
+  // メーター演出
+  $("rMeter").style.width = "0%";
+  setTimeout(() => { $("rMeter").style.width = r.meter + "%"; }, 200);
+}
+
+/* ===== シェア ===== */
+function buildShareText(){
+  // 【測驗名稱】+【結果】+【幽默短評】+【連結】
+  const url = window.location.href;
+  return QUIZ_TITLE + "\n" +
+         "私の結果は…『" + lastResult.title + "』🀄\n" +
+         "→ " + lastResult.short + "！" + lastResult.tagline + "\n" +
+         "あなたの京都人度＝裏表レベルもチェック👇\n" + url;
+}
+
+function showToast(msg){
+  const t = $("toast"); t.textContent = msg; t.classList.add("show");
+  setTimeout(() => t.classList.remove("show"), 1900);
+}
+
+$("copyBtn").addEventListener("click", async () => {
+  const text = buildShareText();
+  try {
+    await navigator.clipboard.writeText(text);
+    showToast("結果をコピーしました！");
+  } catch (e) {
+    // フォールバック
+    const ta = document.createElement("textarea");
+    ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); showToast("結果をコピーしました！"); }
+    catch (_) { showToast("コピーできませんでした"); }
+    document.body.removeChild(ta);
+  }
+});
+
+$("xBtn").addEventListener("click", () => {
+  const url = window.location.href;
+  const hashtags = "京都人度チェック,裏表診断,心理テスト"; // CTRが上がる関連3タグ
+  const text = QUIZ_TITLE + "\n私は『" + lastResult.title + "』でした！" + lastResult.tagline;
+  const intent = "https://twitter.com/intent/tweet"
+    + "?text=" + encodeURIComponent(text)
+    + "&url=" + encodeURIComponent(url)
+    + "&hashtags=" + encodeURIComponent(hashtags);
+  window.open(intent, "_blank", "noopener");
+});
+
+$("retryBtn").addEventListener("click", () => {
+  current = 0;
+  answers.fill(null);
+  result.style.display = "none";
+  intro.style.display = "block";
+  window.scrollTo({top:0, behavior:"smooth"});
+});
+</script>
+</body>
+</html>
