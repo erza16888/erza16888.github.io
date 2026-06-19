@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ====== SEO Meta ====== -->
+<title>【京都人度チェック】あなたの「裏表」ぶっちゃけ診断｜腹黒度・本音と建前占い</title>
+<meta name="description" content="あなたの京都人度を無料診断。8つの質問に答えるだけで、あなたの腹黒度・本音と建前の使い分けレベルが丸わかり。ぶぶ漬けの意味、分かってますか？京都人 診断・腹黒度 チェック・本音と建前 占いの決定版。">
+<meta name="keywords" content="京都人 診断, 腹黒度 チェック, 本音と建前 占い, 裏表 診断, 京都人度チェック, 心理テスト">
+<meta name="robots" content="index, follow">
+
+<!-- ====== Open Graph (X / Threads / LINE 大圖卡) ====== -->
+<meta property="og:title" content="【京都人度チェック】あなたの「裏表」ぶっちゃけ診断">
+<meta property="og:description" content="あなたの腹黒度、こっそり測定します。ぶぶ漬けの意味、本当に分かってる？8問で分かる本音と建前 占い。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="og-image.png">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="kokoro-shindan">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="【京都人度チェック】あなたの「裏表」ぶっちゃけ診断">
+<meta name="twitter:description" content="あなたの腹黒度、こっそり測定します。ぶぶ漬けの意味、本当に分かってる？">
+<meta name="twitter:image" content="og-image.png">
+
+<!-- ====== JSON-LD FAQ Schema (精選摘要対策) ====== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "京都人度チェックとは何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "8つの日常シチュエーションへの回答から、あなたの「本音と建前」の使い分け度合い、いわゆる腹黒度を測定する無料の心理診断です。点数によって5タイプに分類され、あなたが「直球ストレート型」か「生粋の京都人型」かが分かります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "腹黒度チェックの結果はどうやって決まりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "各設問の選択肢に1〜4点が割り振られており、合計点であなたのタイプが決まります。点数が高いほど本音と建前の使い分けが巧みな「京都人度」が高い結果になります。深い意味はなく、あくまで楽しむための占いです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "「ぶぶ漬けでもどうですか？」の本当の意味は？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "京都に伝わる有名な言い回しで、長居する来客に対して「そろそろお帰りください」という本音を、もてなしの建前にくるんで伝える表現とされています。本音と建前 占いを象徴するフレーズです。"
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --washi:#EDEAE0;
+  --washi-deep:#E4DFD2;
+  --card:#F6F4EC;
+  --sumi:#23282b;
+  --sumi-soft:#555a59;
+  --murasaki:#5B3E6E;       /* 京紫 */
+  --murasaki-deep:#3f2a4d;
+  --shu:#C0432B;            /* 朱 (裏のアクセント) */
+  --gold:#A8854A;
+  --line:rgba(35,40,43,.13);
+  --shadow:0 18px 50px -24px rgba(35,40,43,.5);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Zen Kaku Gothic New",sans-serif;
+  background:
+    radial-gradient(120% 80% at 50% -10%, #F3F0E7 0%, var(--washi) 55%, var(--washi-deep) 100%);
+  color:var(--sumi);
+  line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+  padding:18px 14px 60px;
+}
+.wrap{max-width:540px;margin:0 auto}
+
+/* ===== noren signature divider ===== */
+.noren{
+  height:34px;width:100%;display:flex;gap:0;justify-content:center;
+  margin:6px 0 2px;
+}
+.noren span{
+  flex:1;max-width:42px;background:var(--murasaki);
+  border-radius:0 0 3px 3px;position:relative;
+}
+.noren span:nth-child(odd){background:var(--murasaki-deep)}
+.noren span::after{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--gold);opacity:.6}
+
+/* ===== card ===== */
+.panel{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:20px;
+  box-shadow:var(--shadow);
+  padding:30px 24px 28px;
+  position:relative;
+  overflow:hidden;
+}
+.panel::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(91,62,110,.05),transparent 120px);
+}
+
+/* ===== intro ===== */
+.eyebrow{
+  font-family:"Shippori Mincho B1",serif;
+  letter-spacing:.42em;font-size:.72rem;color:var(--murasaki);
+  text-align:center;text-indent:.42em;margin-bottom:14px;font-weight:700;
+}
+h1{
+  font-family:"Shippori Mincho B1",serif;
+  font-weight:800;font-size:1.72rem;line-height:1.5;text-align:center;
+  letter-spacing:.02em;
+}
+h1 .small{display:block;font-size:.96rem;font-weight:500;color:var(--sumi-soft);margin-top:10px;letter-spacing:.06em}
+h1 .urabe{color:var(--shu)}
+.lead{
+  font-size:.95rem;color:var(--sumi-soft);text-align:center;
+  margin:20px 4px 4px;
+}
+.seal{
+  width:78px;height:78px;margin:6px auto 18px;border-radius:50%;
+  border:2px solid var(--shu);color:var(--shu);
+  font-family:"Shippori Mincho B1",serif;font-weight:800;
+  display:flex;align-items:center;justify-content:center;
+  flex-direction:column;line-height:1.15;font-size:1.4rem;
+  letter-spacing:.04em;transform:rotate(-4deg);
+  background:rgba(192,67,43,.04);
+}
+.seal small{font-size:.55rem;letter-spacing:.2em;font-family:"Zen Kaku Gothic New";font-weight:700}
+
+/* ===== ad slot ===== */
+.ad-slot{
+  min-height:250px;background:#f0f0f0;margin:22px 0;text-align:center;
+  line-height:250px;color:#aaa;border-radius:12px;font-size:.8rem;
+  border:1px dashed #ddd;letter-spacing:.1em;
+}
+
+/* ===== button ===== */
+.btn{
+  display:block;width:100%;border:none;cursor:pointer;
+  font-family:"Shippori Mincho B1",serif;font-weight:700;
+  font-size:1.08rem;letter-spacing:.16em;text-indent:.16em;
+  color:#fff;background:var(--murasaki);
+  padding:17px;border-radius:13px;
+  box-shadow:0 10px 24px -10px rgba(91,62,110,.7);
+  transition:transform .15s ease, box-shadow .15s ease, background .2s;
+}
+.btn:hover{transform:translateY(-2px);background:var(--murasaki-deep)}
+.btn:active{transform:translateY(0)}
+.btn:disabled{background:#c7c2b8;box-shadow:none;cursor:not-allowed;color:#fff}
+.btn.ghost{
+  background:transparent;color:var(--murasaki);
+  border:1.5px solid var(--murasaki);box-shadow:none;
+}
+.btn.ghost:hover{background:rgba(91,62,110,.07)}
+.btn.shu{background:var(--shu);box-shadow:0 10px 24px -10px rgba(192,67,43,.7)}
+.btn.shu:hover{background:#a5371f}
+
+/* ===== quiz ===== */
+.q-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.q-count{font-family:"Shippori Mincho B1",serif;font-weight:700;color:var(--murasaki);letter-spacing:.1em;font-size:.9rem}
+.q-count b{font-size:1.5rem}
+.progress{height:6px;background:var(--washi-deep);border-radius:99px;overflow:hidden;margin:10px 0 26px}
+.progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--murasaki),var(--shu));border-radius:99px;transition:width .45s cubic-bezier(.4,0,.2,1)}
+.q-text{
+  font-family:"Shippori Mincho B1",serif;font-weight:700;font-size:1.22rem;
+  line-height:1.7;margin-bottom:22px;letter-spacing:.01em;
+}
+.opts{display:flex;flex-direction:column;gap:11px}
+.opt{
+  text-align:left;background:#fff;border:1.5px solid var(--line);
+  border-radius:12px;padding:15px 16px;font-size:.97rem;cursor:pointer;
+  font-family:"Zen Kaku Gothic New";color:var(--sumi);line-height:1.6;
+  transition:border-color .18s, background .18s, transform .12s;
+  position:relative;
+}
+.opt:hover{border-color:var(--murasaki)}
+.opt:active{transform:scale(.99)}
+.opt.sel{
+  border-color:var(--murasaki);background:rgba(91,62,110,.07);
+  box-shadow:inset 3px 0 0 var(--murasaki);
+}
+.opt.sel::after{content:"✓";position:absolute;right:15px;top:50%;transform:translateY(-50%);color:var(--murasaki);font-weight:700}
+
+/* ===== screens transition ===== */
+.screen{animation:fade .5s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.hidden{display:none!important}
+
+/* ===== result ===== */
+.r-badge{
+  display:inline-block;font-family:"Shippori Mincho B1",serif;font-weight:700;
+  font-size:.74rem;letter-spacing:.3em;text-indent:.3em;color:#fff;
+  background:var(--shu);padding:6px 16px;border-radius:99px;margin-bottom:14px;
+}
+.r-type{
+  font-family:"Shippori Mincho B1",serif;font-weight:800;
+  font-size:1.7rem;line-height:1.45;letter-spacing:.01em;margin-bottom:4px;
+}
+.r-type .mei{display:block;font-size:.88rem;color:var(--murasaki);letter-spacing:.18em;margin-top:8px;font-weight:700}
+.r-meter{margin:20px 0 6px}
+.r-meter .lab{display:flex;justify-content:space-between;font-size:.78rem;color:var(--sumi-soft);margin-bottom:6px;letter-spacing:.06em}
+.r-meter .bar{height:10px;background:var(--washi-deep);border-radius:99px;overflow:hidden}
+.r-meter .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--murasaki),var(--shu));border-radius:99px;transition:width 1s .2s ease}
+.r-block{margin-top:22px}
+.r-block h3{
+  font-family:"Shippori Mincho B1",serif;font-size:.92rem;letter-spacing:.14em;
+  color:var(--murasaki);margin-bottom:7px;display:flex;align-items:center;gap:8px;
+}
+.r-block.ura h3{color:var(--shu)}
+.r-block h3::before{content:"";width:18px;height:2px;background:currentColor;display:inline-block}
+.r-block p{font-size:.95rem;color:var(--sumi);line-height:1.85}
+.share-row{display:flex;flex-direction:column;gap:11px;margin-top:26px}
+.toast{
+  position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);
+  background:var(--sumi);color:#fff;padding:12px 22px;border-radius:99px;
+  font-size:.86rem;letter-spacing:.05em;opacity:0;pointer-events:none;
+  transition:opacity .3s, transform .3s;z-index:50;box-shadow:0 10px 30px -10px rgba(0,0,0,.5);
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ===== faq ===== */
+.seo-faq{margin-top:40px;padding:26px 22px;background:var(--card);border:1px solid var(--line);border-radius:18px}
+.seo-faq h2{font-family:"Shippori Mincho B1",serif;font-size:1.05rem;letter-spacing:.1em;margin-bottom:18px;color:var(--sumi);text-align:center}
+.faq-item{border-top:1px solid var(--line);padding:15px 0}
+.faq-item:first-of-type{border-top:none}
+.faq-item dt{font-weight:700;font-size:.93rem;color:var(--murasaki);margin-bottom:7px}
+.faq-item dt::before{content:"Q. ";font-family:"Shippori Mincho B1",serif}
+.faq-item dd{font-size:.88rem;color:var(--sumi-soft);line-height:1.8}
+.faq-item dd::before{content:"A. ";font-family:"Shippori Mincho B1",serif;color:var(--shu);font-weight:700}
+
+footer{text-align:center;color:var(--sumi-soft);font-size:.74rem;margin-top:32px;letter-spacing:.08em}
+
+@media(max-width:380px){
+  h1{font-size:1.5rem}
+  .r-type{font-size:1.45rem}
+  .panel{padding:26px 18px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ================= INTRO ================= -->
+  <section id="intro" class="screen">
+    <div class="noren"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div class="panel">
+      <p class="eyebrow">京都人度チェック</p>
+      <div class="seal">裏表<small>SHINDAN</small></div>
+      <h1>あなたの「<span class="urabe">裏表</span>」<br>ぶっちゃけ診断
+        <span class="small">本音と建前、ちゃんと使い分けてる？</span>
+      </h1>
+      <p class="lead">ぶぶ漬けの意味、本当に分かってますか。<br>たった8つの質問で、あなたの<b>腹黒度</b>をこっそり測定します。</p>
+
+      <!-- AdSense 版位①（開始ボタン上・滞在時間長） -->
+      <div class="ad-slot">【スポンサーリンク / 広告】</div>
+
+      <button class="btn" onclick="startQuiz()">診断スタート</button>
+    </div>
+  </section>
+
+  <!-- ================= QUIZ ================= -->
+  <section id="quiz" class="screen hidden">
+    <div class="panel">
+      <div class="q-head">
+        <span class="q-count"><b id="qNow">1</b> <span style="opacity:.4">/ 8</span></span>
+        <span class="q-count" style="font-size:.74rem;opacity:.7" id="qLabel">設問</span>
+      </div>
+      <div class="progress"><i id="bar"></i></div>
+      <p class="q-text" id="qText"></p>
+      <div class="opts" id="opts"></div>
+      <button class="btn" id="nextBtn" style="margin-top:24px" disabled onclick="nextQ()">次へ</button>
+    </div>
+  </section>
+
+  <!-- ================= RESULT ================= -->
+  <section id="result" class="screen hidden">
+    <div class="noren"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+    <!-- AdSense 版位②（結果タグの真上・滞在時間長） -->
+    <div class="ad-slot">【スポンサーリンク / 広告】</div>
+
+    <div class="panel">
+      <div style="text-align:center">
+        <span class="r-badge">診断結果</span>
+        <h2 class="r-type" id="rType"></h2>
+      </div>
+
+      <div class="r-meter">
+        <div class="lab"><span>あなたの京都人度（腹黒度）</span><span id="rPct">0%</span></div>
+        <div class="bar"><i id="rBar"></i></div>
+      </div>
+
+      <div class="r-block omote">
+        <h3>表（おもて）— ええとこ</h3>
+        <p id="rGood"></p>
+      </div>
+      <div class="r-block ura">
+        <h3>裏（うら）— ぶっちゃけ</h3>
+        <p id="rBad"></p>
+      </div>
+
+      <div class="share-row">
+        <button class="btn shu" onclick="shareX()">𝕏 で結果をシェアする</button>
+        <button class="btn" onclick="copyResult()">結果をコピーしてシェア</button>
+        <button class="btn ghost" onclick="restart()">もう一度診断する</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SEO FAQ ================= -->
+  <section class="seo-faq">
+    <h2>京都人度チェック・よくある質問</h2>
+    <dl>
+      <div class="faq-item">
+        <dt>京都人度チェックとは何ですか？</dt>
+        <dd>8つの日常シチュエーションへの回答から、あなたの「本音と建前」の使い分け度合い、いわゆる腹黒度を測定する無料の心理診断です。点数によって5タイプに分類されます。</dd>
+      </div>
+      <div class="faq-item">
+        <dt>腹黒度チェックの結果はどうやって決まりますか？</dt>
+        <dd>各設問の選択肢に1〜4点が割り振られており、合計点であなたのタイプが決まります。点数が高いほど本音と建前の使い分けが巧みな結果になります。あくまで楽しむための占いです。</dd>
+      </div>
+      <div class="faq-item">
+        <dt>「ぶぶ漬けでもどうですか？」の本当の意味は？</dt>
+        <dd>長居する来客に「そろそろお帰りください」という本音を、もてなしの建前にくるんで伝える京都の有名な言い回しとされ、本音と建前 占いを象徴するフレーズです。</dd>
+      </div>
+    </dl>
+</section>
+
+  <!-- ═══════════════════════════════════════════
+       SEO Articles Section & Footer
+       ════════════════════════════════════════════ -->
+  <style>
+    /* 京都人度チェック專用的優雅隠蔽式頁尾樣式 */
+    .seo-articles-container {
+      max-width: 540px;
+      margin: 36px auto 0;
+      padding: 22px;
+      background: rgba(85, 90, 89, 0.03); /* 使用網頁內建的 sumi-soft 深墨色調進行極淡化半透明處理 */
+      border: 1px solid var(--line);
+      border-radius: 20px;
+    }
+    .seo-article {
+      margin-bottom: 26px;
+    }
+    .seo-article:last-child {
+      margin-bottom: 0;
+    }
+    .seo-article-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--murasaki);
+      opacity: 0.8;
+      margin-bottom: 10px;
+      letter-spacing: 0.04em;
+      font-family: "Shippori Mincho B1", serif;
+    }
+    .seo-article-p {
+      font-size: 12px;
+      color: var(--sumi-soft); /* 降低對比度的優雅碳灰色字體，完美隱蔽不刺眼 */
+      line-height: 1.85;
+      text-align: justify;
+      margin-bottom: 8px;
+      font-family: "Zen Kaku Gothic New", sans-serif;
+    }
+    .seo-article-p:last-child {
+      margin-bottom: 0;
+    }
+    .site-footer-final {
+      text-align: center;
+      color: var(--sumi-soft);
+      font-size: 11px;
+      margin-top: 36px;
+      letter-spacing: 0.08em;
+      font-family: "Zen Kaku Gothic New", sans-serif;
+      line-height: 1.7;
+    }
+  </style>
+
+  <section class="seo-articles-container">
+    <!-- 1️⃣ 第一篇 SEO 文章：聚焦於京都人文化、腹黑度與本音建前的關係 -->
+    <article class="seo-article">
+      <h3 class="seo-article-title">コラム：おもてなしの裏にある本音とは？「京都人 診断」から学ぶ大人の高度なコミュニケーション術</h3>
+      <p class="seo-article-p">
+        日本の古都であり、独自の伝統と格式を重んじる文化が息づく京都。その洗練された生活習慣の中には、「本音と建前」を極めて高度に使い分ける大人の処世術が深く根ざしています。言葉通りに受け取ると大失敗してしまうような遠回しな表現は、時にユーモラスに「腹黒さ」や「裏表」と表現されることもありますが、2026年現在の多様な人間関係マネジメントにおいても、自分の人付き合いのスタイルを客観的にチェックできる「京都人度チェック」や無料の心理テストが大きな注目を集めています。
+      </p>
+      <p class="seo-article-p">
+        コミュニケーション心理学の観点から考察すると、いわゆる腹黒度とは、決して単純な悪意や性格の悪さを意味するものではありません。むしろ、場の調和を崩さず、相手のプライドを傷つけないように自分の要求を優雅に通すための「高い社会的知性（戦略的適応力）」の裏返しであると言えます。当たると評判の本音と建前 占いや裏表 診断を体験することは、自分が感情のままに思ったことを言ってしまう「ど直球ストレート」の段階にいるのか、それとも伝統工芸のレベルで建前を操る「生粋の京都人型」の領域に達しているのかを冷静に把握するための優れた契機となります。
+      </p>
+      <p class="seo-article-p">
+        長居する来客に対してにっこりと勧められる「ぶぶ漬け（お茶漬け）」のフレーズに象徴されるように、相手に「そろそろお帰りください」という本音を思いやりの建前にくるんで伝える技術は、不要な衝突（エラー）を避けるための最大の防御策です。自己の防衛反応や、お世辭を言う際の買い物の癖ならぬ“言葉の癖”を自覚しておくことは、孤立を防ぎ、複雑な社会網の中でもしなやかで心地よい人間関係を再構築するための強力なセルフマネジメントへと繋がっていくでしょう。
+      </p>
+    </article>
+
+    <!-- 2️⃣ 第二篇 SEO 文章：聚焦於腹黑度檢查、社群趣味互動與心理測驗價值 -->
+    <article class="seo-article">
+      <h3 class="seo-article-title">コラム：自分の「腹黒度 チェック」をエンタメに！本音と建前 占いが生み出すSNSの繋がりと自己開示</h3>
+      <p class="seo-article-p">
+        日常生活における自分の八方美人的な一面や、内心で周囲に点数をつけてしまう「性格の裏の顔」を直視するのは少し耳が痛いものですが、ユーモラスな「京都人度（腹黒度）」の％表示や、鋭い指摘レポートとして可視化されると、人間味のある愛すべき個性や面白い話として受け入れやすくなります。深刻になりがちな対人関係のストレスや不満、あるいは気疲れというデリケートな問題を、エンターテインメントの形に昇華した心理テストや面白い無料診断が、SNSを通じて友人同士の自己開示ツールとして広く愛されている理由はここにあります。
+      </p>
+      <p class="seo-article-p">
+        直感で答える設問設計の無料診断が「当たる！」と評判になりやすいのは、日常の建前が緩み、隣家のピアノへの対応や苦手な食べ物を勧められた際の上手な断り方など、日常の選択に潜むリアルな本音が反映されやすいためです。たとえば、本音を見せられる相手がちゃんと残っている「擬態バランサー」タイプと、怒っていても笑顔を崩さず「ええ時計してはりますなぁ」のセリフの裏に何層もの感情を折りたたんでいる「本音と建前マスター」タイプでは、脈ありサインへの感度や社交辞令の実現率が根本的に異なります。
+      </p>
+      <p class="seo-article-p">
+        自分の「エレガントに人を転がす才能」の傾向を自覚し、それを友達とシェアして「誰が一番腹黒オブザイヤーか」を当て合うことは、普段は話しにくいディープな本音をユーモラスに共有し、お互いの純粋さやスマートさをリスペクトし合うための絶好の機会です。無料の心理テストをライフスタイルの一部として楽しみながら、他者との相互理解を深め、しなやかで心地よい距離感の対人関係を築いてみてはいかがでしょうか。
+      </p>
+    </article>
+  </section>
+
+  <div class="site-footer-final">
+    ※この診断はエンターテインメントです。結果に深い意味はありません。<br>
+    kokoro-shindan ｜ 京都人 診断・腹黒度 チェック・本音と建前 占い
+  </div>
+</div>
+
+<script>
+/* =========================================================
+   設問データ
+   各設問の4択は {1,2,3,4} の順列。score が高いほど「裏表（建前）度」が高い。
+   選択肢の点数は順番どおりに並べず、意図的にシャッフルして配置している
+   （＝上から低→高に並んでおらず、結果が読まれにくい）。
+   ========================================================= */
+const QUESTIONS = [
+  {
+    q:"隣家のピアノの音が毎晩うるさい。あなたは？",
+    opts:[
+      {t:"「うるさいので静かにしてください」と直接言う", s:1},
+      {t:"「お子さん、ピアノお上手にならはったなぁ」と褒める", s:4},
+      {t:"イラッとするけど、結局なにも言わず我慢する", s:2},
+      {t:"自分は出ず、管理会社に匿名で連絡してもらう", s:3},
+    ]
+  },
+  {
+    q:"友達の新しい髪型が、正直あまり似合っていない。",
+    opts:[
+      {t:"「お、イメチェンしたんだね！」とだけ言っておく", s:3},
+      {t:"「うーん、前の方が似合ってたかも」と正直に伝える", s:1},
+      {t:"「すごい個性的でいいじゃん！」と褒める", s:4},
+      {t:"特に触れず、何事もなかったようにスルー", s:2},
+    ]
+  },
+  {
+    q:"会議で先輩の意見に、内心まったく賛成できない。",
+    opts:[
+      {t:"その場で「私は反対です」とハッキリ述べる", s:1},
+      {t:"「勉強になります」と言いつつ、裏で別案を根回し", s:4},
+      {t:"「なるほど〜」と相づちで曖昧に流しておく", s:3},
+      {t:"何も言わず、黙って様子をうかがう", s:2},
+    ]
+  },
+  {
+    q:"来客がなかなか帰らない。そろそろ帰ってほしい…",
+    opts:[
+      {t:"「そろそろ時間だから」とストレートに伝える", s:1},
+      {t:"「ぶぶ漬けでもどうですか？」とにっこり勧める", s:4},
+      {t:"わざとあくびをしたり、時計をチラチラ見る", s:3},
+      {t:"内心ぐったりしつつ、最後まで付き合う", s:2},
+    ]
+  },
+  {
+    q:"近所の人に「今度ぜひご飯でも！」と言われた。",
+    opts:[
+      {t:"社交辞令だと分かっているので軽く受け流す", s:3},
+      {t:"本気にして「いつにします？」と日程を聞き返す", s:1},
+      {t:"「ぜひぜひ〜！」と返すが、一生行く気はない", s:4},
+      {t:"「予定確認しますね」と言って、そのまま忘れる", s:2},
+    ]
+  },
+  {
+    q:"SNSで、ちょっと苦手な人の投稿が流れてきた。",
+    opts:[
+      {t:"特に何とも思わず、そのままスルーする", s:1},
+      {t:"こっそりミュート。でも会えば普通ににこやかに話す", s:4},
+      {t:"ブロックもするし、態度にもはっきり出る", s:2},
+      {t:"いいねはしないが、たまにこっそり見に行く", s:3},
+    ]
+  },
+  {
+    q:"上司に、明らかに理不尽なことで怒られた。",
+    opts:[
+      {t:"納得いかないので、その場で冷静に反論する", s:1},
+      {t:"「申し訳ありません」と謝りつつ、心の中で見下す", s:4},
+      {t:"自分が悪かったのかも…と素直に落ち込む", s:2},
+      {t:"あとで同僚を捕まえて、思いきり愚痴る", s:3},
+    ]
+  },
+  {
+    q:"苦手な食べ物を「これ美味しいから食べて！」と勧められた。",
+    opts:[
+      {t:"「すみません、これ苦手なんです」と正直に断る", s:1},
+      {t:"「わぁ嬉しい！」と笑顔で受け取り、こっそり残す", s:4},
+      {t:"顔には出さず、我慢して全部たいらげる", s:2},
+      {t:"「お腹いっぱいで…」とやんわり理由をつけて断る", s:3},
+    ]
+  }
+];
+
+/* =========================================================
+   結果データ（70%褒め + 30%吐槽）
+   ========================================================= */
+const RESULTS = {
+  A:{
+    type:'裏表ゼロの<br>「ど直球ストレート」型',
+    mei:'KANTO NO MANNAKA',
+    good:'思ったことを、思ったまま言える人。あなたのいちばんの魅力は「裏がないこと」です。一緒にいて気を遣わせない安心感は本物で、「この人は陰で何か企んでたりしない」と、誰からも自然に信頼されます。嘘がつけない不器用さも、長い目で見れば最強の武器。あなたの「美味しい」は本当に美味しい。',
+    bad:'ただし、京都ではたぶん生きていけません。「ぶぶ漬けでも？」と言われたら、ニコニコ三杯おかわりして長居するタイプ。空気を読むのが致命的に苦手で、たまに地雷を踏み抜いて場を凍りつかせます。京都人に「ええ性格してはるわぁ」と言われて、それを純粋な褒め言葉だと思って喜んでいるあなたは、控えめに言って最高です。'
+  },
+  B:{
+    type:'まだ素直な<br>「見習い京都人」型',
+    mei:'MINARAI',
+    good:'基本は正直でまっすぐ。でも「ここは本音を言わない方がいいかな」と、ちょっとだけ空気を読める優しさを持っています。憎めない、というのがあなたの最大の長所。多少の建前は使えるのに、根っこの善良さが隠しきれず、結局いい人だとバレてしまうタイプです。',
+    bad:'とはいえ、まだ腹黒くなりきれていない中途半端な見習い。建前を言おうとして、つい本音が顔に出てしまう詰めの甘さがあります。京都人の遠回しな嫌味を、半分くらいは「いい人だなぁ」と本気で受け取って見逃しているのは、あなたの平和なところでもあり、ちょっと心配なところでもあります。'
+  },
+  C:{
+    type:'絶妙に世渡り上手な<br>「擬態バランサー」型',
+    mei:'BALANCER',
+    good:'本音と建前を、ちょうどいい塩梅で使い分けられる大人。場の空気を壊さず、かといって自分を完全に殺すこともなく、しれっと立ち回れる社会人としての完成度の高さは、もはや一つの才能です。敵を作らず、味方は増やす。バランス感覚であなたに勝てる人はそういません。',
+    bad:'ただし、使い分けがあまりに自然すぎて、たまに「あれ、今のどっちが本音だっけ？」と自分でも分からなくなる瞬間があるはず。八方美人と紙一重のラインを、本人だけ気づかずに綱渡りしています。みんなにいい顔をした結果、いちばん大事な相手に本音を言いそびれていませんか。'
+  },
+  D:{
+    type:'笑顔の達人<br>「本音と建前マスター」型',
+    mei:'MASTER',
+    good:'表情と本音を、完全に切り離してコントロールできる処世術の達人。怒っていても笑顔、内心呆れていても「さすがですね」。敵を作らず、波風を立てず、いつの間にか自分の望む方向へ場を運ぶ手腕は、ベテランの域に達しています。あなたを怒らせていることに、相手は最後まで気づきません。',
+    bad:'もはやあなたの褒め言葉は、全部うっすら嫌味に聞こえる特殊能力つき。「お上手ですね」の裏に何層もの感情が折りたたまれていて、友達ですら油断できません。あなたの「今度ごはん行こ」が実現する確率は、体感30%といったところ。本音を見せられる相手、ちゃんと残ってますか。'
+  },
+  E:{
+    type:'千年の都が認定<br>「生粋・腹黒オブザイヤー」型',
+    mei:'EMPEROR OF KYOTO',
+    good:'おめでとうございます、人間国宝級。あなたの建前スキルは、もはや伝統工芸の領域です。一切の角を立てず、相手に良い気分でいてもらいながら、こちらの要求は100%通す。エレガントに人を転がす天才で、一生敵に回したくないタイプ。その優雅さの前では、たいていの揉め事は起こる前に消えています。',
+    bad:'ただし——心の中では、常に全員に点数をつけています。「おおきに」の声色は温かいのに、その奥の感情は氷点下。あなたの「考えときますわ」は、ほぼ確定で「NO」。あなたに「ええ時計してはりますなぁ」と言われた人は、たぶん長居しすぎています。…そして今この吐槽を読みながら、あなたはきっと顔色ひとつ変えていない。'
+  }
+};
+
+/* =========================================================
+   状態管理
+   ========================================================= */
+let cur = 0;
+let total = 0;
+let selected = null;
+const answers = new Array(QUESTIONS.length).fill(null);
+
+const $ = id => document.getElementById(id);
+
+function startQuiz(){
+  $('intro').classList.add('hidden');
+  $('quiz').classList.remove('hidden');
+  $('quiz').classList.remove('screen'); void $('quiz').offsetWidth; $('quiz').classList.add('screen');
+  cur = 0;
+  renderQ();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function renderQ(){
+  const Q = QUESTIONS[cur];
+  $('qNow').textContent = cur+1;
+  $('qLabel').textContent = '設問 ' + (cur+1);
+  $('bar').style.width = ((cur)/QUESTIONS.length*100) + '%';
+  $('qText').textContent = Q.q;
+
+  const wrap = $('opts');
+  wrap.innerHTML = '';
+  selected = answers[cur];
+  Q.opts.forEach((o, i)=>{
+    const b = document.createElement('button');
+    b.className = 'opt' + (answers[cur]===i ? ' sel' : '');
+    b.innerHTML = o.t;
+    b.onclick = ()=>pick(i, b);
+    wrap.appendChild(b);
+  });
+
+  const nb = $('nextBtn');
+  nb.textContent = (cur === QUESTIONS.length-1) ? '診断結果を見る' : '次へ';
+  nb.disabled = answers[cur]===null;
+}
+
+function pick(i, el){
+  answers[cur] = i;
+  selected = i;
+  document.querySelectorAll('.opt').forEach(o=>o.classList.remove('sel'));
+  el.classList.add('sel');
+  $('nextBtn').disabled = false;
+}
+
+function nextQ(){
+  if(answers[cur]===null) return;
+  if(cur < QUESTIONS.length-1){
+    cur++;
+    // smooth re-render
+    const panel = $('quiz').querySelector('.panel');
+    panel.style.opacity = 0;
+    setTimeout(()=>{ renderQ(); panel.style.opacity = 1; window.scrollTo({top:0,behavior:'smooth'}); }, 160);
+  } else {
+    showResult();
+  }
+}
+
+/* =========================================================
+   計分ロジック ＋ 機率平衡コメント
+   ---------------------------------------------------------
+   ・8問 × 各{1,2,3,4}点 → 理論上の最低点 = 8、最高点 = 32。
+   ・選択は一様ランダムと仮定すると、合計点は中央（=20付近）に
+     山なりに集中する（中心極限定理）。したがって、もし区間を
+     単純に「24/5＝約4.8点ずつ」均等に切ると、中央のC帯に
+     確率が偏ってしまう。
+   ・そこで全 4^8 = 65,536 通りを厳密に列挙して合計点分布を求め、
+     各タイプの出現確率がほぼ均等（≒20%）になるよう、
+     中央の帯を「狭く」、端の帯を「広く」する形で境界を最適化した。
+   ・確定した区間と、その理論出現率（厳密計算）は以下の通り：
+       A  8〜16 点 … 13.6%
+       B 17〜18 点 … 18.4%
+       C 19〜20 点 … 24.1%
+       D 21〜22 点 … 22.1%
+       E 23〜32 点 … 21.8%
+     → 最も偏った帯でも 24.1%、最少でも 13.6%。
+       「特定の結果に80%が集中する」事態は構造的に発生しない。
+   ========================================================= */
+function calcType(score){
+  if(score >= 8  && score <= 16) return 'A'; // 13.6%
+  if(score >= 17 && score <= 18) return 'B'; // 18.4%
+  if(score >= 19 && score <= 20) return 'C'; // 24.1%
+  if(score >= 21 && score <= 22) return 'D'; // 22.1%
+  return 'E';                                 // 23〜32 : 21.8%
+}
+
+let lastResult = null;
+
+function showResult(){
+  total = 0;
+  answers.forEach((ai, qi)=>{ total += QUESTIONS[qi].opts[ai].s; });
+
+  const key = calcType(total);
+  const R = RESULTS[key];
+  lastResult = R;
+
+  // 京都人度 % （最低8〜最高32点を 0〜100% に正規化）
+  const pct = Math.round((total - 8) / (32 - 8) * 100);
+
+  $('rType').innerHTML = R.type + '<span class="mei">'+R.mei+'</span>';
+  $('rGood').textContent = R.good;
+  $('rBad').textContent = R.bad;
+  $('rPct').textContent = pct + '%';
+
+  $('quiz').classList.add('hidden');
+  const res = $('result');
+  res.classList.remove('hidden');
+  res.classList.remove('screen'); void res.offsetWidth; res.classList.add('screen');
+  window.scrollTo({top:0,behavior:'smooth'});
+
+  setTimeout(()=>{ $('rBar').style.width = pct + '%'; }, 250);
+}
+
+/* =========================================================
+   シェア機能（動的メッセージ ＋ 動的URL）
+   ========================================================= */
+function plainType(){
+  // <br> を除いた純テキストのタイプ名
+  return lastResult.type.replace(/<br>/g,'');
+}
+function shareText(){
+  const url = window.location.href;          // ← 現在のURLを動的取得
+  const t = plainType();
+  return `【京都人度チェック】あなたの「裏表」ぶっちゃけ診断\n\n私の結果は…「${t}」でした。\n${lastResult.mei}\n\nあなたの腹黒度は何%？▼\n${url}`;
+}
+
+function copyResult(){
+  const text = shareText();
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(()=>showToast('結果をコピーしました')).catch(()=>fallbackCopy(text));
+  } else {
+    fallbackCopy(text);
+  }
+}
+function fallbackCopy(text){
+  const ta = document.createElement('textarea');
+  ta.value = text; ta.style.position='fixed'; ta.style.opacity=0;
+  document.body.appendChild(ta); ta.select();
+  try{ document.execCommand('copy'); showToast('結果をコピーしました'); }
+  catch(e){ showToast('コピーに失敗しました'); }
+  document.body.removeChild(ta);
+}
+
+function shareX(){
+  const url = window.location.href;          // ← 現在のURLを動的取得
+  const t = plainType();
+  const body = `【京都人度チェック】私の結果は「${t}」でした😏\nあなたの腹黒度は何%？本音と建前、ちゃんと使い分けてる？▼`;
+  const hashtags = '京都人診断,腹黒度チェック,本音と建前';   // ← 社群用ハッシュタグ3つ
+  const intent = 'https://twitter.com/intent/tweet?text='
+    + encodeURIComponent(body)
+    + '&url=' + encodeURIComponent(url)
+    + '&hashtags=' + encodeURIComponent(hashtags);
+  window.open(intent, '_blank', 'noopener,noreferrer');
+}
+
+function showToast(msg){
+  const t = $('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 2000);
+}
+
+function restart(){
+  answers.fill(null);
+  cur = 0; total = 0; lastResult = null;
+  $('result').classList.add('hidden');
+  $('rBar').style.width = '0%';
+  $('intro').classList.remove('hidden');
+  $('intro').classList.remove('screen'); void $('intro').offsetWidth; $('intro').classList.add('screen');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
