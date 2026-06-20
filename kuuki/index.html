@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ====== SEO Meta ====== -->
+<title>【HSP・繊細さん】あなたの「空気読みすぎ」過呼吸度テスト｜HSP診断・人間関係 占い</title>
+<meta name="description" content="あなたは空気を読みすぎて疲れていませんか？8つの質問で分かる無料のHSP診断。繊細さん度・気疲れレベルを5タイプで判定します。人といると、なぜかどっと疲れるあなたへ。HSP診断・繊細さん テスト・人間関係 占いの決定版。">
+<meta name="keywords" content="HSP診断, 繊細さん テスト, 人間関係 占い, 空気読みすぎ, 気疲れ 診断, 繊細さん, 心理テスト">
+<meta name="robots" content="index, follow">
+
+<!-- ====== Open Graph (X / Threads / LINE 大圖卡) ====== -->
+<meta property="og:title" content="【HSP・繊細さん】あなたの「空気読みすぎ」過呼吸度テスト">
+<meta property="og:description" content="人といると、なぜかどっと疲れる。それ、空気の読みすぎかも。8問で分かるあなたの気疲れレベル＝過呼吸度を無料診断。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="og-image.png">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="kokoro-shindan">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="【HSP・繊細さん】あなたの「空気読みすぎ」過呼吸度テスト">
+<meta name="twitter:description" content="人といると、なぜかどっと疲れる。あなたの気疲れレベル＝過呼吸度を無料診断。">
+<meta name="twitter:image" content="og-image.png">
+
+<!-- ====== JSON-LD FAQ Schema (精選摘要対策) ====== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "HSP診断・過呼吸度テストとは何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "8つの日常シチュエーションへの回答から、あなたが「空気を読みすぎて気疲れしている度合い」を測定する無料の心理診断です。点数によって5タイプに分類され、あなたが鈍感力の達人タイプか、過呼吸寸前の超繊細さんタイプかが分かります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "繊細さん（HSP）の特徴は何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HSP（Highly Sensitive Person）は生まれつき感受性が強い気質とされ、人の表情や声のトーンの変化に敏感、刺激や人混みで疲れやすい、断るのが苦手、一人の時間で回復するなどの傾向があると言われます。気質であり、病気や診断名ではありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "空気を読みすぎて疲れるのを和らげるには？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "一人になれる時間を意識的に確保する、相手の感情は相手のものと線引きする、断る練習をするなどが、人間関係の気疲れをやわらげる工夫としてよく挙げられます。つらさが続く場合は専門家への相談も選択肢です。"
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --mist:#E9F0EE;
+  --mist-deep:#DAE6E3;
+  --card:#F8FBFA;
+  --ink:#2C3A38;
+  --ink-soft:#5e6c6a;
+  --sage:#4E8C81;        /* 落ち着いた青緑 */
+  --sage-deep:#3a6b62;
+  --coral:#E2917B;       /* 高ぶった神経のあたたかさ */
+  --coral-deep:#cf7860;
+  --line:rgba(44,58,56,.12);
+  --shadow:0 20px 55px -26px rgba(44,58,56,.45);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Zen Kaku Gothic New",sans-serif;
+  background:
+    radial-gradient(130% 90% at 50% -10%, #F1F6F4 0%, var(--mist) 55%, var(--mist-deep) 100%);
+  color:var(--ink);
+  line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+  padding:18px 14px 60px;
+}
+.wrap{max-width:540px;margin:0 auto}
+
+/* ===== breathing ring : signature ===== */
+.breath{
+  width:96px;height:96px;margin:8px auto 16px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--sage-deep);font-family:"Zen Maru Gothic",sans-serif;font-weight:900;
+  font-size:.82rem;letter-spacing:.12em;text-align:center;line-height:1.4;
+  background:radial-gradient(circle, rgba(78,140,129,.16), rgba(78,140,129,.04) 70%);
+  border:2px solid rgba(78,140,129,.4);
+  animation:breathe 5.2s ease-in-out infinite;
+}
+@keyframes breathe{
+  0%,100%{transform:scale(.92);box-shadow:0 0 0 0 rgba(78,140,129,.18)}
+  50%{transform:scale(1.06);box-shadow:0 0 0 16px rgba(78,140,129,0)}
+}
+
+/* ===== card ===== */
+.panel{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:22px;
+  box-shadow:var(--shadow);
+  padding:30px 24px 28px;
+  position:relative;overflow:hidden;
+}
+.panel::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(78,140,129,.05),transparent 130px);
+}
+
+/* ===== intro ===== */
+.eyebrow{
+  font-family:"Zen Maru Gothic",sans-serif;
+  letter-spacing:.36em;font-size:.72rem;color:var(--sage);
+  text-align:center;text-indent:.36em;margin-bottom:8px;font-weight:700;
+}
+h1{
+  font-family:"Zen Maru Gothic",sans-serif;
+  font-weight:900;font-size:1.66rem;line-height:1.55;text-align:center;letter-spacing:.01em;
+}
+h1 .ko{color:var(--coral-deep)}
+h1 .small{display:block;font-size:.94rem;font-weight:500;color:var(--ink-soft);margin-top:12px;letter-spacing:.05em}
+.lead{font-size:.95rem;color:var(--ink-soft);text-align:center;margin:18px 4px 4px}
+.lead b{color:var(--sage-deep)}
+
+/* ===== ad slot ===== */
+.ad-slot{
+  min-height:250px;background:#f0f0f0;margin:22px 0;text-align:center;
+  line-height:250px;color:#aaa;border-radius:14px;font-size:.8rem;
+  border:1px dashed #ddd;letter-spacing:.1em;
+}
+
+/* ===== button ===== */
+.btn{
+  display:block;width:100%;border:none;cursor:pointer;
+  font-family:"Zen Maru Gothic",sans-serif;font-weight:700;
+  font-size:1.06rem;letter-spacing:.12em;text-indent:.12em;
+  color:#fff;background:var(--sage);
+  padding:17px;border-radius:14px;
+  box-shadow:0 12px 26px -12px rgba(78,140,129,.75);
+  transition:transform .15s ease, box-shadow .15s ease, background .2s;
+}
+.btn:hover{transform:translateY(-2px);background:var(--sage-deep)}
+.btn:active{transform:translateY(0)}
+.btn:disabled{background:#bcc9c6;box-shadow:none;cursor:not-allowed;color:#fff}
+.btn.ghost{background:transparent;color:var(--sage);border:1.5px solid var(--sage);box-shadow:none}
+.btn.ghost:hover{background:rgba(78,140,129,.08)}
+.btn.coral{background:var(--coral);box-shadow:0 12px 26px -12px rgba(226,145,123,.8)}
+.btn.coral:hover{background:var(--coral-deep)}
+
+/* ===== quiz ===== */
+.q-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.q-count{font-family:"Zen Maru Gothic",sans-serif;font-weight:700;color:var(--sage);letter-spacing:.08em;font-size:.9rem}
+.q-count b{font-size:1.5rem}
+.progress{height:7px;background:var(--mist-deep);border-radius:99px;overflow:hidden;margin:10px 0 26px}
+.progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--sage),var(--coral));border-radius:99px;transition:width .45s cubic-bezier(.4,0,.2,1)}
+.q-text{font-family:"Zen Maru Gothic",sans-serif;font-weight:700;font-size:1.18rem;line-height:1.7;margin-bottom:22px;letter-spacing:.01em}
+.opts{display:flex;flex-direction:column;gap:11px}
+.opt{
+  text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:14px;
+  padding:15px 16px;font-size:.97rem;cursor:pointer;font-family:"Zen Kaku Gothic New";
+  color:var(--ink);line-height:1.6;position:relative;
+  transition:border-color .18s, background .18s, transform .12s;
+}
+.opt:hover{border-color:var(--sage)}
+.opt:active{transform:scale(.99)}
+.opt.sel{border-color:var(--sage);background:rgba(78,140,129,.08);box-shadow:inset 3px 0 0 var(--sage)}
+.opt.sel::after{content:"✓";position:absolute;right:15px;top:50%;transform:translateY(-50%);color:var(--sage);font-weight:700}
+
+/* ===== screens ===== */
+.screen{animation:fade .5s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.hidden{display:none!important}
+
+/* ===== result ===== */
+.r-badge{
+  display:inline-block;font-family:"Zen Maru Gothic",sans-serif;font-weight:700;
+  font-size:.74rem;letter-spacing:.28em;text-indent:.28em;color:#fff;
+  background:var(--coral);padding:6px 16px;border-radius:99px;margin-bottom:14px;
+}
+.r-type{font-family:"Zen Maru Gothic",sans-serif;font-weight:900;font-size:1.62rem;line-height:1.5;letter-spacing:.01em;margin-bottom:4px}
+.r-type .mei{display:block;font-size:.84rem;color:var(--sage);letter-spacing:.16em;margin-top:9px;font-weight:700}
+.r-meter{margin:22px 0 6px}
+.r-meter .lab{display:flex;justify-content:space-between;font-size:.78rem;color:var(--ink-soft);margin-bottom:6px;letter-spacing:.05em}
+.r-meter .bar{height:11px;background:var(--mist-deep);border-radius:99px;overflow:hidden}
+.r-meter .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--sage),var(--coral));border-radius:99px;width:0;transition:width 1.1s .2s cubic-bezier(.4,0,.2,1)}
+.r-block{margin-top:22px}
+.r-block h3{font-family:"Zen Maru Gothic",sans-serif;font-size:.92rem;letter-spacing:.1em;color:var(--sage);margin-bottom:7px;display:flex;align-items:center;gap:8px}
+.r-block.ko h3{color:var(--coral-deep)}
+.r-block h3::before{content:"";width:18px;height:2px;background:currentColor;display:inline-block}
+.r-block p{font-size:.95rem;color:var(--ink);line-height:1.9}
+.share-row{display:flex;flex-direction:column;gap:11px;margin-top:26px}
+.toast{
+  position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);
+  background:var(--ink);color:#fff;padding:12px 22px;border-radius:99px;font-size:.86rem;
+  letter-spacing:.05em;opacity:0;pointer-events:none;transition:opacity .3s, transform .3s;
+  z-index:50;box-shadow:0 10px 30px -10px rgba(0,0,0,.5);
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ===== faq ===== */
+.seo-faq{margin-top:40px;padding:26px 22px;background:var(--card);border:1px solid var(--line);border-radius:18px}
+.seo-faq h2{font-family:"Zen Maru Gothic",sans-serif;font-size:1.05rem;letter-spacing:.08em;margin-bottom:18px;color:var(--ink);text-align:center}
+.faq-item{border-top:1px solid var(--line);padding:15px 0}
+.faq-item:first-of-type{border-top:none}
+.faq-item dt{font-weight:700;font-size:.93rem;color:var(--sage-deep);margin-bottom:7px}
+.faq-item dt::before{content:"Q. ";font-family:"Zen Maru Gothic"}
+.faq-item dd{font-size:.88rem;color:var(--ink-soft);line-height:1.8}
+.faq-item dd::before{content:"A. ";font-family:"Zen Maru Gothic";color:var(--coral-deep);font-weight:700}
+
+footer{text-align:center;color:var(--ink-soft);font-size:.74rem;margin-top:32px;letter-spacing:.06em;line-height:1.8}
+
+@media(max-width:380px){
+  h1{font-size:1.46rem}.r-type{font-size:1.4rem}.panel{padding:26px 18px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .breath{animation:none!important}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ================= INTRO ================= -->
+  <section id="intro" class="screen">
+    <div class="panel">
+      <p class="eyebrow">HSP・繊細さん診断</p>
+      <div class="breath">ふぅー…<br>すーっ</div>
+      <h1>あなたの「<span class="ko">空気読みすぎ</span>」<br>過呼吸度テスト
+        <span class="small">人といると、なぜかどっと疲れるあなたへ。</span>
+      </h1>
+      <p class="lead">気にしすぎ？　考えすぎ？<br>たった8つの質問で、あなたの<b>気疲れレベル</b>をそっと測ります。</p>
+
+      <!-- AdSense 版位①（開始ボタン上・滞在時間長） -->
+      <div class="ad-slot">【スポンサーリンク / 広告】</div>
+
+      <button class="btn" onclick="startQuiz()">テストをはじめる</button>
+    </div>
+  </section>
+
+  <!-- ================= QUIZ ================= -->
+  <section id="quiz" class="screen hidden">
+    <div class="panel">
+      <div class="q-head">
+        <span class="q-count"><b id="qNow">1</b> <span style="opacity:.4">/ 8</span></span>
+        <span class="q-count" style="font-size:.74rem;opacity:.7" id="qLabel">設問 1</span>
+      </div>
+      <div class="progress"><i id="bar"></i></div>
+      <p class="q-text" id="qText"></p>
+      <div class="opts" id="opts"></div>
+      <button class="btn" id="nextBtn" style="margin-top:24px" disabled onclick="nextQ()">次へ</button>
+    </div>
+  </section>
+
+  <!-- ================= RESULT ================= -->
+  <section id="result" class="screen hidden">
+
+    <!-- AdSense 版位②（結果タグの真上・滞在時間長） -->
+    <div class="ad-slot">【スポンサーリンク / 広告】</div>
+
+    <div class="panel">
+      <div style="text-align:center">
+        <span class="r-badge">診断結果</span>
+        <h2 class="r-type" id="rType"></h2>
+      </div>
+
+      <div class="r-meter">
+        <div class="lab"><span>あなたの空気読みすぎ度（過呼吸度）</span><span id="rPct">0%</span></div>
+        <div class="bar"><i id="rBar"></i></div>
+      </div>
+
+      <div class="r-block good">
+        <h3>すーっ — あなたの素敵なところ</h3>
+        <p id="rGood"></p>
+      </div>
+      <div class="r-block ko">
+        <h3>はぁ… — ぶっちゃけ、ここがしんどい</h3>
+        <p id="rBad"></p>
+      </div>
+
+      <div class="share-row">
+        <button class="btn coral" onclick="shareX()">𝕏 で結果をシェアする</button>
+        <button class="btn" onclick="copyResult()">結果をコピーしてシェア</button>
+        <button class="btn ghost" onclick="restart()">もう一度テストする</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SEO FAQ ================= -->
+  <section class="seo-faq">
+    <h2>HSP診断・繊細さんテスト よくある質問</h2>
+    <dl>
+      <div class="faq-item">
+        <dt>HSP診断・過呼吸度テストとは何ですか？</dt>
+        <dd>8つの日常シチュエーションへの回答から、あなたが「空気を読みすぎて気疲れしている度合い」を測定する無料の心理診断です。点数によって5タイプに分類されます。</dd>
+      </div>
+      <div class="faq-item">
+        <dt>繊細さん（HSP）の特徴は何ですか？</dt>
+        <dd>HSPは生まれつき感受性が強い気質とされ、人の表情や声のトーンに敏感、人混みで疲れやすい、断るのが苦手、一人の時間で回復する、などの傾向があると言われます。気質であり、病気や診断名ではありません。</dd>
+      </div>
+      <div class="faq-item">
+        <dt>空気を読みすぎて疲れるのを和らげるには？</dt>
+        <dd>一人になれる時間を確保する、相手の感情は相手のものと線引きする、断る練習をするなどが、人間関係の気疲れをやわらげる工夫としてよく挙げられます。つらさが続く場合は専門家への相談も選択肢です。</dd>
+      </div>
+    </dl>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SEO Articles Section & Footer
+       ════════════════════════════════════════════ -->
+  <style>
+    /* HSP過呼吸度テスト專用的優雅隠蔽式頁尾樣式 */
+    .seo-articles-container {
+      max-width: 540px;
+      margin: 36px auto 0;
+      padding: 22px;
+      background: rgba(78, 140, 129, 0.03); /* 使用網頁內建的 sage 青綠色調進行極淡化半透明處理 */
+      border: 1px solid var(--line);
+      border-radius: 22px;
+    }
+    .seo-article {
+      margin-bottom: 26px;
+    }
+    .seo-article:last-child {
+      margin-bottom: 0;
+    }
+    .seo-article-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--sage-deep);
+      opacity: 0.8;
+      margin-bottom: 10px;
+      letter-spacing: 0.04em;
+      font-family: "Zen Maru Gothic", sans-serif;
+    }
+    .seo-article-p {
+      font-size: 12px;
+      color: var(--ink-soft); /* 降低對比度的煙燻灰綠字體，完美隱蔽不刺眼 */
+      line-height: 1.85;
+      text-align: justify;
+      margin-bottom: 8px;
+      font-family: "Zen Kaku Gothic New", sans-serif;
+    }
+    .seo-article-p:last-child {
+      margin-bottom: 0;
+    }
+    .site-footer-final {
+      text-align: center;
+      color: var(--ink-soft);
+      font-size: 11px;
+      margin-top: 36px;
+      letter-spacing: 0.06em;
+      font-family: "Zen Kaku Gothic New", sans-serif;
+      line-height: 1.8;
+    }
+  </style>
+
+  <section class="seo-articles-container">
+    <!-- 1️⃣ 第一篇 SEO 文章：聚焦於高敏感、空氣閱讀過度與気疲れ的關係 -->
+    <article class="seo-article">
+      <h3 class="seo-article-title">コラム：なぜ人といると疲れる？「HSP診断」から紐解く空気読みすぎの心理と気疲れのサイン</h3>
+      <p class="seo-article-p">
+        日常生活や職場の中で、「周りの人のちょっとした表情の変化が気になって仕事に集中できない」「グループチャットの発言に気を遣いすぎて送信するまでに何時間も悩んでしまう」といった深い気疲れを抱える人が増えています。他人の感情やその場の空気を過剰に読み取ってしまうこの気質は、近年心理学や性格診断の領域において「HSP（Highly Sensitive Person）」や「繊細さん」という言葉で広く知られるようになりました。2026年現在の複雑な人間関係社会においても、自分の疲労度やストレスの現在地を客観的に見つめ直すツールとして、無料の「過呼吸度テスト」やHSP診断が大きな注目を集めています。
+      </p>
+      <p class="seo-article-p">
+        心理学的なアプローチから考察すると、空気を読みすぎて疲れるという現象は、決して本人の能力不足や単なる気にしすぎが原因ではありません。むしろ、生まれつき感覚処理感受性が非常に高く、他者の声のトーンの曇りや不機嫌な態度を瞬時に察知してしまう「優れた気配りの才能（環境感受性）」の裏返しであると言えます。当たると評判の繊細さん テストや人間関係 占いを体験することは、日常の中で知らず知らずのうちに受信し続けている情報の過多（容量オーバー）を数値として可視化し、自分の高ぶった神経をそっと落ち着かせるための優れた契機となります。
+      </p>
+      <p class="seo-article-p">
+        他人の不機嫌を自分の責任のように感じてしまい布団でひとり反省会を繰り返す状態を抜け出し、自分を守るための健康的な心の境界線（線引き）を引くこと。それこそが、どっと疲れる毎日を軽やかに乗りこなし、自分自身の素晴らしい感受性をかけがえのないギフトとして活かすための大切な一歩となるでしょう。
+      </p>
+    </article>
+
+    <!-- 2️⃣ 第二篇 SEO 文章：聚焦於自衛力、放鬆方式與心理測驗社交價值 -->
+    <article class="seo-article">
+      <h3 class="seo-article-title">コラム：「繊細さん テスト」をエンタメに！人間関係 占いが生み出すセルフケアと心の深呼吸</h3>
+      <p class="seo-article-p">
+        自分の「断るのが苦手なクセ」や、他人のメンタルを勝手にケアしてバッテリー切れを起こしてしまう「性格の盲点」を直視するのは少し耳が痛いものですが、ユーモラスな「過呼吸度」の％表示や、愛のある辛口な指摘レポートとして可視化されると、人間味のある愛すべき長所として受け入れやすくなります。深刻になりがちな対人恐怖の不安や、生きづらさというデリケートな問題を、エンターテインメントの形に昇華した心理テストや面白い無料診断が、SNSを中心に友人同士の自己開示ツールとして広く愛されている理由はここにあります。
+      </p>
+      <p class="seo-article-p">
+        直感で答える設問設計の人間関係 占いが「当たる！」と評判になりやすいのは、日常の理性が一瞬緩み、自分の希望をはっきり言えずに笑顔で合わせてしまう行動や、一日の終わりに感じるぐったり感といったリアルな本音が反映されやすいためです。たとえば、他人の機嫌に振り回されず自分のペースを守れる「鈍感力の達人（メンタル無敵）」タイプと、まわりの感情を全部受信して容量オーバーになりがちな「超ハイパー繊細さん」タイプでは、一人の時間による回復スピードや、罪悪感のコントロールの仕方が根本的に異なります。
+      </p>
+      <p class="seo-article-p">
+        自分の「人間版エアコン」としての特徴を自覚し、それを友達や恋人とシェアして「誰のアンテナが一番高性能か」を笑い合いながら比べ合うことは、普段は話しにくい心の内側の繊細さをユーモラスに共有し、お互いの優しさをリスペクトし合うための絶好の機会です。無料のHSP診断をライフスタイルの一部として楽しみながら、意識的に深呼吸を挟み、スマホを伏せて誰のことも気にしない夜を自分にプレゼントしてみてはいかがでしょうか。
+      </p>
+    </article>
+  </section>
+
+  <div class="site-footer-final">
+    ※この診断はエンターテインメントであり、医学的なHSP診断ではありません。<br>
+    kokoro-shindan ｜ HSP診断・繊細さん テスト・人間関係 占い
+  </div>
+</div>
+
+<div class="toast" id="toast">結果をコピーしました</div>
+
+<div class="toast" id="toast">結果をコピーしました</div>
+
+<script>
+/* =========================================================
+   設問データ
+   各設問の4択は {1,2,3,4} の順列。score が高いほど
+  「空気を読みすぎて気疲れしている度（過呼吸度）」が高い。
+   選択肢の点数は上から低→高に並べず、意図的にシャッフルして
+   配置している（＝結果が一目で読まれにくい）。
+   ========================================================= */
+const QUESTIONS = [
+  {
+    q:"グループチャットで自分が発言した直後、急に会話が止まった。",
+    opts:[
+      {t:"「何かまずいこと言った？」と自分の発言を読み返す", s:3},
+      {t:"「タイミングだろうな」と、まったく気にしない", s:1},
+      {t:"全員の心の中を推測しはじめ、その夜は眠れない", s:4},
+      {t:"少し気になるけど、「まあいいか」と流せる", s:2},
+    ]
+  },
+  {
+    q:"友達とどの店に行くか決めるとき、あなたは？",
+    opts:[
+      {t:"「ここ行きたい！」と自分の希望をはっきり言う", s:1},
+      {t:"「どこでもいい」と言いつつ、内心は相手の好みを必死で探る", s:4},
+      {t:"とりあえず相手に合わせておく", s:3},
+      {t:"候補をいくつか出して、相手に選んでもらう", s:2},
+    ]
+  },
+  {
+    q:"隣にいる人が、なんだか不機嫌そうにしている。",
+    opts:[
+      {t:"自分には関係ないので、特に気にしない", s:1},
+      {t:"「私、何かしたかな…」と原因を考えこんでしまう", s:4},
+      {t:"少し気になるけど、そっとしておく", s:2},
+      {t:"機嫌を直してもらおうと、さりげなく話しかける", s:3},
+    ]
+  },
+  {
+    q:"楽しい飲み会・集まりが終わったあと、あなたは？",
+    opts:[
+      {t:"「楽しかったー」と、その日のうちにぐっすり眠れる", s:1},
+      {t:"帰り道で「あの発言、大丈夫だった？」とひとり反省会", s:3},
+      {t:"どっと疲れて、翌日は誰にも会いたくない", s:4},
+      {t:"特に何も思わず、いつも通りに過ごす", s:2},
+    ]
+  },
+  {
+    q:"自分が少し我慢すれば、その場が丸く収まりそうなとき。",
+    opts:[
+      {t:"嫌なことは嫌と、ちゃんと言葉にして伝える", s:1},
+      {t:"言いたいけど、雰囲気を壊したくなくて飲み込む", s:3},
+      {t:"自分が折れて、笑顔で合わせてしまう", s:4},
+      {t:"状況によるけど、わりとはっきり言う方だ", s:2},
+    ]
+  },
+  {
+    q:"相手の表情や声のトーンの、ちょっとした変化に。",
+    opts:[
+      {t:"表情のわずかな曇りで「あ、今のダメだった」と即わかる", s:4},
+      {t:"正直、ほとんど気づかない", s:1},
+      {t:"声のトーンが少し変わるだけで、すぐ察知する", s:3},
+      {t:"言われてみれば分かる、という程度", s:2},
+    ]
+  },
+  {
+    q:"気が進まない頼みごとを、断りたいとき。",
+    opts:[
+      {t:"無理なものは「ごめん、無理！」と普通に断れる", s:1},
+      {t:"罪悪感がすごくて、つい引き受けてしまう", s:4},
+      {t:"理由を一生懸命説明して、なんとか断る", s:3},
+      {t:"少し迷うけど、最終的にはちゃんと断れる", s:2},
+    ]
+  },
+  {
+    q:"一日の終わり、あなたの状態は？",
+    opts:[
+      {t:"特に疲れてない。明日もたぶん元気", s:1},
+      {t:"人と話した分だけ、なぜかぐったりしている", s:4},
+      {t:"そこそこ疲れるけど、寝れば回復するタイプ", s:2},
+      {t:"今日の人間関係を振り返って、布団でひとり反省会", s:3},
+    ]
+  }
+];
+
+/* =========================================================
+   結果データ（70%褒め + 30%吐槽）
+   ========================================================= */
+const RESULTS = {
+  A:{
+    type:'鈍感力の達人<br>「メンタル無敵」さん',
+    mei:'INVINCIBLE',
+    good:'あなたの心臓には、たくましい毛が生えています（最大級の褒め言葉です）。他人の機嫌に振り回されず、自分のペースをしっかり守れる強さは、繊細さんたちが喉から手が出るほど欲しがる才能。小さなことでクヨクヨしない安定感で、まわりに「この人がいると大丈夫」という安心感を配っています。',
+    bad:'ただし、たまに空気を読まなさすぎて、隣で誰かが落ち込んでいることに三日後くらいまで気づきません。「え、怒ってたの？」と後から聞いて、さらに地雷を踏むタイプ。鈍感力も振り切ると、ただのマイペースな問題児に片足を突っ込みます。月に一回くらいは、隣の人の顔色を見てあげてください。'
+  },
+  B:{
+    type:'ほどよくマイペース<br>「省エネ運転」さん',
+    mei:'ECO MODE',
+    good:'気を遣うべき時は遣い、流すところはサラッと流す。あなたは「人間関係の省エネ運転」がとても上手な人です。繊細さんの優しさをちゃんと持ちつつ、自分を消耗させすぎない絶妙なバランス感覚は、気疲れしやすい人たちが心から見習いたい完成形。一緒にいてラクだと思われています。',
+    bad:'とはいえ本当はもう少し気づいているのに、「気づかなかったフリ」でうまく乗り切っている、ちょっとした狡猾さも。たまに省エネしすぎて、大事な人の小さなSOSまでスルーしてしまう危うさがあります。燃費がいいのは長所ですが、肝心な場面ではちゃんとアクセルを踏んであげて。'
+  },
+  C:{
+    type:'気づけば気疲れ<br>「一般・繊細さん」',
+    mei:'STANDARD',
+    good:'人の気持ちにちゃんと気づける、優しさの持ち主。あなたのさりげない「大丈夫？」は、本人も知らないうちに、たくさんの人を救っています。場の空気を読んで自然にフォローできる気配り力があり、「一緒にいて居心地がいい」と思われているはず。バランスのとれた、愛されるタイプです。',
+    bad:'ただし、気づける分だけ、ちゃっかり気疲れもしています。「私が気にしすぎなだけかな」が口癖で、家に帰るとどっと疲れて動けない。気づかなくてもいいことにまで全部気づいて、勝手にダメージを受けて勝手に回復している——その健気さが、いじらしくも、ちょっと残念なところです。'
+  },
+  D:{
+    type:'空気読みすぎ<br>「気配りモンスター」',
+    mei:'OVER SENSOR',
+    good:'あなたのアンテナは、高性能すぎます。相手が口を開く前に欲しいものを察知し、ざわついた空気を一瞬で整える——もはや人間版エアコン。あなたがその場にいるだけで、全員が知らないうちに快適に過ごせています。気配りの精度でいえば、間違いなくトップクラスの才能です。',
+    bad:'ただし、その高性能アンテナ、24時間オフになりません。誰にも頼まれていないのに全員のメンタルを勝手にケアして、勝手に充電を消耗している。あなたが今いちばん気を遣うべき相手は、たぶんあなた自身です。「私は大丈夫」は、いちばん大丈夫じゃない人がよく言うセリフだと、そろそろ気づいて。'
+  },
+  E:{
+    type:'過呼吸寸前<br>「超ハイパー繊細さん」',
+    mei:'ULTRA HSP',
+    good:'世界の機微を、誰よりも深く感じ取れる人。あなたの感受性は、人の痛みにそっと寄り添える本物の才能です。他の人が素通りしてしまう小さな優しさに気づき、誰かのわずかな変化に最初に手を差し伸べられる——その繊細さは、間違いなくこの世界に必要な、かけがえのないギフト。あなたに救われた人が、必ずどこかにいます。',
+    bad:'……ただ、そのギフト、今ちょっと容量オーバーで過呼吸寸前です。まわりの感情を全部受信して、自分のことは後回しで勝手にバッテリー切れ。「考えすぎだよ」と言われるたび、その言葉についてもまた三日考えてしまう。今日はもう、深呼吸して、スマホを伏せて、誰のことも気にしない夜を自分にプレゼントしてください。お願いだから、まずあなたを大事に。'
+  }
+};
+
+/* =========================================================
+   状態管理
+   ========================================================= */
+const QN = QUESTIONS.length;
+let cur = 0, total = 0, lastResult = null;
+const answers = new Array(QN).fill(null);
+const $ = id => document.getElementById(id);
+
+function startQuiz(){
+  $('intro').classList.add('hidden');
+  const q = $('quiz');
+  q.classList.remove('hidden');
+  q.classList.remove('screen'); void q.offsetWidth; q.classList.add('screen');
+  cur = 0; renderQ();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function renderQ(){
+  const Q = QUESTIONS[cur];
+  $('qNow').textContent = cur+1;
+  $('qLabel').textContent = '設問 ' + (cur+1);
+  $('bar').style.width = (cur/QN*100) + '%';
+  $('qText').textContent = Q.q;
+
+  const wrap = $('opts');
+  wrap.innerHTML = '';
+  Q.opts.forEach((o,i)=>{
+    const b = document.createElement('button');
+    b.className = 'opt' + (answers[cur]===i ? ' sel' : '');
+    b.innerHTML = o.t;
+    b.onclick = ()=>pick(i,b);
+    wrap.appendChild(b);
+  });
+
+  const nb = $('nextBtn');
+  nb.textContent = (cur === QN-1) ? '診断結果を見る' : '次へ';
+  nb.disabled = answers[cur]===null;
+}
+
+function pick(i, el){
+  answers[cur] = i;
+  document.querySelectorAll('.opt').forEach(o=>o.classList.remove('sel'));
+  el.classList.add('sel');
+  $('nextBtn').disabled = false;
+}
+
+function nextQ(){
+  if(answers[cur]===null) return;
+  if(cur < QN-1){
+    cur++;
+    const panel = $('quiz').querySelector('.panel');
+    panel.style.opacity = 0;
+    setTimeout(()=>{ renderQ(); panel.style.opacity = 1; window.scrollTo({top:0,behavior:'smooth'}); }, 160);
+  } else {
+    showResult();
+  }
+}
+
+/* =========================================================
+   計分ロジック ＋ 機率平衡コメント
+   ---------------------------------------------------------
+   ・8問 × 各{1,2,3,4}点 → 理論上の最低点 = 8、最高点 = 32。
+   ・選択を一様ランダムと仮定すると、合計点は中央（=20付近）に
+     山なりに集中する（中心極限定理）。よって区間を単純に
+     「24/5 ≒ 4.8点ずつ」均等に切ると、中央のC帯に確率が偏る。
+   ・そこで全 4^8 = 65,536 通りを厳密に列挙して合計点分布を求め、
+     各タイプの出現確率がほぼ均等（≒20%）になるよう、
+     中央の帯を「狭く」、端の帯を「広く」して境界を最適化した。
+   ・確定した区間と理論出現率（厳密計算）は以下の通り：
+       A  8〜16 点 … 13.6%
+       B 17〜18 点 … 18.4%
+       C 19〜20 点 … 24.1%
+       D 21〜22 点 … 22.1%
+       E 23〜32 点 … 21.8%
+     → 最大でも 24.1%、最少でも 13.6%。20%からの最大乖離は約6.4pt。
+       「特定の結果に80%が集中する」偏りは構造的に発生しない。
+   ========================================================= */
+function calcType(score){
+  if(score >= 8  && score <= 16) return 'A'; // 13.6%
+  if(score >= 17 && score <= 18) return 'B'; // 18.4%
+  if(score >= 19 && score <= 20) return 'C'; // 24.1%
+  if(score >= 21 && score <= 22) return 'D'; // 22.1%
+  return 'E';                                 // 23〜32 : 21.8%
+}
+
+function showResult(){
+  total = 0;
+  answers.forEach((ai, qi)=>{ total += QUESTIONS[qi].opts[ai].s; });
+
+  const R = RESULTS[ calcType(total) ];
+  lastResult = R;
+
+  const pct = Math.round((total - 8) / (32 - 8) * 100); // 8〜32点 → 0〜100%
+
+  $('rType').innerHTML = R.type + '<span class="mei">'+R.mei+'</span>';
+  $('rGood').textContent = R.good;
+  $('rBad').textContent = R.bad;
+  $('rPct').textContent = pct + '%';
+
+  $('quiz').classList.add('hidden');
+  const res = $('result');
+  res.classList.remove('hidden');
+  res.classList.remove('screen'); void res.offsetWidth; res.classList.add('screen');
+  window.scrollTo({top:0,behavior:'smooth'});
+  setTimeout(()=>{ $('rBar').style.width = pct + '%'; }, 250);
+}
+
+/* =========================================================
+   シェア機能（動的メッセージ ＋ 動的URL）
+   ========================================================= */
+function plainType(){ return lastResult.type.replace(/<br>/g,'・'); }
+
+function shareText(){
+  const url = window.location.href;          // ← 現在のURLを動的取得
+  return `【HSP・繊細さん】空気読みすぎ過呼吸度テスト\n\n私の結果は…「${plainType()}」でした。\n（${lastResult.mei}）\n\nあなたの過呼吸度は何%？▼\n${url}`;
+}
+
+function copyResult(){
+  const text = shareText();
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(()=>showToast('結果をコピーしました')).catch(()=>fallbackCopy(text));
+  } else {
+    fallbackCopy(text);
+  }
+}
+function fallbackCopy(text){
+  const ta = document.createElement('textarea');
+  ta.value = text; ta.style.position='fixed'; ta.style.opacity=0;
+  document.body.appendChild(ta); ta.select();
+  try{ document.execCommand('copy'); showToast('結果をコピーしました'); }
+  catch(e){ showToast('コピーに失敗しました'); }
+  document.body.removeChild(ta);
+}
+
+function shareX(){
+  const url = window.location.href;          // ← 現在のURLを動的取得
+  const body = `【空気読みすぎ過呼吸度テスト】私の結果は「${plainType()}」でした😮‍💨\n気にしすぎて疲れてない？あなたの過呼吸度は何%？▼`;
+  const hashtags = 'HSP診断,繊細さん,人間関係';   // ← 社群用ハッシュタグ3つ
+  const intent = 'https://twitter.com/intent/tweet?text='
+    + encodeURIComponent(body)
+    + '&url=' + encodeURIComponent(url)
+    + '&hashtags=' + encodeURIComponent(hashtags);
+  window.open(intent, '_blank', 'noopener,noreferrer');
+}
+
+function showToast(msg){
+  const t = $('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 2000);
+}
+
+function restart(){
+  answers.fill(null);
+  cur = 0; total = 0; lastResult = null;
+  $('result').classList.add('hidden');
+  $('rBar').style.width = '0%';
+  const intro = $('intro');
+  intro.classList.remove('hidden');
+  intro.classList.remove('screen'); void intro.offsetWidth; intro.classList.add('screen');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
