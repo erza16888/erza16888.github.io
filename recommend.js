@@ -62,7 +62,7 @@
   function injectStyle() {
     if (document.getElementById("ks-rec-style")) return;
     var css =
-    '.ks-rec{box-sizing:border-box;max-width:560px;margin:34px auto 8px;padding:0 16px;' +
+    '.ks-rec{box-sizing:border-box;display:block;clear:both;width:100%;margin:30px 0 10px;' +
       'font-family:"Noto Sans JP",system-ui,sans-serif;}' +
     '.ks-rec *{box-sizing:border-box;}' +
     '.ks-rec-inner{background:#fff;border:1px solid #e7e1d7;border-radius:18px;' +
@@ -134,7 +134,12 @@
         '</div>' +
       '</div>';
 
-    var host = document.querySelector("main") || document.body;
+    // 本文カラムの中に入れる（body が flex 中央寄せの場合に
+    // 外側へ並んでしまうのを防ぐ）。main→.wrap→.container の順で探す。
+    var host = document.querySelector("main")
+            || document.querySelector(".wrap")
+            || document.querySelector(".container")
+            || document.body;
     host.appendChild(sec);
 
     renderCards(sec.querySelector("#ksRecCards"), slug);
