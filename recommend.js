@@ -62,7 +62,7 @@
   function injectStyle() {
     if (document.getElementById("ks-rec-style")) return;
     var css =
-    '.ks-rec{box-sizing:border-box;display:block;clear:both;width:100%;margin:30px 0 10px;' +
+    '.ks-rec{box-sizing:border-box;display:block;clear:both;width:100%;margin:18px 0 34px;' +
       'font-family:"Noto Sans JP",system-ui,sans-serif;}' +
     '.ks-rec *{box-sizing:border-box;}' +
     '.ks-rec-inner{background:#fff;border:1px solid #e7e1d7;border-radius:18px;' +
@@ -134,13 +134,23 @@
         '</div>' +
       '</div>';
 
-    // 本文カラムの中に入れる（body が flex 中央寄せの場合に
-    // 外側へ並んでしまうのを防ぐ）。main→.wrap→.container の順で探す。
-    var host = document.querySelector("main")
-            || document.querySelector(".wrap")
-            || document.querySelector(".container")
-            || document.body;
-    host.appendChild(sec);
+    // 配置：FAQの下・SEO記事の上に差し込む。
+    //  1) .seo-articles-container があればその直前（＝FAQの下）
+    //  2) なければ .seo-faq の直後
+    //  3) どちらも無ければ本文カラム末尾（main→.wrap→.container→body）
+    var articles = document.querySelector(".seo-articles-container");
+    var faq = document.querySelector(".seo-faq");
+    if (articles && articles.parentNode) {
+      articles.parentNode.insertBefore(sec, articles);
+    } else if (faq && faq.parentNode) {
+      faq.parentNode.insertBefore(sec, faq.nextSibling);
+    } else {
+      var host = document.querySelector("main")
+              || document.querySelector(".wrap")
+              || document.querySelector(".container")
+              || document.body;
+      host.appendChild(sec);
+    }
 
     renderCards(sec.querySelector("#ksRecCards"), slug);
 
